@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://aitooldir.vercel.app', // nach Deploy ersetzen
+  site: 'https://ai-tool-directory-orpin.vercel.app',
   trailingSlash: 'never',
   build: {
     format: 'file',
