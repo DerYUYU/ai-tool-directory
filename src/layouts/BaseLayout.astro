@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -64,10 +66,7 @@ const canonical = canonicalUrl || Astro.url.href;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <style>
-    @import url('/src/styles/global.css');
-  </style>
-  <link rel="stylesheet" href="/styles/global.css" />
+  <!-- CSS injected by Astro bundler via frontmatter import -->
 </head>
 <body>
   <nav>
@@ -106,18 +105,5 @@ const canonical = canonicalUrl || Astro.url.href;
     </div>
   </footer>
 
-  <!-- Inline Search Script -->
-  <script>
-    const searchInput = document.getElementById('search') as HTMLInputElement;
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        const q = (e.target as HTMLInputElement).value.toLowerCase();
-        document.querySelectorAll<HTMLElement>('.tool-card').forEach(card => {
-          const text = card.textContent?.toLowerCase() || '';
-          card.style.display = text.includes(q) ? '' : 'none';
-        });
-      });
-    }
-  </script>
 </body>
 </html>
