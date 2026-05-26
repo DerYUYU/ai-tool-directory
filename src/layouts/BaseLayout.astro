@@ -1,0 +1,123 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title,
+  description = 'Discover and compare the best AI tools. Find the perfect AI assistant for writing, coding, design, and more.',
+  ogImage = '/og-default.png',
+  canonicalUrl,
+} = Astro.props;
+
+const siteTitle = `${title} | AI Tool Directory`;
+const canonical = canonicalUrl || Astro.url.href;
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- Primary Meta -->
+  <title>{siteTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={siteTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={siteTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Schema.org WebSite -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AI Tool Directory",
+      "url": "https://aitooldir.vercel.app",
+      "description": "Discover and compare the best AI tools",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://aitooldir.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    @import url('/src/styles/global.css');
+  </style>
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">🤖 AI<span>Directory</span></a>
+      <div class="nav-links">
+        <a href="/categories/Writing">Writing</a>
+        <a href="/categories/Coding">Coding</a>
+        <a href="/categories/Design">Design</a>
+        <a href="/categories/Productivity">Productivity</a>
+        <a href="/categories/Business">Business</a>
+        <a href="/compare">Compare</a>
+        <a href="/newsletter">Newsletter</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>🤖 AI Tool Directory</strong> — Alle KI-Tools auf einen Blick
+      </div>
+      <div style="display:flex;gap:2rem">
+        <a href="/about">About</a>
+        <a href="/submit">Tool einreichen</a>
+        <a href="/newsletter">Newsletter</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+      <div style="font-size:0.75rem;color:var(--text-muted)">
+        Diese Seite enthält Affiliate-Links. Wir erhalten Provision ohne Mehrkosten für dich.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inline Search Script -->
+  <script>
+    const searchInput = document.getElementById('search') as HTMLInputElement;
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const q = (e.target as HTMLInputElement).value.toLowerCase();
+        document.querySelectorAll<HTMLElement>('.tool-card').forEach(card => {
+          const text = card.textContent?.toLowerCase() || '';
+          card.style.display = text.includes(q) ? '' : 'none';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

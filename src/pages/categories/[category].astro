@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const categories = ['Writing', 'Coding', 'Design', 'Productivity', 'Trading', 'Video', 'Audio', 'Business', 'Research', 'Other'];
+
+export async function getStaticPaths() {
+  const cats = ['Writing', 'Coding', 'Design', 'Productivity', 'Trading', 'Video', 'Audio', 'Business', 'Research', 'Other'];
+  return cats.map(cat => ({ params: { category: cat } }));
+}
+
+const { category } = Astro.params;
+const allTools = await getCollection('tools');
+const tools = allTools.filter(t => t.data.category === category);
+
+function renderStars(r: number) {
+  return '★'.repeat(Math.floor(r)) + '☆'.repeat(5 - Math.floor(r));
+}
+
+const categoryDescriptions: Record<string, string> = {
+  Writing: 'Die besten KI-Schreibtools für Texte, Blogs, Emails und Marketing-Content.',
+  Coding: 'KI-Coding-Assistenten für schnelleres und besseres Programmieren.',
+  Design: 'KI-Design-Tools für Bilder, Logos, UI und kreative Projekte.',
+  Productivity: 'KI-Produktivitätstools für mehr Effizienz im Alltag und Beruf.',
+  Trading: 'KI-Trading-Tools für Analyse, Signale und automatisiertes Trading.',
+  Video: 'KI-Videotools zum Erstellen, Bearbeiten und Verbessern von Videos.',
+  Audio: 'KI-Audiotools für Stimmen, Musik, Podcasts und Soundeffekte.',
+  Business: 'KI-Business-Tools für Analyse, Automatisierung und Wachstum.',
+  Research: 'KI-Recherchetools für schnelle und tiefe Informationssuche.',
+  Other: 'Weitere KI-Tools die keine Kategorie passen.',
+};
+---
+
+<BaseLayout
+  title={`Beste KI-Tools für ${category}`}
+  description={categoryDescriptions[category || 'Other'] || `Die besten KI-Tools für ${category}.`}
+>
+  <div class="container" style="padding-top:3rem;padding-bottom:5rem">
+
+    <!-- Breadcrumb -->
+    <nav style="font-size:0.85rem;color:var(--text-muted);margin-bottom:2rem">
+      <a href="/">Home</a> → <a href="/categories">Kategorien</a> → {category}
+    </nav>
+
+    <h1 style="margin-bottom:0.5rem">🏷️ KI-Tools: {category}</h1>
+    <p style="color:var(--text-muted);margin-bottom:2rem">{categoryDescriptions[category || 'Other']}</p>
+
+    <!-- Category Pills -->
+    <div class="pills" style="margin-bottom:2rem">
+      <a href="/" class="pill">Alle</a>
+      {categories.map(cat => (
+        <a href={`/categories/${cat}`} class={`pill ${cat === category ? 'active' : ''}`}>{cat}</a>
+      ))}
+    </div>
+
+    {tools.length > 0 ? (
+      <div class="tools-grid">
+        {tools.map(tool => (
+          <a href={`/tools/${tool.id}`} style="text-decoration:none">
+            <div class="tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <div class="tool-card-title">{tool.data.name}</div>
+                  <div class="tool-card-tagline">{tool.data.tagline}</div>
+                </div>
+                <div class="stars" style="font-size:0.9rem">{renderStars(tool.data.rating)}</div>
+              </div>
+              <div class="tool-card-meta">
+                {tool.data.pricing.free
+                  ? <span class="badge badge-free">Free</span>
+                  : <span class="badge badge-paid">{tool.data.pricing.startingPrice}</span>
+                }
+                {tool.data.affiliateLink && (
+                  <span style="font-size:0.7rem;color:var(--accent-light)">💰</span>
+                )}
+              </div>
+              <p style="font-size:0.88rem;color:var(--text-muted)">{tool.data.description.slice(0, 100)}...</p>
+              <div class="tool-card-footer">
+                <span style="font-size:0.8rem;color:var(--text-muted)">{tool.data.pricing.freeTier || ''}</span>
+                <span style="font-size:0.8rem;color:var(--accent-light)">Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <div style="text-align:center;padding:5rem;color:var(--text-muted)">
+        <p style="font-size:2rem">🔍</p>
+        <p>Noch keine Tools in dieser Kategorie. Komm bald wieder!</p>
+      </div>
+    )}
+  </div>
+</BaseLayout>

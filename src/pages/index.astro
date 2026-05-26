@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+const featuredTools = allTools.filter(t => t.data.featured).slice(0, 6);
+const recentTools = [...allTools].sort((a, b) =>
+  b.data.addedDate.getTime() - a.data.addedDate.getTime()
+).slice(0, 9);
+
+const categories = ['Writing', 'Coding', 'Design', 'Productivity', 'Trading', 'Video', 'Audio', 'Business'];
+
+function renderStars(rating: number) {
+  return '★'.repeat(Math.floor(rating)) + '☆'.repeat(5 - Math.floor(rating));
+}
+---
+
+<BaseLayout
+  title="Beste KI-Tools entdecken"
+  description="Das größte Verzeichnis für KI-Tools. Vergleiche, finde und nutze die besten AI-Assistenten für Writing, Coding, Design und mehr."
+>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge badge-category" style="margin-bottom:1rem">
+        🤖 {allTools.length} KI-Tools und wächst täglich
+      </div>
+      <h1>Finde das perfekte<br /><span style="color:var(--accent)">KI-Tool</span> für dich</h1>
+      <p class="hero-subtitle">
+        Das größte deutsche KI-Tool-Verzeichnis. Vergleiche Funktionen, Preise und
+        echte Bewertungen — kostenlos.
+      </p>
+
+      <!-- Search -->
+      <div class="search-box" style="max-width:600px;margin:0 auto 2rem">
+        <span style="color:var(--text-muted)">🔍</span>
+        <input
+          id="search"
+          type="text"
+          placeholder="ChatGPT, Midjourney, Jasper AI suchen..."
+          autocomplete="off"
+        />
+      </div>
+
+      <!-- Category Pills -->
+      <div class="pills" style="justify-content:center">
+        <a href="/" class="pill active">Alle</a>
+        {categories.map(cat => (
+          <a href={`/categories/${cat}`} class="pill">{cat}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Tools -->
+  {featuredTools.length > 0 && (
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>⭐ Featured Tools</h2>
+          <p>Die besten und meistgenutzten KI-Tools</p>
+        </div>
+        <div class="tools-grid">
+          {featuredTools.map(tool => (
+            <a href={`/tools/${tool.id}`} style="text-decoration:none">
+              <div class="tool-card">
+                <div class="tool-card-header">
+                  <div>
+                    <div class="tool-card-title">{tool.data.name}</div>
+                    <div class="tool-card-tagline">{tool.data.tagline}</div>
+                  </div>
+                  <div class="stars" title={`${tool.data.rating}/5`}>
+                    {renderStars(tool.data.rating)}
+                  </div>
+                </div>
+                <div class="tool-card-meta">
+                  <span class="badge badge-category">{tool.data.category}</span>
+                  {tool.data.pricing.free
+                    ? <span class="badge badge-free">Kostenlos</span>
+                    : <span class="badge badge-paid">Ab {tool.data.pricing.startingPrice}</span>
+                  }
+                </div>
+                <p style="font-size:0.9rem;color:var(--text-muted)">{tool.data.description.slice(0, 120)}...</p>
+                <div class="tool-card-footer">
+                  <span style="font-size:0.8rem;color:var(--text-muted)">{tool.data.pricing.freeTier}</span>
+                  <span class="btn btn-primary" style="font-size:0.8rem;padding:0.4rem 1rem">Details →</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- All / Recent Tools -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>🆕 Alle Tools</h2>
+        <p>{allTools.length} KI-Tools — täglich neue hinzugefügt</p>
+      </div>
+      <div class="tools-grid" id="tools-container">
+        {(recentTools.length > 0 ? recentTools : allTools).map(tool => (
+          <a href={`/tools/${tool.id}`} style="text-decoration:none">
+            <div class="tool-card" data-name={tool.data.name.toLowerCase()} data-category={tool.data.category.toLowerCase()}>
+              <div class="tool-card-header">
+                <div>
+                  <div class="tool-card-title">{tool.data.name}</div>
+                  <div class="tool-card-tagline">{tool.data.tagline}</div>
+                </div>
+                <div class="stars" title={`${tool.data.rating}/5`} style="font-size:0.9rem">
+                  {renderStars(tool.data.rating)}
+                </div>
+              </div>
+              <div class="tool-card-meta">
+                <span class="badge badge-category">{tool.data.category}</span>
+                {tool.data.pricing.free
+                  ? <span class="badge badge-free">Free</span>
+                  : <span class="badge badge-paid">{tool.data.pricing.startingPrice}</span>
+                }
+                {tool.data.affiliateLink && (
+                  <span style="font-size:0.7rem;color:var(--accent-light)">💰 Affiliate</span>
+                )}
+              </div>
+              <div class="tool-card-footer">
+                <div class="stars" style="font-size:0.8rem">{renderStars(tool.data.rating)}</div>
+                <span style="font-size:0.8rem;color:var(--accent-light)">Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {allTools.length === 0 && (
+        <div style="text-align:center;padding:4rem;color:var(--text-muted)">
+          <p style="font-size:2rem">🚧</p>
+          <p>Tools werden gerade hinzugefügt... komm morgen wieder!</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section>
+    <div class="container">
+      <div class="card" style="text-align:center;padding:3rem;background:linear-gradient(135deg,rgba(124,106,247,0.1),rgba(124,106,247,0.05))">
+        <h2>📬 Neue KI-Tools jede Woche</h2>
+        <p style="color:var(--text-muted);margin:1rem 0 2rem">
+          Werde der Erste der neue KI-Tools entdeckt. Kein Spam, jederzeit abmeldbar.
+        </p>
+        <a href="/newsletter" class="btn btn-primary" style="font-size:1rem;padding:0.8rem 2rem">
+          Kostenlos abonnieren
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section>
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;text-align:center">
+        <div class="card">
+          <div style="font-size:2.5rem;font-weight:800;color:var(--accent)">{allTools.length}+</div>
+          <div style="color:var(--text-muted)">KI-Tools</div>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem;font-weight:800;color:var(--accent)">8</div>
+          <div style="color:var(--text-muted)">Kategorien</div>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem;font-weight:800;color:var(--accent)">€0</div>
+          <div style="color:var(--text-muted)">Kosten für dich</div>
+        </div>
+        <div class="card">
+          <div style="font-size:2.5rem;font-weight:800;color:var(--accent)">täglich</div>
+          <div style="color:var(--text-muted)">aktualisiert</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

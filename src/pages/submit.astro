@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="KI-Tool einreichen"
+  description="Reiche dein KI-Tool kostenlos ein und erreiche tausende Nutzer auf dem AI Tool Directory."
+>
+  <div class="container" style="padding-top:5rem;padding-bottom:5rem;max-width:700px">
+    <h1 style="margin-bottom:0.5rem">🚀 Tool einreichen</h1>
+    <p style="color:var(--text-muted);margin-bottom:3rem">
+      Dein KI-Tool fehlt im Verzeichnis? Reiche es kostenlos ein.
+      Wir prüfen alle Einreichungen manuell und antworten innerhalb von 48h.
+    </p>
+
+    <!-- GitHub Issues Link -->
+    <div class="card" style="margin-bottom:2rem">
+      <h2 style="margin-bottom:1rem">📋 Via GitHub Issues einreichen</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem">
+        Öffne ein GitHub Issue mit den folgenden Infos.
+        Das ist der schnellste Weg damit wir dein Tool hinzufügen.
+      </p>
+      <a
+        href="https://github.com/yilcay/ai-tool-directory/issues/new?template=submit-tool.md"
+        target="_blank"
+        class="btn btn-primary"
+      >
+        GitHub Issue öffnen →
+      </a>
+    </div>
+
+    <!-- Manual Form (future) -->
+    <div class="card">
+      <h2 style="margin-bottom:1rem">📝 Direkt einreichen</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        {[
+          ['Tool-Name', 'text', 'z.B. ChatGPT'],
+          ['Website URL', 'url', 'https://...'],
+          ['Kategorie', 'text', 'Writing, Coding, Design...'],
+          ['Beschreibung (1 Satz)', 'text', 'Was macht das Tool?'],
+          ['Kostenlose Version?', 'text', 'Ja / Nein / Freemium'],
+          ['Preis', 'text', 'ab $X/Monat oder kostenlos'],
+          ['Deine Email (optional)', 'email', 'für Rückmeldung'],
+        ].map(([label, type, placeholder]) => (
+          <div>
+            <label style="display:block;font-size:0.85rem;margin-bottom:0.3rem;color:var(--text-muted)">{label}</label>
+            <input
+              type={type}
+              placeholder={placeholder}
+              style="width:100%;padding:0.7rem 1rem;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg-card);color:var(--text);font-size:0.9rem"
+            />
+          </div>
+        ))}
+        <button class="btn btn-primary" style="justify-content:center">
+          Einreichen
+        </button>
+        <p style="font-size:0.75rem;color:var(--text-muted)">
+          * Formular-Backend (Formspree/Netlify Forms) wird noch verbunden
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

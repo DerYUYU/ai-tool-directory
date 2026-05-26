@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const tools = await getCollection('tools');
+  return tools.map(tool => ({ params: { slug: tool.id }, props: { tool } }));
+}
+
+const { tool } = Astro.props;
+const { Content } = await render(tool);
+
+function renderStars(rating: number) {
+  return '★'.repeat(Math.floor(rating)) + '☆'.repeat(5 - Math.floor(rating));
+}
+
+// Schema.org für Tool
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": tool.data.name,
+  "description": tool.data.description,
+  "applicationCategory": `${tool.data.category}Application`,
+  "operatingSystem": "Web",
+  "offers": tool.data.pricing.free
+    ? { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    : { "@type": "Offer", "price": tool.data.pricing.startingPrice, "priceCurrency": "USD" },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": tool.data.rating,
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "1"
+  }
+};
+---
+
+<BaseLayout
+  title={`${tool.data.name} — Review & Bewertung`}
+  description={tool.data.description}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} slot="head" />
+
+  <div class="container" style="padding-top:3rem;padding-bottom:5rem">
+
+    <!-- Breadcrumb -->
+    <nav style="font-size:0.85rem;color:var(--text-muted);margin-bottom:2rem">
+      <a href="/">Home</a> → <a href={`/categories/${tool.data.category}`}>{tool.data.category}</a> → {tool.data.name}
+    </nav>
+
+    <!-- Affiliate Disclosure -->
+    {tool.data.affiliateLink && (
+      <div class="affiliate-banner">
+        ℹ️ <strong>Hinweis:</strong> Diese Seite enthält Affiliate-Links. Wenn du über unsere Links kaufst, erhalten wir eine kleine Provision — ohne Mehrkosten für dich.
+      </div>
+    )}
+
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:3rem;align-items:start">
+      <!-- Main Content -->
+      <div>
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem">
+          <span class="badge badge-category">{tool.data.category}</span>
+          {tool.data.pricing.free
+            ? <span class="badge badge-free">Kostenlos verfügbar</span>
+            : <span class="badge badge-paid">Ab {tool.data.pricing.startingPrice}/Monat</span>
+          }
+          {tool.data.featured && <span class="badge" style="background:rgba(251,191,36,0.15);color:#fbbf24">⭐ Featured</span>}
+        </div>
+
+        <h1 style="margin-bottom:0.5rem">{tool.data.name}</h1>
+        <p style="font-size:1.2rem;color:var(--text-muted);margin-bottom:1.5rem">{tool.data.tagline}</p>
+
+        <!-- Rating -->
+        <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:2rem">
+          <span class="stars" style="font-size:1.5rem">{renderStars(tool.data.rating)}</span>
+          <span style="font-size:1.2rem;font-weight:700">{tool.data.rating}/5</span>
+        </div>
+
+        <!-- Description -->
+        <h2 style="margin-bottom:1rem">Was ist {tool.data.name}?</h2>
+        <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem">{tool.data.description}</p>
+
+        <!-- Pros & Cons -->
+        <h2 style="margin-bottom:1rem">Vor- und Nachteile</h2>
+        <div class="pros-cons" style="margin-bottom:2rem">
+          <div class="card">
+            <h3 style="color:var(--green);margin-bottom:1rem">✅ Vorteile</h3>
+            <ul class="pros">
+              {tool.data.pros.map(pro => <li>{pro}</li>)}
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="color:var(--red);margin-bottom:1rem">❌ Nachteile</h3>
+            <ul class="cons">
+              {tool.data.cons.map(con => <li>{con}</li>)}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <h2 style="margin-bottom:1rem">Preise</h2>
+        <div class="card" style="margin-bottom:2rem">
+          {tool.data.pricing.free && tool.data.pricing.freeTier && (
+            <div style="margin-bottom:0.8rem">
+              <span class="badge badge-free" style="margin-right:0.5rem">FREE</span>
+              {tool.data.pricing.freeTier}
+            </div>
+          )}
+          {tool.data.pricing.startingPrice && (
+            <div>
+              <span class="badge badge-paid" style="margin-right:0.5rem">PAID</span>
+              Ab {tool.data.pricing.startingPrice}/Monat für Pro-Features
+            </div>
+          )}
+        </div>
+
+        <!-- Tags -->
+        {tool.data.tags.length > 0 && (
+          <div style="margin-bottom:2rem">
+            <h3 style="margin-bottom:0.8rem">Tags</h3>
+            <div class="pills">
+              {tool.data.tags.map(tag => (
+                <span class="pill">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- MDX Content -->
+        <div class="prose" style="color:var(--text-muted)">
+          <Content />
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div style="position:sticky;top:80px;display:flex;flex-direction:column;gap:1.5rem">
+        <!-- CTA Card -->
+        <div class="card" style="text-align:center;padding:2rem">
+          <h3 style="margin-bottom:0.5rem">{tool.data.name} testen</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem">
+            {tool.data.pricing.free ? 'Kostenlos loslegen — kein Kreditkarte nötig' : `Ab ${tool.data.pricing.startingPrice}/Monat`}
+          </p>
+          {tool.data.affiliateLink ? (
+            <a href={tool.data.affiliateLink} target="_blank" rel="noopener sponsored" class="btn btn-primary" style="width:100%;justify-content:center">
+              Jetzt kostenlos starten →
+            </a>
+          ) : (
+            <a href={tool.data.websiteUrl} target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;justify-content:center">
+              Website besuchen →
+            </a>
+          )}
+          {tool.data.affiliateLink && (
+            <p style="font-size:0.7rem;color:var(--text-muted);margin-top:0.8rem">* Affiliate-Link</p>
+          )}
+        </div>
+
+        <!-- Quick Info -->
+        <div class="card">
+          <h3 style="margin-bottom:1rem">Quick Facts</h3>
+          <div style="display:flex;flex-direction:column;gap:0.8rem;font-size:0.9rem">
+            <div style="display:flex;justify-content:space-between">
+              <span style="color:var(--text-muted)">Kategorie</span>
+              <a href={`/categories/${tool.data.category}`}>{tool.data.category}</a>
+            </div>
+            <div style="display:flex;justify-content:space-between">
+              <span style="color:var(--text-muted)">Kostenlose Version</span>
+              <span>{tool.data.pricing.free ? '✅ Ja' : '❌ Nein'}</span>
+            </div>
+            <div style="display:flex;justify-content:space-between">
+              <span style="color:var(--text-muted)">Bewertung</span>
+              <span>{renderStars(tool.data.rating)} {tool.data.rating}/5</span>
+            </div>
+            {tool.data.affiliateCommission && (
+              <div style="display:flex;justify-content:space-between">
+                <span style="color:var(--text-muted)">Affiliate</span>
+                <span style="color:var(--green)">{tool.data.affiliateCommission}</span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="card" style="background:var(--accent-dim);border-color:var(--accent)">
+          <h3 style="margin-bottom:0.5rem">📬 Newsletter</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem">Neue Tools jede Woche</p>
+          <a href="/newsletter" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem">
+            Abonnieren
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

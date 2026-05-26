@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Newsletter — Neue KI-Tools jede Woche"
+  description="Abonniere unseren kostenlosen Newsletter und erhalte jede Woche die besten neuen KI-Tools direkt in dein Postfach."
+>
+  <div class="container" style="padding-top:5rem;padding-bottom:5rem;max-width:700px">
+    <div style="text-align:center;margin-bottom:3rem">
+      <div style="font-size:4rem;margin-bottom:1rem">📬</div>
+      <h1>KI-Tools Newsletter</h1>
+      <p style="color:var(--text-muted);font-size:1.1rem;margin-top:1rem">
+        Jede Woche die <strong>10 besten neuen KI-Tools</strong> — direkt in dein Postfach.
+        Kein Spam. Jederzeit abmeldbar.
+      </p>
+    </div>
+
+    <!-- Beehiiv Embed Placeholder -->
+    <div class="card" style="text-align:center;padding:3rem">
+      <h2 style="margin-bottom:1rem">Kostenlos abonnieren</h2>
+
+      <!-- TODO: Beehiiv embed code hier einfügen -->
+      <!-- Geh zu beehiiv.com → Settings → Embed → Code kopieren -->
+      <div style="background:var(--bg);border:2px dashed var(--border);border-radius:var(--radius);padding:2rem;margin-bottom:1.5rem">
+        <p style="color:var(--text-muted);font-size:0.9rem">
+          📌 Beehiiv Embed kommt hier rein.<br />
+          <a href="https://beehiiv.com" target="_blank">Jetzt kostenlosen Beehiiv-Account erstellen →</a>
+        </p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem;max-width:400px;margin:0 auto">
+        <input
+          type="email"
+          placeholder="deine@email.com"
+          style="padding:0.8rem 1.2rem;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg-card);color:var(--text);font-size:1rem;width:100%"
+        />
+        <button class="btn btn-primary" style="width:100%;justify-content:center;padding:0.8rem;font-size:1rem">
+          Jetzt abonnieren →
+        </button>
+      </div>
+
+      <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem">
+        Bereits <strong>0 Abonnenten</strong> · Kostenlos · Kein Spam
+      </p>
+    </div>
+
+    <!-- What you get -->
+    <div style="margin-top:3rem">
+      <h2 style="margin-bottom:1.5rem">Was du bekommst</h2>
+      <div style="display:grid;gap:1rem">
+        {[
+          ['🆕', 'Top 10 neue KI-Tools', 'Jede Woche kuratiert und bewertet'],
+          ['💰', 'Beste kostenlose Tools', 'Wir finden die Deals für dich'],
+          ['⚡', 'Early Access', 'Neue Tools bevor alle davon wissen'],
+          ['📊', 'Preisvergleiche', 'Welcher Plan lohnt sich wirklich?'],
+        ].map(([emoji, title, desc]) => (
+          <div style="display:flex;gap:1rem;align-items:center" class="card">
+            <span style="font-size:2rem">{emoji}</span>
+            <div>
+              <strong>{title}</strong>
+              <p style="color:var(--text-muted);font-size:0.85rem">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
