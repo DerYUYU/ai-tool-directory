@@ -25,6 +25,7 @@ const tools = defineCollection({
     tags: z.array(z.string()).default([]),
     addedDate: z.coerce.date(),
     lastUpdated: z.coerce.date().optional(),
+    seoDescription: z.string().max(160).optional(),
   }),
 });
 
