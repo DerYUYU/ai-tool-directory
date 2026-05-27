@@ -332,41 +332,38 @@ function renderStars(rating: number) {
     </div>
   </section>
 
-</BaseLayout>
+  <!-- ════════════════════════════════════════ LIVE SEARCH ══ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search') as HTMLInputElement | null;
+      const toolLinks   = document.querySelectorAll<HTMLElement>('.tool-link');
+      const noResults   = document.getElementById('no-results');
+      const resultCount = document.getElementById('result-count');
 
-<!-- ════════════════════════════════════════ LIVE SEARCH ══ -->
-<script>
-  const searchInput = document.getElementById('search') as HTMLInputElement | null;
-  const toolLinks   = document.querySelectorAll<HTMLElement>('.tool-link');
-  const noResults   = document.getElementById('no-results');
-  const resultCount = document.getElementById('result-count');
+      function updateCount(visible: number, total: number) {
+        if (resultCount) {
+          resultCount.textContent = visible < total ? `${visible} von ${total} Tools` : '';
+        }
+      }
 
-  function updateCount(visible: number, total: number) {
-    if (resultCount) {
-      resultCount.textContent = visible < total ? `${visible} von ${total} Tools` : '';
-    }
-  }
+      searchInput?.addEventListener('input', () => {
+        const q = (searchInput.value ?? '').toLowerCase().trim();
+        let visible = 0;
 
-  searchInput?.addEventListener('input', () => {
-    const q = searchInput.value.toLowerCase().trim();
-    let visible = 0;
+        toolLinks.forEach(link => {
+          const name = link.dataset.name ?? '';
+          const cat  = link.dataset.cat  ?? '';
+          const tags = link.dataset.tags ?? '';
+          const match = !q || name.includes(q) || cat.includes(q) || tags.includes(q);
+          link.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
 
-    toolLinks.forEach(link => {
-      const name = link.dataset.name ?? '';
-      const cat  = link.dataset.cat  ?? '';
-      const tags = link.dataset.tags ?? '';
-      const match = !q || name.includes(q) || cat.includes(q) || tags.includes(q);
-      link.style.display = match ? '' : 'none';
-      if (match) visible++;
+        const total = toolLinks.length;
+        updateCount(visible, total);
+        if (noResults) noResults.style.display = (q && visible === 0) ? 'block' : 'none';
+      });
     });
+  </script>
 
-    const total = toolLinks.length;
-    updateCount(visible, total);
-    if (noResults) noResults.style.display = (q && visible === 0) ? 'block' : 'none';
-  });
-</script>
-
-<style>
-  /* Trigger fadeUp animations */
-  [style*="opacity:0"] { animation-fill-mode: both; }
-</style>
+</BaseLayout>

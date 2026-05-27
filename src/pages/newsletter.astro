@@ -141,7 +141,7 @@ nlForm?.addEventListener('submit', async (e) => {
   if (nlBtn) { nlBtn.textContent = '⏳...'; nlBtn.disabled = true; }
 
   try {
-    const res = await fetch(action, {
+    const res = await fetch('https://formspree.io/f/xojbpode', {
       method: 'POST',
       body: new FormData(nlForm),
       headers: { Accept: 'application/json' },
