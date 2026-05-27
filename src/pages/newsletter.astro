@@ -60,7 +60,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
         <!-- Form -->
         <form id="nl-form" style="max-width:440px;margin:0 auto"
-          action="https://formspree.io/f/DEIN_FORMSPREE_ID"
+          action="https://formspree.io/f/xojbpode"
           method="POST">
           <input type="hidden" name="_subject" value="Newsletter Anmeldung — AI Tool Directory" />
 
@@ -137,16 +137,6 @@ const nlSuccess = document.getElementById('nl-success');
 const nlBtn     = document.getElementById('nl-btn') as HTMLButtonElement | null;
 
 nlForm?.addEventListener('submit', async (e) => {
-  const action = nlForm.getAttribute('action') || '';
-
-  if (action.includes('DEIN_FORMSPREE_ID')) {
-    e.preventDefault();
-    // Fallback: open mailto
-    const email = (nlForm.querySelector('[name="email"]') as HTMLInputElement)?.value;
-    window.location.href = `mailto:yilcay.b@gmail.com?subject=Newsletter%20Anmeldung&body=Email:%20${email}`;
-    return;
-  }
-
   e.preventDefault();
   if (nlBtn) { nlBtn.textContent = '⏳...'; nlBtn.disabled = true; }
 

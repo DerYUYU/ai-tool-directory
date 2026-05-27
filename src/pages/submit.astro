@@ -40,7 +40,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <form
         id="tool-form"
-        action="https://formspree.io/f/DEIN_FORMSPREE_ID"
+        action="https://formspree.io/f/xojbpode"
         method="POST"
         style="display:flex;flex-direction:column;gap:1.25rem"
       >
@@ -226,15 +226,6 @@ const formWrap   = document.getElementById('submit-form-wrap');
 const submitBtn  = document.getElementById('submit-btn') as HTMLButtonElement | null;
 
 form?.addEventListener('submit', async (e) => {
-  const action = form.getAttribute('action') || '';
-
-  // If Formspree ID not set yet → show instructions
-  if (action.includes('DEIN_FORMSPREE_ID')) {
-    e.preventDefault();
-    alert('⚠️ Formspree noch nicht verbunden.\nSiehe Anleitung im Code: DEIN_FORMSPREE_ID ersetzen.');
-    return;
-  }
-
   e.preventDefault();
   if (submitBtn) {
     submitBtn.textContent = '⏳ Wird eingereicht...';
