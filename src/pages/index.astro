@@ -257,6 +257,7 @@ function renderStars(rating: number) {
             style="text-decoration:none;display:block"
             class="tool-link"
             data-name={tool.data.name.toLowerCase()}
+            data-display={tool.data.name}
             data-cat={tool.data.category.toLowerCase()}
             data-tags={tool.data.tags?.join(' ').toLowerCase() ?? ''}
             data-tagline={tool.data.tagline}
@@ -356,194 +357,117 @@ function renderStars(rating: number) {
     </div>
   </section>
 
-  <!-- ════════════════════════════════════════ LIVE SEARCH ══ -->
+  <!-- ══════════════════════════════════════════ SEARCH ══ -->
   <script is:inline>
   (function () {
-    var CAT_ICONS = {
+    var ICONS = {
       writing:'✍️', coding:'💻', design:'🎨', productivity:'⚡',
       video:'🎬', audio:'🎵', business:'💼', research:'🔬'
     };
 
-    function initSearch() {
-      var searchInput = document.getElementById('search');
-      var dropdown    = document.getElementById('search-dropdown');
-      var escHint     = document.getElementById('search-esc');
-      var toolLinks   = Array.prototype.slice.call(document.querySelectorAll('.tool-link'));
-      var noResults   = document.getElementById('no-results');
-      var resultCount = document.getElementById('result-count');
+    function init() {
+      var inp  = document.getElementById('search');
+      var drop = document.getElementById('search-dropdown');
+      var esc  = document.getElementById('search-esc');
+      var all  = Array.prototype.slice.call(document.querySelectorAll('.tool-link'));
 
-      if (!searchInput) { return; }
-      if (!dropdown)    { return; }
+      if (!inp || !drop) return;
 
-      var activeIdx = -1;
-      var dropItems = [];
-
-      /* ── Grid filtern ─────────────────────────── */
-      function filterGrid(q) {
-        var visible = 0;
-        toolLinks.forEach(function (link) {
-          var match = !q
-            || (link.getAttribute('data-name') || '').indexOf(q) >= 0
-            || (link.getAttribute('data-cat')  || '').indexOf(q) >= 0
-            || (link.getAttribute('data-tags') || '').indexOf(q) >= 0;
-          link.style.display = match ? '' : 'none';
-          if (match) visible++;
-        });
-        var total = toolLinks.length;
-        if (resultCount)
-          resultCount.textContent = (q && visible < total) ? (visible + ' von ' + total) : '';
-        if (noResults)
-          noResults.style.display = (q && visible === 0) ? 'block' : 'none';
+      /* ── Position des Dropdowns berechnen (position:fixed) ── */
+      function reposition() {
+        var r = inp.getBoundingClientRect();
+        drop.style.left  = r.left  + 'px';
+        drop.style.top   = (r.bottom + 6) + 'px';
+        drop.style.width = r.width + 'px';
       }
 
-      /* ── Dropdown befüllen ────────────────────── */
-      function showDropdown(q) {
-        if (!q) { hideDropdown(); return; }
+      /* ── Dropdown anzeigen ─────────────────────────────── */
+      function show(q) {
+        if (!q) { hide(); return; }
 
-        var hits = toolLinks.filter(function (link) {
-          return (link.getAttribute('data-name') || '').indexOf(q) >= 0
-            || (link.getAttribute('data-cat')  || '').indexOf(q) >= 0
-            || (link.getAttribute('data-tags') || '').indexOf(q) >= 0;
-        }).slice(0, 7);
+        var hits = all.filter(function(l) {
+          return (l.getAttribute('data-name') || '').indexOf(q) !== -1
+              || (l.getAttribute('data-cat')  || '').indexOf(q) !== -1
+              || (l.getAttribute('data-tags') || '').indexOf(q) !== -1;
+        }).slice(0, 8);
 
-        if (!hits.length) { hideDropdown(); return; }
+        if (!hits.length) { hide(); return; }
 
-        dropdown.innerHTML = '';
-        dropItems = [];
-        activeIdx = -1;
+        drop.innerHTML = '';
 
-        hits.forEach(function (link, i) {
-          var name    = link.getAttribute('data-name') || '';
-          var cat     = link.getAttribute('data-cat')  || '';
+        hits.forEach(function(link) {
+          var display = link.getAttribute('data-display') || link.getAttribute('data-name') || '';
           var tagline = link.getAttribute('data-tagline') || '';
-          var isFree  = link.getAttribute('data-free') === '1';
+          var cat     = link.getAttribute('data-cat')  || '';
+          var free    = link.getAttribute('data-free') === '1';
           var href    = link.getAttribute('href') || '#';
-          var icon    = CAT_ICONS[cat] || '🤖';
+          var icon    = ICONS[cat] || '🤖';
 
-          var item = document.createElement('a');
-          item.href = href;
-          item.style.cssText =
-            'display:flex;align-items:center;gap:0.85rem;' +
-            'padding:0.72rem 1.1rem;text-decoration:none;' +
-            'border-bottom:1px solid rgba(255,255,255,0.05);' +
-            'transition:background 0.1s;cursor:pointer;color:inherit;';
+          var a = document.createElement('a');
+          a.href = href;
+          a.style.cssText =
+            'display:flex;align-items:center;gap:12px;padding:11px 16px;' +
+            'text-decoration:none;color:inherit;cursor:pointer;' +
+            'border-bottom:1px solid rgba(255,255,255,0.04);' +
+            'transition:background 0.1s;';
 
-          var nameDisplay = name.charAt(0).toUpperCase() + name.slice(1);
-
-          item.innerHTML =
-            '<span style="font-size:1.35rem;flex-shrink:0;width:26px;text-align:center">' + icon + '</span>' +
-            '<span style="flex:1;min-width:0;">' +
-              '<span style="display:block;font-weight:600;font-size:0.93rem;color:#f1f5f9">' + nameDisplay + '</span>' +
-              '<span style="display:block;font-size:0.75rem;color:#94a3b8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:300px">' + tagline + '</span>' +
+          a.innerHTML =
+            '<span style="font-size:1.3rem;width:24px;text-align:center;flex-shrink:0">' + icon + '</span>' +
+            '<span style="flex:1;min-width:0">' +
+              '<b style="display:block;font-size:0.92rem;color:#f1f5f9;font-weight:600">' + display + '</b>' +
+              '<span style="display:block;font-size:0.73rem;color:#94a3b8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + tagline + '</span>' +
             '</span>' +
-            (isFree ? '<span style="font-size:0.62rem;padding:0.15rem 0.45rem;border-radius:4px;background:rgba(34,197,94,0.15);color:#4ade80;border:1px solid rgba(34,197,94,0.25);white-space:nowrap;flex-shrink:0">Free</span>' : '') +
-            '<span style="font-size:0.8rem;color:#64748b;flex-shrink:0;margin-left:0.25rem">→</span>';
+            (free ? '<span style="flex-shrink:0;font-size:0.6rem;padding:2px 7px;border-radius:4px;background:rgba(34,197,94,0.15);color:#4ade80;border:1px solid rgba(34,197,94,0.3)">Free</span>' : '') +
+            '<span style="flex-shrink:0;color:#475569;font-size:0.8rem">→</span>';
 
-          (function(idx) {
-            item.addEventListener('mouseenter', function () { setActive(idx); });
-            item.addEventListener('mouseleave', function () { setActive(-1); });
-          })(i);
+          a.addEventListener('mouseover',  function() { a.style.background = 'rgba(124,106,247,0.12)'; });
+          a.addEventListener('mouseout',   function() { a.style.background = ''; });
 
-          dropdown.appendChild(item);
-          dropItems.push(item);
+          drop.appendChild(a);
         });
 
-        var totalHits = toolLinks.filter(function (link) {
-          return (link.getAttribute('data-name') || '').indexOf(q) >= 0
-            || (link.getAttribute('data-cat')  || '').indexOf(q) >= 0
-            || (link.getAttribute('data-tags') || '').indexOf(q) >= 0;
-        }).length;
-
-        if (totalHits > 7) {
-          var footer = document.createElement('div');
-          footer.style.cssText = 'padding:0.55rem 1.1rem;font-size:0.75rem;color:#64748b;text-align:center;border-top:1px solid rgba(255,255,255,0.05)';
-          footer.textContent = '+' + (totalHits - 7) + ' weitere Treffer im Grid unten';
-          dropdown.appendChild(footer);
-        }
-
-        /* Position berechnen — position:fixed relativ zum Viewport */
-        positionDropdown();
-        dropdown.style.display = 'block';
-        if (escHint) escHint.style.display = 'inline-flex';
+        reposition();
+        drop.style.display = 'block';
+        if (esc) esc.style.display = 'inline-flex';
       }
 
-      function positionDropdown() {
-        var rect = searchInput.getBoundingClientRect();
-        dropdown.style.top    = (rect.bottom + 8) + 'px';
-        dropdown.style.left   = rect.left + 'px';
-        dropdown.style.width  = rect.width + 'px';
+      /* ── Dropdown verstecken ───────────────────────────── */
+      function hide() {
+        drop.style.display = 'none';
+        if (esc) esc.style.display = 'none';
       }
 
-      function hideDropdown() {
-        dropdown.style.display = 'none';
-        if (escHint) escHint.style.display = 'none';
-        activeIdx = -1;
-        dropItems = [];
-      }
-
-      function setActive(i) {
-        dropItems.forEach(function (el, idx) {
-          el.style.background = idx === i ? 'rgba(124,106,247,0.14)' : '';
-        });
-        activeIdx = i;
-      }
-
-      /* ── Events ───────────────────────────────── */
-      searchInput.addEventListener('input', function () {
-        var q = searchInput.value.toLowerCase().trim();
-        filterGrid(q);
-        showDropdown(q);
+      /* ── Events ────────────────────────────────────────── */
+      inp.addEventListener('input', function() {
+        show(inp.value.toLowerCase().trim());
       });
 
-      searchInput.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowDown') {
+      inp.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') { inp.value = ''; hide(); }
+      });
+
+      /* Klick außerhalb → schließen (mousedown damit Klick auf Item noch durchkommt) */
+      document.addEventListener('mousedown', function(e) {
+        if (e.target !== inp && !drop.contains(e.target)) hide();
+      });
+
+      window.addEventListener('scroll',  hide, { passive: true });
+      window.addEventListener('resize',  function() { if (drop.style.display !== 'none') reposition(); });
+
+      if (esc) {
+        esc.addEventListener('mousedown', function(e) {
           e.preventDefault();
-          if (dropItems.length) setActive(Math.min(activeIdx + 1, dropItems.length - 1));
-        } else if (e.key === 'ArrowUp') {
-          e.preventDefault();
-          if (dropItems.length) setActive(Math.max(activeIdx - 1, 0));
-        } else if (e.key === 'Enter' && activeIdx >= 0 && dropItems[activeIdx]) {
-          e.preventDefault();
-          window.location.href = dropItems[activeIdx].getAttribute('href');
-        } else if (e.key === 'Escape') {
-          searchInput.value = '';
-          hideDropdown();
-          filterGrid('');
-        }
-      });
-
-      /* Schließen bei Klick außerhalb — mousedown statt click,
-         damit das Dropdown weg ist BEVOR das Ziel den click-Event bekommt */
-      document.addEventListener('mousedown', function (e) {
-        var t = e.target;
-        if (t !== searchInput && !dropdown.contains(t)) {
-          hideDropdown();
-        }
-      });
-
-      /* Beim Scrollen Dropdown schließen */
-      window.addEventListener('scroll', hideDropdown, { passive: true });
-
-      /* Beim Resize neu positionieren */
-      window.addEventListener('resize', function () {
-        if (dropdown.style.display !== 'none') positionDropdown();
-      });
-
-      if (escHint) {
-        escHint.addEventListener('mousedown', function (e) {
-          e.preventDefault(); /* verhindert blur des Inputs */
-          searchInput.value = '';
-          hideDropdown();
-          filterGrid('');
-          searchInput.focus();
+          inp.value = '';
+          hide();
+          inp.focus();
         });
       }
     }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initSearch);
+      document.addEventListener('DOMContentLoaded', init);
     } else {
-      initSearch();
+      init();
     }
   })();
   </script>
