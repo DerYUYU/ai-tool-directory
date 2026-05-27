@@ -47,6 +47,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Hidden subject -->
         <input type="hidden" name="_subject" value="Neues Tool eingereicht: AI Tool Directory" />
         <input type="hidden" name="_next" value="" />
+        <!-- Honeypot: Bots füllen das aus → Formspree blockiert automatisch -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
         <!-- Tool Name -->
         <div>

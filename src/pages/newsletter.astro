@@ -63,6 +63,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           action="https://formspree.io/f/xojbpode"
           method="POST">
           <input type="hidden" name="_subject" value="Newsletter Anmeldung — AI Tool Directory" />
+          <!-- Honeypot: Bots füllen das aus → Formspree blockiert automatisch -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
           <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center">
             <input
