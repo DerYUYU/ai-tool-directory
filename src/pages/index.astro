@@ -452,8 +452,19 @@ function renderStars(rating: number) {
         if (e.target !== inp && !drop.contains(e.target)) hide();
       });
 
-      window.addEventListener('scroll',  hide, { passive: true });
-      window.addEventListener('resize',  function() { if (drop.style.display !== 'none') reposition(); });
+      /* Seite scrollt → Dropdown schließen (nur wenn Maus NICHT über Dropdown) */
+      window.addEventListener('scroll', function() {
+        if (!drop.matches(':hover')) hide();
+      }, { passive: true });
+
+      /* Mausrad über Dropdown → Dropdown scrollen, Seite NICHT scrollen */
+      drop.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        drop.scrollTop += e.deltaY;
+      }, { passive: false });
+
+      window.addEventListener('resize', function() { if (drop.style.display !== 'none') reposition(); });
 
       if (esc) {
         esc.addEventListener('mousedown', function(e) {
