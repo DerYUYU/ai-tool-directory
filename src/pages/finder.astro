@@ -338,6 +338,120 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div><!-- /.step-wrap -->
 </div><!-- /.container -->
 
+<!-- ══════════════════════════════════════════════════════════
+     BROWSE BY CATEGORY
+══════════════════════════════════════════════════════════ -->
+<section style="padding:4rem 0 3rem;border-top:1px solid var(--border);margin-top:1rem">
+  <div class="container">
+    <h2 style="text-align:center;font-size:1.4rem;font-weight:700;margin-bottom:0.5rem">
+      Oder direkt nach Kategorie browsen
+    </h2>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.9rem;margin-bottom:2.25rem">
+      Alle KI-Tools sortiert nach Einsatzgebiet
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:0.75rem;max-width:800px;margin:0 auto">
+      <a href="/categories/Writing"      class="cat-tile"><span class="ct-icon">✍️</span><span>Writing</span></a>
+      <a href="/categories/Coding"       class="cat-tile"><span class="ct-icon">💻</span><span>Coding</span></a>
+      <a href="/categories/Design"       class="cat-tile"><span class="ct-icon">🎨</span><span>Design</span></a>
+      <a href="/categories/Video"        class="cat-tile"><span class="ct-icon">🎬</span><span>Video</span></a>
+      <a href="/categories/Research"     class="cat-tile"><span class="ct-icon">🔬</span><span>Research</span></a>
+      <a href="/categories/Productivity" class="cat-tile"><span class="ct-icon">⚡</span><span>Productivity</span></a>
+      <a href="/categories/Business"     class="cat-tile"><span class="ct-icon">💼</span><span>Business</span></a>
+      <a href="/categories/Audio"        class="cat-tile"><span class="ct-icon">🎵</span><span>Audio</span></a>
+    </div>
+
+    <div style="text-align:center;margin-top:1.75rem">
+      <a href="/" class="btn btn-ghost" style="font-size:0.85rem;padding:0.55rem 1.4rem">
+        Alle Tools ansehen →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     WHY AI TOOL DIRECTORY + NEWSLETTER
+══════════════════════════════════════════════════════════ -->
+<section style="padding:3rem 0 5rem">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto">
+
+      <!-- Trust Block -->
+      <div class="card" style="padding:2rem;display:flex;flex-direction:column;gap:1.25rem">
+        <div style="font-size:1.75rem">🏆</div>
+        <h3 style="font-size:1.05rem;font-weight:700;margin:0">Warum AI Tool Directory?</h3>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.65rem">
+          <li style="display:flex;gap:0.65rem;align-items:flex-start;font-size:0.88rem;color:var(--text-muted)">
+            <span style="color:var(--green);flex-shrink:0">✓</span>
+            <span><strong style="color:var(--text)">40+ Tools</strong> — kuratiert & täglich aktualisiert</span>
+          </li>
+          <li style="display:flex;gap:0.65rem;align-items:flex-start;font-size:0.88rem;color:var(--text-muted)">
+            <span style="color:var(--green);flex-shrink:0">✓</span>
+            <span><strong style="color:var(--text)">Ehrliche Bewertungen</strong> — keine bezahlten Platzierungen</span>
+          </li>
+          <li style="display:flex;gap:0.65rem;align-items:flex-start;font-size:0.88rem;color:var(--text-muted)">
+            <span style="color:var(--green);flex-shrink:0">✓</span>
+            <span><strong style="color:var(--text)">Preise & Free Tiers</strong> — sofort vergleichbar</span>
+          </li>
+          <li style="display:flex;gap:0.65rem;align-items:flex-start;font-size:0.88rem;color:var(--text-muted)">
+            <span style="color:var(--green);flex-shrink:0">✓</span>
+            <span><strong style="color:var(--text)">Auf Deutsch</strong> — das größte deutschsprachige KI-Verzeichnis</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Block -->
+      <div class="card" style="padding:2rem;display:flex;flex-direction:column;gap:1rem;background:linear-gradient(135deg,rgba(124,106,247,0.08),rgba(34,211,238,0.04))">
+        <div style="font-size:1.75rem">📬</div>
+        <h3 style="font-size:1.05rem;font-weight:700;margin:0">Neue Tools per Newsletter</h3>
+        <p style="font-size:0.87rem;color:var(--text-muted);margin:0;line-height:1.6">
+          Wöchentlich die besten neuen KI-Tools — direkt in dein Postfach.
+          Kein Spam, jederzeit abmeldbar.
+        </p>
+        <a href="/newsletter" class="btn btn-primary" style="font-size:0.85rem;padding:0.6rem 1.2rem;text-align:center">
+          📬 Kostenlos abonnieren
+        </a>
+        <p style="font-size:0.72rem;color:var(--text-dim);margin:0;text-align:center">
+          Bereits angemeldet? <a href="/" style="color:var(--accent)">Alle Tools entdecken →</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .cat-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.1rem 0.75rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.83rem;
+    font-weight: 500;
+    transition: all 0.18s ease;
+    text-align: center;
+  }
+  .cat-tile:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+    color: var(--text);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(124,106,247,0.15);
+  }
+  .ct-icon { font-size: 1.6rem; }
+  @media (max-width: 600px) {
+    section > .container > div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+
 <script is:inline>
 (function () {
 
