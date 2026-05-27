@@ -21,6 +21,7 @@ const tools = defineCollection({
     websiteUrl: z.string().url(),
     logoUrl: z.string().optional(),
     featured: z.boolean().default(false),
+    trending: z.boolean().default(false),
     tags: z.array(z.string()).default([]),
     addedDate: z.coerce.date(),
     lastUpdated: z.coerce.date().optional(),

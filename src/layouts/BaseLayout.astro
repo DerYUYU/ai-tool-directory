@@ -10,13 +10,14 @@ interface Props {
 
 const {
   title,
-  description = 'Discover and compare the best AI tools. Find the perfect AI assistant for writing, coding, design, and more.',
+  description = 'Das größte KI-Tool Verzeichnis. Vergleiche ChatGPT, Midjourney, GitHub Copilot und 100+ KI-Tools mit echten Bewertungen und Preisvergleich.',
   ogImage = '/og-default.png',
   canonicalUrl,
 } = Astro.props;
 
 const siteTitle = `${title} | AI Tool Directory`;
 const canonical = canonicalUrl || Astro.url.href;
+const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
@@ -31,6 +32,7 @@ const canonical = canonicalUrl || Astro.url.href;
   <title>{siteTitle}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:title" content={siteTitle} />
@@ -38,6 +40,8 @@ const canonical = canonicalUrl || Astro.url.href;
   <meta property="og:image" content={ogImage} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="AI Tool Directory" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -45,65 +49,142 @@ const canonical = canonicalUrl || Astro.url.href;
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
 
-  <!-- Schema.org WebSite -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "AI Tool Directory",
-      "url": "https://aitooldir.vercel.app",
-      "description": "Discover and compare the best AI tools",
+      "url": "https://ai-tool-directory-orpin.vercel.app",
+      "description": "Das größte KI-Tool Verzeichnis — kostenlos, affiliate-frei, täglich aktualisiert",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://aitooldir.vercel.app/?q={search_term_string}",
+        "target": "https://ai-tool-directory-orpin.vercel.app/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
   </script>
 
-  <!-- Google Fonts (Inter) -->
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- CSS injected by Astro bundler via frontmatter import -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- ═══════════════════════════════════════════ NAV ══ -->
   <nav>
     <div class="container nav-inner">
-      <a href="/" class="nav-logo">🤖 AI<span>Directory</span></a>
+
+      <!-- Logo -->
+      <a href="/" class="nav-logo">
+        <span>🤖</span>
+        <span>AI<span class="logo-accent">Tools</span></span>
+      </a>
+
+      <!-- Links -->
       <div class="nav-links">
-        <a href="/categories/Writing">Writing</a>
-        <a href="/categories/Coding">Coding</a>
-        <a href="/categories/Design">Design</a>
-        <a href="/categories/Productivity">Productivity</a>
-        <a href="/categories/Business">Business</a>
-        <a href="/compare">Compare</a>
-        <a href="/newsletter">Newsletter</a>
+        <a href="/categories/Writing"     class={currentPath.includes('Writing')     ? 'active' : ''}>Writing</a>
+        <a href="/categories/Coding"      class={currentPath.includes('Coding')      ? 'active' : ''}>Coding</a>
+        <a href="/categories/Design"      class={currentPath.includes('Design')      ? 'active' : ''}>Design</a>
+        <a href="/categories/Productivity" class={currentPath.includes('Productivity') ? 'active' : ''}>Productivity</a>
+        <a href="/categories/Video"       class={currentPath.includes('Video')       ? 'active' : ''}>Video</a>
+        <a href="/categories/Business"    class={currentPath.includes('Business')    ? 'active' : ''}>Business</a>
+        <a href="/categories/Research"    class={currentPath.includes('Research')    ? 'active' : ''}>Research</a>
+      </div>
+
+      <!-- CTA -->
+      <div class="nav-cta">
+        <a href="/newsletter" class="btn btn-ghost" style="padding:0.5rem 1rem;font-size:0.82rem">
+          📬 Newsletter
+        </a>
+        <a href="/submit" class="btn btn-primary" style="padding:0.5rem 1.1rem;font-size:0.82rem">
+          + Tool einreichen
+        </a>
       </div>
     </div>
   </nav>
 
+  <!-- ═══════════════════════════════════════════ MAIN ══ -->
   <main>
     <slot />
   </main>
 
+  <!-- ═══════════════════════════════════════════ FOOTER ══ -->
   <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong>🤖 AI Tool Directory</strong> — Alle KI-Tools auf einen Blick
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-col">
+          <div class="footer-logo">🤖 AI<span class="logo-accent">Tools</span></div>
+          <p style="font-size:0.85rem;line-height:1.7;max-width:280px;margin-bottom:1.5rem">
+            Das größte deutschsprachige KI-Tool Verzeichnis.
+            Täglich aktualisiert — ehrlich, ohne versteckte Empfehlungen.
+          </p>
+          <div style="display:flex;gap:0.75rem">
+            <a href="/newsletter" class="btn btn-outline" style="font-size:0.78rem;padding:0.4rem 0.9rem">📬 Newsletter</a>
+            <a href="/submit"     class="btn btn-ghost"   style="font-size:0.78rem;padding:0.4rem 0.9rem">+ Tool einreichen</a>
+          </div>
+        </div>
+
+        <!-- Kategorien -->
+        <div class="footer-col">
+          <h4>Kategorien</h4>
+          <a href="/categories/Writing">✍️ Writing</a>
+          <a href="/categories/Coding">💻 Coding</a>
+          <a href="/categories/Design">🎨 Design</a>
+          <a href="/categories/Video">🎬 Video</a>
+          <a href="/categories/Audio">🎵 Audio</a>
+          <a href="/categories/Productivity">⚡ Productivity</a>
+          <a href="/categories/Business">💼 Business</a>
+          <a href="/categories/Research">🔬 Research</a>
+        </div>
+
+        <!-- Top Tools -->
+        <div class="footer-col">
+          <h4>Top Tools</h4>
+          <a href="/tools/chatgpt">ChatGPT</a>
+          <a href="/tools/claude">Claude</a>
+          <a href="/tools/midjourney">Midjourney</a>
+          <a href="/tools/github-copilot">GitHub Copilot</a>
+          <a href="/tools/cursor">Cursor</a>
+          <a href="/tools/perplexity">Perplexity</a>
+          <a href="/tools/elevenlabs">ElevenLabs</a>
+          <a href="/tools/runway-ml">Runway ML</a>
+        </div>
+
+        <!-- Seiten -->
+        <div class="footer-col">
+          <h4>Mehr</h4>
+          <a href="/newsletter">📬 Newsletter</a>
+          <a href="/submit">Tool einreichen</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
       </div>
-      <div style="display:flex;gap:2rem">
-        <a href="/about">About</a>
-        <a href="/submit">Tool einreichen</a>
-        <a href="/newsletter">Newsletter</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </div>
-      <div style="font-size:0.75rem;color:var(--text-muted)">
-        Diese Seite enthält Affiliate-Links. Wir erhalten Provision ohne Mehrkosten für dich.
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          <strong style="color:var(--text)">🤖 AI Tool Directory</strong>
+          &nbsp;— © 2026 · Made with ❤️ in Deutschland
+        </div>
+        <div style="display:flex;gap:1.5rem;align-items:center">
+          <span style="color:var(--text-dim)">Diese Seite enthält Affiliate-Links.</span>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Footer logo accent style -->
+  <style>
+    .footer-logo .logo-accent {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
 
 </body>
 </html>
