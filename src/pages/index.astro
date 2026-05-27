@@ -333,37 +333,45 @@ function renderStars(rating: number) {
   </section>
 
   <!-- ════════════════════════════════════════ LIVE SEARCH ══ -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('search') as HTMLInputElement | null;
-      const toolLinks   = document.querySelectorAll<HTMLElement>('.tool-link');
-      const noResults   = document.getElementById('no-results');
-      const resultCount = document.getElementById('result-count');
+  <script is:inline>
+    (function () {
+      function initSearch() {
+        var searchInput = document.getElementById('search');
+        var toolLinks   = document.querySelectorAll('.tool-link');
+        var noResults   = document.getElementById('no-results');
+        var resultCount = document.getElementById('result-count');
 
-      function updateCount(visible: number, total: number) {
-        if (resultCount) {
-          resultCount.textContent = visible < total ? `${visible} von ${total} Tools` : '';
-        }
+        if (!searchInput) return;
+
+        searchInput.addEventListener('input', function () {
+          var q = searchInput.value.toLowerCase().trim();
+          var visible = 0;
+
+          toolLinks.forEach(function (link) {
+            var name = link.dataset.name || '';
+            var cat  = link.dataset.cat  || '';
+            var tags = link.dataset.tags || '';
+            var match = !q || name.includes(q) || cat.includes(q) || tags.includes(q);
+            link.style.display = match ? '' : 'none';
+            if (match) visible++;
+          });
+
+          var total = toolLinks.length;
+          if (resultCount) {
+            resultCount.textContent = visible < total ? (visible + ' von ' + total + ' Tools') : '';
+          }
+          if (noResults) {
+            noResults.style.display = (q && visible === 0) ? 'block' : 'none';
+          }
+        });
       }
 
-      searchInput?.addEventListener('input', () => {
-        const q = (searchInput.value ?? '').toLowerCase().trim();
-        let visible = 0;
-
-        toolLinks.forEach(link => {
-          const name = link.dataset.name ?? '';
-          const cat  = link.dataset.cat  ?? '';
-          const tags = link.dataset.tags ?? '';
-          const match = !q || name.includes(q) || cat.includes(q) || tags.includes(q);
-          link.style.display = match ? '' : 'none';
-          if (match) visible++;
-        });
-
-        const total = toolLinks.length;
-        updateCount(visible, total);
-        if (noResults) noResults.style.display = (q && visible === 0) ? 'block' : 'none';
-      });
-    });
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSearch);
+      } else {
+        initSearch();
+      }
+    })();
   </script>
 
 </BaseLayout>
