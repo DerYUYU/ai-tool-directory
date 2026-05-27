@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# stray shell artifacts (single chars, punctuation)
+[,]
+[0-9][)]
