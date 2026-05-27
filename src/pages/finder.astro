@@ -1,0 +1,560 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="KI-Finder — Finde dein perfektes KI-Tool"
+  description="Beantworte 3 kurze Fragen und erhalte sofort persönliche KI-Tool-Empfehlungen — kostenlos, ohne Anmeldung."
+>
+
+<style>
+  /* ── Hero ── */
+  .finder-hero {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    animation: fadeUp 0.6s ease both;
+  }
+  .finder-hero-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    animation: float 4s ease-in-out infinite;
+  }
+  .finder-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    background: var(--grad-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.75rem;
+  }
+  .finder-hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── Progress ── */
+  .progress-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 2rem auto 0;
+    max-width: 280px;
+  }
+  .prog-bar {
+    flex: 1;
+    height: 4px;
+    border-radius: 99px;
+    background: var(--border);
+    transition: background 0.4s ease;
+  }
+  .prog-bar.active { background: var(--accent); }
+  .prog-bar.done   { background: var(--green); }
+  .step-label-text {
+    display: block;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+
+  /* ── Step container ── */
+  .step-wrap {
+    max-width: 700px;
+    margin: 2rem auto 5rem;
+    padding: 0 1rem;
+  }
+  .step-panel { display: none; }
+  .step-panel.active {
+    display: block;
+    animation: fadeUp 0.35s ease both;
+  }
+
+  .step-q {
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+  .step-hint {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* ── Choices grid ── */
+  .choices {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    gap: 0.7rem;
+  }
+  .choice-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    user-select: none;
+    line-height: 1.3;
+  }
+  .choice-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(124,106,247,0.18);
+  }
+  .choice-btn.selected {
+    background: var(--accent-dim);
+    border-color: var(--border-bright);
+    color: var(--accent-light);
+  }
+  .choice-icon { font-size: 1.9rem; }
+
+  /* ── Back btn ── */
+  .btn-back {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    padding: 0.45rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    transition: all 0.18s;
+  }
+  .btn-back:hover { border-color: var(--border-bright); color: var(--text); }
+
+  /* ── Results ── */
+  .results-headline {
+    text-align: center;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    font-weight: 800;
+    margin-bottom: 0.35rem;
+  }
+  .results-sub {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+  .result-list { display: flex; flex-direction: column; gap: 0.85rem; }
+
+  .result-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.18s ease;
+  }
+  .result-card:hover {
+    border-color: var(--accent);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+  }
+  .result-card.gold {
+    border-color: rgba(124,106,247,0.45);
+    background: linear-gradient(135deg, rgba(124,106,247,0.08) 0%, rgba(34,211,238,0.03) 100%);
+  }
+  .result-rank {
+    font-size: 1.6rem;
+    width: 34px;
+    flex-shrink: 0;
+    text-align: center;
+    margin-top: 2px;
+  }
+  .result-body { flex: 1; min-width: 0; }
+  .result-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.15rem;
+  }
+  .result-tagline {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.55rem;
+  }
+  .result-reason {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 0.6rem;
+  }
+  .result-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+  .tag {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-weight: 600;
+  }
+  .tag-free {
+    background: rgba(34,197,94,0.12);
+    color: var(--green);
+    border: 1px solid rgba(34,197,94,0.25);
+  }
+  .tag-price {
+    background: var(--accent-dim);
+    color: var(--accent-light);
+    border: 1px solid rgba(124,106,247,0.2);
+  }
+  .result-arrow {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    align-self: center;
+    flex-shrink: 0;
+    transition: transform 0.18s;
+  }
+  .result-card:hover .result-arrow { transform: translateX(3px); color: var(--accent-light); }
+
+  .restart-row { text-align: center; margin-top: 2.5rem; }
+  .btn-restart {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .btn-restart:hover { border-color: var(--accent); color: var(--accent-light); }
+
+  /* ── No results ── */
+  .no-results {
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--text-muted);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .no-results a { color: var(--accent-light); }
+
+  @media (max-width: 480px) {
+    .choices { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+
+<!-- ── Hero ── -->
+<div class="container">
+  <div class="finder-hero">
+    <span class="finder-hero-icon">🤖</span>
+    <h1>KI-Finder</h1>
+    <p>
+      3 kurze Fragen — ich empfehle dir die besten KI-Tools
+      für deinen Use-Case. Kostenlos, sofort, ohne Anmeldung.
+    </p>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+      <div class="prog-bar active" id="p1"></div>
+      <div class="prog-bar" id="p2"></div>
+      <div class="prog-bar" id="p3"></div>
+      <div class="prog-bar" id="pdone"></div>
+    </div>
+    <span class="step-label-text" id="step-label">Schritt 1 von 3</span>
+  </div>
+
+  <!-- ── Steps ── -->
+  <div class="step-wrap">
+
+    <!-- Step 1 -->
+    <div class="step-panel active" id="step-1">
+      <h2 class="step-q">Was willst du mit KI machen?</h2>
+      <p class="step-hint">Wähle deinen wichtigsten Use-Case</p>
+      <div class="choices" id="c1">
+        <button class="choice-btn" data-v="writing">   <span class="choice-icon">✍️</span>Texte schreiben</button>
+        <button class="choice-btn" data-v="coding">    <span class="choice-icon">💻</span>Code schreiben</button>
+        <button class="choice-btn" data-v="design">    <span class="choice-icon">🎨</span>Bilder & Design</button>
+        <button class="choice-btn" data-v="video">     <span class="choice-icon">🎬</span>Videos erstellen</button>
+        <button class="choice-btn" data-v="research">  <span class="choice-icon">🔬</span>Recherchieren</button>
+        <button class="choice-btn" data-v="productivity"><span class="choice-icon">⚡</span>Produktiver werden</button>
+        <button class="choice-btn" data-v="business">  <span class="choice-icon">💼</span>Business automatisieren</button>
+        <button class="choice-btn" data-v="devtools">  <span class="choice-icon">🚀</span>KI-App bauen</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-panel" id="step-2">
+      <button class="btn-back" id="back-2">← Zurück</button>
+      <h2 class="step-q">Wer bist du?</h2>
+      <p class="step-hint">Damit ich passende Tools empfehlen kann</p>
+      <div class="choices" id="c2">
+        <button class="choice-btn" data-v="privatperson"><span class="choice-icon">👤</span>Privatperson</button>
+        <button class="choice-btn" data-v="freelancer">  <span class="choice-icon">💼</span>Freelancer</button>
+        <button class="choice-btn" data-v="startup">     <span class="choice-icon">🚀</span>Startup / Team</button>
+        <button class="choice-btn" data-v="unternehmen"> <span class="choice-icon">🏢</span>Unternehmen</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-panel" id="step-3">
+      <button class="btn-back" id="back-3">← Zurück</button>
+      <h2 class="step-q">Was ist dein monatliches Budget?</h2>
+      <p class="step-hint">Ich filtere die besten Tools für dich</p>
+      <div class="choices" id="c3">
+        <button class="choice-btn" data-v="0">    <span class="choice-icon">🆓</span>Nur kostenlos</button>
+        <button class="choice-btn" data-v="20">   <span class="choice-icon">💶</span>Bis €20 / Monat</button>
+        <button class="choice-btn" data-v="100">  <span class="choice-icon">💰</span>Bis €100 / Monat</button>
+        <button class="choice-btn" data-v="9999"> <span class="choice-icon">♾️</span>Budget egal</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="step-panel" id="step-results">
+      <h2 class="results-headline">Deine Top-Empfehlungen 🎯</h2>
+      <p class="results-sub" id="res-sub"></p>
+      <div class="result-list" id="res-list"></div>
+      <div class="restart-row">
+        <button class="btn-restart" id="btn-restart">↺ Neu starten</button>
+      </div>
+    </div>
+
+  </div><!-- /.step-wrap -->
+</div><!-- /.container -->
+
+<script is:inline>
+(function () {
+
+  /* ══════════════════════════════════════════════════════════════
+     TOOL DATABASE
+     cats: array of categories this tool belongs to
+     personas: ['all'] or specific ['privatperson','freelancer','startup','unternehmen']
+     free: has a usable free tier
+     price: starting paid price (€/mo, approx)
+  ══════════════════════════════════════════════════════════════ */
+  var DB = [
+    /* ─── Writing ─── */
+    { id:'chatgpt',         name:'ChatGPT',           tagline:'Universeller KI-Assistent',        icon:'💬', href:'/tools/chatgpt',          free:true,  price:20,  cats:['writing','coding','research','productivity'], personas:['all'],                                reason:'Der vielseitigste Allround-Assistent — schreibt Texte, erklärt Code, beantwortet jede Frage.' },
+    { id:'claude',          name:'Claude',             tagline:'Bester KI für lange Texte',        icon:'🤖', href:'/tools/claude',            free:true,  price:20,  cats:['writing','research','coding'],               personas:['freelancer','startup'],               reason:'Unschlagbar bei langen Dokumenten und präzisen, natürlichen Texten.' },
+    { id:'gemini',          name:'Gemini',             tagline:'Googles KI mit Web-Zugang',        icon:'✨', href:'/tools/gemini',            free:true,  price:20,  cats:['writing','research','coding'],               personas:['all'],                                reason:'Kostenlos, aktuelle Web-Infos und Google Workspace Integration.' },
+    { id:'deepseek',        name:'DeepSeek',           tagline:'Kostenloser GPT-4-Konkurrent',     icon:'🔬', href:'/tools/deepseek',          free:true,  price:0,   cats:['writing','coding','research'],               personas:['privatperson','freelancer'],          reason:'Vollkommen kostenlos und extrem leistungsfähig — die beste Gratis-Alternative.' },
+    { id:'jasper-ai',       name:'Jasper AI',          tagline:'KI für Marketing-Texte',           icon:'📢', href:'/tools/jasper-ai',         free:false, price:49,  cats:['writing','business'],                        personas:['startup','unternehmen'],              reason:'Speziell für Marketing-Content — hunderte Templates für Ads, Blog und Social Media.' },
+    { id:'copy-ai',         name:'Copy.ai',            tagline:'Schnelle Marketing-Texte',         icon:'📝', href:'/tools/copy-ai',           free:true,  price:49,  cats:['writing','business'],                        personas:['freelancer','startup'],               reason:'Hunderte Vorlagen für Werbetexte und Social Media Posts — sofort einsatzbereit.' },
+    { id:'writesonic',      name:'Writesonic',         tagline:'SEO-optimierte Artikel',           icon:'📖', href:'/tools/writesonic',        free:true,  price:20,  cats:['writing'],                                   personas:['freelancer','startup'],               reason:'Speziell für SEO-Artikel — integrierte Keyword-Optimierung für besseres Google-Ranking.' },
+    { id:'grammarly',       name:'Grammarly',          tagline:'KI-Rechtschreibung & Stil',        icon:'✅', href:'/tools/grammarly',         free:true,  price:12,  cats:['writing'],                                   personas:['privatperson','freelancer'],          reason:'Verbessert Grammatik und Schreibstil in Echtzeit — läuft in jedem Browser.' },
+    { id:'wordtune',        name:'Wordtune',           tagline:'Texte umschreiben & verbessern',   icon:'✏️', href:'/tools/wordtune',          free:true,  price:10,  cats:['writing'],                                   personas:['privatperson','freelancer'],          reason:'Macht jeden Satz klarer und professioneller — perfekt für Englisch.' },
+    /* ─── Coding ─── */
+    { id:'github-copilot',  name:'GitHub Copilot',     tagline:'KI direkt im Code-Editor',         icon:'💻', href:'/tools/github-copilot',    free:false, price:10,  cats:['coding'],                                    personas:['freelancer','startup','unternehmen'], reason:'Direkt in VS Code integriert — vervollständigt Code in Echtzeit, spart Stunden täglich.' },
+    { id:'cursor',          name:'Cursor',             tagline:'Der KI-Code-Editor',               icon:'⚡', href:'/tools/cursor',            free:true,  price:20,  cats:['coding'],                                    personas:['freelancer','startup'],               reason:'Schreibt, erklärt und refactort ganzen Code auf einmal — besser als Copilot.' },
+    { id:'windsurf',        name:'Windsurf',           tagline:'Autonomes KI-Coding',              icon:'🏄', href:'/tools/windsurf',          free:true,  price:15,  cats:['coding'],                                    personas:['freelancer','startup'],               reason:'Neuester KI-Editor — autonomer als Cursor, ideal für komplexe Features.' },
+    { id:'bolt-new',        name:'Bolt.new',           tagline:'Web-Apps ohne Setup bauen',        icon:'⚡', href:'/tools/bolt-new',          free:true,  price:20,  cats:['coding','devtools'],                         personas:['privatperson','freelancer'],          reason:'Komplette Web-Apps per Prompt im Browser — kein Node.js, kein Setup nötig.' },
+    { id:'lovable',         name:'Lovable',            tagline:'Apps ohne Code erstellen',         icon:'💖', href:'/tools/lovable',           free:true,  price:20,  cats:['coding','devtools'],                         personas:['privatperson','freelancer','startup'], reason:'Vollständige Web-Apps per Chat — direkt deployen ohne eine Zeile Code zu schreiben.' },
+    { id:'replit-ai',       name:'Replit AI',          tagline:'Coden ohne Installation',          icon:'🔧', href:'/tools/replit-ai',         free:true,  price:25,  cats:['coding'],                                    personas:['privatperson','freelancer'],          reason:'Coding im Browser ohne Installation — perfekt für Einsteiger und schnelle Prototypen.' },
+    { id:'v0-dev',          name:'v0.dev',             tagline:'UI-Komponenten per KI',            icon:'🎯', href:'/tools/v0-dev',            free:true,  price:20,  cats:['coding','design'],                           personas:['freelancer','startup'],               reason:"Vercel's KI für React-Komponenten — professionelle UI in Sekunden generiert." },
+    /* ─── Dev Tools / AI Dev ─── */
+    { id:'langchain',       name:'LangChain',          tagline:'Framework für KI-Apps',            icon:'🔗', href:'/tools/langchain',         free:true,  price:0,   cats:['coding','devtools'],                         personas:['startup','unternehmen'],              reason:'Das Standard-Framework zum Bauen eigener KI-Anwendungen — für AI-Produkte.' },
+    { id:'hugging-face',    name:'Hugging Face',       tagline:'Die KI-Modell-Bibliothek',         icon:'🤗', href:'/tools/hugging-face',      free:true,  price:9,   cats:['coding','devtools','research'],              personas:['startup','unternehmen'],              reason:'300.000+ KI-Modelle — das GitHub der KI-Community für Forscher und Developer.' },
+    /* ─── Design ─── */
+    { id:'midjourney',      name:'Midjourney',         tagline:'Bester KI-Bildgenerator',          icon:'🎨', href:'/tools/midjourney',        free:false, price:10,  cats:['design'],                                    personas:['all'],                                reason:'Qualitativ bestes KI-Bild-Tool weltweit — professionelle Ergebnisse in Sekunden.' },
+    { id:'dall-e-3',        name:'DALL-E 3',           tagline:'Bilder direkt in ChatGPT',         icon:'🖼️', href:'/tools/dall-e-3',          free:false, price:20,  cats:['design'],                                    personas:['privatperson','freelancer'],          reason:'In ChatGPT Plus integriert — einfachste Art, präzise KI-Bilder zu erstellen.' },
+    { id:'stable-diffusion',name:'Stable Diffusion',   tagline:'Open-Source Bildgenerator',        icon:'🎭', href:'/tools/stable-diffusion',  free:true,  price:0,   cats:['design'],                                    personas:['startup','unternehmen'],              reason:'Kostenlos und Open-Source — volle Kontrolle, läuft lokal oder in der Cloud.' },
+    { id:'adobe-firefly',   name:'Adobe Firefly',      tagline:'KI direkt in Adobe-Tools',         icon:'🔥', href:'/tools/adobe-firefly',     free:true,  price:55,  cats:['design'],                                    personas:['freelancer','unternehmen'],           reason:'In Photoshop & Illustrator integriert — perfekt wenn du Adobe bereits nutzt.' },
+    { id:'canva-ai',        name:'Canva AI',           tagline:'Design für alle',                  icon:'🖌️', href:'/tools/canva-ai',          free:true,  price:15,  cats:['design','business'],                         personas:['privatperson','freelancer'],          reason:'Einfachstes Design-Tool der Welt — sofort nutzbar, kein Vorwissen nötig.' },
+    /* ─── Video ─── */
+    { id:'runway-ml',       name:'Runway ML',          tagline:'Professionelle KI-Videobearbeitung',icon:'🎬', href:'/tools/runway-ml',        free:true,  price:15,  cats:['video'],                                     personas:['freelancer','startup'],               reason:'Hintergrundentfernung, Generierung und Inpainting — das Schweizer Taschenmesser für Video.' },
+    { id:'heygen',          name:'HeyGen',             tagline:'KI-Avatar-Videos',                 icon:'👤', href:'/tools/heygen',            free:true,  price:29,  cats:['video','business'],                          personas:['startup','unternehmen'],              reason:'Realistische Avatar-Videos — erkläre Produkte ohne Kamera oder Studio.' },
+    { id:'pika',            name:'Pika',               tagline:'Text zu Video',                    icon:'📹', href:'/tools/pika',              free:true,  price:8,   cats:['video'],                                     personas:['privatperson','freelancer'],          reason:'Günstigstes Text-zu-Video Tool — ideal für schnellen Social Media Content.' },
+    { id:'sora',            name:'Sora',               tagline:'OpenAIs Video-Generator',          icon:'🎥', href:'/tools/sora',              free:false, price:20,  cats:['video'],                                     personas:['freelancer','startup'],               reason:'Die realistischsten KI-Videos von OpenAI — wenn Qualität das Wichtigste ist.' },
+    { id:'descript',        name:'Descript',           tagline:'Video-Editing per Text',           icon:'✂️', href:'/tools/descript',          free:true,  price:24,  cats:['video','productivity'],                      personas:['freelancer','startup'],               reason:'Bearbeite Videos wie ein Word-Dokument — lösche Wörter, Video passt sich an.' },
+    { id:'elevenlabs',      name:'ElevenLabs',         tagline:'Beste KI-Stimmen & Voiceover',     icon:'🎙️', href:'/tools/elevenlabs',        free:true,  price:11,  cats:['video','productivity'],                      personas:['freelancer','startup'],               reason:'Realistischste KI-Stimmen weltweit — perfekt für Videos, Podcasts, Hörbücher.' },
+    /* ─── Research ─── */
+    { id:'perplexity',      name:'Perplexity',         tagline:'KI-Suchmaschine mit Quellen',      icon:'🔍', href:'/tools/perplexity',        free:true,  price:20,  cats:['research'],                                  personas:['all'],                                reason:'Echtzeit-Web-Suche mit Quellen — immer aktuelle Antworten, keine Halluzinationen.' },
+    { id:'notebooklm',      name:'NotebookLM',         tagline:'KI analysiert deine Dokumente',    icon:'📓', href:'/tools/notebooklm',        free:true,  price:0,   cats:['research','productivity'],                   personas:['all'],                                reason:'Lade PDFs hoch — KI beantwortet Fragen direkt aus deinen eigenen Dokumenten.' },
+    { id:'grok',            name:'Grok',               tagline:'Echtzeit X/Twitter KI',            icon:'🤖', href:'/tools/grok',              free:false, price:8,   cats:['research'],                                  personas:['privatperson','freelancer'],          reason:'Echtzeit X/Twitter-Trends und News — perfekt für Social Media Recherche.' },
+    /* ─── Productivity ─── */
+    { id:'notion-ai',       name:'Notion AI',          tagline:'KI direkt in Notion',              icon:'📋', href:'/tools/notion-ai',         free:false, price:10,  cats:['productivity'],                              personas:['all'],                                reason:'Schreibt, fasst zusammen und plant — direkt in deinem Notion-Workspace.' },
+    { id:'otter-ai',        name:'Otter.ai',           tagline:'KI-Meeting-Transkription',         icon:'🎙️', href:'/tools/otter-ai',          free:true,  price:17,  cats:['productivity','research'],                   personas:['freelancer','startup','unternehmen'], reason:'Transkribiert Meetings automatisch — kein manuelles Mitschreiben mehr.' },
+    { id:'gamma-app',       name:'Gamma',              tagline:'KI-Präsentationen in Sekunden',    icon:'📊', href:'/tools/gamma-app',         free:true,  price:10,  cats:['productivity','business'],                   personas:['all'],                                reason:'Erstellt komplette Präsentationen per Prompt — kein PowerPoint-Stress mehr.' },
+    /* ─── Business / Automation ─── */
+    { id:'zapier',          name:'Zapier',             tagline:'Automatisiere 6.000+ Apps',        icon:'⚡', href:'/tools/zapier',            free:true,  price:20,  cats:['business','productivity'],                   personas:['freelancer','startup','unternehmen'], reason:'Verbindet alle deine Apps ohne Code — automatisiere repetitive Aufgaben sofort.' },
+    { id:'make-com',        name:'Make.com',           tagline:'Visueller Workflow-Builder',       icon:'🔗', href:'/tools/make-com',          free:true,  price:9,   cats:['business','productivity'],                   personas:['freelancer','startup'],               reason:'Günstigste Zapier-Alternative mit visuellem Drag-and-Drop Workflow-Builder.' },
+    { id:'synthesia',       name:'Synthesia',          tagline:'KI-Erklärvideos für Teams',        icon:'🎭', href:'/tools/synthesia',         free:false, price:22,  cats:['business','video'],                          personas:['startup','unternehmen'],              reason:'Professionelle Erklär-Videos mit KI-Avatar — für Teams ohne Videobudget.' },
+    { id:'surfer-seo',      name:'Surfer SEO',         tagline:'KI-SEO-Optimierung',               icon:'🏄', href:'/tools/surfer-seo',        free:false, price:79,  cats:['business','writing'],                        personas:['startup','unternehmen'],              reason:'Analysiert Google Top-10 und zeigt genau welche Inhalte ranken.' },
+    { id:'beautiful-ai',    name:'Beautiful.ai',       tagline:'Team-Präsentationen',              icon:'✨', href:'/tools/beautiful-ai',      free:false, price:12,  cats:['business','productivity'],                   personas:['startup','unternehmen'],              reason:'Marken-konsistente Team-Präsentationen — CI-Guidelines automatisch eingehalten.' },
+  ];
+
+  /* ══════════════════════════════════════════════════════════════
+     STATE
+  ══════════════════════════════════════════════════════════════ */
+  var ans = { cat: null, persona: null, budget: null };
+
+  /* ══════════════════════════════════════════════════════════════
+     STEP NAVIGATION
+  ══════════════════════════════════════════════════════════════ */
+  var STEP_LABELS = { 1:'Schritt 1 von 3', 2:'Schritt 2 von 3', 3:'Schritt 3 von 3', results:'Deine Empfehlungen ✓' };
+
+  function goStep(s) {
+    document.querySelectorAll('.step-panel').forEach(function(p) { p.classList.remove('active'); });
+    var id = s === 'results' ? 'step-results' : 'step-' + s;
+    var panel = document.getElementById(id);
+    if (panel) panel.classList.add('active');
+
+    // Progress bars
+    var bars = ['p1','p2','p3','pdone'];
+    bars.forEach(function(bid, i) {
+      var el = document.getElementById(bid);
+      if (!el) return;
+      el.classList.remove('active','done');
+      if (s === 'results') {
+        el.classList.add('done');
+      } else if (i < s - 1) {
+        el.classList.add('done');
+      } else if (i === s - 1) {
+        el.classList.add('active');
+      }
+    });
+
+    var lbl = document.getElementById('step-label');
+    if (lbl) lbl.textContent = STEP_LABELS[s] || '';
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     CHOICE WIRING
+  ══════════════════════════════════════════════════════════════ */
+  function wireChoices(containerId, key, nextFn) {
+    var wrap = document.getElementById(containerId);
+    if (!wrap) return;
+    wrap.querySelectorAll('.choice-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        wrap.querySelectorAll('.choice-btn').forEach(function(b) { b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        ans[key] = btn.getAttribute('data-v');
+        setTimeout(nextFn, 230);
+      });
+    });
+  }
+
+  wireChoices('c1', 'cat',    function() { goStep(2); });
+  wireChoices('c2', 'persona', function() { goStep(3); });
+  wireChoices('c3', 'budget', function() { buildResults(); goStep('results'); });
+
+  /* ── Back buttons ── */
+  var b2 = document.getElementById('back-2');
+  var b3 = document.getElementById('back-3');
+  if (b2) b2.addEventListener('click', function() { goStep(1); });
+  if (b3) b3.addEventListener('click', function() { goStep(2); });
+
+  /* ── Restart ── */
+  var btnR = document.getElementById('btn-restart');
+  if (btnR) btnR.addEventListener('click', function() {
+    ans = { cat: null, persona: null, budget: null };
+    document.querySelectorAll('.choice-btn').forEach(function(b) { b.classList.remove('selected'); });
+    goStep(1);
+  });
+
+  /* ══════════════════════════════════════════════════════════════
+     RECOMMENDATION ALGORITHM
+  ══════════════════════════════════════════════════════════════ */
+  function buildResults() {
+    var cat     = ans.cat;
+    var persona = ans.persona;
+    var budget  = parseInt(ans.budget, 10);
+
+    // devtools → treat as coding + devtools
+    var catFilter = cat === 'devtools' ? ['coding','devtools'] : [cat];
+
+    // 1. Filter: category must match
+    var pool = DB.filter(function(t) {
+      return t.cats.some(function(c) { return catFilter.indexOf(c) !== -1; });
+    });
+
+    // 2. Filter: budget
+    pool = pool.filter(function(t) {
+      if (budget === 0) return t.free === true;
+      return t.free === true || t.price <= budget;
+    });
+
+    // 3. Score: persona + small free bonus
+    pool = pool.map(function(t) {
+      var score = 0;
+      if (t.personas.indexOf('all')     !== -1) score += 1;
+      if (t.personas.indexOf(persona)   !== -1) score += 2;
+      if (persona === 'privatperson' && t.free)        score += 0.5;
+      if (persona === 'startup'      && !t.free && t.price <= 30) score += 0.5;
+      return { t: t, s: score };
+    });
+
+    pool.sort(function(a, b) { return b.s - a.s; });
+
+    renderResults(pool.slice(0,3).map(function(x) { return x.t; }));
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     RENDER RESULTS
+  ══════════════════════════════════════════════════════════════ */
+  function renderResults(tools) {
+    var catLabels = {
+      writing:'Texte schreiben', coding:'Code schreiben', design:'Design & Bilder',
+      video:'Videos erstellen', research:'Recherche', productivity:'Produktivität',
+      business:'Business', devtools:'KI-App bauen'
+    };
+    var personaLabels = { privatperson:'Privatperson', freelancer:'Freelancer', startup:'Startup/Team', unternehmen:'Unternehmen' };
+    var budgetLabels  = { '0':'Nur kostenlos', '20':'bis €20/Mo', '100':'bis €100/Mo', '9999':'Kein Limit' };
+    var ranks = ['🥇','🥈','🥉'];
+
+    var sub = document.getElementById('res-sub');
+    if (sub) {
+      sub.textContent = (catLabels[ans.cat] || '') + '  ·  ' + (personaLabels[ans.persona] || '') + '  ·  ' + (budgetLabels[ans.budget] || '');
+    }
+
+    var list = document.getElementById('res-list');
+    if (!list) return;
+    list.innerHTML = '';
+
+    if (!tools.length) {
+      list.innerHTML = '<div class="no-results"><p>Keine passenden Tools für diese Kombination gefunden.</p><p>Versuche ein <a href="javascript:void(0)" id="retry-link">höheres Budget</a> oder einen anderen Use-Case.</p></div>';
+      var retry = document.getElementById('retry-link');
+      if (retry) retry.addEventListener('click', function() { goStep(3); });
+      return;
+    }
+
+    tools.forEach(function(t, i) {
+      var a = document.createElement('a');
+      a.href = t.href;
+      a.className = 'result-card' + (i === 0 ? ' gold' : '');
+      a.innerHTML =
+        '<div class="result-rank">' + (ranks[i] || '') + '</div>' +
+        '<div class="result-body">' +
+          '<div class="result-name">' + t.name + '</div>' +
+          '<div class="result-tagline">' + t.tagline + '</div>' +
+          '<div class="result-reason">' + t.reason + '</div>' +
+          '<div class="result-tags">' +
+            (t.free ? '<span class="tag tag-free">✓ Kostenlose Version</span>' : '') +
+            '<span class="tag tag-price">' + (t.price === 0 ? 'Gratis' : 'ab €' + t.price + '/Mo') + '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="result-arrow">→</div>';
+      list.appendChild(a);
+    });
+  }
+
+})();
+</script>
+
+</BaseLayout>

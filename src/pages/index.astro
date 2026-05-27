@@ -93,6 +93,25 @@ function renderStars(rating: number) {
         </div>
       </div>
 
+      <!-- KI-Finder CTA -->
+      <div style="text-align:center;margin-bottom:1.5rem;animation:fadeUp 0.6s 0.35s ease both;opacity:0">
+        <a href="/finder" style="
+          display:inline-flex;align-items:center;gap:0.6rem;
+          background:linear-gradient(135deg,rgba(124,106,247,0.15),rgba(34,211,238,0.08));
+          border:1px solid rgba(124,106,247,0.35);
+          border-radius:99px;
+          padding:0.55rem 1.4rem;
+          font-size:0.88rem;font-weight:600;
+          color:var(--accent-light);
+          text-decoration:none;
+          transition:all 0.2s;
+        "
+        onmouseover="this.style.background='linear-gradient(135deg,rgba(124,106,247,0.25),rgba(34,211,238,0.12))';this.style.transform='translateY(-1px)'"
+        onmouseout="this.style.background='linear-gradient(135deg,rgba(124,106,247,0.15),rgba(34,211,238,0.08))';this.style.transform=''">
+          🤖 Welches KI-Tool passt zu mir? <span style="opacity:0.6;font-weight:400">→ Finder</span>
+        </a>
+      </div>
+
       <!-- Category Pills -->
       <div class="pills" style="justify-content:center;animation:fadeUp 0.6s 0.4s ease both;opacity:0">
         <button class="pill active" data-filter="all">Alle</button>

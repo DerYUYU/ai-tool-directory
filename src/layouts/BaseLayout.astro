@@ -91,6 +91,7 @@ const currentPath = Astro.url.pathname;
         <a href="/categories/Video"       class={currentPath.includes('Video')       ? 'active' : ''}>Video</a>
         <a href="/categories/Business"    class={currentPath.includes('Business')    ? 'active' : ''}>Business</a>
         <a href="/categories/Research"    class={currentPath.includes('Research')    ? 'active' : ''}>Research</a>
+        <a href="/finder" class={currentPath.includes('finder') ? 'active' : ''} style="color:var(--accent-light)">🤖 Finder</a>
       </div>
 
       <!-- CTA -->
@@ -158,6 +159,7 @@ const currentPath = Astro.url.pathname;
         <div class="footer-col">
           <h4>Mehr</h4>
           <a href="/about">Über uns</a>
+          <a href="/finder">🤖 KI-Finder</a>
           <a href="/newsletter">📬 Newsletter</a>
           <a href="/submit">Tool einreichen</a>
           <a href="/sitemap.xml">Sitemap</a>
