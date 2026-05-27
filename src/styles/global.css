@@ -636,6 +636,40 @@ section { padding: 3.5rem 0; }
   margin: 3rem 0;
 }
 
+/* ---- Prose (Tool Detail Page Markdown) ---- */
+.prose { color: var(--text-muted); line-height: 1.75; font-size: 0.95rem; }
+.prose h2 { color: var(--text); font-size: 1.3rem; margin: 2rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.prose h3 { color: var(--text); font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+.prose p  { margin-bottom: 1rem; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose li { margin-bottom: 0.4rem; }
+.prose strong { color: var(--text); font-weight: 700; }
+.prose a  { color: var(--accent-light); text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { color: var(--accent); }
+.prose code {
+  background: rgba(124,106,247,0.12);
+  color: var(--accent-light);
+  border-radius: 4px;
+  padding: 0.15em 0.45em;
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+.prose pre {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+.prose pre code { background: none; padding: 0; color: var(--text-muted); }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.9rem; }
+.prose th { color: var(--text); background: rgba(255,255,255,0.04); padding: 0.65rem 1rem; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.prose td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+.prose tr:hover td { background: rgba(255,255,255,0.02); }
+.prose blockquote { border-left: 3px solid var(--accent); padding-left: 1.25rem; color: var(--text-muted); font-style: italic; margin: 1.25rem 0; }
+.prose hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
 /* ---- Scrollbar ---- */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }

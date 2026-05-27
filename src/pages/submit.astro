@@ -3,61 +3,266 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="KI-Tool einreichen"
+  title="KI-Tool kostenlos einreichen"
   description="Reiche dein KI-Tool kostenlos ein und erreiche tausende Nutzer auf dem AI Tool Directory."
 >
-  <div class="container" style="padding-top:5rem;padding-bottom:5rem;max-width:700px">
-    <h1 style="margin-bottom:0.5rem">🚀 Tool einreichen</h1>
-    <p style="color:var(--text-muted);margin-bottom:3rem">
-      Dein KI-Tool fehlt im Verzeichnis? Reiche es kostenlos ein.
-      Wir prüfen alle Einreichungen manuell und antworten innerhalb von 48h.
-    </p>
+  <div class="container" style="padding-top:5rem;padding-bottom:6rem;max-width:720px">
 
-    <!-- GitHub Issues Link -->
-    <div class="card" style="margin-bottom:2rem">
-      <h2 style="margin-bottom:1rem">📋 Via GitHub Issues einreichen</h2>
-      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem">
-        Öffne ein GitHub Issue mit den folgenden Infos.
-        Das ist der schnellste Weg damit wir dein Tool hinzufügen.
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:3.5rem">
+      <div style="font-size:3.5rem;margin-bottom:1rem">🚀</div>
+      <h1 style="margin-bottom:0.75rem">Tool kostenlos einreichen</h1>
+      <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.7">
+        Dein KI-Tool fehlt im Verzeichnis? Wir prüfen alle Einreichungen manuell
+        und antworten innerhalb von 48 Stunden.
       </p>
-      <a
-        href="https://github.com/yilcay/ai-tool-directory/issues/new?template=submit-tool.md"
-        target="_blank"
-        class="btn btn-primary"
-      >
-        GitHub Issue öffnen →
-      </a>
     </div>
 
-    <!-- Manual Form (future) -->
-    <div class="card">
-      <h2 style="margin-bottom:1rem">📝 Direkt einreichen</h2>
-      <div style="display:flex;flex-direction:column;gap:1rem">
-        {[
-          ['Tool-Name', 'text', 'z.B. ChatGPT'],
-          ['Website URL', 'url', 'https://...'],
-          ['Kategorie', 'text', 'Writing, Coding, Design...'],
-          ['Beschreibung (1 Satz)', 'text', 'Was macht das Tool?'],
-          ['Kostenlose Version?', 'text', 'Ja / Nein / Freemium'],
-          ['Preis', 'text', 'ab $X/Monat oder kostenlos'],
-          ['Deine Email (optional)', 'email', 'für Rückmeldung'],
-        ].map(([label, type, placeholder]) => (
+    <!-- Success message (hidden by default) -->
+    <div id="success-msg" style="display:none" class="card" style="
+      background:rgba(34,197,94,0.08);
+      border-color:rgba(34,197,94,0.3);
+      text-align:center;
+      padding:2.5rem;
+      margin-bottom:2rem;
+    ">
+      <div style="font-size:3rem;margin-bottom:0.75rem">✅</div>
+      <h2 style="color:var(--green);margin-bottom:0.5rem">Einreichung erhalten!</h2>
+      <p style="color:var(--text-muted)">Wir melden uns innerhalb von 48h. Danke für deine Einreichung!</p>
+    </div>
+
+    <!-- Main Form -->
+    <div class="card" id="submit-form-wrap">
+      <h2 style="margin-bottom:0.5rem;font-size:1.3rem">📝 Tool-Daten</h2>
+      <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:2rem">
+        Alle Felder mit * sind Pflichtfelder.
+      </p>
+
+      <form
+        id="tool-form"
+        action="https://formspree.io/f/DEIN_FORMSPREE_ID"
+        method="POST"
+        style="display:flex;flex-direction:column;gap:1.25rem"
+      >
+        <!-- Hidden subject -->
+        <input type="hidden" name="_subject" value="Neues Tool eingereicht: AI Tool Directory" />
+        <input type="hidden" name="_next" value="" />
+
+        <!-- Tool Name -->
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+            Tool-Name <span style="color:var(--red)">*</span>
+          </label>
+          <input
+            type="text"
+            name="tool_name"
+            placeholder="z.B. ChatGPT, Midjourney..."
+            required
+            class="form-input"
+          />
+        </div>
+
+        <!-- Website URL -->
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+            Website URL <span style="color:var(--red)">*</span>
+          </label>
+          <input
+            type="url"
+            name="website_url"
+            placeholder="https://..."
+            required
+            class="form-input"
+          />
+        </div>
+
+        <!-- Kategorie -->
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+            Kategorie <span style="color:var(--red)">*</span>
+          </label>
+          <select name="category" required class="form-input">
+            <option value="">Bitte wählen...</option>
+            <option value="Writing">✍️ Writing</option>
+            <option value="Coding">💻 Coding</option>
+            <option value="Design">🎨 Design</option>
+            <option value="Productivity">⚡ Productivity</option>
+            <option value="Video">🎬 Video</option>
+            <option value="Audio">🎵 Audio</option>
+            <option value="Business">💼 Business</option>
+            <option value="Research">🔬 Research</option>
+            <option value="Other">🔧 Other</option>
+          </select>
+        </div>
+
+        <!-- Beschreibung -->
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+            Kurzbeschreibung (1–2 Sätze) <span style="color:var(--red)">*</span>
+          </label>
+          <textarea
+            name="description"
+            placeholder="Was macht das Tool? Für wen ist es geeignet?"
+            required
+            rows="3"
+            class="form-input"
+          ></textarea>
+        </div>
+
+        <!-- 2-col grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
           <div>
-            <label style="display:block;font-size:0.85rem;margin-bottom:0.3rem;color:var(--text-muted)">{label}</label>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+              Kostenlose Version?
+            </label>
+            <select name="has_free" class="form-input">
+              <option value="Ja">✅ Ja, kostenlos</option>
+              <option value="Freemium">🟡 Freemium</option>
+              <option value="Nein">❌ Nein, nur paid</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+              Preis ab
+            </label>
             <input
-              type={type}
-              placeholder={placeholder}
-              style="width:100%;padding:0.7rem 1rem;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--bg-card);color:var(--text);font-size:0.9rem"
+              type="text"
+              name="price"
+              placeholder="z.B. $20/Monat oder kostenlos"
+              class="form-input"
             />
           </div>
-        ))}
-        <button class="btn btn-primary" style="justify-content:center">
-          Einreichen
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+            Deine E-Mail (optional — für Rückmeldung)
+          </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="deine@email.com"
+            class="form-input"
+          />
+        </div>
+
+        <!-- Affiliate -->
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
+            Affiliate-Programm vorhanden?
+          </label>
+          <input
+            type="text"
+            name="affiliate"
+            placeholder="z.B. 30% Provision, Link: https://..."
+            class="form-input"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" id="submit-btn" style="justify-content:center;padding:0.9rem;font-size:1rem;margin-top:0.5rem">
+          🚀 Tool einreichen
         </button>
-        <p style="font-size:0.75rem;color:var(--text-muted)">
-          * Formular-Backend (Formspree/Netlify Forms) wird noch verbunden
+
+        <p style="font-size:0.75rem;color:var(--text-dim);text-align:center">
+          Kein Spam. Wir prüfen jedes Tool manuell. Antwort innerhalb 48h.
         </p>
+      </form>
+    </div>
+
+    <!-- What happens next -->
+    <div style="margin-top:3rem">
+      <h2 style="margin-bottom:1.5rem;text-align:center">Was passiert danach?</h2>
+      <div style="display:grid;gap:1rem">
+        {[
+          ['1️⃣', 'Einreichung geht ein', 'Wir erhalten deine Angaben sofort per E-Mail'],
+          ['2️⃣', 'Manuelle Prüfung', 'Wir testen das Tool und prüfen auf Qualität (24-48h)'],
+          ['3️⃣', 'Live im Verzeichnis', 'Dein Tool erscheint mit vollständiger Seite im Verzeichnis'],
+          ['4️⃣', 'Organic Traffic', 'SEO-optimierte Tool-Seite bringt dir kostenlose Besucher'],
+        ].map(([num, title, desc]) => (
+          <div class="card" style="display:flex;gap:1.25rem;align-items:center">
+            <span style="font-size:1.75rem;flex-shrink:0">{num}</span>
+            <div>
+              <strong style="display:block;margin-bottom:0.25rem">{title}</strong>
+              <span style="color:var(--text-muted);font-size:0.85rem">{desc}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
+
   </div>
 </BaseLayout>
+
+<style>
+.form-input {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-family: var(--font-sans);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  appearance: none;
+}
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124,106,247,0.12);
+}
+.form-input::placeholder { color: var(--text-muted); }
+select.form-input { cursor: pointer; }
+textarea.form-input { resize: vertical; min-height: 80px; }
+</style>
+
+<script>
+// Handle Formspree AJAX submit for better UX
+const form = document.getElementById('tool-form') as HTMLFormElement | null;
+const successMsg = document.getElementById('success-msg');
+const formWrap   = document.getElementById('submit-form-wrap');
+const submitBtn  = document.getElementById('submit-btn') as HTMLButtonElement | null;
+
+form?.addEventListener('submit', async (e) => {
+  const action = form.getAttribute('action') || '';
+
+  // If Formspree ID not set yet → show instructions
+  if (action.includes('DEIN_FORMSPREE_ID')) {
+    e.preventDefault();
+    alert('⚠️ Formspree noch nicht verbunden.\nSiehe Anleitung im Code: DEIN_FORMSPREE_ID ersetzen.');
+    return;
+  }
+
+  e.preventDefault();
+  if (submitBtn) {
+    submitBtn.textContent = '⏳ Wird eingereicht...';
+    submitBtn.disabled = true;
+  }
+
+  try {
+    const data = new FormData(form);
+    const res  = await fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+
+    if (res.ok) {
+      if (formWrap)  formWrap.style.display  = 'none';
+      if (successMsg) successMsg.style.display = 'block';
+    } else {
+      if (submitBtn) {
+        submitBtn.textContent = '❌ Fehler — erneut versuchen';
+        submitBtn.disabled = false;
+      }
+    }
+  } catch {
+    if (submitBtn) {
+      submitBtn.textContent = '❌ Netzwerkfehler — erneut versuchen';
+      submitBtn.disabled = false;
+    }
+  }
+});
+</script>

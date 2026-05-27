@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+const categories = ['Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Audio', 'Business', 'Research'];
+---
+
+<BaseLayout
+  title="Über AI Tool Directory — Das größte KI-Tool Verzeichnis"
+  description="Wer steckt hinter AI Tool Directory? Unser Ziel: das ehrlichste und vollständigste KI-Tool Verzeichnis im deutschsprachigen Raum."
+>
+  <div class="container" style="padding-top:5rem;padding-bottom:6rem;max-width:800px">
+
+    <!-- Hero -->
+    <div style="text-align:center;margin-bottom:4rem">
+      <div class="badge badge-new" style="margin-bottom:1.5rem">
+        🤖 Über uns
+      </div>
+      <h1 style="margin-bottom:1rem">Das <span class="grad-text">ehrlichste</span> KI-Tool Verzeichnis</h1>
+      <p style="color:var(--text-muted);font-size:1.1rem;line-height:1.75;max-width:580px;margin:0 auto">
+        Kein Pay-to-Play. Keine versteckten Empfehlungen. Nur Tools die wir wirklich getestet
+        und für gut befunden haben.
+      </p>
+    </div>
+
+    <!-- Mission -->
+    <div class="card" style="
+      background:linear-gradient(135deg,rgba(124,106,247,0.08),rgba(34,211,238,0.04));
+      border-color:rgba(124,106,247,0.25);
+      padding:3rem;
+      margin-bottom:2.5rem;
+    ">
+      <h2 style="margin-bottom:1.25rem">🎯 Unsere Mission</h2>
+      <p style="color:var(--text-muted);line-height:1.8;font-size:1.02rem">
+        KI-Tools entwickeln sich rasend schnell. Jeden Tag erscheinen neue Produkte,
+        Preise ändern sich und manche Tools verschwinden wieder. Es ist fast unmöglich,
+        den Überblick zu behalten.
+      </p>
+      <p style="color:var(--text-muted);line-height:1.8;font-size:1.02rem;margin-top:1rem">
+        <strong style="color:var(--text)">AI Tool Directory</strong> existiert damit du das nicht mehr musst.
+        Wir kuratieren, testen und bewerten KI-Tools täglich — damit du in Minuten
+        das perfekte Tool für deinen Anwendungsfall findest.
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem;text-align:center">
+      <div class="card" style="padding:2rem">
+        <div class="stat-number">{allTools.length}+</div>
+        <div class="stat-label">Kuratierte Tools</div>
+      </div>
+      <div class="card" style="padding:2rem">
+        <div class="stat-number">{categories.length}</div>
+        <div class="stat-label">Kategorien</div>
+      </div>
+      <div class="card" style="padding:2rem">
+        <div class="stat-number">€0</div>
+        <div class="stat-label">Kosten für dich</div>
+      </div>
+    </div>
+
+    <!-- Principles -->
+    <h2 style="margin-bottom:1.5rem">🤝 Unsere Grundsätze</h2>
+    <div style="display:grid;gap:1rem;margin-bottom:3rem">
+      {[
+        ['🎯', 'Ehrlichkeit über Provisionen', 'Wenn wir Affiliate-Links haben, kennzeichnen wir sie immer deutlich. Unser Urteil wird nie durch Provisionen beeinflusst.'],
+        ['🔬', 'Nur getestete Tools', 'Wir fügen keine Tools hinzu die wir nicht zumindest kurz getestet haben. Kein Blindkauf-Risiko für dich.'],
+        ['🆓', 'Free-Tier Fokus', 'Wir heben besonders kostenlose Versionen hervor — weil wir glauben dass großartige Tools auch kostenlos zugänglich sein sollten.'],
+        ['📅', 'Täglich aktualisiert', 'Preise, Verfügbarkeit und Features ändern sich. Wir halten die Daten so aktuell wie möglich.'],
+        ['🚫', 'Kein Pay-to-Play', 'Kein Unternehmen kann sich bei uns einkaufen. Das Ranking basiert nur auf Qualität.'],
+      ].map(([emoji, title, desc]) => (
+        <div class="card" style="display:flex;gap:1.25rem;align-items:flex-start">
+          <span style="font-size:1.75rem;flex-shrink:0">{emoji}</span>
+          <div>
+            <strong style="display:block;margin-bottom:0.35rem">{title}</strong>
+            <span style="color:var(--text-muted);font-size:0.88rem;line-height:1.6">{desc}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Affiliate Disclosure -->
+    <div class="card" style="background:rgba(245,158,11,0.06);border-color:rgba(245,158,11,0.25);margin-bottom:2.5rem">
+      <h3 style="color:var(--yellow);margin-bottom:0.75rem">💰 Affiliate-Transparenz</h3>
+      <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7">
+        Einige Links auf dieser Website sind Affiliate-Links — das bedeutet wir erhalten eine
+        kleine Provision wenn du über unseren Link ein Tool kaufst. Das kostet dich nichts extra.
+        Solche Links sind immer mit 💰 gekennzeichnet. Unsere Bewertungen werden dadurch
+        <strong>nicht</strong> beeinflusst.
+      </p>
+    </div>
+
+    <!-- Contact / CTA -->
+    <div style="text-align:center">
+      <h2 style="margin-bottom:1rem">Tool einreichen oder Fragen?</h2>
+      <p style="color:var(--text-muted);margin-bottom:2rem">
+        Fehlt ein Tool im Verzeichnis? Melde einen Fehler? Wir freuen uns über Feedback.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="/submit"     class="btn btn-primary"  style="padding:0.8rem 2rem">🚀 Tool einreichen</a>
+        <a href="/newsletter" class="btn btn-outline"  style="padding:0.8rem 2rem">📬 Newsletter</a>
+        <a href="mailto:yilcay.b@gmail.com" class="btn btn-ghost" style="padding:0.8rem 2rem">✉️ Kontakt</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

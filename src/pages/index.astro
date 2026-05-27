@@ -4,12 +4,11 @@ import { getCollection } from 'astro:content';
 
 const allTools = await getCollection('tools');
 const featuredTools = allTools.filter(t => t.data.featured).slice(0, 6);
-const trendingTools = allTools.filter(t => t.data.trending).slice(0, 4);
-const recentTools   = [...allTools]
-  .sort((a, b) => b.data.addedDate.getTime() - a.data.addedDate.getTime())
-  .slice(0, 12);
-
-const displayTools = recentTools.length > 0 ? recentTools : allTools;
+const trendingTools = allTools.filter(t => (t.data as any).trending).slice(0, 4);
+// Alle Tools nach Datum sortiert — kein Slice → Suche findet alle Tools!
+const displayTools = [...allTools].sort(
+  (a, b) => b.data.addedDate.getTime() - a.data.addedDate.getTime()
+);
 
 const categories = [
   { name: 'Writing',      icon: '✍️' },
