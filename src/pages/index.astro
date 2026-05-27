@@ -91,17 +91,17 @@ function renderStars(rating: number) {
             color:var(--text-dim);cursor:pointer;font-family:var(--font-sans);
           ">ESC</kbd>
         </div>
-        <!-- Dropdown -->
+        <!-- Dropdown: position:fixed → über hero overflow:hidden -->
         <div id="search-dropdown" style="
           display:none;
-          position:absolute;top:calc(100% + 6px);left:0;right:0;
-          background:var(--card-bg);
-          border:1px solid rgba(124,106,247,0.3);
-          border-radius:var(--radius);
-          box-shadow:0 12px 40px rgba(0,0,0,0.5),0 0 0 1px rgba(124,106,247,0.1);
-          z-index:200;
+          position:fixed;
+          background:#1a1a2e;
+          border:1px solid rgba(124,106,247,0.35);
+          border-radius:12px;
+          box-shadow:0 20px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(124,106,247,0.12),inset 0 1px 0 rgba(255,255,255,0.06);
+          z-index:9999;
           overflow:hidden;
-          max-height:340px;
+          max-height:360px;
           overflow-y:auto;
         "></div>
       </div>
@@ -461,8 +461,17 @@ function renderStars(rating: number) {
           dropdown.appendChild(footer);
         }
 
+        /* Position berechnen — position:fixed relativ zum Viewport */
+        positionDropdown();
         dropdown.style.display = 'block';
         if (escHint) escHint.style.display = 'inline-flex';
+      }
+
+      function positionDropdown() {
+        var rect = searchInput.getBoundingClientRect();
+        dropdown.style.top    = (rect.bottom + 8) + 'px';
+        dropdown.style.left   = rect.left + 'px';
+        dropdown.style.width  = rect.width + 'px';
       }
 
       function hideDropdown() {
@@ -503,15 +512,26 @@ function renderStars(rating: number) {
         }
       });
 
-      document.addEventListener('click', function (e) {
+      /* Schließen bei Klick außerhalb — mousedown statt click,
+         damit das Dropdown weg ist BEVOR das Ziel den click-Event bekommt */
+      document.addEventListener('mousedown', function (e) {
         var t = e.target;
         if (t !== searchInput && !dropdown.contains(t)) {
           hideDropdown();
         }
       });
 
+      /* Beim Scrollen Dropdown schließen */
+      window.addEventListener('scroll', hideDropdown, { passive: true });
+
+      /* Beim Resize neu positionieren */
+      window.addEventListener('resize', function () {
+        if (dropdown.style.display !== 'none') positionDropdown();
+      });
+
       if (escHint) {
-        escHint.addEventListener('click', function () {
+        escHint.addEventListener('mousedown', function (e) {
+          e.preventDefault(); /* verhindert blur des Inputs */
           searchInput.value = '';
           hideDropdown();
           filterGrid('');
