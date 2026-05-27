@@ -170,6 +170,23 @@ const breadcrumbs = {
           </div>
         )}
 
+        <!-- Related Comparisons -->
+        {['chatgpt-vs-claude','cursor-vs-github-copilot','midjourney-vs-dall-e-3','cursor-vs-windsurf','chatgpt-vs-gemini','midjourney-vs-stable-diffusion','notion-ai-vs-mem-ai','zapier-vs-make-com','elevenlabs-vs-murf-ai','suno-ai-vs-udio','perplexity-vs-notebooklm','github-copilot-vs-codeium','heygen-vs-synthesia','jasper-ai-vs-writesonic','runway-ml-vs-pika'].filter(c => c.includes(tool.id)).length > 0 && (
+          <div style="margin-bottom:2rem">
+            <h3 style="margin-bottom:0.8rem">Tool-Vergleiche</h3>
+            <div class="pills">
+              {['chatgpt-vs-claude','cursor-vs-github-copilot','midjourney-vs-dall-e-3','cursor-vs-windsurf','chatgpt-vs-gemini','midjourney-vs-stable-diffusion','notion-ai-vs-mem-ai','zapier-vs-make-com','elevenlabs-vs-murf-ai','suno-ai-vs-udio','perplexity-vs-notebooklm','github-copilot-vs-codeium','heygen-vs-synthesia','jasper-ai-vs-writesonic','runway-ml-vs-pika']
+                .filter(c => c.includes(tool.id))
+                .map(c => {
+                  const parts = c.split('-vs-');
+                  const other = parts[0] === tool.id ? parts[1] : parts[0];
+                  return <a href={`/compare/${c}`} class="pill" style="text-decoration:none">{other.replace(/-/g,' ')} vergleichen →</a>;
+                })
+              }
+            </div>
+          </div>
+        )}
+
         <!-- MDX Content -->
         <div class="prose" style="color:var(--text-muted)">
           <Content />

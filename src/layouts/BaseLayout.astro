@@ -65,10 +65,9 @@ const currentPath = Astro.url.pathname;
     }
   </script>
 
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Plausible Analytics (DSGVO-konform, kein Cookie-Banner nötig) -->
+  <!-- Aktivieren: Auf https://plausible.io registrieren + Domain "ai-tool-directory-orpin.vercel.app" hinzufügen -->
+  <script defer data-domain="ai-tool-directory-orpin.vercel.app" src="https://plausible.io/js/script.js"></script>
 
   <slot name="head" />
 </head>

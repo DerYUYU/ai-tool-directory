@@ -270,6 +270,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       für deinen Use-Case. Kostenlos, sofort, ohne Anmeldung.
     </p>
 
+    <!-- Phase B: Freitext-Suche -->
+    <div style="max-width:480px;margin:1.75rem auto 0;position:relative">
+      <input
+        id="finder-search"
+        type="text"
+        placeholder="Tool suchen... (z.B. Canva, ChatGPT, Video...)"
+        autocomplete="off"
+        style="width:100%;padding:0.75rem 1rem 0.75rem 2.6rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-family:var(--font-sans);font-size:0.9rem;outline:none;box-sizing:border-box;transition:border-color 0.2s"
+      />
+      <span style="position:absolute;left:0.85rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:1rem;pointer-events:none">🔍</span>
+      <div id="search-results" style="display:none;position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--bg-secondary);border:1px solid var(--border-bright);border-radius:var(--radius-sm);max-height:320px;overflow-y:auto;z-index:100;box-shadow:0 16px 40px rgba(0,0,0,0.6)"></div>
+    </div>
+
     <!-- Progress -->
     <div class="progress-wrap">
       <div class="prog-bar active" id="p1"></div>
@@ -383,7 +396,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.65rem">
           <li style="display:flex;gap:0.65rem;align-items:flex-start;font-size:0.88rem;color:var(--text-muted)">
             <span style="color:var(--green);flex-shrink:0">✓</span>
-            <span><strong style="color:var(--text)">40+ Tools</strong> — kuratiert & täglich aktualisiert</span>
+            <span><strong style="color:var(--text)">100+ Tools</strong> — kuratiert & täglich aktualisiert</span>
           </li>
           <li style="display:flex;gap:0.65rem;align-items:flex-start;font-size:0.88rem;color:var(--text-muted)">
             <span style="color:var(--green);flex-shrink:0">✓</span>
@@ -511,6 +524,73 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     { id:'synthesia',       name:'Synthesia',          tagline:'KI-Erklärvideos für Teams',        icon:'🎭', href:'/tools/synthesia',         free:false, price:22,  cats:['business','video'],                          personas:['startup','unternehmen'],              reason:'Professionelle Erklär-Videos mit KI-Avatar — für Teams ohne Videobudget.' },
     { id:'surfer-seo',      name:'Surfer SEO',         tagline:'KI-SEO-Optimierung',               icon:'🏄', href:'/tools/surfer-seo',        free:false, price:79,  cats:['business','writing'],                        personas:['startup','unternehmen'],              reason:'Analysiert Google Top-10 und zeigt genau welche Inhalte ranken.' },
     { id:'beautiful-ai',    name:'Beautiful.ai',       tagline:'Team-Präsentationen',              icon:'✨', href:'/tools/beautiful-ai',      free:false, price:12,  cats:['business','productivity'],                   personas:['startup','unternehmen'],              reason:'Marken-konsistente Team-Präsentationen — CI-Guidelines automatisch eingehalten.' },
+    /* ─── Writing (neue) ─── */
+    { id:'rytr',           name:'Rytr',            tagline:'Günstiger KI-Texter für alle Use Cases',    icon:'📝', href:'/tools/rytr',           free:true,  price:9,   cats:['writing'],                                   personas:['privatperson','freelancer'],          reason:'Günstigste KI-Texter-Lösung — 40+ Use Cases in 30+ Sprachen, ideal für kleines Budget.' },
+    { id:'anyword',        name:'Anyword',          tagline:'KI-Texte mit Performance-Score',            icon:'📊', href:'/tools/anyword',         free:false, price:49,  cats:['writing','business'],                        personas:['startup','unternehmen'],              reason:'Einziger KI-Texter der voraussagt wie gut dein Text konvertiert — für Performance-Marketing.' },
+    { id:'frase',          name:'Frase',            tagline:'SEO-Content von Recherche bis Artikel',     icon:'🔍', href:'/tools/frase',           free:false, price:15,  cats:['writing'],                                   personas:['freelancer','startup'],               reason:'Analysiert Top-10-Google-Ergebnisse und hilft dir besser rankende Artikel zu schreiben.' },
+    { id:'quillbot',       name:'QuillBot',         tagline:'Bester KI-Paraphrasierer weltweit',         icon:'🔄', href:'/tools/quillbot',        free:true,  price:10,  cats:['writing'],                                   personas:['privatperson','freelancer'],          reason:'35+ Millionen Nutzer — umschreibt, fasst zusammen und verbessert jeden Text sofort.' },
+    { id:'prowritingaid',  name:'ProWritingAid',    tagline:'Professioneller KI-Lektor',                 icon:'✏️', href:'/tools/prowritingaid',   free:true,  price:20,  cats:['writing'],                                   personas:['freelancer'],                         reason:'Tiefste Stil-Analyse für ernsthafte Schreiber — besser als Grammarly für Langformen.' },
+    { id:'hemingway-editor',name:'Hemingway Editor',tagline:'Schreibe klarer und kraftvoller',           icon:'✍️', href:'/tools/hemingway-editor',free:true,  price:20,  cats:['writing'],                                   personas:['privatperson','freelancer'],          reason:'Web-Version kostenlos — macht Texte sofort klarer durch Lesbarkeits-Analyse.' },
+    { id:'scalenut',       name:'Scalenut',         tagline:'KI SEO Content Planning',                  icon:'📈', href:'/tools/scalenut',        free:false, price:39,  cats:['writing'],                                   personas:['startup'],                            reason:'Vollständiger SEO-Workflow von Keyword bis fertiger Artikel in einem Tool.' },
+    { id:'koala-writer',   name:'Koala Writer',     tagline:'Sofort SEO-Artikel mit Google-Suche',      icon:'🐨', href:'/tools/koala-writer',    free:false, price:9,   cats:['writing'],                                   personas:['freelancer','startup'],               reason:'Günstigster Weg zu SEO-Artikeln mit aktuellen Infos durch Web-Suche.' },
+    { id:'sudowrite',      name:'Sudowrite',        tagline:'KI für Romanautoren & Kreativschreiber',   icon:'📚', href:'/tools/sudowrite',       free:false, price:19,  cats:['writing'],                                   personas:['privatperson','freelancer'],          reason:'Speziell für Romane und kreatives Schreiben — überwindet Schreibblockaden, entwickelt Charaktere.' },
+    { id:'wordai',         name:'WordAI',           tagline:'Artikel umschreiben in Menschenqualität',   icon:'🔁', href:'/tools/wordai',          free:false, price:57,  cats:['writing'],                                   personas:['startup','unternehmen'],              reason:'Bestes Article-Spinning-Tool für Content-Marketer die schnell unique Content brauchen.' },
+    /* ─── Coding (neue) ─── */
+    { id:'tabnine',        name:'Tabnine',          tagline:'KI lernt deinen Coding-Stil',               icon:'🧠', href:'/tools/tabnine',         free:true,  price:12,  cats:['coding'],                                    personas:['freelancer','unternehmen'],           reason:'Personalisiertes KI-Coding — trainiert auf deiner eigenen Codebase, sicher für Enterprise.' },
+    { id:'amazon-q',       name:'Amazon Q Developer',tagline:'AWS-integrierter KI-Code-Assistent',      icon:'☁️', href:'/tools/amazon-q',        free:true,  price:19,  cats:['coding'],                                    personas:['startup','unternehmen'],              reason:'Kostenlos für individuelle AWS-Entwickler mit integrierten Security-Scans.' },
+    { id:'codeium',        name:'Codeium',          tagline:'Kostenlose Copilot-Alternative',            icon:'⚡', href:'/tools/codeium',         free:true,  price:15,  cats:['coding'],                                    personas:['privatperson','freelancer'],          reason:'Vollständig kostenlos für Einzelentwickler — 70+ Sprachen, schnelle Vervollständigung.' },
+    { id:'cody-sourcegraph',name:'Sourcegraph Cody',tagline:'KI versteht deine gesamte Codebase',       icon:'🔭', href:'/tools/cody-sourcegraph', free:true,  price:9,   cats:['coding'],                                    personas:['startup','unternehmen'],              reason:'Versteht die gesamte Codebase — ideal für große Teams und Legacy-Code.' },
+    { id:'jetbrains-ai',   name:'JetBrains AI',     tagline:'KI in allen JetBrains IDEs',               icon:'🧩', href:'/tools/jetbrains-ai',    free:false, price:10,  cats:['coding'],                                    personas:['freelancer','startup'],               reason:'Nativ in IntelliJ, PyCharm und WebStorm integriert — kein Kontextverlust.' },
+    { id:'qodo',           name:'Qodo',             tagline:'KI generiert automatisch Tests',            icon:'🧪', href:'/tools/qodo',            free:true,  price:19,  cats:['coding'],                                    personas:['freelancer','startup'],               reason:'Automatische Test-Generierung spart Stunden — schreibt Unit-Tests auf Knopfdruck.' },
+    { id:'pieces-dev',     name:'Pieces for Developers',tagline:'KI-Snippet-Manager mit lokalem KI',   icon:'🧩', href:'/tools/pieces-dev',      free:true,  price:10,  cats:['coding'],                                    personas:['privatperson','freelancer'],          reason:'Lokales KI-Modell für Entwickler — offline, privat, organisiert Code-Snippets intelligent.' },
+    { id:'aider',          name:'Aider',            tagline:'Open-Source KI-Coding im Terminal',         icon:'💻', href:'/tools/aider',           free:true,  price:0,   cats:['coding','devtools'],                         personas:['freelancer','startup'],               reason:'Open-Source Terminal-Coding mit Git-Integration — unterstützt Claude, GPT und Gemini.' },
+    /* ─── Design (neue) ─── */
+    { id:'ideogram',       name:'Ideogram',         tagline:'Einziger KI-Bildgenerator mit Text',        icon:'🔤', href:'/tools/ideogram',        free:true,  price:8,   cats:['design'],                                    personas:['all'],                                reason:'Einziger KI-Generator der Text zuverlässig in Bilder einbettet — perfekt für Thumbnails.' },
+    { id:'leonardo-ai',    name:'Leonardo AI',      tagline:'KI für Game-Assets und Charaktere',         icon:'🎮', href:'/tools/leonardo-ai',     free:true,  price:12,  cats:['design'],                                    personas:['privatperson','freelancer'],          reason:'Starke kostenlose Tier, Canvas-Editor und konsistente Charaktere für Kreative.' },
+    { id:'freepik-ai',     name:'Freepik AI',       tagline:'KI in der größten Stock-Plattform',         icon:'🖼️', href:'/tools/freepik-ai',      free:true,  price:15,  cats:['design'],                                    personas:['freelancer'],                         reason:'KI-Bildgenerierung direkt in Freepik mit kommerzieller Lizenz — für Designer-Workflows.' },
+    { id:'krea-ai',        name:'Krea AI',          tagline:'Echtzeit KI-Bildgenerierung',               icon:'🎨', href:'/tools/krea-ai',         free:true,  price:24,  cats:['design'],                                    personas:['freelancer','startup'],               reason:'Revolutionäre Echtzeit-Generierung — siehst das Bild während du zeichnest.' },
+    { id:'remove-bg',      name:'Remove.bg',        tagline:'Hintergrund entfernen in 1 Sekunde',        icon:'✂️', href:'/tools/remove-bg',       free:true,  price:9,   cats:['design'],                                    personas:['all'],                                reason:'Schnellste Hintergrundentfernung — einfach hochladen und fertig, auch bei Haaren.' },
+    { id:'clipdrop',       name:'Clipdrop',         tagline:'10 KI-Bildbearbeitungs-Tools in einem',    icon:'🖌️', href:'/tools/clipdrop',        free:true,  price:13,  cats:['design'],                                    personas:['freelancer'],                         reason:'Stable Diffusion + Relight + Upscaling in einer App — perfekt für professionelle Designer.' },
+    { id:'picsart-ai',     name:'Picsart AI',       tagline:'KI-Design für Social Media',               icon:'📱', href:'/tools/picsart-ai',      free:true,  price:5,   cats:['design'],                                    personas:['privatperson'],                       reason:'150M+ Nutzer — einfachste Mobile-First KI-Design-App für Social Media Content.' },
+    { id:'bing-image-creator',name:'Bing Image Creator',tagline:'DALL-E 3 kostenlos von Microsoft',    icon:'🆓', href:'/tools/bing-image-creator',free:true, price:0,   cats:['design'],                                    personas:['privatperson'],                       reason:'Komplett kostenlos, DALL-E 3 Qualität, kein Abo — einfachster Einstieg in KI-Bilder.' },
+    /* ─── Video (neue) ─── */
+    { id:'invideo-ai',     name:'InVideo AI',       tagline:'Text zu Video in Minuten',                  icon:'🎬', href:'/tools/invideo-ai',      free:true,  price:20,  cats:['video'],                                     personas:['privatperson','freelancer'],          reason:'6000+ Templates und KI-Voiceover — einfachster Weg von Text zu professionellem Video.' },
+    { id:'lumen5',         name:'Lumen5',           tagline:'Blog-Artikel automatisch zu Videos',        icon:'📺', href:'/tools/lumen5',          free:true,  price:29,  cats:['video'],                                     personas:['freelancer','startup'],               reason:'Content-Repurposing auf Autopilot — Blog zu Social Media Video in Minuten.' },
+    { id:'pictory',        name:'Pictory',          tagline:'Lange Videos zu Kurz-Clips schneiden',     icon:'✂️', href:'/tools/pictory',         free:false, price:19,  cats:['video'],                                     personas:['freelancer','startup'],               reason:'Automatische Highlight-Erkennung aus langen Videos — ideal für Podcast-Clips und Shorts.' },
+    { id:'captions-app',   name:'Captions',         tagline:'KI-Untertitel für TikTok und Reels',       icon:'💬', href:'/tools/captions-app',    free:true,  price:17,  cats:['video'],                                     personas:['privatperson','freelancer'],          reason:'Beste automatische Untertitel für Social Media — Eye-Contact-Korrektur inklusive.' },
+    { id:'fliki',          name:'Fliki',            tagline:'Text zu Video mit 2000+ KI-Stimmen',        icon:'🎙️', href:'/tools/fliki',           free:true,  price:21,  cats:['video'],                                     personas:['freelancer','startup'],               reason:'2000+ KI-Stimmen in 75 Sprachen — perfekt für mehrsprachige Video-Inhalte.' },
+    { id:'kapwing',        name:'Kapwing',          tagline:'Online Video-Editor im Browser',            icon:'🎞️', href:'/tools/kapwing',         free:true,  price:16,  cats:['video'],                                     personas:['privatperson','freelancer'],          reason:'Vollständiger Video-Editor im Browser — kein Download, Auto-Untertitel inklusive.' },
+    /* ─── Audio (neue) ─── */
+    { id:'murf-ai',        name:'Murf AI',          tagline:'120+ professionelle KI-Stimmen',            icon:'🎙️', href:'/tools/murf-ai',         free:true,  price:19,  cats:['video','productivity'],                      personas:['freelancer','startup'],               reason:'120+ Studio-Stimmen in 20 Sprachen — für YouTube, E-Learning und Podcasts.' },
+    { id:'suno-ai',        name:'Suno AI',          tagline:'Vollständige Songs aus Text generieren',    icon:'🎵', href:'/tools/suno-ai',         free:true,  price:10,  cats:['productivity'],                              personas:['privatperson','freelancer'],          reason:'Atemberaubende Musik-KI — komplette Songs mit echtem Gesang aus einem Satz.' },
+    { id:'udio',           name:'Udio',             tagline:'KI-Musik in Studioqualität',                icon:'🎼', href:'/tools/udio',            free:true,  price:10,  cats:['productivity'],                              personas:['privatperson','freelancer'],          reason:'Außergewöhnliche Audio-Qualität und großzügiges Free Tier — Sunos stärkster Konkurrent.' },
+    { id:'speechify',      name:'Speechify',        tagline:'Höre jedes Dokument als Hörbuch',           icon:'👂', href:'/tools/speechify',       free:true,  price:139, cats:['productivity','research'],                   personas:['privatperson'],                       reason:'30M+ Nutzer — macht jedes PDF, Webseite oder Dokument zum Hörbuch.' },
+    { id:'play-ht',        name:'Play.ht',          tagline:'Stimmklonierung und KI-Voiceovers',         icon:'🎤', href:'/tools/play-ht',         free:true,  price:39,  cats:['video','productivity'],                      personas:['freelancer','startup'],               reason:'Klone deine eigene Stimme und nutze sie für unbegrenzte Voiceovers — mit API.' },
+    /* ─── Productivity (neue) ─── */
+    { id:'fireflies-ai',   name:'Fireflies.ai',     tagline:'KI-Meeting-Assistent und Transkription',   icon:'🦋', href:'/tools/fireflies-ai',    free:true,  price:10,  cats:['productivity'],                              personas:['startup','unternehmen'],              reason:'Nimmt automatisch an Meetings teil — transkribiert, fasst zusammen und erkennt Action Items.' },
+    { id:'krisp',          name:'Krisp',            tagline:'Hintergrundgeräusche aus Calls entfernen', icon:'🔇', href:'/tools/krisp',           free:true,  price:8,   cats:['productivity'],                              personas:['all'],                                reason:'Funktioniert mit JEDER App — kein Rauschen mehr in Calls, einfach installiert.' },
+    { id:'motion-app',     name:'Motion',           tagline:'KI plant deinen Tag automatisch',          icon:'📅', href:'/tools/motion-app',      free:false, price:19,  cats:['productivity'],                              personas:['freelancer','startup'],               reason:'Vollautomatisches Tages-Scheduling — KI priorisiert Tasks und schützt Fokuszeit.' },
+    { id:'reclaim-ai',     name:'Reclaim AI',       tagline:'Fokuszeit automatisch im Kalender schützen',icon:'🛡️',href:'/tools/reclaim-ai',      free:true,  price:8,   cats:['productivity'],                              personas:['freelancer','startup'],               reason:'Google-Calendar-Integration — blockt Fokuszeit und plant Habits automatisch.' },
+    { id:'mem-ai',         name:'Mem AI',           tagline:'KI-Notizen die sich selbst organisieren', icon:'🧠', href:'/tools/mem-ai',          free:true,  price:14,  cats:['productivity','research'],                   personas:['privatperson','freelancer'],          reason:'Notizen-App mit KI-Vernetzung — findet Verbindungen zwischen Notizen automatisch.' },
+    { id:'taskade',        name:'Taskade',          tagline:'KI-Agenten und Aufgaben in einem',         icon:'✅', href:'/tools/taskade',         free:true,  price:8,   cats:['productivity'],                              personas:['privatperson','startup'],             reason:'KI-Agenten erledigen Aufgaben direkt im Workspace — für Produktivität und Teams.' },
+    { id:'superhuman',     name:'Superhuman',       tagline:'Schnellstes E-Mail-Erlebnis mit KI',       icon:'⚡', href:'/tools/superhuman',      free:false, price:30,  cats:['productivity'],                              personas:['startup','unternehmen'],              reason:'2x schnellere E-Mail-Verarbeitung — AI-Triage und Follow-up-Reminder für Power-User.' },
+    { id:'loom',           name:'Loom',             tagline:'Video-Nachrichten statt langer Meetings',  icon:'📹', href:'/tools/loom',            free:true,  price:15,  cats:['productivity','business'],                   personas:['all'],                                reason:'Erkläre alles in 2 Minuten Video statt 1 Stunde Meeting — KI-Zusammenfassung inklusive.' },
+    /* ─── Business (neue) ─── */
+    { id:'tome-app',       name:'Tome',             tagline:'KI erstellt komplette Präsentationen',     icon:'📊', href:'/tools/tome-app',        free:true,  price:20,  cats:['business','productivity'],                   personas:['all'],                                reason:'Aus einem Satz eine komplette Präsentation — das modernste KI-Präsentations-Tool.' },
+    { id:'pitch-ai',       name:'Pitch',            tagline:'Team-Präsentationen mit KI',               icon:'🎯', href:'/tools/pitch-ai',        free:true,  price:25,  cats:['business'],                                  personas:['startup'],                            reason:'Kollaborative Pitch-Decks für Teams — schönes Design out-of-the-box, kostenlos.' },
+    { id:'hubspot-ai',     name:'HubSpot AI',       tagline:'KI in der weltbesten CRM-Plattform',       icon:'🔶', href:'/tools/hubspot-ai',      free:true,  price:20,  cats:['business'],                                  personas:['startup','unternehmen'],              reason:'Vollständiges CRM + Marketing-Suite — KI schreibt E-Mails, analysiert Deals, kostenloses CRM.' },
+    { id:'salesforce-einstein',name:'Salesforce Einstein',tagline:'KI für Enterprise-CRM',            icon:'☁️', href:'/tools/salesforce-einstein',free:false,price:50, cats:['business'],                                  personas:['unternehmen'],                        reason:'Bestes Enterprise-CRM mit KI — Sales-Prognosen und automatisierte Workflows für große Teams.' },
+    { id:'glean',          name:'Glean',            tagline:'KI-Suche über alle Business-Apps',         icon:'🔍', href:'/tools/glean',           free:false, price:20,  cats:['business','productivity'],                   personas:['unternehmen'],                        reason:'Findet in Sekunden alles quer durch Slack, Drive, Notion und 100+ andere Tools.' },
+    { id:'typeface-ai',    name:'Typeface',         tagline:'Enterprise KI im konsistenten Brand Voice',icon:'🎨', href:'/tools/typeface-ai',     free:false, price:95,  cats:['business'],                                  personas:['unternehmen'],                        reason:'Brand-konsistenter KI-Content für Enterprise-Marketing — integriert mit Adobe und Figma.' },
+    { id:'clay-com',       name:'Clay',             tagline:'KI-B2B-Prospecting mit 50+ Datenquellen', icon:'🏺', href:'/tools/clay-com',        free:true,  price:149, cats:['business'],                                  personas:['startup','unternehmen'],              reason:'Mächtigstes Prospecting-Tool — 50+ Datenquellen und KI-Personalisierung für Sales-Teams.' },
+    /* ─── Research (neue) ─── */
+    { id:'consensus-app',  name:'Consensus',        tagline:'KI-Suche in wissenschaftlichen Papers',   icon:'🔬', href:'/tools/consensus-app',   free:true,  price:9,   cats:['research'],                                  personas:['privatperson','freelancer','startup'], reason:'Direkte Antworten aus echten Studien — zeigt den Wissenschaftskonsens zu jeder Frage.' },
+    { id:'elicit-ai',      name:'Elicit',           tagline:'KI analysiert tausende Forschungsarbeiten',icon:'📑', href:'/tools/elicit-ai',       free:true,  price:10,  cats:['research'],                                  personas:['startup','unternehmen'],              reason:'Systematische Literaturreviews in Minuten — analysiert automatisch tausende Papers.' },
+    { id:'research-rabbit',name:'Research Rabbit',  tagline:'Visuelle Paper-Netzwerke — kostenlos',    icon:'🐇', href:'/tools/research-rabbit', free:true,  price:0,   cats:['research'],                                  personas:['privatperson','freelancer'],          reason:'Vollständig kostenlos — findet unbekannte relevante Papers als interaktives Netzwerk.' },
+    { id:'explainpaper',   name:'Explainpaper',     tagline:'Wissenschaftliche Papers verstehen',       icon:'📄', href:'/tools/explainpaper',    free:true,  price:12,  cats:['research'],                                  personas:['privatperson','freelancer'],          reason:'Markiere unverständliche Passagen — KI erklärt sie sofort einfach und verständlich.' },
+    { id:'scispace',       name:'SciSpace',         tagline:'KI-Copilot für 200M wissenschaftliche Papers',icon:'🚀',href:'/tools/scispace',      free:true,  price:6,   cats:['research'],                                  personas:['privatperson','freelancer','startup'], reason:'200M+ Papers durchsuchen, PDFs chatten, Literaturreviews generieren — günstig.' },
+    { id:'scite-ai',       name:'Scite',            tagline:'Sieh ob Papers unterstützt oder widerlegt werden',icon:'📊',href:'/tools/scite-ai', free:false, price:10,  cats:['research'],                                  personas:['startup','unternehmen'],              reason:'Einzigartiges Citation-Kontext-Feature — Forschungsqualität zuverlässig einschätzen.' },
+    { id:'semantic-scholar',name:'Semantic Scholar',tagline:'200M Papers kostenlos — von Allen AI',     icon:'🎓', href:'/tools/semantic-scholar',free:true,  price:0,   cats:['research'],                                  personas:['all'],                                reason:'Vollständig kostenlos, 200M+ Papers, KI-Zusammenfassungen — das beste Gratis-Forschungstool.' },
   ];
 
   /* ══════════════════════════════════════════════════════════════
@@ -665,6 +745,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         '</div>' +
         '<div class="result-arrow">→</div>';
       list.appendChild(a);
+    });
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     PHASE B: FREITEXT-SUCHE
+  ══════════════════════════════════════════════════════════════ */
+  var searchInput = document.getElementById('finder-search');
+  var searchResults = document.getElementById('search-results');
+
+  if (searchInput && searchResults) {
+    searchInput.addEventListener('focus', function() {
+      this.style.borderColor = 'var(--accent)';
+    });
+    searchInput.addEventListener('blur', function() {
+      this.style.borderColor = 'var(--border)';
+      setTimeout(function() { searchResults.style.display = 'none'; }, 200);
+    });
+
+    searchInput.addEventListener('input', function() {
+      var q = this.value.trim().toLowerCase();
+      if (q.length < 2) { searchResults.style.display = 'none'; return; }
+
+      var hits = DB.filter(function(t) {
+        return t.name.toLowerCase().includes(q)
+          || t.tagline.toLowerCase().includes(q)
+          || (t.cats && t.cats.some(function(c) { return c.includes(q); }));
+      }).slice(0, 8);
+
+      if (!hits.length) {
+        searchResults.innerHTML = '<div style="padding:0.9rem 1rem;color:var(--text-muted);font-size:0.85rem">Kein Tool gefunden für "' + q + '"</div>';
+        searchResults.style.display = 'block';
+        return;
+      }
+
+      searchResults.innerHTML = hits.map(function(t) {
+        var freeTag = t.free ? '<span style="font-size:0.65rem;padding:1px 6px;border-radius:99px;background:rgba(34,197,94,0.12);color:#22c55e;border:1px solid rgba(34,197,94,0.2)">Free</span>' : '';
+        return '<a href="' + t.href + '" style="display:flex;align-items:center;gap:0.75rem;padding:0.7rem 1rem;text-decoration:none;color:var(--text);transition:background 0.15s;border-bottom:1px solid var(--border)" onmouseover="this.style.background=\'var(--bg-card-hover)\'" onmouseout="this.style.background=\'transparent\'">'
+          + '<span style="font-size:1.4rem;width:28px;text-align:center;flex-shrink:0">' + t.icon + '</span>'
+          + '<span style="flex:1;min-width:0">'
+          + '<span style="font-size:0.88rem;font-weight:600;display:block">' + t.name + '</span>'
+          + '<span style="font-size:0.75rem;color:var(--text-muted)">' + t.tagline + '</span>'
+          + '</span>'
+          + freeTag
+          + '</a>';
+      }).join('');
+      searchResults.lastElementChild.style.borderBottom = 'none';
+      searchResults.style.display = 'block';
     });
   }
 

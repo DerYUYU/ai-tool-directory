@@ -3,7 +3,7 @@
    Style: AI-Native Dark + Glassmorphism + Cinematic Glow
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import '@fontsource-variable/inter';
 
 :root {
   /* Core Colors */
@@ -43,7 +43,7 @@
   --grad-green:   linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Spacing & Shape */
