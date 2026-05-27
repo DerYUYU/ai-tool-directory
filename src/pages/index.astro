@@ -72,16 +72,38 @@ function renderStars(rating: number) {
       </p>
 
       <!-- Search -->
-      <div class="search-wrap" style="margin-bottom:2.25rem;animation:fadeUp 0.6s 0.3s ease both;opacity:0">
-        <span class="search-icon">🔍</span>
-        <input
-          id="search"
-          type="text"
-          class="search-input"
-          placeholder="ChatGPT, Midjourney, Cursor, ElevenLabs suchen..."
-          autocomplete="off"
-          spellcheck="false"
-        />
+      <div style="position:relative;max-width:600px;margin:0 auto 2.25rem;animation:fadeUp 0.6s 0.3s ease both;opacity:0">
+        <div class="search-wrap" style="margin-bottom:0">
+          <span class="search-icon">🔍</span>
+          <input
+            id="search"
+            type="text"
+            class="search-input"
+            placeholder="ChatGPT, Midjourney, Cursor, ElevenLabs suchen..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <kbd id="search-esc" style="
+            display:none;
+            position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+            font-size:0.7rem;padding:0.2rem 0.45rem;border-radius:4px;
+            background:rgba(255,255,255,0.08);border:1px solid var(--border);
+            color:var(--text-dim);cursor:pointer;font-family:var(--font-sans);
+          ">ESC</kbd>
+        </div>
+        <!-- Dropdown -->
+        <div id="search-dropdown" style="
+          display:none;
+          position:absolute;top:calc(100% + 6px);left:0;right:0;
+          background:var(--card-bg);
+          border:1px solid rgba(124,106,247,0.3);
+          border-radius:var(--radius);
+          box-shadow:0 12px 40px rgba(0,0,0,0.5),0 0 0 1px rgba(124,106,247,0.1);
+          z-index:200;
+          overflow:hidden;
+          max-height:340px;
+          overflow-y:auto;
+        "></div>
       </div>
 
       <!-- Category Pills -->
@@ -332,46 +354,183 @@ function renderStars(rating: number) {
     </div>
   </section>
 
+  <!-- Tools-Daten für Dropdown-Suche -->
+  <script type="application/json" id="tools-data" set:text={JSON.stringify(
+    displayTools.map(t => ({
+      id:       t.id,
+      name:     t.data.name,
+      tagline:  t.data.tagline,
+      category: t.data.category,
+      tags:     t.data.tags ?? [],
+      free:     t.data.pricing.free,
+    }))
+  )}></script>
+
   <!-- ════════════════════════════════════════ LIVE SEARCH ══ -->
   <script is:inline>
-    (function () {
-      function initSearch() {
-        var searchInput = document.getElementById('search');
-        var toolLinks   = document.querySelectorAll('.tool-link');
-        var noResults   = document.getElementById('no-results');
-        var resultCount = document.getElementById('result-count');
+  (function () {
+    var CAT_ICONS = {
+      Writing:'✍️', Coding:'💻', Design:'🎨', Productivity:'⚡',
+      Video:'🎬', Audio:'🎵', Business:'💼', Research:'🔬'
+    };
 
-        if (!searchInput) return;
+    function initSearch() {
+      var searchInput  = document.getElementById('search');
+      var dropdown     = document.getElementById('search-dropdown');
+      var escHint      = document.getElementById('search-esc');
+      var toolLinks    = document.querySelectorAll('.tool-link');
+      var noResults    = document.getElementById('no-results');
+      var resultCount  = document.getElementById('result-count');
+      var dataEl       = document.getElementById('tools-data');
 
-        searchInput.addEventListener('input', function () {
-          var q = searchInput.value.toLowerCase().trim();
-          var visible = 0;
+      if (!searchInput || !dropdown || !dataEl) return;
 
-          toolLinks.forEach(function (link) {
-            var name = link.dataset.name || '';
-            var cat  = link.dataset.cat  || '';
-            var tags = link.dataset.tags || '';
-            var match = !q || name.includes(q) || cat.includes(q) || tags.includes(q);
-            link.style.display = match ? '' : 'none';
-            if (match) visible++;
-          });
+      var tools = JSON.parse(dataEl.textContent || '[]');
+      var activeIdx = -1;
+      var dropItems = [];
 
-          var total = toolLinks.length;
-          if (resultCount) {
-            resultCount.textContent = visible < total ? (visible + ' von ' + total + ' Tools') : '';
-          }
-          if (noResults) {
-            noResults.style.display = (q && visible === 0) ? 'block' : 'none';
-          }
+      /* ── Grid filtern ─────────────────────────── */
+      function filterGrid(q) {
+        var visible = 0;
+        toolLinks.forEach(function (link) {
+          var match = !q
+            || (link.dataset.name || '').includes(q)
+            || (link.dataset.cat  || '').includes(q)
+            || (link.dataset.tags || '').includes(q);
+          link.style.display = match ? '' : 'none';
+          if (match) visible++;
         });
+        var total = toolLinks.length;
+        if (resultCount)
+          resultCount.textContent = (q && visible < total) ? (visible + ' von ' + total + ' Tools') : '';
+        if (noResults)
+          noResults.style.display = (q && visible === 0) ? 'block' : 'none';
       }
 
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initSearch);
-      } else {
-        initSearch();
+      /* ── Dropdown befüllen ────────────────────── */
+      function showDropdown(q) {
+        if (!q) { hideDropdown(); return; }
+
+        var hits = tools.filter(function (t) {
+          return t.name.toLowerCase().includes(q)
+            || t.category.toLowerCase().includes(q)
+            || t.tags.join(' ').toLowerCase().includes(q);
+        }).slice(0, 7);
+
+        if (!hits.length) { hideDropdown(); return; }
+
+        dropdown.innerHTML = '';
+        dropItems = [];
+        activeIdx = -1;
+
+        hits.forEach(function (t, i) {
+          var item = document.createElement('a');
+          item.href = '/tools/' + t.id;
+          item.style.cssText = [
+            'display:flex', 'align-items:center', 'gap:0.85rem',
+            'padding:0.75rem 1.1rem', 'text-decoration:none',
+            'border-bottom:1px solid rgba(255,255,255,0.05)',
+            'transition:background 0.12s', 'cursor:pointer'
+          ].join(';');
+
+          var icon  = CAT_ICONS[t.category] || '🤖';
+          var badge = t.free
+            ? '<span style="font-size:0.62rem;padding:0.15rem 0.45rem;border-radius:4px;background:rgba(34,197,94,0.12);color:#4ade80;border:1px solid rgba(34,197,94,0.2);white-space:nowrap">Free</span>'
+            : '';
+
+          item.innerHTML =
+            '<span style="font-size:1.4rem;flex-shrink:0;width:28px;text-align:center">' + icon + '</span>' +
+            '<span style="flex:1;min-width:0">' +
+              '<span style="display:block;font-weight:600;color:var(--text);font-size:0.95rem">' + t.name + '</span>' +
+              '<span style="display:block;font-size:0.78rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + t.tagline + '</span>' +
+            '</span>' +
+            badge +
+            '<span style="font-size:0.82rem;color:var(--text-dim);flex-shrink:0">→</span>';
+
+          item.addEventListener('mouseenter', function () { setActive(i); });
+          item.addEventListener('mouseleave', function () { setActive(-1); });
+
+          dropdown.appendChild(item);
+          dropItems.push(item);
+        });
+
+        /* "Alle anzeigen"-Footer wenn mehr als 7 Treffer */
+        var total = tools.filter(function (t) {
+          return t.name.toLowerCase().includes(q)
+            || t.category.toLowerCase().includes(q)
+            || t.tags.join(' ').toLowerCase().includes(q);
+        }).length;
+
+        if (total > 7) {
+          var more = document.createElement('div');
+          more.style.cssText = 'padding:0.6rem 1.1rem;font-size:0.78rem;color:var(--text-dim);text-align:center';
+          more.textContent = (total - 7) + ' weitere Treffer — scrolle unten';
+          dropdown.appendChild(more);
+        }
+
+        dropdown.style.display = 'block';
+        if (escHint) escHint.style.display = 'flex';
       }
-    })();
+
+      function hideDropdown() {
+        dropdown.style.display = 'none';
+        if (escHint) escHint.style.display = 'none';
+        activeIdx = -1;
+        dropItems = [];
+      }
+
+      function setActive(i) {
+        dropItems.forEach(function (el, idx) {
+          el.style.background = idx === i ? 'rgba(124,106,247,0.12)' : '';
+        });
+        activeIdx = i;
+      }
+
+      /* ── Events ───────────────────────────────── */
+      searchInput.addEventListener('input', function () {
+        var q = searchInput.value.toLowerCase().trim();
+        filterGrid(q);
+        showDropdown(q);
+      });
+
+      searchInput.addEventListener('keydown', function (e) {
+        if (!dropItems.length) return;
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          setActive(Math.min(activeIdx + 1, dropItems.length - 1));
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          setActive(Math.max(activeIdx - 1, 0));
+        } else if (e.key === 'Enter' && activeIdx >= 0) {
+          e.preventDefault();
+          dropItems[activeIdx].click();
+        } else if (e.key === 'Escape') {
+          searchInput.value = '';
+          hideDropdown();
+          filterGrid('');
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!dropdown.contains(e.target) && e.target !== searchInput) {
+          hideDropdown();
+        }
+      });
+
+      if (escHint) escHint.addEventListener('click', function () {
+        searchInput.value = '';
+        hideDropdown();
+        filterGrid('');
+        searchInput.focus();
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSearch);
+    } else {
+      initSearch();
+    }
+  })();
   </script>
 
 </BaseLayout>
