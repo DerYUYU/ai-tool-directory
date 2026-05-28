@@ -19,7 +19,7 @@ function renderStars(rating: number) {
 // SEO meta description — custom override or auto-generated (max 160 chars)
 const metaDescription = tool.data.seoDescription ?? (() => {
   const price = tool.data.pricing.free
-    ? 'Kostenlose Version verfügbar'
+    ? 'Freee Version verfügbar'
     : `Ab ${tool.data.pricing.startingPrice}/Monat`;
   const raw = `${tool.data.name}: ${tool.data.tagline}. ${price}. ★${tool.data.rating}/5 Sterne — Alle Infos & Erfahrungen 2026.`;
   return raw.length > 160 ? raw.slice(0, 157) + '...' : raw;
@@ -163,7 +163,7 @@ const breadcrumbs = {
         <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem">
           <span class="badge badge-category">{tool.data.category}</span>
           {tool.data.pricing.free
-            ? <span class="badge badge-free">Kostenlos verfügbar</span>
+            ? <span class="badge badge-free">Free verfügbar</span>
             : <span class="badge badge-paid">Ab {tool.data.pricing.startingPrice}/Monat</span>
           }
           {tool.data.featured && <span class="badge" style="background:rgba(251,191,36,0.15);color:#fbbf24">⭐ Featured</span>}
@@ -183,16 +183,16 @@ const breadcrumbs = {
         <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem">{tool.data.description}</p>
 
         <!-- Pros & Cons -->
-        <h2 style="margin-bottom:1rem">Vor- und Nachteile</h2>
+        <h2 style="margin-bottom:1rem">Vor- und Cons</h2>
         <div class="pros-cons" style="margin-bottom:2rem">
           <div class="card">
-            <h3 style="color:var(--green);margin-bottom:1rem">✅ Vorteile</h3>
+            <h3 style="color:var(--green);margin-bottom:1rem">✅ Pros</h3>
             <ul class="pros">
               {tool.data.pros.map(pro => <li>{pro}</li>)}
             </ul>
           </div>
           <div class="card">
-            <h3 style="color:var(--red);margin-bottom:1rem">❌ Nachteile</h3>
+            <h3 style="color:var(--red);margin-bottom:1rem">❌ Cons</h3>
             <ul class="cons">
               {tool.data.cons.map(con => <li>{con}</li>)}
             </ul>
@@ -200,7 +200,7 @@ const breadcrumbs = {
         </div>
 
         <!-- Pricing -->
-        <h2 style="margin-bottom:1rem">Preise</h2>
+        <h2 style="margin-bottom:1rem">Pricing</h2>
         <div class="card" style="margin-bottom:2rem">
           {tool.data.pricing.free && tool.data.pricing.freeTier && (
             <div style="margin-bottom:0.8rem">
@@ -284,7 +284,7 @@ const breadcrumbs = {
         <div class="card" style="text-align:center;padding:2rem">
           <h3 style="margin-bottom:0.5rem">{tool.data.name} testen</h3>
           <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem">
-            {tool.data.pricing.free ? 'Kostenlos loslegen — kein Kreditkarte nötig' : `Ab ${tool.data.pricing.startingPrice}/Monat`}
+            {tool.data.pricing.free ? 'Free loslegen — kein Kreditkarte nötig' : `Ab ${tool.data.pricing.startingPrice}/Monat`}
           </p>
           {tool.data.affiliateLink ? (
             <a href={tool.data.affiliateLink} target="_blank" rel="noopener sponsored" class="btn btn-primary" style="width:100%;justify-content:center">
@@ -309,11 +309,11 @@ const breadcrumbs = {
               <a href={`/categories/${tool.data.category}`}>{tool.data.category}</a>
             </div>
             <div style="display:flex;justify-content:space-between">
-              <span style="color:var(--text-muted)">Kostenlose Version</span>
+              <span style="color:var(--text-muted)">Freee Version</span>
               <span>{tool.data.pricing.free ? '✅ Ja' : '❌ Nein'}</span>
             </div>
             <div style="display:flex;justify-content:space-between">
-              <span style="color:var(--text-muted)">Bewertung</span>
+              <span style="color:var(--text-muted)">Rating</span>
               <span>{renderStars(tool.data.rating)} {tool.data.rating}/5</span>
             </div>
             {tool.data.affiliateCommission && (
@@ -330,7 +330,7 @@ const breadcrumbs = {
           <h3 style="margin-bottom:0.5rem">📬 Newsletter</h3>
           <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem">Neue Tools jede Woche</p>
           <a href="/newsletter" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem">
-            Abonnieren
+            Subscribe
           </a>
         </div>
       </div>
