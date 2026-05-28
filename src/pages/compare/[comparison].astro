@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const comparisons = [
+    // Bestehende (15)
     ['chatgpt', 'claude'],
     ['cursor', 'github-copilot'],
     ['midjourney', 'dall-e-3'],
@@ -19,6 +20,32 @@ export async function getStaticPaths() {
     ['heygen', 'synthesia'],
     ['jasper-ai', 'writesonic'],
     ['runway-ml', 'pika'],
+    // Neue (25)
+    ['chatgpt', 'perplexity'],
+    ['chatgpt', 'deepseek'],
+    ['chatgpt', 'grok'],
+    ['gemini', 'perplexity'],
+    ['grammarly', 'quillbot'],
+    ['grammarly', 'writesonic'],
+    ['grammarly', 'wordtune'],
+    ['jasper-ai', 'copy-ai'],
+    ['jasper-ai', 'rytr'],
+    ['copy-ai', 'rytr'],
+    ['writesonic', 'koala-writer'],
+    ['cursor', 'replit-ai'],
+    ['cursor', 'tabnine'],
+    ['elevenlabs', 'play-ht'],
+    ['descript', 'loom'],
+    ['canva-ai', 'adobe-firefly'],
+    ['surfer-seo', 'frase'],
+    ['invideo-ai', 'lumen5'],
+    ['otter-ai', 'fireflies-ai'],
+    ['gamma-app', 'beautiful-ai'],
+    ['midjourney', 'leonardo-ai'],
+    ['runway-ml', 'sora'],
+    ['notion-ai', 'taskade'],
+    ['stable-diffusion', 'dall-e-3'],
+    ['jasper-ai', 'grammarly'],
   ];
 
   const allTools = await getCollection('tools');
