@@ -5,10 +5,12 @@ import { getCollection } from 'astro:content';
 const allTools = await getCollection('tools');
 const featuredTools = allTools.filter(t => t.data.featured).slice(0, 6);
 const trendingTools = allTools.filter(t => (t.data as any).trending).slice(0, 4);
-// Alle Tools nach Datum sortiert — kein Slice → Suche findet alle Tools!
-const displayTools = [...allTools].sort(
-  (a, b) => b.data.addedDate.getTime() - a.data.addedDate.getTime()
-);
+// Nur Top 12 nach Rating auf der Startseite
+const displayTools = [...allTools]
+  .sort((a, b) => b.data.rating - a.data.rating)
+  .slice(0, 12);
+// Alle Tools als Suchdaten (unsichtbar im DOM für Dropdown-Suche)
+const allToolsForSearch = [...allTools].sort((a, b) => b.data.rating - a.data.rating);
 
 const categories = [
   { name: 'Writing',      icon: '✍️' },
@@ -245,15 +247,27 @@ function renderStars(rating: number) {
     </section>
   )}
 
-  <!-- ══════════════════════════════════════ ALLE TOOLS ══ -->
+  <!-- ══════════════════════════════════════ TOP TOOLS ══ -->
   <section style="padding:0 0 5rem">
     <div class="container">
-      <div class="section-title" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
+      <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
         <div>
-          <h2>🆕 <span class="grad-text">Alle Tools</span></h2>
-          <p style="color:var(--text-muted)">{allTools.length} KI-Tools — täglich neue hinzugefügt</p>
+          <h2>🏆 <span class="grad-text">Bekannteste Tools</span></h2>
+          <p style="color:var(--text-muted)">Die beliebtesten KI-Tools — nach Bewertung sortiert</p>
         </div>
-        <span id="result-count" style="font-size:0.85rem;color:var(--text-muted)"></span>
+        <a href="/tools" style="
+          display:inline-flex;align-items:center;gap:0.5rem;
+          background:linear-gradient(135deg,rgba(124,106,247,0.15),rgba(34,211,238,0.08));
+          border:1px solid rgba(124,106,247,0.4);
+          border-radius:99px;padding:0.55rem 1.4rem;
+          font-size:0.88rem;font-weight:600;
+          color:var(--accent-light);text-decoration:none;
+          transition:all 0.2s;white-space:nowrap;
+        "
+        onmouseover="this.style.background='linear-gradient(135deg,rgba(124,106,247,0.28),rgba(34,211,238,0.15))';this.style.transform='translateY(-1px)'"
+        onmouseout="this.style.background='linear-gradient(135deg,rgba(124,106,247,0.15),rgba(34,211,238,0.08))';this.style.transform=''">
+          Alle {allTools.length} Tools anzeigen →
+        </a>
       </div>
 
       <div class="tools-grid" id="tools-container">
@@ -301,13 +315,30 @@ function renderStars(rating: number) {
         ))}
       </div>
 
-      <!-- Empty state -->
-      <div id="no-results" style="display:none;text-align:center;padding:5rem 2rem;color:var(--text-muted)">
-        <div style="font-size:3.5rem;margin-bottom:1rem">🔍</div>
-        <p style="font-size:1.1rem">Kein Tool gefunden.<br/>Versuch einen anderen Suchbegriff.</p>
+      <!-- "Alle anzeigen" CTA unten -->
+      <div style="text-align:center;margin-top:3rem">
+        <a href="/tools" class="btn btn-primary" style="font-size:1rem;padding:0.9rem 2.5rem">
+          Alle {allTools.length} KI-Tools entdecken →
+        </a>
       </div>
     </div>
   </section>
+
+  <!-- Versteckte Suchdaten für alle Tools (Dropdown-Suche) -->
+  <div style="display:none" aria-hidden="true">
+    {allToolsForSearch.map(tool => (
+      <span
+        class="tool-link"
+        data-name={tool.data.name.toLowerCase()}
+        data-display={tool.data.name}
+        data-cat={tool.data.category.toLowerCase()}
+        data-tags={tool.data.tags?.join(' ').toLowerCase() ?? ''}
+        data-tagline={tool.data.tagline}
+        data-free={tool.data.pricing.free ? '1' : '0'}
+        data-href={`/tools/${tool.id}`}
+      />
+    ))}
+  </div>
 
   <!-- ═════════════════════════════════ KATEGORIEN GRID ══ -->
   <section style="padding:0 0 5rem">
@@ -420,7 +451,7 @@ function renderStars(rating: number) {
           var tagline = link.getAttribute('data-tagline') || '';
           var cat     = link.getAttribute('data-cat')  || '';
           var free    = link.getAttribute('data-free') === '1';
-          var href    = link.getAttribute('href') || '#';
+          var href    = link.getAttribute('href') || link.getAttribute('data-href') || '#';
           var icon    = ICONS[cat] || '🤖';
 
           var a = document.createElement('a');

@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allTools = await getCollection('tools');
+const sorted = [...allTools].sort((a, b) => b.data.rating - a.data.rating);
+
+const categories = ['Alle', 'Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Audio', 'Business', 'Research'];
+
+function renderStars(rating: number) {
+  return '★'.repeat(Math.floor(rating)) + '☆'.repeat(5 - Math.floor(rating));
+}
+---
+
+<BaseLayout
+  title="Alle KI-Tools — 100+ Tools entdecken & vergleichen"
+  description="Alle 100+ KI-Tools auf einen Blick. Suche, filtere nach Kategorie und finde das perfekte Tool für dich — mit Bewertungen und Preisvergleich."
+>
+
+  <section style="padding:5rem 0 3rem">
+    <div class="container">
+
+      <!-- Header -->
+      <div style="text-align:center;margin-bottom:3rem">
+        <div class="badge badge-new" style="margin-bottom:1.25rem;font-size:0.8rem">
+          {allTools.length} KI-Tools · täglich aktualisiert
+        </div>
+        <h1 style="margin-bottom:1rem">
+          Alle <span class="grad-text">KI-Tools</span> entdecken
+        </h1>
+        <p style="color:var(--text-muted);font-size:1.1rem;max-width:540px;margin:0 auto">
+          Durchsuche alle {allTools.length} Tools oder filtere nach Kategorie.
+        </p>
+      </div>
+
+      <!-- Search -->
+      <div style="max-width:600px;margin:0 auto 2.5rem">
+        <div class="search-wrap" style="position:relative;margin-bottom:0">
+          <span class="search-icon">🔍</span>
+          <input
+            id="tools-search"
+            type="text"
+            class="search-input"
+            placeholder="Tool suchen — z.B. ChatGPT, Midjourney, ElevenLabs..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <span id="result-count" style="
+            position:absolute;right:1rem;top:50%;transform:translateY(-50%);
+            font-size:0.75rem;color:var(--text-dim);pointer-events:none
+          "></span>
+        </div>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="pills" style="justify-content:center;margin-bottom:2.5rem;flex-wrap:wrap">
+        {categories.map(cat => (
+          <button
+            class={`pill cat-filter${cat === 'Alle' ? ' active' : ''}`}
+            data-cat={cat.toLowerCase()}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Tools Grid -->
+      <div class="tools-grid" id="all-tools-grid">
+        {sorted.map(tool => (
+          <a
+            href={`/tools/${tool.id}`}
+            style="text-decoration:none;display:block"
+            class="tool-item"
+            data-name={tool.data.name.toLowerCase()}
+            data-cat={tool.data.category.toLowerCase()}
+            data-tags={tool.data.tags?.join(' ').toLowerCase() ?? ''}
+            data-tagline={tool.data.tagline.toLowerCase()}
+          >
+            <div class={`tool-card${(tool.data as any).trending ? ' trending' : ''}`}>
+              <div class="tool-card-header">
+                <div style="flex:1;min-width:0">
+                  <div class="tool-card-title">{tool.data.name}</div>
+                  <div class="tool-card-tagline">{tool.data.tagline}</div>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.35rem;flex-shrink:0">
+                  <div class="stars" style="font-size:0.78rem">{renderStars(tool.data.rating)}</div>
+                  {(tool.data as any).trending && <span class="badge badge-trending" style="font-size:0.6rem;padding:0.15rem 0.5rem">🔥</span>}
+                </div>
+              </div>
+              <div class="tool-card-meta">
+                <span class="badge badge-category">{tool.data.category}</span>
+                {tool.data.pricing.free
+                  ? <span class="badge badge-free">Free</span>
+                  : <span class="badge badge-paid">{tool.data.pricing.startingPrice ?? 'Paid'}</span>
+                }
+                {tool.data.affiliateLink && (
+                  <span style="font-size:0.72rem;color:var(--cyan);opacity:0.8">💰</span>
+                )}
+              </div>
+              <div class="tool-card-footer">
+                <span style="font-size:0.78rem;color:var(--text-dim)">
+                  {tool.data.pricing.freeTier ? `✓ ${tool.data.pricing.freeTier}` : ''}
+                </span>
+                <span class="tool-card-footer-link">Details →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Empty state -->
+      <div id="no-results" style="display:none;text-align:center;padding:5rem 2rem;color:var(--text-muted)">
+        <div style="font-size:3.5rem;margin-bottom:1rem">🔍</div>
+        <p style="font-size:1.1rem">Kein Tool gefunden.<br/>Versuch einen anderen Suchbegriff.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script is:inline>
+  (function () {
+    var inp      = document.getElementById('tools-search');
+    var grid     = document.getElementById('all-tools-grid');
+    var noRes    = document.getElementById('no-results');
+    var count    = document.getElementById('result-count');
+    var filters  = document.querySelectorAll('.cat-filter');
+    var items    = Array.prototype.slice.call(document.querySelectorAll('.tool-item'));
+
+    var activeCat = 'alle';
+    var activeQ   = '';
+
+    function update() {
+      var visible = 0;
+      items.forEach(function(el) {
+        var name    = el.getAttribute('data-name')    || '';
+        var cat     = el.getAttribute('data-cat')     || '';
+        var tags    = el.getAttribute('data-tags')    || '';
+        var tagline = el.getAttribute('data-tagline') || '';
+
+        var matchCat = activeCat === 'alle' || cat === activeCat;
+        var matchQ   = !activeQ
+          || name.indexOf(activeQ) !== -1
+          || cat.indexOf(activeQ) !== -1
+          || tags.indexOf(activeQ) !== -1
+          || tagline.indexOf(activeQ) !== -1;
+
+        var show = matchCat && matchQ;
+        el.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      if (noRes) noRes.style.display = visible === 0 ? 'block' : 'none';
+      if (count) count.textContent = activeQ || activeCat !== 'alle'
+        ? visible + ' von ' + items.length + ' Tools'
+        : '';
+    }
+
+    if (inp) {
+      inp.addEventListener('input', function() {
+        activeQ = inp.value.toLowerCase().trim();
+        update();
+      });
+    }
+
+    filters.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filters.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeCat = btn.getAttribute('data-cat') || 'alle';
+        update();
+      });
+    });
+  })();
+  </script>
+
+</BaseLayout>
