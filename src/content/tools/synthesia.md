@@ -18,7 +18,7 @@ cons:
   - "Videos wirken manchmal unnatürlich"
   - "Teuer für häufige Nutzung"
   - "Wenig kreative Kontrolle"
-affiliateLink: "https://synthesia.io?via=aitooldir"
+affiliateLink: "https://www.synthesia.io?via=YOUR_SYNTH_ID"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://synthesia.io"
 featured: false

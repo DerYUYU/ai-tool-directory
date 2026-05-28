@@ -18,6 +18,7 @@ cons:
   - "Weniger kreativ als Jasper oder Copy.ai"
   - "Begrenzte Langform-Content-Funktionen"
   - "Manchmal generische und vorhersehbare Outputs"
+affiliateLink: "https://rytr.me?via=muok7detr5hz"
 websiteUrl: "https://rytr.me"
 affiliateCommission: "30% recurring"
 featured: false

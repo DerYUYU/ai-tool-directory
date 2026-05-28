@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 const { tool } = Astro.props;
 const { Content } = await render(tool);
 
-const SITE_URL = 'https://ai-tool-directory-orpin.vercel.app';
+const SITE_URL = 'https://tooly-ai.dev';
 
 function renderStars(rating: number) {
   return '★'.repeat(Math.floor(rating)) + '☆'.repeat(5 - Math.floor(rating));

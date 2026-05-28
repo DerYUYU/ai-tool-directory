@@ -17,6 +17,8 @@ pros:
 cons:
   - "Kostenlose Version liefert nur kleine Auflösung"
   - "Bei vielen Bildern werden die Kosten schnell hoch"
+affiliateLink: "https://www.remove.bg?via=YOUR_RBG_ID"
+affiliateCommission: "10%/Sale"
 websiteUrl: "https://remove.bg"
 featured: false
 trending: false

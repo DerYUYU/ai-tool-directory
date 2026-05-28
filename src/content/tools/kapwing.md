@@ -17,6 +17,8 @@ pros:
 cons:
   - Wasserzeichen auf allen Exporten im kostenlosen Plan
   - Langsamer als native Desktop-Anwendungen bei großen Projekten
+affiliateLink: "https://www.kapwing.com?via=muok7detr5hz"
+affiliateCommission: "15% recurring"
 websiteUrl: "https://kapwing.com"
 featured: false
 trending: false

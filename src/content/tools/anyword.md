@@ -16,8 +16,9 @@ cons:
   - "Teurer als die meisten Konkurrenten"
   - "Kein kostenloser Einstiegsplan verfügbar"
   - "Lernkurve beim Verstehen des Scoring-Systems"
+affiliateLink: "https://anyword.com?via=muok7detr5hz"
 websiteUrl: "https://anyword.com"
-affiliateCommission: "20% recurring"
+affiliateCommission: "30% recurring"
 featured: false
 trending: false
 tags: ["copywriting", "conversion", "performance", "ads"]

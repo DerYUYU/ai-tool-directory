@@ -15,7 +15,7 @@ pros:
 cons:
   - "Primär auf Englisch ausgerichtet"
   - "Datenschutz bei vertraulichen Meetings"
-affiliateLink: "https://otter.ai/affiliates"
+affiliateLink: "https://otter.ai?via=YOUR_OTTER_ID"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://otter.ai"
 featured: false

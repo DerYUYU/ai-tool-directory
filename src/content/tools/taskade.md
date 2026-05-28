@@ -16,6 +16,8 @@ pros:
 cons:
   - KI-Funktionen im Free Plan stark eingeschränkt
   - Weniger bekannt als Notion, kleineres Ökosystem
+affiliateLink: "https://www.taskade.com?via=muok7detr5hz"
+affiliateCommission: "30% recurring"
 websiteUrl: "https://taskade.com"
 featured: false
 trending: false

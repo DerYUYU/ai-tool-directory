@@ -17,6 +17,8 @@ pros:
 cons:
   - Kostenlose Version enthält sichtbares Wasserzeichen
   - Weniger kreative Kontrolle als professionelle Editoren
+affiliateLink: "https://invideo.io?via=muok7detr5hz"
+affiliateCommission: "50% erstes Jahr"
 websiteUrl: "https://invideo.io"
 featured: false
 trending: false

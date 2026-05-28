@@ -17,6 +17,8 @@ pros:
 cons:
   - "Kostenlose Version enthält Wasserzeichen und Werbeanzeigen"
   - "Weniger professionell und leistungsstark als Canva oder Adobe"
+affiliateLink: "https://picsart.com?irgwc=1&mpid=YOUR_IMPACT_ID"
+affiliateCommission: "15% recurring"
 websiteUrl: "https://picsart.com"
 featured: false
 trending: false

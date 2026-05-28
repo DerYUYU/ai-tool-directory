@@ -15,7 +15,7 @@ pros:
 cons:
   - "Lernkurve fuer traditionelle Editoren"
   - "Teuer fuer professionelle Nutzung"
-affiliateLink: "https://descript.com/affiliates"
+affiliateLink: "https://www.descript.com?lmref=YOUR_DESC_ID"
 affiliateCommission: "15% recurring"
 websiteUrl: "https://descript.com"
 featured: false

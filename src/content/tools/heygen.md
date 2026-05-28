@@ -16,6 +16,8 @@ pros:
 cons:
   - "Teuer fuer haeufige Nutzung"
   - "Nur 1 Minute im kostenlosen Tier"
+affiliateLink: "https://app.heygen.com?via=muok7detr5hz"
+affiliateCommission: "25% recurring"
 websiteUrl: "https://heygen.com"
 featured: false
 tags: ["video", "avatar", "business", "translation", "marketing"]

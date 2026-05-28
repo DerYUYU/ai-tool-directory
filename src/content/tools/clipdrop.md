@@ -16,6 +16,8 @@ pros:
 cons:
   - "Pro-Abonnement nötig, um alle Features nutzen zu können"
   - "Benutzeroberfläche wirkt durch die vielen Tools etwas unübersichtlich"
+affiliateLink: "https://clipdrop.co?via=YOUR_CD_ID"
+affiliateCommission: "15%/Sale"
 websiteUrl: "https://clipdrop.co"
 featured: false
 trending: false

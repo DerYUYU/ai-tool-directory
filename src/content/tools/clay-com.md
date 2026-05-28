@@ -17,6 +17,8 @@ cons:
   - Teuer ab dem Einstiegsplan
   - Steile Lernkurve für neue Nutzer
   - Primär für Sales-Teams mit ausreichendem Budget geeignet
+affiliateLink: "https://clay.com?via=YOUR_CLAY_ID"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://clay.com"
 featured: false
 trending: true

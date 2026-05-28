@@ -19,7 +19,7 @@ cons:
   - "Teurer als Konkurrenten"
   - "Output manchmal zu generisch"
   - "Benötigt gute Prompts für beste Ergebnisse"
-affiliateLink: "https://jasper.ai?fpr=aitooldir"
+affiliateLink: "https://jasper.ai?fpr=muok7detr5hz"
 affiliateCommission: "30% recurring"
 websiteUrl: "https://jasper.ai"
 featured: true

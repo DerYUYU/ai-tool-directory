@@ -16,6 +16,8 @@ pros:
 cons:
   - Wird bei Skalierung schnell teuer
   - Komplex und überwältigend für kleine Teams
+affiliateLink: "https://www.hubspot.com?irgwc=1&mpid=YOUR_IMPACT_ID"
+affiliateCommission: "30% recurring"
 websiteUrl: "https://hubspot.com"
 featured: false
 trending: false

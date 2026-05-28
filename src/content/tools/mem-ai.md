@@ -17,6 +17,8 @@ cons:
   - Teurer als Notion oder Obsidian bei vergleichbarem Funktionsumfang
   - Weniger strukturiert für komplexe Projektmanagement-Workflows
   - Produkt noch aktiv in Entwicklung mit häufigen Änderungen
+affiliateLink: "https://mem.ai?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://mem.ai"
 featured: false
 trending: false

@@ -15,7 +15,7 @@ pros:
 cons:
   - "Teuer bei hohem Volumen"
   - "Limitierter kostenloser Tier"
-affiliateLink: "https://zapier.com/partners"
+affiliateLink: "https://zapier.com?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://zapier.com"
 featured: false

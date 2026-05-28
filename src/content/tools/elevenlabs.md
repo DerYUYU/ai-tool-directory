@@ -18,7 +18,7 @@ cons:
   - "Stimm-Klonen ethisch problematisch"
   - "Premium-Stimmen nur im Abo"
   - "Hoher Datenschutz-Anspruch nötig"
-affiliateLink: "https://elevenlabs.io?via=aitooldir"
+affiliateLink: "https://try.elevenlabs.io/muok7detr5hz"
 affiliateCommission: "22% recurring"
 websiteUrl: "https://elevenlabs.io"
 featured: false

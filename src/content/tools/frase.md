@@ -15,6 +15,7 @@ pros:
 cons:
   - "Kein kostenloser Plan verfügbar"
   - "Wortlimit in günstigen Plänen schnell erreicht"
+affiliateLink: "https://www.frase.io?via=muok7detr5hz"
 websiteUrl: "https://frase.io"
 affiliateCommission: "30% recurring"
 featured: false

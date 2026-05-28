@@ -18,8 +18,8 @@ cons:
   - "Qualität schwankt bei langen Texten"
   - "Weniger Customization als Jasper"
   - "Kein Team-Plan im Free Tier"
-affiliateLink: "https://copy.ai?via=aitooldir"
-affiliateCommission: "45% first year"
+affiliateLink: "https://copy.ai?via=muok7detr5hz"
+affiliateCommission: "45% erstes Jahr"
 websiteUrl: "https://copy.ai"
 featured: false
 tags: ["copywriting", "marketing", "ads", "social-media", "templates"]

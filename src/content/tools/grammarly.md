@@ -18,8 +18,8 @@ cons:
   - "Primär auf Englisch ausgerichtet"
   - "Premium teuer für Einzelpersonen"
   - "Manchmal zu viele Vorschläge"
-affiliateLink: "https://grammarly.com/affiliate"
-affiliateCommission: "$0.20 Free / $20 Pro"
+affiliateLink: "https://grammarly.go2cloud.org/aff_c?aff_id=YOUR_IMPACT_ID"
+affiliateCommission: "$0.20 free + $20 Pro"
 websiteUrl: "https://grammarly.com"
 featured: false
 tags: ["grammar", "writing", "english", "proofreading", "browser-extension"]

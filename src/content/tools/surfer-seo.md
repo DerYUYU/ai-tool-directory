@@ -15,7 +15,7 @@ pros:
 cons:
   - "Teuer fuer Einzelpersonen"
   - "Kein kostenloser Tier"
-affiliateLink: "https://surferseo.com/affiliates"
+affiliateLink: "https://surferseo.com?via=muok7detr5hz"
 affiliateCommission: "25% recurring"
 websiteUrl: "https://surferseo.com"
 featured: false

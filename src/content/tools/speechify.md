@@ -17,6 +17,8 @@ pros:
 cons:
   - Jährliches Premium-Abo mit 139 Dollar sehr teuer
   - Kostenlose Version hat sehr eingeschränkten Funktionsumfang
+affiliateLink: "https://speechify.com?irgwc=1&mpid=YOUR_IMPACT_ID"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://speechify.com"
 featured: false
 trending: false

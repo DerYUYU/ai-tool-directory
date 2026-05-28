@@ -15,7 +15,7 @@ const {
   canonicalUrl,
 } = Astro.props;
 
-const siteTitle = `${title} | AI Tool Directory`;
+const siteTitle = `${title} | Tooly-AI`;
 const canonical = canonicalUrl || Astro.url.href;
 const currentPath = Astro.url.pathname;
 ---
@@ -41,7 +41,7 @@ const currentPath = Astro.url.pathname;
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
   <meta property="og:locale" content="de_DE" />
-  <meta property="og:site_name" content="AI Tool Directory" />
+  <meta property="og:site_name" content="Tooly-AI" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -54,20 +54,20 @@ const currentPath = Astro.url.pathname;
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "AI Tool Directory",
-      "url": "https://ai-tool-directory-orpin.vercel.app",
+      "name": "Tooly-AI",
+      "url": "https://tooly-ai.dev",
       "description": "Das größte KI-Tool Verzeichnis — kostenlos, affiliate-frei, täglich aktualisiert",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://ai-tool-directory-orpin.vercel.app/?q={search_term_string}",
+        "target": "https://tooly-ai.dev/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
   </script>
 
   <!-- Plausible Analytics (DSGVO-konform, kein Cookie-Banner nötig) -->
-  <!-- Aktivieren: Auf https://plausible.io registrieren + Domain "ai-tool-directory-orpin.vercel.app" hinzufügen -->
-  <script defer data-domain="ai-tool-directory-orpin.vercel.app" src="https://plausible.io/js/script.js"></script>
+  <!-- Aktivieren: Auf https://plausible.io registrieren + Domain "tooly-ai.dev" hinzufügen -->
+  <script defer data-domain="tooly-ai.dev" src="https://plausible.io/js/script.js"></script>
 
   <slot name="head" />
 </head>
@@ -80,7 +80,7 @@ const currentPath = Astro.url.pathname;
       <!-- Logo -->
       <a href="/" class="nav-logo">
         <span>🤖</span>
-        <span>AI<span class="logo-accent">Tools</span></span>
+        <span>Tooly<span class="logo-accent">-AI</span></span>
       </a>
 
       <!-- Links -->
@@ -119,7 +119,7 @@ const currentPath = Astro.url.pathname;
 
         <!-- Brand -->
         <div class="footer-col">
-          <div class="footer-logo">🤖 AI<span class="logo-accent">Tools</span></div>
+          <div class="footer-logo">🤖 Tooly<span class="logo-accent">-AI</span></div>
           <p style="font-size:0.85rem;line-height:1.7;max-width:280px;margin-bottom:1.5rem">
             Das größte deutschsprachige KI-Tool Verzeichnis.
             Täglich aktualisiert — ehrlich, ohne versteckte Empfehlungen.
@@ -173,7 +173,7 @@ const currentPath = Astro.url.pathname;
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <div>
-          <strong style="color:var(--text)">🤖 AI Tool Directory</strong>
+          <strong style="color:var(--text)">🤖 Tooly-AI</strong>
           &nbsp;— © 2026 · Made with ❤️ in Deutschland
         </div>
         <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">

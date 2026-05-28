@@ -16,8 +16,9 @@ pros:
 cons:
   - "Free Tier auf 125 Wörter pro Tag stark begrenzt"
   - "Kein vollständiger KI-Textgenerator für neue Inhalte"
+affiliateLink: "https://quillbot.com?via=muok7detr5hz"
 websiteUrl: "https://quillbot.com"
-affiliateCommission: "20% recurring"
+affiliateCommission: "20% Abo"
 featured: false
 trending: false
 tags: ["paraphrase", "rewrite", "summarize", "grammar", "students"]

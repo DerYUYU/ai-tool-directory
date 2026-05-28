@@ -15,6 +15,8 @@ pros:
 cons:
   - "Kein kostenloser Plan verfügbar"
   - "Wenig manuelle Kontrolle über Artikelstruktur und Gliederung"
+affiliateLink: "https://koalawriter.ai?via=muok7detr5hz"
+affiliateCommission: "30% recurring"
 websiteUrl: "https://koala.sh"
 featured: false
 trending: false

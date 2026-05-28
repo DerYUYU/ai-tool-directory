@@ -16,6 +16,8 @@ cons:
   - Kein Free Tier verfügbar
   - Teurer als klassische Kalender-Apps
   - Lernkurve beim Einrichten der eigenen Präferenzen
+affiliateLink: "https://www.usemotion.com?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://usemotion.com"
 featured: false
 trending: false

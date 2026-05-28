@@ -17,6 +17,8 @@ pros:
 cons:
   - Free Tier nur zum Testen geeignet — kein Download möglich
   - Für regelmäßige Nutzung ist ein Premium-Abo erforderlich
+affiliateLink: "https://murf.ai?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://murf.ai"
 featured: false
 trending: false

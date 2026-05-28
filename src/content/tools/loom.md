@@ -15,6 +15,8 @@ pros:
   - Weit verbreitet und von Empfängern ohne Account ansehbar
 cons:
   - Free Tier auf 25 Videos und maximal 5 Minuten pro Video begrenzt
+affiliateLink: "https://www.loom.com?irgwc=1&mpid=YOUR_IMPACT_ID"
+affiliateCommission: "15% recurring"
 websiteUrl: "https://loom.com"
 featured: false
 trending: false

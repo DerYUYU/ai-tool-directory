@@ -17,6 +17,8 @@ pros:
 cons:
   - Begrenzte kreative Kontrolle über Layout und Timing
   - Wasserzeichen auf allen Videos im kostenlosen Plan
+affiliateLink: "https://lumen5.com?via=muok7detr5hz"
+affiliateCommission: "15% recurring"
 websiteUrl: "https://lumen5.com"
 featured: false
 trending: false

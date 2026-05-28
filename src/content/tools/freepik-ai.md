@@ -16,6 +16,8 @@ pros:
 cons:
   - "Weniger kreative Kontrolle als spezialisierte Generatoren"
   - "Bildqualität liegt hinter Midjourney und anderen Premium-Tools"
+affiliateLink: "https://www.freepik.com?irgwc=1&mpid=YOUR_IMPACT_ID"
+affiliateCommission: "10% recurring"
 websiteUrl: "https://freepik.com/pikaso"
 featured: false
 trending: false

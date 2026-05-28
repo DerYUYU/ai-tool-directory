@@ -17,6 +17,8 @@ pros:
 cons:
   - Teurer als Konkurrenten wie Murf AI
   - Stimmklonierung erfordert ausreichend qualitatives Training-Audiomaterial
+affiliateLink: "https://play.ht?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://play.ht"
 featured: false
 trending: false

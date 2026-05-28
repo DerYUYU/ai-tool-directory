@@ -17,6 +17,8 @@ pros:
 cons:
   - Begrenzte Animationen und dynamische Videoelemente
   - Kleinere Stock-Medienbibliothek im Vergleich zu Konkurrenten
+affiliateLink: "https://fliki.ai?via=muok7detr5hz"
+affiliateCommission: "30% recurring"
 websiteUrl: "https://fliki.ai"
 featured: false
 trending: false

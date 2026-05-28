@@ -16,6 +16,8 @@ pros:
 cons:
   - "Nur Satz-Ebene, keine langen Texte"
   - "Englisch-fokussiert"
+affiliateLink: "https://www.wordtune.com?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://wordtune.com"
 featured: false
 tags: ["writing", "editing", "browser-extension", "english"]

@@ -15,8 +15,8 @@ pros:
 cons:
   - "Weniger kreativ als Midjourney"
   - "Creative Cloud Abo fuer Integration"
-affiliateLink: "https://adobe.com/affiliates"
-affiliateCommission: "85% first month"
+affiliateLink: "https://www.adobe.com?irgwc=1&mpid=YOUR_IMPACT_ID"
+affiliateCommission: "85% erstes Monat"
 websiteUrl: "https://firefly.adobe.com"
 featured: false
 tags: ["design", "photoshop", "commercial", "creative-cloud"]

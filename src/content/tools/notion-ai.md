@@ -18,7 +18,7 @@ cons:
   - "Nur sinnvoll wenn du Notion nutzt"
   - "Teurer Add-on zu Notion-Abo"
   - "Weniger flexibel als eigenständige Tools"
-affiliateLink: "https://notion.so/product/ai?via=aitooldir"
+affiliateLink: "https://www.notion.so?via=muok7detr5hz"
 affiliateCommission: "$10/Signup"
 websiteUrl: "https://notion.so/product/ai"
 featured: false

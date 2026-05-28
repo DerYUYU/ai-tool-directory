@@ -15,6 +15,8 @@ pros:
 cons:
   - "Kein kostenloser Plan verfügbar"
   - "Interface manchmal buggy und langsam"
+affiliateLink: "https://scalenut.com?via=muok7detr5hz"
+affiliateCommission: "30% recurring"
 websiteUrl: "https://scalenut.com"
 featured: false
 trending: false

@@ -17,6 +17,8 @@ pros:
 cons:
   - CPU-intensiv auf älteren Rechnern mit schwächerer Hardware
   - Free Tier auf 60 Minuten täglich begrenzt
+affiliateLink: "https://krisp.ai?via=YOUR_KRISP_ID"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://krisp.ai"
 featured: false
 trending: false

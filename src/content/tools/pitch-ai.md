@@ -17,6 +17,8 @@ pros:
 cons:
   - Weniger KI-Funktionen als Tome
   - Keine vollständige KI-Generierung aus einem Satz
+affiliateLink: "https://pitch.com?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://pitch.com"
 featured: false
 trending: false

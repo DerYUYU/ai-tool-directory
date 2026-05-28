@@ -17,6 +17,8 @@ pros:
 cons:
   - Funktioniert ausschließlich mit Google Calendar
   - Keine eigene Aufgaben-Datenbank integriert
+affiliateLink: "https://reclaim.ai?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://reclaim.ai"
 featured: false
 trending: false

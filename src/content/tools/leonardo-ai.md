@@ -17,6 +17,8 @@ pros:
 cons:
   - "Tokens werden bei komplexen Generierungen schnell verbraucht"
   - "Weniger photorealistisch als Midjourney bei Porträts"
+affiliateLink: "https://app.leonardo.ai?via=YOUR_LEO_ID"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://leonardo.ai"
 featured: false
 trending: true

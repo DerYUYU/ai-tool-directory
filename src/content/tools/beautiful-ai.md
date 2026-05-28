@@ -16,6 +16,8 @@ pros:
 cons:
   - "Weniger Kontrolle als Canva"
   - "Bearbeitung manchmal frustrierend"
+affiliateLink: "https://www.beautiful.ai?via=muok7detr5hz"
+affiliateCommission: "25% recurring"
 websiteUrl: "https://beautiful.ai"
 featured: false
 tags: ["presentations", "design", "slides", "productivity"]

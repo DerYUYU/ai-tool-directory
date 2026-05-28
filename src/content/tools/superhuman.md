@@ -17,6 +17,8 @@ cons:
   - Teuer mit $30 pro Monat ohne günstigere Einstiegsoption
   - Nur Gmail und Outlook als Mail-Provider unterstützt
   - Für gelegentliche E-Mail-Nutzer deutlich überdimensioniert
+affiliateLink: "https://superhuman.com?irgwc=1&mpid=YOUR_IMPACT_ID"
+affiliateCommission: "$30/Referral"
 websiteUrl: "https://superhuman.com"
 featured: false
 trending: false

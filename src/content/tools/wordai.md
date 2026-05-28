@@ -15,6 +15,8 @@ pros:
 cons:
   - "Teuer im Vergleich zu anderen Rewriting-Tools"
   - "Nicht für kreatives oder originäres Schreiben geeignet"
+affiliateLink: "https://wordai.com?via=muok7detr5hz"
+affiliateCommission: "30% recurring"
 websiteUrl: "https://wordai.com"
 featured: false
 trending: false

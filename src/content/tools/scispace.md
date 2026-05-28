@@ -17,6 +17,8 @@ pros:
 cons:
   - Gelegentlich ungenaue Zusammenfassungen
   - Benutzeroberfläche könnte übersichtlicher gestaltet sein
+affiliateLink: "https://typeset.io?via=muok7detr5hz"
+affiliateCommission: "30% recurring"
 websiteUrl: "https://scispace.com"
 featured: false
 trending: false

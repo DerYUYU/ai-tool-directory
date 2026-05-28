@@ -16,6 +16,8 @@ pros:
 cons:
   - "Weniger leistungsfähig als GitHub Copilot bei komplexen Aufgaben"
   - "Personalisierung benötigt Zeit zum Einlernen"
+affiliateLink: "https://www.tabnine.com?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://tabnine.com"
 featured: false
 trending: false

@@ -16,6 +16,8 @@ pros:
 cons:
   - Kein kostenloser Plan verfügbar — nur bezahlte Optionen
   - Teurere Pläne erforderlich für höheres Videovolumen
+affiliateLink: "https://pictory.ai?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://pictory.ai"
 featured: false
 trending: false

@@ -18,8 +18,8 @@ cons:
   - "Wenig Kontrolle für erfahrene Designer"
   - "KI-Bilder oft generisch"
   - "Beste Features nur mit Canva Pro"
-affiliateLink: "https://canva.com?via=aitooldir"
-affiliateCommission: "$36 pro Pro-Signup"
+affiliateLink: "https://www.canva.com/brand/join?token=YOUR_IMPACT_ID"
+affiliateCommission: "$36/Pro-Signup"
 websiteUrl: "https://canva.com"
 featured: false
 tags: ["design", "templates", "social-media", "presentations", "marketing"]

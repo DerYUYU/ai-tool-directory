@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://ai-tool-directory-orpin.vercel.app',
+  site: 'https://tooly-ai.dev',
   trailingSlash: 'never',
   build: {
     format: 'file',

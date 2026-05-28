@@ -15,6 +15,8 @@ pros:
 cons:
   - "Nicht geeignet für Marketing-Texte oder Business-Content"
   - "Nur für kreatives Schreiben relevant — sehr spitze Zielgruppe"
+affiliateLink: "https://sudowrite.com?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://sudowrite.com"
 featured: false
 trending: false

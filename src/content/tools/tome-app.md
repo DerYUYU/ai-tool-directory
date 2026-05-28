@@ -17,6 +17,8 @@ cons:
   - Weniger Features als PowerPoint oder Google Slides
   - Wasserzeichen im kostenlosen Plan
   - Begrenzte Export-Optionen
+affiliateLink: "https://tome.app?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://tome.app"
 featured: false
 trending: false

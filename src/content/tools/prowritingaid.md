@@ -17,8 +17,9 @@ pros:
 cons:
   - "Kann mit der Menge an Vorschlägen überwältigend sein"
   - "Analyse läuft langsamer als bei Grammarly"
+affiliateLink: "https://prowritingaid.com?via=muok7detr5hz"
 websiteUrl: "https://prowritingaid.com"
-affiliateCommission: "25% recurring"
+affiliateCommission: "20% recurring"
 featured: false
 trending: false
 tags: ["grammar", "style", "editing", "authors", "long-form"]

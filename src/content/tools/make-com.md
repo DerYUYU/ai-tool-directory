@@ -16,6 +16,8 @@ pros:
 cons:
   - "Lernkurve steiler als Zapier"
   - "Weniger App-Integrationen"
+affiliateLink: "https://www.make.com?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://make.com"
 featured: false
 tags: ["automation", "workflow", "no-code", "integration"]

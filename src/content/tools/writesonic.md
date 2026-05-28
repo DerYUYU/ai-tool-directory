@@ -14,7 +14,7 @@ pros:
   - "Günstigste Preise im Segment"
 cons:
   - "Qualität bei langen Texten schwankt"
-affiliateLink: "https://writesonic.com/affiliates"
+affiliateLink: "https://writesonic.com?via=muok7detr5hz"
 affiliateCommission: "30% recurring"
 websiteUrl: "https://writesonic.com"
 featured: false

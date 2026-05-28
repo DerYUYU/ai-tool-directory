@@ -17,6 +17,8 @@ pros:
 cons:
   - Hauptsächlich für Mobile optimiert — Desktop-Features begrenzt
   - Voller Funktionsumfang nur mit bezahltem Abo nutzbar
+affiliateLink: "https://www.captions.ai?via=YOUR_CAP_ID"
+affiliateCommission: "15% recurring"
 websiteUrl: "https://captions.ai"
 featured: false
 trending: true

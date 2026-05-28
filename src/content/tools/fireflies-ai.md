@@ -17,6 +17,8 @@ pros:
 cons:
   - Datenschutz-Bedenken bei vertraulichen oder sensiblen Meetings
   - Gelegentliche Transkriptionsfehler bei starken Akzenten
+affiliateLink: "https://fireflies.ai?via=muok7detr5hz"
+affiliateCommission: "20% recurring"
 websiteUrl: "https://fireflies.ai"
 featured: false
 trending: false
