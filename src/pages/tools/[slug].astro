@@ -45,6 +45,64 @@ const ratingCount = Math.round(tool.data.rating * 18)
 
 const priceValue = tool.data.pricing.startingPrice?.replace(/[^0-9.]/g, '') ?? '0';
 
+// Compare partners map — 3-4 relevant comparisons per popular tool
+const comparePartners = {
+  'chatgpt':          [{ slug: 'chatgpt-vs-claude', label: 'Claude' }, { slug: 'chatgpt-vs-gemini', label: 'Gemini' }, { slug: 'chatgpt-vs-perplexity', label: 'Perplexity' }, { slug: 'chatgpt-vs-deepseek', label: 'DeepSeek' }],
+  'claude':           [{ slug: 'chatgpt-vs-claude', label: 'ChatGPT' }],
+  'gemini':           [{ slug: 'chatgpt-vs-gemini', label: 'ChatGPT' }, { slug: 'gemini-vs-perplexity', label: 'Perplexity' }],
+  'perplexity':       [{ slug: 'chatgpt-vs-perplexity', label: 'ChatGPT' }, { slug: 'gemini-vs-perplexity', label: 'Gemini' }, { slug: 'perplexity-vs-notebooklm', label: 'NotebookLM' }],
+  'deepseek':         [{ slug: 'chatgpt-vs-deepseek', label: 'ChatGPT' }],
+  'grok':             [{ slug: 'chatgpt-vs-grok', label: 'ChatGPT' }],
+  'cursor':           [{ slug: 'cursor-vs-github-copilot', label: 'GitHub Copilot' }, { slug: 'cursor-vs-windsurf', label: 'Windsurf' }, { slug: 'cursor-vs-replit-ai', label: 'Replit AI' }, { slug: 'cursor-vs-tabnine', label: 'Tabnine' }],
+  'github-copilot':   [{ slug: 'cursor-vs-github-copilot', label: 'Cursor' }, { slug: 'github-copilot-vs-codeium', label: 'Codeium' }],
+  'windsurf':         [{ slug: 'cursor-vs-windsurf', label: 'Cursor' }],
+  'codeium':          [{ slug: 'github-copilot-vs-codeium', label: 'GitHub Copilot' }],
+  'tabnine':          [{ slug: 'cursor-vs-tabnine', label: 'Cursor' }],
+  'replit-ai':        [{ slug: 'cursor-vs-replit-ai', label: 'Cursor' }],
+  'midjourney':       [{ slug: 'midjourney-vs-dall-e-3', label: 'DALL-E 3' }, { slug: 'midjourney-vs-stable-diffusion', label: 'Stable Diffusion' }, { slug: 'midjourney-vs-leonardo-ai', label: 'Leonardo AI' }],
+  'dall-e-3':         [{ slug: 'midjourney-vs-dall-e-3', label: 'Midjourney' }, { slug: 'stable-diffusion-vs-dall-e-3', label: 'Stable Diffusion' }],
+  'stable-diffusion': [{ slug: 'midjourney-vs-stable-diffusion', label: 'Midjourney' }, { slug: 'stable-diffusion-vs-dall-e-3', label: 'DALL-E 3' }],
+  'leonardo-ai':      [{ slug: 'midjourney-vs-leonardo-ai', label: 'Midjourney' }],
+  'adobe-firefly':    [{ slug: 'canva-ai-vs-adobe-firefly', label: 'Canva AI' }],
+  'canva-ai':         [{ slug: 'canva-ai-vs-adobe-firefly', label: 'Adobe Firefly' }],
+  'elevenlabs':       [{ slug: 'elevenlabs-vs-murf-ai', label: 'Murf AI' }, { slug: 'elevenlabs-vs-play-ht', label: 'Play.ht' }],
+  'murf-ai':          [{ slug: 'elevenlabs-vs-murf-ai', label: 'ElevenLabs' }],
+  'play-ht':          [{ slug: 'elevenlabs-vs-play-ht', label: 'ElevenLabs' }],
+  'suno-ai':          [{ slug: 'suno-ai-vs-udio', label: 'Udio' }],
+  'udio':             [{ slug: 'suno-ai-vs-udio', label: 'Suno AI' }],
+  'runway-ml':        [{ slug: 'runway-ml-vs-pika', label: 'Pika' }, { slug: 'runway-ml-vs-sora', label: 'Sora' }],
+  'pika':             [{ slug: 'runway-ml-vs-pika', label: 'Runway ML' }],
+  'sora':             [{ slug: 'runway-ml-vs-sora', label: 'Runway ML' }],
+  'heygen':           [{ slug: 'heygen-vs-synthesia', label: 'Synthesia' }],
+  'synthesia':        [{ slug: 'heygen-vs-synthesia', label: 'HeyGen' }],
+  'descript':         [{ slug: 'descript-vs-loom', label: 'Loom' }],
+  'loom':             [{ slug: 'descript-vs-loom', label: 'Descript' }],
+  'invideo-ai':       [{ slug: 'invideo-ai-vs-lumen5', label: 'Lumen5' }],
+  'lumen5':           [{ slug: 'invideo-ai-vs-lumen5', label: 'InVideo AI' }],
+  'grammarly':        [{ slug: 'grammarly-vs-quillbot', label: 'QuillBot' }, { slug: 'grammarly-vs-writesonic', label: 'Writesonic' }, { slug: 'grammarly-vs-wordtune', label: 'Wordtune' }, { slug: 'jasper-ai-vs-grammarly', label: 'Jasper AI' }],
+  'quillbot':         [{ slug: 'grammarly-vs-quillbot', label: 'Grammarly' }],
+  'wordtune':         [{ slug: 'grammarly-vs-wordtune', label: 'Grammarly' }],
+  'jasper-ai':        [{ slug: 'jasper-ai-vs-writesonic', label: 'Writesonic' }, { slug: 'jasper-ai-vs-copy-ai', label: 'Copy.ai' }, { slug: 'jasper-ai-vs-rytr', label: 'Rytr' }, { slug: 'jasper-ai-vs-grammarly', label: 'Grammarly' }],
+  'writesonic':       [{ slug: 'jasper-ai-vs-writesonic', label: 'Jasper AI' }, { slug: 'grammarly-vs-writesonic', label: 'Grammarly' }, { slug: 'writesonic-vs-koala-writer', label: 'Koala Writer' }],
+  'copy-ai':          [{ slug: 'jasper-ai-vs-copy-ai', label: 'Jasper AI' }, { slug: 'copy-ai-vs-rytr', label: 'Rytr' }],
+  'rytr':             [{ slug: 'jasper-ai-vs-rytr', label: 'Jasper AI' }, { slug: 'copy-ai-vs-rytr', label: 'Copy.ai' }],
+  'koala-writer':     [{ slug: 'writesonic-vs-koala-writer', label: 'Writesonic' }],
+  'surfer-seo':       [{ slug: 'surfer-seo-vs-frase', label: 'Frase' }],
+  'frase':            [{ slug: 'surfer-seo-vs-frase', label: 'Surfer SEO' }],
+  'notion-ai':        [{ slug: 'notion-ai-vs-mem-ai', label: 'Mem AI' }, { slug: 'notion-ai-vs-taskade', label: 'Taskade' }],
+  'mem-ai':           [{ slug: 'notion-ai-vs-mem-ai', label: 'Notion AI' }],
+  'taskade':          [{ slug: 'notion-ai-vs-taskade', label: 'Notion AI' }],
+  'zapier':           [{ slug: 'zapier-vs-make-com', label: 'Make.com' }],
+  'make-com':         [{ slug: 'zapier-vs-make-com', label: 'Zapier' }],
+  'otter-ai':         [{ slug: 'otter-ai-vs-fireflies-ai', label: 'Fireflies.ai' }],
+  'fireflies-ai':     [{ slug: 'otter-ai-vs-fireflies-ai', label: 'Otter.ai' }],
+  'gamma-app':        [{ slug: 'gamma-app-vs-beautiful-ai', label: 'Beautiful.ai' }],
+  'beautiful-ai':     [{ slug: 'gamma-app-vs-beautiful-ai', label: 'Gamma App' }],
+  'notebooklm':       [{ slug: 'perplexity-vs-notebooklm', label: 'Perplexity' }],
+};
+const toolCompareLinks = comparePartners[tool.id] ?? [];
+
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -187,7 +245,34 @@ const breadcrumbs = {
           </div>
         )}
 
-        <!-- MDX Content -->
+           <!-- Compare with similar tools -->
+        {toolCompareLinks.length > 0 && (
+          <div class="card" style="margin-top:2rem;padding:1.5rem">
+            <h3 style="margin-bottom:1rem">⚡ Compare {tool.data.name} with...</h3>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+              {toolCompareLinks.map(link => (
+                <a href={`/compare/${link.slug}`} class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1rem">
+                  vs. {link.label} →
+                </a>
+              ))}
+              <a href="/compare" class="btn btn-ghost" style="font-size:0.85rem;padding:0.5rem 1rem">
+                All comparisons
+              </a>
+            </div>
+          </div>
+        )}
+        {toolCompareLinks.length === 0 && (
+          <div class="card" style="margin-top:2rem;padding:1.5rem">
+            <h3 style="margin-bottom:1rem">⚡ Compare AI Tools</h3>
+            <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
+              <a href="/compare" class="btn btn-outline" style="font-size:0.85rem;padding:0.5rem 1rem">
+                Browse all comparisons →
+              </a>
+            </div>
+          </div>
+        )}
+
+     <!-- MDX Content -->
         <div class="prose" style="color:var(--text-muted)">
           <Content />
         </div>

@@ -7,20 +7,20 @@ const categories = ['Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Aud
 ---
 
 <BaseLayout
-  title="Über Tooly-AI — Das größte KI-Tool Verzeichnis"
-  description="Wer steckt hinter Tooly-AI? Unser Ziel: das ehrlichste und vollständigste KI-Tool Verzeichnis im deutschsprachigen Raum."
+  title="About Tooly-AI — The Largest AI Tool Directory"
+  description="Who is behind Tooly-AI? Our goal: the most honest and complete AI tool directory on the web."
 >
   <div class="container" style="padding-top:5rem;padding-bottom:6rem;max-width:800px">
 
     <!-- Hero -->
     <div style="text-align:center;margin-bottom:4rem">
       <div class="badge badge-new" style="margin-bottom:1.5rem">
-        🤖 Über uns
+        🤖 About us
       </div>
-      <h1 style="margin-bottom:1rem">Das <span class="grad-text">ehrlichste</span> KI-Tool Verzeichnis</h1>
+      <h1 style="margin-bottom:1rem">The <span class="grad-text">most honest</span> AI tool directory</h1>
       <p style="color:var(--text-muted);font-size:1.1rem;line-height:1.75;max-width:580px;margin:0 auto">
-        Kein Pay-to-Play. Keine versteckten Empfehlungen. Nur Tools die wir wirklich getestet
-        und für gut befunden haben.
+        No pay-to-play. No hidden recommendations. Only tools we have genuinely tested
+        and found to be good.
       </p>
     </div>
 
@@ -31,16 +31,16 @@ const categories = ['Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Aud
       padding:3rem;
       margin-bottom:2.5rem;
     ">
-      <h2 style="margin-bottom:1.25rem">🎯 Unsere Mission</h2>
+      <h2 style="margin-bottom:1.25rem">🎯 Our Mission</h2>
       <p style="color:var(--text-muted);line-height:1.8;font-size:1.02rem">
-        KI-Tools entwickeln sich rasend schnell. Jeden Tag erscheinen neue Produkte,
-        Preise ändern sich und manche Tools verschwinden wieder. Es ist fast unmöglich,
-        den Überblick zu behalten.
+        AI tools are evolving at a breakneck pace. New products appear every day,
+        prices change and some tools disappear again. It is nearly impossible
+        to keep up.
       </p>
       <p style="color:var(--text-muted);line-height:1.8;font-size:1.02rem;margin-top:1rem">
-        <strong style="color:var(--text)">Tooly-AI</strong> existiert damit du das nicht mehr musst.
-        Wir kuratieren, testen und bewerten KI-Tools täglich — damit du in Minuten
-        das perfekte Tool für deinen Anwendungsfall findest.
+        <strong style="color:var(--text)">Tooly-AI</strong> exists so you no longer have to.
+        We curate, test and rate AI tools daily — so you can find the perfect tool
+        for your use case in minutes.
       </p>
     </div>
 
@@ -48,27 +48,27 @@ const categories = ['Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Aud
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2.5rem;text-align:center">
       <div class="card" style="padding:2rem">
         <div class="stat-number">{allTools.length}+</div>
-        <div class="stat-label">Kuratierte Tools</div>
+        <div class="stat-label">Curated tools</div>
       </div>
       <div class="card" style="padding:2rem">
         <div class="stat-number">{categories.length}</div>
-        <div class="stat-label">Kategorien</div>
+        <div class="stat-label">Categories</div>
       </div>
       <div class="card" style="padding:2rem">
         <div class="stat-number">€0</div>
-        <div class="stat-label">Kosten für dich</div>
+        <div class="stat-label">Cost to you</div>
       </div>
     </div>
 
     <!-- Principles -->
-    <h2 style="margin-bottom:1.5rem">🤝 Unsere Grundsätze</h2>
+    <h2 style="margin-bottom:1.5rem">🤝 Our Principles</h2>
     <div style="display:grid;gap:1rem;margin-bottom:3rem">
       {[
-        ['🎯', 'Ehrlichkeit über Provisionen', 'Wenn wir Affiliate-Links haben, kennzeichnen wir sie immer deutlich. Unser Urteil wird nie durch Provisionen beeinflusst.'],
-        ['🔬', 'Nur getestete Tools', 'Wir fügen keine Tools hinzu die wir nicht zumindest kurz getestet haben. Kein Blindkauf-Risiko für dich.'],
-        ['🆓', 'Free-Tier Fokus', 'Wir heben besonders kostenlose Versionen hervor — weil wir glauben dass großartige Tools auch kostenlos zugänglich sein sollten.'],
-        ['📅', 'Täglich aktualisiert', 'Preise, Verfügbarkeit und Features ändern sich. Wir halten die Daten so aktuell wie möglich.'],
-        ['🚫', 'Kein Pay-to-Play', 'Kein Unternehmen kann sich bei uns einkaufen. Das Ranking basiert nur auf Qualität.'],
+        ['🎯', 'Honesty over commissions', 'When we have affiliate links, we always label them clearly. Our judgement is never influenced by commissions.'],
+        ['🔬', 'Only tested tools', 'We do not add tools we have not at least briefly tested. No blind-purchase risk for you.'],
+        ['🆓', 'Free-tier focus', 'We specifically highlight free tiers — because we believe great tools should also be accessible at no cost.'],
+        ['📅', 'Updated daily', 'Prices, availability and features change. We keep the data as up to date as possible.'],
+        ['🚫', 'No pay-to-play', 'No company can buy their way in. Rankings are based on quality only.'],
       ].map(([emoji, title, desc]) => (
         <div class="card" style="display:flex;gap:1.25rem;align-items:flex-start">
           <span style="font-size:1.75rem;flex-shrink:0">{emoji}</span>
@@ -82,25 +82,24 @@ const categories = ['Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Aud
 
     <!-- Affiliate Disclosure -->
     <div class="card" style="background:rgba(245,158,11,0.06);border-color:rgba(245,158,11,0.25);margin-bottom:2.5rem">
-      <h3 style="color:var(--yellow);margin-bottom:0.75rem">💰 Affiliate-Transparenz</h3>
+      <h3 style="color:var(--yellow);margin-bottom:0.75rem">💰 Affiliate Transparency</h3>
       <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7">
-        Einige Links auf dieser Website sind Affiliate-Links — das bedeutet wir erhalten eine
-        kleine Provision wenn du über unseren Link ein Tool kaufst. Das kostet dich nichts extra.
-        Solche Links sind immer mit 💰 gekennzeichnet. Unsere Bewertungen werden dadurch
-        <strong>nicht</strong> beeinflusst.
+        Some links on this site are affiliate links — meaning we receive a small commission
+        if you purchase a tool through our link. This costs you nothing extra.
+        Such links are always marked with 💰. Our reviews are <strong>not</strong> influenced by this.
       </p>
     </div>
 
     <!-- Contact / CTA -->
     <div style="text-align:center">
-      <h2 style="margin-bottom:1rem">Tool einreichen oder Fragen?</h2>
+      <h2 style="margin-bottom:1rem">Submit a tool or have questions?</h2>
       <p style="color:var(--text-muted);margin-bottom:2rem">
-        Fehlt ein Tool im Verzeichnis? Melde einen Fehler? Wir freuen uns über Feedback.
+        Missing a tool in the directory? Found an error? We welcome your feedback.
       </p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="/submit"     class="btn btn-primary"  style="padding:0.8rem 2rem">🚀 Tool einreichen</a>
+        <a href="/submit"     class="btn btn-primary"  style="padding:0.8rem 2rem">🚀 Submit a tool</a>
         <a href="/newsletter" class="btn btn-outline"  style="padding:0.8rem 2rem">📬 Newsletter</a>
-        <a href="mailto:yilcay.b@gmail.com" class="btn btn-ghost" style="padding:0.8rem 2rem">✉️ Kontakt</a>
+        <a href="mailto:yilcay.b@gmail.com" class="btn btn-ghost" style="padding:0.8rem 2rem">✉️ Contact</a>
       </div>
     </div>
   </div>

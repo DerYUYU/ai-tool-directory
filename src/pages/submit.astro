@@ -3,18 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="KI-Tool kostenlos einreichen"
-  description="Reiche dein KI-Tool kostenlos ein und erreiche tausende Nutzer auf dem Tooly-AI."
+  title="Submit an AI tool for free"
+  description="Submit your AI tool for free and reach thousands of users on Tooly-AI."
 >
   <div class="container" style="padding-top:5rem;padding-bottom:6rem;max-width:720px">
 
     <!-- Header -->
     <div style="text-align:center;margin-bottom:3.5rem">
       <div style="font-size:3.5rem;margin-bottom:1rem">🚀</div>
-      <h1 style="margin-bottom:0.75rem">Tool kostenlos einreichen</h1>
+      <h1 style="margin-bottom:0.75rem">Submit a tool for free</h1>
       <p style="color:var(--text-muted);font-size:1.05rem;line-height:1.7">
-        Dein KI-Tool fehlt im Verzeichnis? Wir prüfen alle Einreichungen manuell
-        und antworten innerhalb von 48 Stunden.
+        Your AI tool is missing from the directory? We review all submissions manually
+        and respond within 48 hours.
       </p>
     </div>
 
@@ -27,15 +27,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       margin-bottom:2rem;
     ">
       <div style="font-size:3rem;margin-bottom:0.75rem">✅</div>
-      <h2 style="color:var(--green);margin-bottom:0.5rem">Einreichung erhalten!</h2>
-      <p style="color:var(--text-muted)">Wir melden uns innerhalb von 48h. Danke für deine Einreichung!</p>
+      <h2 style="color:var(--green);margin-bottom:0.5rem">Submission received!</h2>
+      <p style="color:var(--text-muted)">We will get back to you within 48h. Thanks for your submission!</p>
     </div>
 
     <!-- Main Form -->
     <div class="card" id="submit-form-wrap">
-      <h2 style="margin-bottom:0.5rem;font-size:1.3rem">📝 Tool-Daten</h2>
+      <h2 style="margin-bottom:0.5rem;font-size:1.3rem">📝 Tool details</h2>
       <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:2rem">
-        Alle Felder mit * sind Pflichtfelder.
+        All fields marked with * are required.
       </p>
 
       <form
@@ -45,7 +45,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         style="display:flex;flex-direction:column;gap:1.25rem"
       >
         <!-- Hidden subject -->
-        <input type="hidden" name="_subject" value="Neues Tool eingereicht: Tooly-AI" />
+        <input type="hidden" name="_subject" value="New tool submitted: Tooly-AI" />
         <input type="hidden" name="_next" value="" />
         <!-- Honeypot: Bots füllen das aus → Formspree blockiert automatisch -->
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
@@ -53,12 +53,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Tool Name -->
         <div>
           <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
-            Tool-Name <span style="color:var(--red)">*</span>
+            Tool name <span style="color:var(--red)">*</span>
           </label>
           <input
             type="text"
             name="tool_name"
-            placeholder="z.B. ChatGPT, Midjourney..."
+            placeholder="e.g. ChatGPT, Midjourney..."
             required
             class="form-input"
           />
@@ -78,13 +78,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           />
         </div>
 
-        <!-- Kategorie -->
+        <!-- Category -->
         <div>
           <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
-            Kategorie <span style="color:var(--red)">*</span>
+            Category <span style="color:var(--red)">*</span>
           </label>
           <select name="category" required class="form-input">
-            <option value="">Bitte wählen...</option>
+            <option value="">Please select...</option>
             <option value="Writing">✍️ Writing</option>
             <option value="Coding">💻 Coding</option>
             <option value="Design">🎨 Design</option>
@@ -97,14 +97,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </select>
         </div>
 
-        <!-- Beschreibung -->
+        <!-- Description -->
         <div>
           <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
-            Kurzbeschreibung (1–2 Sätze) <span style="color:var(--red)">*</span>
+            Short description (1–2 sentences) <span style="color:var(--red)">*</span>
           </label>
           <textarea
             name="description"
-            placeholder="Was macht das Tool? Für wen ist es geeignet?"
+            placeholder="What does the tool do? Who is it for?"
             required
             rows="3"
             class="form-input"
@@ -115,22 +115,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
           <div>
             <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
-              Kostenlose Version?
+              Free tier available?
             </label>
             <select name="has_free" class="form-input">
-              <option value="Ja">✅ Ja, kostenlos</option>
+              <option value="Ja">✅ Yes, free</option>
               <option value="Freemium">🟡 Freemium</option>
-              <option value="Nein">❌ Nein, nur paid</option>
+              <option value="Nein">❌ No, paid only</option>
             </select>
           </div>
           <div>
             <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
-              Preis ab
+              Starting price
             </label>
             <input
               type="text"
               name="price"
-              placeholder="z.B. $20/Monat oder kostenlos"
+              placeholder="e.g. $20/month or free"
               class="form-input"
             />
           </div>
@@ -139,12 +139,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Email -->
         <div>
           <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
-            Deine E-Mail (optional — für Rückmeldung)
+            Your email (optional — for follow-up)
           </label>
           <input
             type="email"
             name="email"
-            placeholder="deine@email.com"
+            placeholder="your@email.com"
             class="form-input"
           />
         </div>
@@ -152,36 +152,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Affiliate -->
         <div>
           <label style="display:block;font-size:0.85rem;font-weight:600;margin-bottom:0.4rem">
-            Affiliate-Programm vorhanden?
+            Affiliate program available?
           </label>
           <input
             type="text"
             name="affiliate"
-            placeholder="z.B. 30% Provision, Link: https://..."
+            placeholder="e.g. 30% commission, link: https://..."
             class="form-input"
           />
         </div>
 
         <!-- Submit Button -->
         <button type="submit" class="btn btn-primary" id="submit-btn" style="justify-content:center;padding:0.9rem;font-size:1rem;margin-top:0.5rem">
-          🚀 Tool einreichen
+          🚀 Submit tool
         </button>
 
         <p style="font-size:0.75rem;color:var(--text-dim);text-align:center">
-          Kein Spam. Wir prüfen jedes Tool manuell. Antwort innerhalb 48h.
+          No spam. We review every tool manually. Response within 48h.
         </p>
       </form>
     </div>
 
     <!-- What happens next -->
     <div style="margin-top:3rem">
-      <h2 style="margin-bottom:1.5rem;text-align:center">Was passiert danach?</h2>
+      <h2 style="margin-bottom:1.5rem;text-align:center">What happens next?</h2>
       <div style="display:grid;gap:1rem">
         {[
-          ['1️⃣', 'Einreichung geht ein', 'Wir erhalten deine Angaben sofort per E-Mail'],
-          ['2️⃣', 'Manuelle Prüfung', 'Wir testen das Tool und prüfen auf Qualität (24-48h)'],
-          ['3️⃣', 'Live im Verzeichnis', 'Dein Tool erscheint mit vollständiger Seite im Verzeichnis'],
-          ['4️⃣', 'Organic Traffic', 'SEO-optimierte Tool-Seite bringt dir kostenlose Besucher'],
+          ['1️⃣', 'Submission received', 'We receive your details immediately by email'],
+          ['2️⃣', 'Manual review', 'We test the tool and check quality (24–48h)'],
+          ['3️⃣', 'Live in the directory', 'Your tool appears with a full dedicated page'],
+          ['4️⃣', 'Organic traffic', 'SEO-optimized tool page brings you free visitors'],
         ].map(([num, title, desc]) => (
           <div class="card" style="display:flex;gap:1.25rem;align-items:center">
             <span style="font-size:1.75rem;flex-shrink:0">{num}</span>
@@ -230,7 +230,7 @@ const submitBtn  = document.getElementById('submit-btn') as HTMLButtonElement | 
 form?.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (submitBtn) {
-    submitBtn.textContent = '⏳ Wird eingereicht...';
+    submitBtn.textContent = '⏳ Submitting...';
     submitBtn.disabled = true;
   }
 
@@ -247,13 +247,13 @@ form?.addEventListener('submit', async (e) => {
       if (successMsg) successMsg.style.display = 'block';
     } else {
       if (submitBtn) {
-        submitBtn.textContent = '❌ Fehler — erneut versuchen';
+        submitBtn.textContent = '❌ Error — try again';
         submitBtn.disabled = false;
       }
     }
   } catch {
     if (submitBtn) {
-      submitBtn.textContent = '❌ Netzwerkfehler — erneut versuchen';
+      submitBtn.textContent = '❌ Network error — try again';
       submitBtn.disabled = false;
     }
   }

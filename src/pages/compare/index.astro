@@ -1,0 +1,273 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const comparisons = [
+  // Existing (15)
+  { slug: 'chatgpt-vs-claude',               a: 'ChatGPT',          b: 'Claude',            category: 'AI Assistants' },
+  { slug: 'cursor-vs-github-copilot',        a: 'Cursor',           b: 'GitHub Copilot',    category: 'Coding' },
+  { slug: 'midjourney-vs-dall-e-3',          a: 'Midjourney',       b: 'DALL-E 3',          category: 'Image AI' },
+  { slug: 'cursor-vs-windsurf',              a: 'Cursor',           b: 'Windsurf',          category: 'Coding' },
+  { slug: 'chatgpt-vs-gemini',               a: 'ChatGPT',          b: 'Gemini',            category: 'AI Assistants' },
+  { slug: 'midjourney-vs-stable-diffusion',  a: 'Midjourney',       b: 'Stable Diffusion',  category: 'Image AI' },
+  { slug: 'notion-ai-vs-mem-ai',             a: 'Notion AI',        b: 'Mem AI',            category: 'Productivity' },
+  { slug: 'zapier-vs-make-com',              a: 'Zapier',           b: 'Make.com',          category: 'Automation' },
+  { slug: 'elevenlabs-vs-murf-ai',           a: 'ElevenLabs',       b: 'Murf AI',           category: 'Audio' },
+  { slug: 'suno-ai-vs-udio',                 a: 'Suno AI',          b: 'Udio',              category: 'Audio' },
+  { slug: 'perplexity-vs-notebooklm',        a: 'Perplexity',       b: 'NotebookLM',        category: 'Research' },
+  { slug: 'github-copilot-vs-codeium',       a: 'GitHub Copilot',   b: 'Codeium',           category: 'Coding' },
+  { slug: 'heygen-vs-synthesia',             a: 'HeyGen',           b: 'Synthesia',         category: 'Video' },
+  { slug: 'jasper-ai-vs-writesonic',         a: 'Jasper AI',        b: 'Writesonic',        category: 'Writing' },
+  { slug: 'runway-ml-vs-pika',               a: 'Runway ML',        b: 'Pika',              category: 'Video' },
+  // New (25)
+  { slug: 'chatgpt-vs-perplexity',           a: 'ChatGPT',          b: 'Perplexity',        category: 'AI Assistants' },
+  { slug: 'chatgpt-vs-deepseek',             a: 'ChatGPT',          b: 'DeepSeek',          category: 'AI Assistants' },
+  { slug: 'chatgpt-vs-grok',                 a: 'ChatGPT',          b: 'Grok',              category: 'AI Assistants' },
+  { slug: 'gemini-vs-perplexity',            a: 'Gemini',           b: 'Perplexity',        category: 'AI Assistants' },
+  { slug: 'grammarly-vs-quillbot',           a: 'Grammarly',        b: 'QuillBot',          category: 'Writing' },
+  { slug: 'grammarly-vs-writesonic',         a: 'Grammarly',        b: 'Writesonic',        category: 'Writing' },
+  { slug: 'grammarly-vs-wordtune',           a: 'Grammarly',        b: 'Wordtune',          category: 'Writing' },
+  { slug: 'jasper-ai-vs-copy-ai',            a: 'Jasper AI',        b: 'Copy.ai',           category: 'Writing' },
+  { slug: 'jasper-ai-vs-rytr',               a: 'Jasper AI',        b: 'Rytr',              category: 'Writing' },
+  { slug: 'copy-ai-vs-rytr',                 a: 'Copy.ai',          b: 'Rytr',              category: 'Writing' },
+  { slug: 'writesonic-vs-koala-writer',      a: 'Writesonic',       b: 'Koala Writer',      category: 'Writing' },
+  { slug: 'cursor-vs-replit-ai',             a: 'Cursor',           b: 'Replit AI',         category: 'Coding' },
+  { slug: 'cursor-vs-tabnine',               a: 'Cursor',           b: 'Tabnine',           category: 'Coding' },
+  { slug: 'elevenlabs-vs-play-ht',           a: 'ElevenLabs',       b: 'Play.ht',           category: 'Audio' },
+  { slug: 'descript-vs-loom',                a: 'Descript',         b: 'Loom',              category: 'Video' },
+  { slug: 'canva-ai-vs-adobe-firefly',       a: 'Canva AI',         b: 'Adobe Firefly',     category: 'Design' },
+  { slug: 'surfer-seo-vs-frase',             a: 'Surfer SEO',       b: 'Frase',             category: 'Writing' },
+  { slug: 'invideo-ai-vs-lumen5',            a: 'InVideo AI',       b: 'Lumen5',            category: 'Video' },
+  { slug: 'otter-ai-vs-fireflies-ai',        a: 'Otter.ai',         b: 'Fireflies.ai',      category: 'Productivity' },
+  { slug: 'gamma-app-vs-beautiful-ai',       a: 'Gamma App',        b: 'Beautiful.ai',      category: 'Productivity' },
+  { slug: 'midjourney-vs-leonardo-ai',       a: 'Midjourney',       b: 'Leonardo AI',       category: 'Image AI' },
+  { slug: 'runway-ml-vs-sora',               a: 'Runway ML',        b: 'Sora',              category: 'Video' },
+  { slug: 'notion-ai-vs-taskade',            a: 'Notion AI',        b: 'Taskade',           category: 'Productivity' },
+  { slug: 'stable-diffusion-vs-dall-e-3',    a: 'Stable Diffusion', b: 'DALL-E 3',          category: 'Image AI' },
+  { slug: 'jasper-ai-vs-grammarly',          a: 'Jasper AI',        b: 'Grammarly',         category: 'Writing' },
+];
+
+const categories = [...new Set(comparisons.map(c => c.category))].sort();
+
+const categoryIcons: Record<string, string> = {
+  'AI Assistants': '🤖',
+  'Audio':         '🎵',
+  'Automation':    '⚙️',
+  'Coding':        '💻',
+  'Design':        '🎨',
+  'Image AI':      '🖼️',
+  'Productivity':  '⚡',
+  'Research':      '🔬',
+  'Video':         '🎬',
+  'Writing':       '✍️',
+};
+---
+
+<BaseLayout
+  title="Compare AI Tools — Find Your Perfect Match"
+  description="Find out which AI tool wins for your use case. Side-by-side comparisons of ChatGPT, Cursor, Midjourney and 40+ more tools — with pricing, ratings, and verdicts."
+>
+  <style>
+    .compare-hero {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+    }
+    .compare-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .compare-hero p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 580px;
+      margin: 0 auto 2rem;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .category-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .cat-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 0.35rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .cat-pill:hover,
+    .cat-pill.active {
+      border-color: var(--accent);
+      color: var(--accent-light);
+      background: var(--accent-dim);
+    }
+
+    .compare-section {
+      margin-bottom: 3rem;
+    }
+    .compare-section h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .compare-section h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .compare-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .compare-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .compare-card:hover {
+      border-color: rgba(124,106,247,0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .card-tools {
+      flex: 1;
+      min-width: 0;
+    }
+    .card-tools-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .vs-dot {
+      font-size: 0.7rem;
+      color: var(--accent-light);
+      font-weight: 800;
+      flex-shrink: 0;
+      background: var(--accent-dim);
+      border-radius: 99px;
+      padding: 0.1rem 0.4rem;
+    }
+    .card-arrow {
+      color: var(--text-dim);
+      font-size: 1rem;
+      flex-shrink: 0;
+      transition: color 0.2s;
+    }
+    .compare-card:hover .card-arrow {
+      color: var(--accent-light);
+    }
+
+    @media (max-width: 600px) {
+      .compare-cards { grid-template-columns: 1fr; }
+      .stat-row { gap: 1.5rem; }
+    }
+  </style>
+
+  <div class="container">
+    <!-- Hero -->
+    <div class="compare-hero">
+      <div class="vs-badge" style="display:inline-block;background:var(--accent-dim);color:var(--accent-light);border:1px solid rgba(124,106,247,0.3);border-radius:99px;padding:0.2rem 0.9rem;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;margin-bottom:1rem">
+        ⚡ AI TOOL COMPARISONS
+      </div>
+      <h1>Compare AI Tools</h1>
+      <p>Find out which AI tool wins for your use case. Side-by-side comparisons with pricing, features, and verdicts.</p>
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-num">40</div>
+          <div class="stat-label">Comparisons</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">{categories.length}</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">2026</div>
+          <div class="stat-label">Updated</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category nav -->
+    <div class="category-nav">
+      {categories.map(cat => (
+        <a href={`#${cat.toLowerCase().replace(/\s+/g, '-')}`} class="cat-pill">
+          {categoryIcons[cat] ?? ''} {cat}
+        </a>
+      ))}
+    </div>
+
+    <!-- Grouped by category -->
+    {categories.map(cat => (
+      <div class="compare-section" id={cat.toLowerCase().replace(/\s+/g, '-')}>
+        <h2>{categoryIcons[cat] ?? ''} {cat}</h2>
+        <div class="compare-cards">
+          {comparisons
+            .filter(c => c.category === cat)
+            .map(c => (
+              <a href={`/compare/${c.slug}`} class="compare-card">
+                <div class="card-tools">
+                  <div class="card-tools-row">
+                    <span>{c.a}</span>
+                    <span class="vs-dot">VS</span>
+                    <span>{c.b}</span>
+                  </div>
+                </div>
+                <span class="card-arrow">→</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

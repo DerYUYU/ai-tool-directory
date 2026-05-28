@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="KI-Tools Newsletter — Jede Woche neu"
-  description="Abonniere den kostenlosen KI-Tools Newsletter und erhalte jede Woche die 10 besten neuen KI-Tools direkt in dein Postfach."
+  title="AI Tools Newsletter — New every week"
+  description="Subscribe to the free AI Tools Newsletter and receive the 10 best new AI tools straight to your inbox every week."
 >
   <div class="container" style="padding-top:5rem;padding-bottom:6rem;max-width:680px">
 
@@ -16,10 +16,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         display:inline-block;
         animation: float 3s ease-in-out infinite;
       ">📬</div>
-      <h1 style="margin-bottom:1rem">KI-Tools Newsletter</h1>
+      <h1 style="margin-bottom:1rem">AI Tools Newsletter</h1>
       <p style="color:var(--text-muted);font-size:1.1rem;line-height:1.75;max-width:500px;margin:0 auto">
-        Jede Woche die <strong style="color:var(--text)">10 besten neuen KI-Tools</strong> —
-        direkt in dein Postfach. Kostenlos. Kein Spam. Jederzeit abmeldbar.
+        Every week the <strong style="color:var(--text)">10 best new AI tools</strong> —
+        straight to your inbox. Free. No spam. Unsubscribe anytime.
       </p>
     </div>
 
@@ -44,25 +44,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div style="position:relative;z-index:1">
         <div class="badge badge-new" style="margin-bottom:1.5rem">
-          ✨ Kostenlos · Kein Spam
+          ✨ Free · No spam
         </div>
-        <h2 style="margin-bottom:0.5rem">Jetzt abonnieren</h2>
+        <h2 style="margin-bottom:0.5rem">Subscribe now</h2>
         <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem">
-          Werde Teil von Tausenden die KI-Tools als erste entdecken.
+          Join thousands who discover AI tools first.
         </p>
 
         <!-- Success state -->
         <div id="nl-success" style="display:none">
           <div style="font-size:2.5rem;margin-bottom:0.75rem">🎉</div>
-          <h3 style="color:var(--green);margin-bottom:0.5rem">Erfolgreich abonniert!</h3>
-          <p style="color:var(--text-muted);font-size:0.9rem">Check deine E-Mails — du erhältst eine Bestätigung.</p>
+          <h3 style="color:var(--green);margin-bottom:0.5rem">Successfully subscribed!</h3>
+          <p style="color:var(--text-muted);font-size:0.9rem">Check your email — you'll receive a confirmation.</p>
         </div>
 
         <!-- Form -->
         <form id="nl-form" style="max-width:440px;margin:0 auto"
           action="https://formspree.io/f/xojbpode"
           method="POST">
-          <input type="hidden" name="_subject" value="Newsletter Anmeldung — Tooly-AI" />
+          <input type="hidden" name="_subject" value="Newsletter Signup — Tooly-AI" />
           <!-- Honeypot: Bots füllen das aus → Formspree blockiert automatisch -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
@@ -89,26 +89,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               onblur="this.style.borderColor='var(--border)'"
             />
             <button type="submit" id="nl-btn" class="btn btn-primary" style="padding:0.8rem 1.6rem;white-space:nowrap">
-              Abonnieren →
+              Subscribe →
             </button>
           </div>
 
           <p style="font-size:0.75rem;color:var(--text-dim);margin-top:1rem">
-            Durch Abonnieren stimmst du dem Erhalt wöchentlicher E-Mails zu. Jederzeit abmeldbar.
+            By subscribing you agree to receive weekly emails. Unsubscribe anytime.
           </p>
         </form>
       </div>
     </div>
 
     <!-- What you get -->
-    <h2 style="margin-bottom:1.5rem;text-align:center">Was du jede Woche bekommst</h2>
+    <h2 style="margin-bottom:1.5rem;text-align:center">What you get every week</h2>
     <div style="display:grid;gap:1rem;margin-bottom:3rem">
       {[
-        ['🆕', 'Top 10 neue KI-Tools', 'Jede Woche sorgfältig kuratiert und bewertet — bevor alle davon wissen'],
-        ['💰', 'Beste kostenlose Tools', 'Wir finden die Free-Tier Deals und Freemium-Angebote für dich'],
-        ['⚡', 'Early Access Tipps', 'Beta-Zugänge, Launch-Deals und limitierte Angebote'],
-        ['📊', 'Ehrliche Preisvergleiche', 'Welcher Plan lohnt sich wirklich? Wir rechnen es durch'],
-        ['🚫', 'Kein Spam, kein Bullshit', 'Nur Tools die wir selbst getestet haben — keine Pay-to-Play Empfehlungen'],
+        ['🆕', 'Top 10 new AI tools', 'Carefully curated and rated every week — before everyone else knows about them'],
+        ['💰', 'Best free tools', 'We find the free-tier deals and freemium offers for you'],
+        ['⚡', 'Early access tips', 'Beta access, launch deals and limited offers'],
+        ['📊', 'Honest price comparisons', 'Which plan is actually worth it? We do the math'],
+        ['🚫', 'No spam, no fluff', 'Only tools we have tested ourselves — no pay-to-play recommendations'],
       ].map(([emoji, title, desc]) => (
         <div class="card" style="display:flex;gap:1.25rem;align-items:flex-start">
           <span style="font-size:1.75rem;flex-shrink:0;margin-top:0.1rem">{emoji}</span>
@@ -124,10 +124,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="card" style="text-align:center;padding:2rem;background:rgba(34,197,94,0.06);border-color:rgba(34,197,94,0.2)">
       <div style="font-size:2rem;margin-bottom:0.75rem">⭐⭐⭐⭐⭐</div>
       <p style="font-style:italic;color:var(--text-muted);font-size:0.95rem;max-width:420px;margin:0 auto">
-        "Endlich ein Newsletter der mir Tools zeigt die ich wirklich nutze —
-        kein Hype, nur echte Empfehlungen."
+        "Finally a newsletter that shows me tools I actually use —
+        no hype, just real recommendations."
       </p>
-      <p style="font-size:0.8rem;color:var(--text-dim);margin-top:0.75rem">— Erster Abonnent</p>
+      <p style="font-size:0.8rem;color:var(--text-dim);margin-top:0.75rem">— First subscriber</p>
     </div>
 
   </div>
@@ -152,10 +152,10 @@ nlForm?.addEventListener('submit', async (e) => {
       nlForm.style.display = 'none';
       if (nlSuccess) nlSuccess.style.display = 'block';
     } else {
-      if (nlBtn) { nlBtn.textContent = '❌ Erneut versuchen'; nlBtn.disabled = false; }
+      if (nlBtn) { nlBtn.textContent = '❌ Try again'; nlBtn.disabled = false; }
     }
   } catch {
-    if (nlBtn) { nlBtn.textContent = '❌ Netzwerkfehler'; nlBtn.disabled = false; }
+    if (nlBtn) { nlBtn.textContent = '❌ Network error'; nlBtn.disabled = false; }
   }
 });
 </script>

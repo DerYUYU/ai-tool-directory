@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const allTools = await getCollection('tools');
 const sorted = [...allTools].sort((a, b) => b.data.rating - a.data.rating);
 
-const categories = ['Alle', 'Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Audio', 'Business', 'Research'];
+const categories = ['All', 'Writing', 'Coding', 'Design', 'Productivity', 'Video', 'Audio', 'Business', 'Research'];
 
 function renderStars(rating: number) {
   return '★'.repeat(Math.floor(rating)) + '☆'.repeat(5 - Math.floor(rating));
@@ -13,8 +13,8 @@ function renderStars(rating: number) {
 ---
 
 <BaseLayout
-  title="Alle KI-Tools — 100+ Tools entdecken & vergleichen"
-  description="Alle 100+ KI-Tools auf einen Blick. Suche, filtere nach Kategorie und finde das perfekte Tool für dich — mit Bewertungen und Preisvergleich."
+  title="All AI Tools — Discover & compare 100+ tools"
+  description="All 100+ AI tools at a glance. Search, filter by category and find the perfect tool for you — with ratings and pricing."
 >
 
   <section style="padding:5rem 0 3rem">
@@ -23,13 +23,13 @@ function renderStars(rating: number) {
       <!-- Header -->
       <div style="text-align:center;margin-bottom:3rem">
         <div class="badge badge-new" style="margin-bottom:1.25rem;font-size:0.8rem">
-          {allTools.length} KI-Tools · täglich aktualisiert
+          {allTools.length} AI Tools · updated daily
         </div>
         <h1 style="margin-bottom:1rem">
-          Alle <span class="grad-text">KI-Tools</span> entdecken
+          Discover all <span class="grad-text">AI Tools</span>
         </h1>
         <p style="color:var(--text-muted);font-size:1.1rem;max-width:540px;margin:0 auto">
-          Durchsuche alle {allTools.length} Tools oder filtere nach Kategorie.
+          Browse all {allTools.length} tools or filter by category.
         </p>
       </div>
 
@@ -41,7 +41,7 @@ function renderStars(rating: number) {
             id="tools-search"
             type="text"
             class="search-input"
-            placeholder="Tool suchen — z.B. ChatGPT, Midjourney, ElevenLabs..."
+            placeholder="Search tools — e.g. ChatGPT, Midjourney, ElevenLabs..."
             autocomplete="off"
             spellcheck="false"
           />
@@ -56,7 +56,7 @@ function renderStars(rating: number) {
       <div class="pills" style="justify-content:center;margin-bottom:2.5rem;flex-wrap:wrap">
         {categories.map(cat => (
           <button
-            class={`pill cat-filter${cat === 'Alle' ? ' active' : ''}`}
+            class={`pill cat-filter${cat === 'All' ? ' active' : ''}`}
             data-cat={cat.toLowerCase()}
           >
             {cat}
@@ -111,7 +111,7 @@ function renderStars(rating: number) {
       <!-- Empty state -->
       <div id="no-results" style="display:none;text-align:center;padding:5rem 2rem;color:var(--text-muted)">
         <div style="font-size:3.5rem;margin-bottom:1rem">🔍</div>
-        <p style="font-size:1.1rem">Kein Tool gefunden.<br/>Versuch einen anderen Suchbegriff.</p>
+        <p style="font-size:1.1rem">No tool found.<br/>Try a different search term.</p>
       </div>
 
     </div>
@@ -126,7 +126,7 @@ function renderStars(rating: number) {
     var filters  = document.querySelectorAll('.cat-filter');
     var items    = Array.prototype.slice.call(document.querySelectorAll('.tool-item'));
 
-    var activeCat = 'alle';
+    var activeCat = 'all';
     var activeQ   = '';
 
     function update() {
@@ -137,7 +137,7 @@ function renderStars(rating: number) {
         var tags    = el.getAttribute('data-tags')    || '';
         var tagline = el.getAttribute('data-tagline') || '';
 
-        var matchCat = activeCat === 'alle' || cat === activeCat;
+        var matchCat = activeCat === 'all' || cat === activeCat;
         var matchQ   = !activeQ
           || name.indexOf(activeQ) !== -1
           || cat.indexOf(activeQ) !== -1
@@ -151,7 +151,7 @@ function renderStars(rating: number) {
 
       if (noRes) noRes.style.display = visible === 0 ? 'block' : 'none';
       if (count) count.textContent = activeQ || activeCat !== 'alle'
-        ? visible + ' von ' + items.length + ' Tools'
+        ? visible + ' of ' + items.length + ' tools'
         : '';
     }
 

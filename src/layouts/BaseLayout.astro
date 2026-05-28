@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Das größte KI-Tool Verzeichnis. Vergleiche ChatGPT, Midjourney, GitHub Copilot und 100+ KI-Tools mit echten Bewertungen und Preisvergleich.',
+  description = 'The largest AI tool directory. Compare ChatGPT, Midjourney, GitHub Copilot and 100+ AI tools with real ratings and pricing.',
   ogImage = '/og-default.png',
   canonicalUrl,
 } = Astro.props;
@@ -21,7 +21,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +40,7 @@ const currentPath = Astro.url.pathname;
   <meta property="og:image" content={ogImage} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
-  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Tooly-AI" />
 
   <!-- Twitter -->
@@ -56,7 +56,7 @@ const currentPath = Astro.url.pathname;
       "@type": "WebSite",
       "name": "Tooly-AI",
       "url": "https://tooly-ai.dev",
-      "description": "Das größte KI-Tool Verzeichnis — kostenlos, affiliate-frei, täglich aktualisiert",
+      "description": "The largest AI tool directory — free, affiliate-transparent, updated daily",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://tooly-ai.dev/?q={search_term_string}",
@@ -65,8 +65,8 @@ const currentPath = Astro.url.pathname;
     }
   </script>
 
-  <!-- Plausible Analytics (DSGVO-konform, kein Cookie-Banner nötig) -->
-  <!-- Aktivieren: Auf https://plausible.io registrieren + Domain "tooly-ai.dev" hinzufügen -->
+  <!-- Plausible Analytics (GDPR-compliant, no cookie banner needed) -->
+  <!-- To enable: register at https://plausible.io and add domain "tooly-ai.dev" -->
   <script defer data-domain="tooly-ai.dev" src="https://plausible.io/js/script.js"></script>
 
   <slot name="head" />
@@ -92,6 +92,7 @@ const currentPath = Astro.url.pathname;
         <a href="/categories/Video"       class={currentPath.includes('Video')       ? 'active' : ''}>Video</a>
         <a href="/categories/Business"    class={currentPath.includes('Business')    ? 'active' : ''}>Business</a>
         <a href="/categories/Research"    class={currentPath.includes('Research')    ? 'active' : ''}>Research</a>
+        <a href="/compare" class={currentPath.includes('compare') ? 'active' : ''}>⚡ Compare</a>
         <a href="/finder" class={currentPath.includes('finder') ? 'active' : ''} style="color:var(--accent-light)">🤖 Finder</a>
       </div>
 
@@ -101,7 +102,7 @@ const currentPath = Astro.url.pathname;
           📬 Newsletter
         </a>
         <a href="/submit" class="btn btn-primary" style="padding:0.5rem 1.1rem;font-size:0.82rem">
-          + Tool einreichen
+          + Submit a tool
         </a>
       </div>
     </div>
@@ -121,18 +122,18 @@ const currentPath = Astro.url.pathname;
         <div class="footer-col">
           <div class="footer-logo">🤖 Tooly<span class="logo-accent">-AI</span></div>
           <p style="font-size:0.85rem;line-height:1.7;max-width:280px;margin-bottom:1.5rem">
-            Das größte deutschsprachige KI-Tool Verzeichnis.
-            Täglich aktualisiert — ehrlich, ohne versteckte Empfehlungen.
+            The largest AI tool directory.
+            Updated daily — honest, without hidden bias.
           </p>
           <div style="display:flex;gap:0.75rem">
             <a href="/newsletter" class="btn btn-outline" style="font-size:0.78rem;padding:0.4rem 0.9rem">📬 Newsletter</a>
-            <a href="/submit"     class="btn btn-ghost"   style="font-size:0.78rem;padding:0.4rem 0.9rem">+ Tool einreichen</a>
+            <a href="/submit"     class="btn btn-ghost"   style="font-size:0.78rem;padding:0.4rem 0.9rem">+ Submit a tool</a>
           </div>
         </div>
 
-        <!-- Kategorien -->
+        <!-- Categories -->
         <div class="footer-col">
-          <h4>Kategorien</h4>
+          <h4>Categories</h4>
           <a href="/categories/Writing">✍️ Writing</a>
           <a href="/categories/Coding">💻 Coding</a>
           <a href="/categories/Design">🎨 Design</a>
@@ -156,15 +157,15 @@ const currentPath = Astro.url.pathname;
           <a href="/tools/runway-ml">Runway ML</a>
         </div>
 
-        <!-- Seiten -->
+        <!-- Pages -->
         <div class="footer-col">
-          <h4>Mehr</h4>
-          <a href="/about">Über uns</a>
-          <a href="/finder">🤖 KI-Finder</a>
+          <h4>More</h4>
+          <a href="/about">About</a>
+          <a href="/finder">🤖 AI Finder</a>
           <a href="/newsletter">📬 Newsletter</a>
-          <a href="/submit">Tool einreichen</a>
+          <a href="/submit">Submit a tool</a>
           <a href="/sitemap-index.xml">Sitemap</a>
-          <a href="mailto:yilcay.b@gmail.com">Kontakt</a>
+          <a href="mailto:yilcay.b@gmail.com">Contact</a>
           <a href="/impressum">Impressum</a>
           <a href="/datenschutz">Datenschutz</a>
         </div>
@@ -174,10 +175,10 @@ const currentPath = Astro.url.pathname;
       <div class="footer-bottom">
         <div>
           <strong style="color:var(--text)">🤖 Tooly-AI</strong>
-          &nbsp;— © 2026 · Made with ❤️ in Deutschland
+          &nbsp;— © 2026 · Made with ❤️ in Germany
         </div>
         <div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-          <span style="color:var(--text-dim)">Diese Seite enthält Affiliate-Links.</span>
+          <span style="color:var(--text-dim)">This site contains affiliate links.</span>
           <a href="/impressum" style="color:var(--text-dim);font-size:0.8rem;text-decoration:none">Impressum</a>
           <a href="/datenschutz" style="color:var(--text-dim);font-size:0.8rem;text-decoration:none">Datenschutz</a>
         </div>

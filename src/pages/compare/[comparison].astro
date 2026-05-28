@@ -62,8 +62,8 @@ export async function getStaticPaths() {
 const { toolA, toolB } = Astro.props;
 const SITE_URL = 'https://tooly-ai.dev';
 
-const metaTitle = `${toolA.data.name} vs. ${toolB.data.name}: Der große Vergleich 2026`;
-const metaDesc = `${toolA.data.name} oder ${toolB.data.name}? Wir vergleichen Preise, Features und Bewertungen — damit du die richtige Wahl triffst.`;
+const metaTitle = `${toolA.data.name} vs. ${toolB.data.name}: The Big Comparison 2026`;
+const metaDesc = `${toolA.data.name} or ${toolB.data.name}? We compare pricing, features and ratings — so you can make the right choice.`;
 
 const schema = {
   "@context": "https://schema.org",
@@ -279,9 +279,9 @@ function winnerClass(a: number, b: number) {
 
   <div class="container">
     <div class="compare-hero">
-      <span class="vs-badge">VERGLEICH 2026</span>
+      <span class="vs-badge">COMPARISON 2026</span>
       <h1>{toolA.data.name} vs. {toolB.data.name}</h1>
-      <p>Welches Tool ist das Richtige für dich? Wir vergleichen Preise, Features und Bewertungen.</p>
+      <p>Which tool is the right one for you? We compare pricing, features and ratings.</p>
     </div>
 
     <!-- Hero Cards -->
@@ -296,8 +296,8 @@ function winnerClass(a: number, b: number) {
         <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7">{toolA.data.description.slice(0,200)}...</p>
         <div style="margin-top:1rem">
           {toolA.data.pricing.free
-            ? <span class="badge badge-free" style="font-size:0.75rem">Kostenlose Version</span>
-            : <span class="badge badge-paid" style="font-size:0.75rem">Ab {toolA.data.pricing.startingPrice}/Monat</span>
+            ? <span class="badge badge-free" style="font-size:0.75rem">Free tier</span>
+            : <span class="badge badge-paid" style="font-size:0.75rem">From {toolA.data.pricing.startingPrice}/month</span>
           }
         </div>
       </div>
@@ -316,8 +316,8 @@ function winnerClass(a: number, b: number) {
         <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7">{toolB.data.description.slice(0,200)}...</p>
         <div style="margin-top:1rem">
           {toolB.data.pricing.free
-            ? <span class="badge badge-free" style="font-size:0.75rem">Kostenlose Version</span>
-            : <span class="badge badge-paid" style="font-size:0.75rem">Ab {toolB.data.pricing.startingPrice}/Monat</span>
+            ? <span class="badge badge-free" style="font-size:0.75rem">Free tier</span>
+            : <span class="badge badge-paid" style="font-size:0.75rem">From {toolB.data.pricing.startingPrice}/month</span>
           }
         </div>
       </div>
@@ -325,51 +325,51 @@ function winnerClass(a: number, b: number) {
 
     <!-- Comparison Table -->
     <div class="compare-table">
-      <h2>Direktvergleich</h2>
+      <h2>Direct comparison</h2>
 
       <div class="compare-row">
         <div class={`row-val ${winnerClass(toolA.data.rating, toolB.data.rating)}`}>{toolA.data.rating}/5 {renderStars(toolA.data.rating)}</div>
-        <div class="row-label">Bewertung</div>
+        <div class="row-label">Rating</div>
         <div class={`row-val ${winnerClass(toolB.data.rating, toolA.data.rating)}`}>{toolB.data.rating}/5 {renderStars(toolB.data.rating)}</div>
       </div>
 
       <div class="compare-row">
-        <div class={`row-val ${toolA.data.pricing.free ? 'winner' : 'loser'}`}>{toolA.data.pricing.free ? '✅ Kostenlos verfügbar' : '❌ Kein Free Tier'}</div>
-        <div class="row-label">Gratis-Version</div>
-        <div class={`row-val ${toolB.data.pricing.free ? 'winner' : 'loser'}`}>{toolB.data.pricing.free ? '✅ Kostenlos verfügbar' : '❌ Kein Free Tier'}</div>
+        <div class={`row-val ${toolA.data.pricing.free ? 'winner' : 'loser'}`}>{toolA.data.pricing.free ? '✅ Free tier available' : '❌ No free tier'}</div>
+        <div class="row-label">Free tier</div>
+        <div class={`row-val ${toolB.data.pricing.free ? 'winner' : 'loser'}`}>{toolB.data.pricing.free ? '✅ Free tier available' : '❌ No free tier'}</div>
       </div>
 
       <div class="compare-row">
-        <div class="row-val">{toolA.data.pricing.startingPrice ? `Ab ${toolA.data.pricing.startingPrice}/Mo` : 'Kostenlos'}</div>
-        <div class="row-label">Preis</div>
-        <div class="row-val">{toolB.data.pricing.startingPrice ? `Ab ${toolB.data.pricing.startingPrice}/Mo` : 'Kostenlos'}</div>
+        <div class="row-val">{toolA.data.pricing.startingPrice ? `From ${toolA.data.pricing.startingPrice}/mo` : 'Free'}</div>
+        <div class="row-label">Price</div>
+        <div class="row-val">{toolB.data.pricing.startingPrice ? `From ${toolB.data.pricing.startingPrice}/mo` : 'Free'}</div>
       </div>
 
       <div class="compare-row">
         <div class="row-val">{toolA.data.category}</div>
-        <div class="row-label">Kategorie</div>
+        <div class="row-label">Category</div>
         <div class="row-val">{toolB.data.category}</div>
       </div>
 
       <div class="compare-row">
-        <div class={`row-val ${winnerClass(toolA.data.pros.length, toolB.data.pros.length)}`}>{toolA.data.pros.length} Vorteile</div>
-        <div class="row-label">Vorteile</div>
-        <div class={`row-val ${winnerClass(toolB.data.pros.length, toolA.data.pros.length)}`}>{toolB.data.pros.length} Vorteile</div>
+        <div class={`row-val ${winnerClass(toolA.data.pros.length, toolB.data.pros.length)}`}>{toolA.data.pros.length} pros</div>
+        <div class="row-label">Pros</div>
+        <div class={`row-val ${winnerClass(toolB.data.pros.length, toolA.data.pros.length)}`}>{toolB.data.pros.length} pros</div>
       </div>
     </div>
 
     <!-- Verdict -->
     <div class="verdict-section">
-      <h2>Wann welches Tool wählen?</h2>
+      <h2>When to choose which tool?</h2>
       <div class="verdict-grid">
         <div class="verdict-card">
-          <h3>Wähle {toolA.data.name} wenn...</h3>
+          <h3>Choose {toolA.data.name} if...</h3>
           <ul>
             {toolA.data.pros.slice(0,3).map(p => <li>{p}</li>)}
           </ul>
         </div>
         <div class="verdict-card">
-          <h3>Wähle {toolB.data.name} wenn...</h3>
+          <h3>Choose {toolB.data.name} if...</h3>
           <ul>
             {toolB.data.pros.slice(0,3).map(p => <li>{p}</li>)}
           </ul>
@@ -381,23 +381,23 @@ function winnerClass(a: number, b: number) {
     <div class="cta-section">
       <div class="cta-card">
         <div style="font-size:1.5rem;margin-bottom:0.5rem">🚀</div>
-        <h3 style="font-size:1rem;margin-bottom:0.5rem">{toolA.data.name} testen</h3>
-        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem">{toolA.data.pricing.free ? 'Kostenlos starten' : `Ab ${toolA.data.pricing.startingPrice}/Monat`}</p>
+        <h3 style="font-size:1rem;margin-bottom:0.5rem">Try {toolA.data.name}</h3>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem">{toolA.data.pricing.free ? 'Start for free' : `From ${toolA.data.pricing.startingPrice}/month`}</p>
         <a href={toolA.data.affiliateLink || toolA.data.websiteUrl} target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.82rem;padding:0.6rem 1.2rem">
-          {toolA.data.name} öffnen →
+          Open {toolA.data.name} →
         </a>
         <br/><br/>
-        <a href={`/tools/${toolA.id}`} style="font-size:0.78rem;color:var(--text-muted)">Vollständige Bewertung lesen</a>
+        <a href={`/tools/${toolA.id}`} style="font-size:0.78rem;color:var(--text-muted)">Read full review</a>
       </div>
       <div class="cta-card">
         <div style="font-size:1.5rem;margin-bottom:0.5rem">⚡</div>
-        <h3 style="font-size:1rem;margin-bottom:0.5rem">{toolB.data.name} testen</h3>
-        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem">{toolB.data.pricing.free ? 'Kostenlos starten' : `Ab ${toolB.data.pricing.startingPrice}/Monat`}</p>
+        <h3 style="font-size:1rem;margin-bottom:0.5rem">Try {toolB.data.name}</h3>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem">{toolB.data.pricing.free ? 'Start for free' : `From ${toolB.data.pricing.startingPrice}/month`}</p>
         <a href={toolB.data.affiliateLink || toolB.data.websiteUrl} target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.82rem;padding:0.6rem 1.2rem">
-          {toolB.data.name} öffnen →
+          Open {toolB.data.name} →
         </a>
         <br/><br/>
-        <a href={`/tools/${toolB.id}`} style="font-size:0.78rem;color:var(--text-muted)">Vollständige Bewertung lesen</a>
+        <a href={`/tools/${toolB.id}`} style="font-size:0.78rem;color:var(--text-muted)">Read full review</a>
       </div>
     </div>
   </div>
