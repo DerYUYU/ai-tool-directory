@@ -1,29 +1,29 @@
-﻿---
+---
 name: "LangChain"
-tagline: "Framework fuer KI-Anwendungen"
-description: "LangChain ist das meistgenutzte Framework um KI-Anwendungen mit LLMs zu bauen. Es verbindet Sprachmodelle mit Datenquellen, Tools und ermoeglicht autonome Agenten."
+tagline: "Framework for AI applications"
+description: "LangChain is the most widely used framework for building AI applications with LLMs. It connects language models with data sources and tools, and enables autonomous agents."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Open Source - komplett kostenlos"
+  freeTier: "Open source - completely free"
   startingPrice: "0"
 rating: 4.2
 pros:
-  - "De-facto Standard fuer LLM Apps"
-  - "Riesiges Oekoystem und Community"
-  - "Python und JavaScript Unterstuetzung"
-  - "LangSmith fuer Debugging und Monitoring"
+  - "De-facto standard for LLM apps"
+  - "Huge ecosystem and community"
+  - "Python and JavaScript support"
+  - "LangSmith for debugging and monitoring"
 cons:
-  - "Steile Lernkurve"
-  - "Dokumentation manchmal veraltet"
-  - "Rapid changes brechen manchmal Code"
+  - "Steep learning curve"
+  - "Documentation sometimes outdated"
+  - "Rapid changes sometimes break code"
 websiteUrl: "https://langchain.com"
 featured: false
 tags: ["framework", "llm", "developer", "agents", "python"]
 addedDate: 2026-05-26
 ---
 
-## LangChain - Der KI-App-Baukasten
+## LangChain - The AI App Toolkit
 
-Wenn du eine KI-Anwendung mit mehreren Modellen und Datenquellen bauen willst,
-ist LangChain der Standard-Startpunkt.
+If you want to build an AI application with multiple models and data sources,
+LangChain is the standard starting point.

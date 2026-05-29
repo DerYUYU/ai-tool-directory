@@ -1,21 +1,21 @@
 ---
 name: "Codeium"
-tagline: "Kostenloser KI-Code-Assistent — die beste Copilot-Alternative"
-description: "Codeium ist ein vollständig kostenloser KI-Code-Assistent für Einzelentwickler, der über 70 Programmiersprachen unterstützt. Mit schneller Code-Vervollständigung und einem Chat-Modus bietet er eine überzeugende Alternative zu GitHub Copilot ohne Monatsgebühr."
+tagline: "Free AI code assistant — the best Copilot alternative"
+description: "Codeium is a completely free AI code assistant for individual developers that supports over 70 programming languages. With fast code completion and a chat mode, it offers a compelling alternative to GitHub Copilot without a monthly fee."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Vollständig kostenlos für Einzelentwickler"
+  freeTier: "Completely free for individual developers"
   startingPrice: "$15"
 rating: 4.5
 pros:
-  - "Vollständig kostenlos für individuelle Entwickler"
-  - "Unterstützt 70+ Programmiersprachen"
-  - "Sehr schnelle Code-Vervollständigung"
-  - "Guter Chat-Modus für Code-Erklärungen und Refactoring"
+  - "Completely free for individual developers"
+  - "Supports 70+ programming languages"
+  - "Very fast code completion"
+  - "Good chat mode for code explanations and refactoring"
 cons:
-  - "Weniger Kontext als Cursor bei komplexen Projekten"
-  - "Keine Codebase-weite Analyse wie bei Enterprise-Tools"
+  - "Less context than Cursor for complex projects"
+  - "No codebase-wide analysis like enterprise tools"
 websiteUrl: "https://codeium.com"
 featured: false
 trending: true
@@ -25,9 +25,9 @@ tags:
   - alternative
   - ai-coding
 addedDate: 2026-05-28
-seoDescription: "Codeium ist die kostenlose KI-Copilot-Alternative mit 70+ Sprachen, schneller Vervollständigung und Chat-Modus für Entwickler."
+seoDescription: "Codeium is the free AI Copilot alternative with 70+ languages, fast completion, and chat mode for developers."
 ---
 
-Codeium hat sich als die beliebteste kostenlose Alternative zu GitHub Copilot etabliert. Für Einzelentwickler ist das Tool vollständig gratis — keine Kreditkarte, kein Trial, kein Ablaufdatum. Die Qualität der Vervollständigungen ist beeindruckend für ein kostenloses Tool und hält in vielen Alltagssituationen problemlos mit bezahlten Konkurrenten mit.
+Codeium has established itself as the most popular free alternative to GitHub Copilot. For individual developers the tool is completely free — no credit card, no trial, no expiration date. The quality of completions is impressive for a free tool and holds up well against paid competitors in many everyday situations.
 
-Besonders praktisch ist der integrierte Chat-Modus, mit dem sich Code erklären, refactoren oder Bugs debuggen lassen, ohne die IDE zu verlassen. Mit Plugins für VS Code, JetBrains, Vim, Neovim und viele weitere Editoren ist Codeium auch für Entwickler mit individuellen Setups eine Option. Wer ein komplexes Multi-Repo-Projekt mit tiefer Kontextanalyse benötigt, sollte jedoch zu Cursor oder Enterprise-Lösungen greifen.
+Particularly practical is the integrated chat mode, which lets you explain, refactor, or debug code without leaving the IDE. With plugins for VS Code, JetBrains, Vim, Neovim, and many other editors, Codeium is also an option for developers with individual setups. Those who need a complex multi-repo project with deep context analysis should however turn to Cursor or enterprise solutions.

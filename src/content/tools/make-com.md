@@ -1,21 +1,21 @@
-﻿---
+---
 name: "Make (Integromat)"
-tagline: "Visuelles Workflow-Automation-Tool"
-description: "Make (frueher Integromat) ist eine visuelle Workflow-Automatisierungsplattform die komplexere Automationen als Zapier ermoeglicht. Mit KI-Modulen werden LLM-Anfragen direkt in Workflows integriert."
+tagline: "Visual workflow automation tool"
+description: "Make (formerly Integromat) is a visual workflow automation platform that enables more complex automations than Zapier. With AI modules, LLM requests are integrated directly into workflows."
 category: "Productivity"
 pricing:
   free: true
-  freeTier: "1.000 Operationen/Monat kostenlos"
+  freeTier: "1,000 operations/month free"
   startingPrice: "$9"
 rating: 4.3
 pros:
-  - "Komplexere Workflows als Zapier"
-  - "Guenstigere Preise als Zapier"
-  - "Visueller Editor sehr intuitiv"
-  - "Guter kostenloser Tier"
+  - "More complex workflows than Zapier"
+  - "Cheaper prices than Zapier"
+  - "Visual editor very intuitive"
+  - "Good free tier"
 cons:
-  - "Lernkurve steiler als Zapier"
-  - "Weniger App-Integrationen"
+  - "Steeper learning curve than Zapier"
+  - "Fewer app integrations"
 affiliateLink: "https://www.make.com?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://make.com"
@@ -24,6 +24,6 @@ tags: ["automation", "workflow", "no-code", "integration"]
 addedDate: 2026-05-26
 ---
 
-## Make als guenstige Zapier-Alternative
+## Make as an affordable Zapier alternative
 
-Fuer komplexe Automationen mit kleinem Budget ist Make die bessere Wahl.
+For complex automations on a small budget, Make is the better choice.

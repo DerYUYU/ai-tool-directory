@@ -1,32 +1,32 @@
 ---
 name: "Hemingway Editor"
-tagline: "Schreibe klarer und kraftvoller — wie Ernest Hemingway"
-description: "Der Hemingway Editor ist ein minimalistisches Schreib- und Analyse-Tool, das auf Klarheit und Lesbarkeit ausgerichtet ist. Er hebt komplexe Sätze, Passiv-Konstruktionen und schwache Adverbien farblich hervor — inspiriert vom direkten Schreibstil Ernest Hemingways."
+tagline: "Write clearer and more powerfully — like Ernest Hemingway"
+description: "The Hemingway Editor is a minimalist writing and analysis tool focused on clarity and readability. It highlights complex sentences, passive constructions, and weak adverbs with color coding — inspired by the direct writing style of Ernest Hemingway."
 category: "Writing"
 pricing:
   free: true
-  freeTier: "Web-Version vollständig kostenlos"
+  freeTier: "Web version completely free"
   startingPrice: "$20"
 rating: 4.0
 pros:
-  - "Web-Version ist komplett und dauerhaft kostenlos"
-  - "Sofortige Lesbarkeitsanalyse per Farbcodierung"
-  - "Desktop-App für Mac und Windows als Einmalkauf ($20)"
-  - "Extrem fokussiertes, ablenkungsfreies Interface"
+  - "Web version is complete and permanently free"
+  - "Instant readability analysis via color coding"
+  - "Desktop app for Mac and Windows as a one-time purchase ($20)"
+  - "Extremely focused, distraction-free interface"
 cons:
-  - "Kein KI-Textgenerator — nur Analyse bestehender Texte"
-  - "Macht keine konkreten Verbesserungsvorschläge"
-  - "Keine Browser-Extension oder Integration"
+  - "No AI text generator — only analysis of existing texts"
+  - "Makes no concrete improvement suggestions"
+  - "No browser extension or integration"
 websiteUrl: "https://hemingwayapp.com"
 featured: false
 trending: false
 tags: ["readability", "editing", "clarity", "simplicity"]
 addedDate: 2026-05-28
-seoDescription: "Hemingway Editor: Lesbarkeitsanalyse für klareres Schreiben. Web-Version kostenlos, Desktop ab $20. ★4.0/5 Sterne — Jetzt testen."
+seoDescription: "Hemingway Editor: Readability analysis for clearer writing. Web version free, desktop from $20. ★4.0/5 stars — Try it now."
 ---
 
-## Hemingway Editor im Detail
+## Hemingway Editor in Detail
 
-Der Hemingway Editor folgt einem einfachen Prinzip: gutes Schreiben ist klares Schreiben. Das Tool markiert Sätze, die zu komplex oder zu lang sind (gelb und rot), hebt Passiv-Konstruktionen hervor (grün) und kennzeichnet überflüssige Adverbien (blau). Ein Lesbarkeits-Score zeigt, auf welchem Bildungsniveau der Text verständlich ist — ideal für alle, die breite Zielgruppen ansprechen wollen.
+The Hemingway Editor follows a simple principle: good writing is clear writing. The tool marks sentences that are too complex or too long (yellow and red), highlights passive constructions (green), and flags unnecessary adverbs (blue). A readability score shows at what education level the text is understandable — ideal for anyone who wants to reach broad audiences.
 
-Die Web-Version unter hemingwayapp.com ist vollständig kostenlos und ohne Registrierung nutzbar. Texte werden einfach hineinkopiert und sofort analysiert. Die Desktop-App für $20 (Einmalkauf) bietet zusätzlich direktes Schreiben im Tool und Export-Funktionen. Im Vergleich zu ProWritingAid oder Grammarly ist der Hemingway Editor bewusst minimalistisch gehalten — was ihn zu einem perfekten Zweitwerkzeug für den finalen Schliff macht.
+The web version at hemingwayapp.com is completely free and usable without registration. Texts are simply pasted in and analyzed immediately. The desktop app for $20 (one-time purchase) additionally offers direct writing within the tool and export functions. Compared to ProWritingAid or Grammarly, the Hemingway Editor is intentionally minimalist — which makes it a perfect secondary tool for the final polish.

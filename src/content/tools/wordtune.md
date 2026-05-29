@@ -1,21 +1,21 @@
-﻿---
+---
 name: "Wordtune"
-tagline: "KI-Schreibassistent fuer bessere Formulierungen"
-description: "Wordtune schlaegt alternative Formulierungen fuer deine Saetze vor. Es macht Texte klarer, kurzgebundener oder formeller - ohne den Sinn zu veraendern. Ideal als Browser-Extension."
+tagline: "AI writing assistant for better phrasing"
+description: "Wordtune suggests alternative phrasings for your sentences. It makes texts clearer, more concise or more formal — without changing the meaning. Ideal as a browser extension."
 category: "Writing"
 pricing:
   free: true
-  freeTier: "10 Neuformulierungen/Tag kostenlos"
+  freeTier: "10 reformulations/day free"
   startingPrice: "$9.99"
 rating: 4.2
 pros:
-  - "Schnelle Satz-Neuformulierungen"
-  - "Browser-Extension sehr praktisch"
-  - "Ton anpassbar"
-  - "Kostenloser Tier ausreichend fuer Gelegenheitsnutzer"
+  - "Fast sentence reformulations"
+  - "Browser extension very practical"
+  - "Adjustable tone"
+  - "Free tier sufficient for occasional users"
 cons:
-  - "Nur Satz-Ebene, keine langen Texte"
-  - "Englisch-fokussiert"
+  - "Sentence level only, no long texts"
+  - "English-focused"
 affiliateLink: "https://www.wordtune.com?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://wordtune.com"
@@ -24,6 +24,6 @@ tags: ["writing", "editing", "browser-extension", "english"]
 addedDate: 2026-05-26
 ---
 
-## Wordtune - Schreibhilfe auf Satz-Ebene
+## Wordtune - Writing Help at Sentence Level
 
-Wenn du weisst was du sagen willst aber nicht wie - Wordtune zeigt dir 10 bessere Wege.
+If you know what you want to say but not how — Wordtune shows you 10 better ways.

@@ -1,20 +1,20 @@
-﻿---
+---
 name: "Otter.ai"
-tagline: "KI-Transkription und Meeting-Notizen"
-description: "Otter.ai transkribiert Meetings in Echtzeit, erstellt Zusammenfassungen und extrahiert Action Items. Integriert mit Zoom, Teams und Google Meet."
+tagline: "AI transcription and meeting notes"
+description: "Otter.ai transcribes meetings in real time, creates summaries, and extracts action items. Integrates with Zoom, Teams, and Google Meet."
 category: "Productivity"
 pricing:
   free: true
-  freeTier: "600 Minuten/Monat kostenlos"
+  freeTier: "600 minutes/month free"
   startingPrice: "$16.99"
 rating: 4.4
 pros:
-  - "Beste Transkriptionsgenauigkeit"
-  - "Echtzeit-Transkription in Zoom/Teams"
-  - "Automatische Meeting-Zusammenfassung"
+  - "Best transcription accuracy"
+  - "Real-time transcription in Zoom/Teams"
+  - "Automatic meeting summary"
 cons:
-  - "Primär auf Englisch ausgerichtet"
-  - "Datenschutz bei vertraulichen Meetings"
+  - "Primarily focused on English"
+  - "Privacy concerns for confidential meetings"
 affiliateLink: "https://otter.ai?via=YOUR_OTTER_ID"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://otter.ai"
@@ -23,6 +23,6 @@ tags: ["transcription", "meetings", "productivity", "zoom"]
 addedDate: 2026-05-26
 ---
 
-## Otter.ai fuer Meeting-Notizen
+## Otter.ai for Meeting Notes
 
-Nie wieder Meeting-Notizen schreiben — Otter hoert zu und fasst automatisch zusammen.
+Never write meeting notes again — Otter listens and summarizes automatically.

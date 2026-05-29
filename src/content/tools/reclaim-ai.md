@@ -1,22 +1,22 @@
 ---
 name: "Reclaim AI"
-tagline: "Schütze Fokuszeit automatisch im Google Calendar mit KI"
-description: "Reclaim AI ist ein intelligenter Kalenderassistent für Google Calendar, der Fokuszeit, Habits und Task-Blöcke automatisch in deinen Kalender einplant und dabei Meetings und Termine berücksichtigt. So bleibt Zeit für tiefe Arbeit dauerhaft geschützt."
+tagline: "Automatically protect focus time in Google Calendar with AI"
+description: "Reclaim AI is an intelligent calendar assistant for Google Calendar that automatically schedules focus time, habits, and task blocks into your calendar while considering meetings and appointments. This keeps time for deep work permanently protected."
 category: "Productivity"
 pricing:
   free: true
-  freeTier: "1 Kalender kostenlos mit Basis-Features"
+  freeTier: "1 calendar free with basic features"
   startingPrice: "$8"
 rating: 4.4
 pros:
-  - Nahtlose Google-Calendar-Integration ohne Datenmigration
-  - Habits-Feature plant regelmäßige Routinen automatisch ein
-  - Schützt Deep-Work-Zeitblöcke vor spontanen Meeting-Anfragen
-  - Einfach zu nutzen mit minimalem Setup-Aufwand
-  - Solides Free Tier für Einzelpersonen
+  - Seamless Google Calendar integration without data migration
+  - Habits feature automatically schedules regular routines
+  - Protects deep-work time blocks from spontaneous meeting requests
+  - Easy to use with minimal setup effort
+  - Solid free tier for individuals
 cons:
-  - Funktioniert ausschließlich mit Google Calendar
-  - Keine eigene Aufgaben-Datenbank integriert
+  - Works exclusively with Google Calendar
+  - No integrated task database
 affiliateLink: "https://reclaim.ai?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://reclaim.ai"
@@ -29,9 +29,9 @@ tags:
   - google-calendar
   - time-management
 addedDate: 2026-05-28
-seoDescription: "Reclaim AI schützt Fokuszeit automatisch im Google Calendar. Habits, Deep Work und Tasks intelligent eingeplant. Kostenlos starten."
+seoDescription: "Reclaim AI automatically protects focus time in Google Calendar. Habits, deep work, and tasks intelligently scheduled. Start for free."
 ---
 
-Reclaim AI verbindet sich mit Google Calendar und plant Fokusblöcke, Habits und Tasks automatisch in freie Zeitfenster ein. Wenn ein Meeting dazwischenkommt, verschiebt Reclaim die Blöcke eigenständig auf den nächsten freien Slot — ohne manuelles Eingreifen.
+Reclaim AI connects to Google Calendar and automatically schedules focus blocks, habits, and tasks into free time slots. When a meeting comes up, Reclaim independently moves the blocks to the next free slot — without manual intervention.
 
-Das Habits-Feature ist besonders nützlich für regelmäßige Routinen wie Sport, Lernen oder wöchentliche Reviews: Reclaim findet immer die optimale Zeit und hält die Gewohnheit im Kalender sichtbar. Für alle, die bereits auf Google Calendar setzen, ist es einer der einfachsten Wege zu mehr strukturierter Fokuszeit.
+The habits feature is particularly useful for regular routines like exercise, learning, or weekly reviews: Reclaim always finds the optimal time and keeps the habit visible in the calendar. For everyone who already uses Google Calendar, it is one of the easiest ways to get more structured focus time.

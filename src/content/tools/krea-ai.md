@@ -1,23 +1,23 @@
 ---
 name: "Krea AI"
-tagline: "Echtzeit KI-Bildgenerierung — siehst du das Bild während du zeichnest"
-description: "Krea AI revolutioniert die KI-Bildgenerierung durch Echtzeit-Feedback: Das Bild entsteht simultan während des Zeichnens oder Beschreibens. Zusätzlich bietet Krea AI-Training, Upscaling und experimentelle Video-Generierung."
+tagline: "Real-time AI image generation — see the image as you draw"
+description: "Krea AI revolutionizes AI image generation through real-time feedback: the image is created simultaneously while drawing or describing. Additionally, Krea offers AI training, upscaling, and experimental video generation."
 category: "Design"
 pricing:
   free: true
-  freeTier: "Echtzeit-Generator kostenlos nutzbar"
+  freeTier: "Real-time generator free to use"
   startingPrice: "$24"
 rating: 4.4
 pros:
-  - "Einzigartige Echtzeit-Generierung — kein anderes Tool bietet das"
-  - "Hohe kreative Kontrolle durch interaktives Zeichnen"
-  - "AI Training auf eigene Bilder möglich"
-  - "Leistungsstarkes Upscaling-Feature"
-  - "Experimentelle Video-Generierung inklusive"
+  - "Unique real-time generation — no other tool offers this"
+  - "High creative control through interactive drawing"
+  - "AI training on your own images possible"
+  - "Powerful upscaling feature"
+  - "Experimental video generation included"
 cons:
-  - "Deutlich teurer als die meisten Alternativen"
-  - "GPU-intensiv und manchmal instabile Server"
-  - "Lernkurve für neue Nutzer"
+  - "Significantly more expensive than most alternatives"
+  - "GPU-intensive and sometimes unstable servers"
+  - "Learning curve for new users"
 websiteUrl: "https://krea.ai"
 featured: false
 trending: true
@@ -28,9 +28,9 @@ tags:
   - upscaling
   - experimental
 addedDate: 2026-05-28
-seoDescription: "Krea AI: Einzigartiger Echtzeit KI-Bildgenerator — Bild entsteht während des Zeichnens. Mit AI Training, Upscaling und Video-Generierung."
+seoDescription: "Krea AI: Unique real-time AI image generator — image is created while drawing. With AI training, upscaling, and video generation."
 ---
 
-Krea AI bringt einen grundlegend anderen Ansatz in die KI-Bildgenerierung: Statt auf einen fertigen Output zu warten, sieht der Nutzer das Bild in Echtzeit entstehen, während er zeichnet, malt oder tippt. Diese interaktive Erfahrung eröffnet völlig neue kreative Workflows und macht Krea zur bevorzugten Plattform für professionelle Künstler und Illustratoren, die direktes Feedback beim kreativen Prozess schätzen.
+Krea AI brings a fundamentally different approach to AI image generation: instead of waiting for a finished output, the user sees the image being created in real time while drawing, painting, or typing. This interactive experience opens up entirely new creative workflows and makes Krea the preferred platform for professional artists and illustrators who appreciate direct feedback during the creative process.
 
-Das AI-Training auf eigene Bildsammlungen und das hochwertige Upscaling-Feature ergänzen den Echtzeit-Generator zu einem vollständigen Kreativ-Studio. Der höhere Preis von $24 pro Monat spiegelt die rechenintensive Echtzeit-Infrastruktur wider und richtet sich klar an professionelle Nutzer, für die kreative Kontrolle wichtiger ist als Kosteneffizienz.
+AI training on your own image collections and the high-quality upscaling feature complement the real-time generator into a complete creative studio. The higher price of $24 per month reflects the compute-intensive real-time infrastructure and is clearly aimed at professional users for whom creative control is more important than cost efficiency.

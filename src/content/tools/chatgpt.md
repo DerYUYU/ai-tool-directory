@@ -1,43 +1,43 @@
 ---
 name: "ChatGPT"
-tagline: "Der bekannteste KI-Assistent der Welt"
-description: "ChatGPT von OpenAI ist der weltweit führende KI-Chatbot. Er kann Texte schreiben, Code erklären, Fragen beantworten, Zusammenfassungen erstellen und komplexe Probleme lösen. Mit GPT-4 ist er einer der intelligentesten verfügbaren KI-Assistenten."
+tagline: "The world's most well-known AI assistant"
+description: "ChatGPT by OpenAI is the world's leading AI chatbot. It can write texts, explain code, answer questions, create summaries, and solve complex problems. With GPT-4, it is one of the most intelligent AI assistants available."
 category: "Writing"
 pricing:
   free: true
-  freeTier: "GPT-3.5 kostenlos unbegrenzt"
+  freeTier: "GPT-3.5 free unlimited"
   startingPrice: "$20"
 rating: 4.8
 pros:
-  - "Größte Wissensbasis unter allen KI-Assistenten"
-  - "Kostenlose Version mit GPT-3.5 verfügbar"
-  - "Exzellent bei Code, Texten und Analysen"
-  - "Riesiges Plugin-Ökosystem (ChatGPT Plus)"
-  - "Mehrsprachige Unterstützung"
+  - "Largest knowledge base among all AI assistants"
+  - "Free version with GPT-3.5 available"
+  - "Excellent at code, writing, and analysis"
+  - "Huge plugin ecosystem (ChatGPT Plus)"
+  - "Multilingual support"
 cons:
-  - "Wissen endet im April 2024 (ohne Websuche)"
-  - "GPT-4 nur im Plus-Abo ($20/Monat)"
-  - "Server manchmal überlastet"
-  - "Halluziniert gelegentlich Fakten"
+  - "Knowledge cutoff April 2024 (without web search)"
+  - "GPT-4 only in Plus subscription ($20/month)"
+  - "Servers sometimes overloaded"
+  - "Occasionally hallucinates facts"
 websiteUrl: "https://chat.openai.com"
 featured: true
 tags: ["chatbot", "text-generation", "code", "analysis", "gpt-4"]
 addedDate: 2026-05-26
 ---
 
-## ChatGPT im Detail
+## ChatGPT in Detail
 
-ChatGPT wurde im November 2022 von OpenAI veröffentlicht und hat die Tech-Welt verändert.
-Es ist der meistgenutzte KI-Assistent weltweit mit über 100 Millionen aktiven Nutzern.
+ChatGPT was released in November 2022 by OpenAI and changed the tech world.
+It is the most widely used AI assistant worldwide with over 100 million active users.
 
-### Beste Anwendungsfälle
+### Best Use Cases
 
-- **Texte schreiben**: Blog-Artikel, Emails, Social Media Posts
-- **Code-Hilfe**: Debugging, Erklärungen, Code-Generierung
-- **Lernen**: Komplexe Themen einfach erklärt
-- **Analyse**: Daten interpretieren, Zusammenfassungen
+- **Writing texts**: Blog articles, emails, social media posts
+- **Code help**: Debugging, explanations, code generation
+- **Learning**: Complex topics explained simply
+- **Analysis**: Interpreting data, summaries
 
-### ChatGPT vs. Konkurrenten
+### ChatGPT vs. Competitors
 
-ChatGPT ist die beste Wahl wenn du einen vielseitigen Allround-Assistenten suchst.
-Für spezialisierte Aufgaben gibt es bessere Alternativen (Claude für lange Texte, Gemini für Google-Integration).
+ChatGPT is the best choice when you're looking for a versatile all-round assistant.
+For specialized tasks there are better alternatives (Claude for long texts, Gemini for Google integration).

@@ -1,22 +1,22 @@
 ---
 name: "Leonardo AI"
-tagline: "KI-Bildgenerator für Game-Assets und konsistente Bildserien"
-description: "Leonardo AI ist eine leistungsstarke KI-Bildplattform mit besonderer Stärke bei Game-Assets, Character-Design und konsistenten Bildserien. Der integrierte Canvas-Editor und ControlNet bieten professionelle kreative Kontrolle."
+tagline: "AI image generator for game assets and consistent image series"
+description: "Leonardo AI is a powerful AI image platform with particular strength in game assets, character design, and consistent image series. The integrated canvas editor and ControlNet provide professional creative control."
 category: "Design"
 pricing:
   free: true
-  freeTier: "150 Tokens täglich kostenlos"
+  freeTier: "150 tokens daily free"
   startingPrice: "$12"
 rating: 4.5
 pros:
-  - "Starke und großzügige Free-Tier mit 150 täglichen Tokens"
-  - "Integrierter Canvas-Editor für Bildbearbeitung"
-  - "Konsistente Character-Generierung über mehrere Bilder"
-  - "ControlNet-Unterstützung für präzise Steuerung"
-  - "Große Community mit geteilten Modellen"
+  - "Strong and generous free tier with 150 daily tokens"
+  - "Integrated canvas editor for image editing"
+  - "Consistent character generation across multiple images"
+  - "ControlNet support for precise control"
+  - "Large community with shared models"
 cons:
-  - "Tokens werden bei komplexen Generierungen schnell verbraucht"
-  - "Weniger photorealistisch als Midjourney bei Porträts"
+  - "Tokens are quickly consumed with complex generations"
+  - "Less photorealistic than Midjourney for portraits"
 affiliateLink: "https://app.leonardo.ai?via=YOUR_LEO_ID"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://leonardo.ai"
@@ -28,9 +28,9 @@ tags:
   - creative
   - canvas
 addedDate: 2026-05-28
-seoDescription: "Leonardo AI: KI-Bildgenerator für Game-Assets und Character-Design. 150 Tokens täglich kostenlos, Canvas-Editor inklusive."
+seoDescription: "Leonardo AI: AI image generator for game assets and character design. 150 tokens daily free, canvas editor included."
 ---
 
-Leonardo AI hat sich als bevorzugte Plattform für Game-Developer und digitale Künstler etabliert, die konsistente Charaktere und Assets über mehrere Generierungen hinweg benötigen. Die Kombination aus ControlNet, einem vollwertigen Canvas-Editor und einer aktiven Community, die eigene Modelle teilt, macht es zu einem der vielseitigsten KI-Bildtools auf dem Markt.
+Leonardo AI has established itself as the preferred platform for game developers and digital artists who need consistent characters and assets across multiple generations. The combination of ControlNet, a full-featured canvas editor, and an active community that shares custom models makes it one of the most versatile AI image tools on the market.
 
-Die großzügige kostenlose Tier mit 150 täglichen Tokens ermöglicht es Einsteigern und Hobbyisten, die Plattform ausgiebig zu testen. Besonders die Fähigkeit, konsistente Figuren über mehrere Bilder hinweg beizubehalten — ein sogenanntes Character Consistency Feature — hebt Leonardo AI deutlich von einfacheren Generatoren ab und eröffnet neue Möglichkeiten für Illustrationen, Comics und Game-Content.
+The generous free tier with 150 daily tokens allows beginners and hobbyists to thoroughly test the platform. Particularly the ability to maintain consistent characters across multiple images — a so-called Character Consistency Feature — clearly sets Leonardo AI apart from simpler generators and opens up new possibilities for illustrations, comics, and game content.

@@ -1,21 +1,21 @@
 ---
 name: "Consensus"
-tagline: "KI-Suchmaschine für wissenschaftliche Studien mit direkten Antworten"
-description: "Consensus ist eine KI-Suchmaschine, die ausschließlich wissenschaftliche Studien durchsucht und direkte, belegbare Antworten liefert. Das einzigartige Consensus-Meter zeigt, wie viel Einigkeit in der Forschungsgemeinschaft zu einer Frage besteht."
+tagline: "AI search engine for scientific studies with direct answers"
+description: "Consensus is an AI search engine that exclusively searches scientific studies and delivers direct, verifiable answers. The unique Consensus Meter shows how much agreement exists within the research community on a given question."
 category: "Research"
 pricing:
   free: true
-  freeTier: "20 Suchen täglich kostenlos"
+  freeTier: "20 searches daily free"
   startingPrice: "$9"
 rating: 4.5
 pros:
-  - Echte peer-reviewte Studien als Quellen – keine Halluzinationen
-  - Consensus-Meter zeigt den wissenschaftlichen Konsens
-  - Verlässliche, belegbare Antworten
-  - Günstige Pro-Option
+  - Real peer-reviewed studies as sources — no hallucinations
+  - Consensus Meter shows the scientific consensus
+  - Reliable, verifiable answers
+  - Affordable pro option
 cons:
-  - Primär englischsprachige Literatur verfügbar
-  - Begrenzte Suchen im kostenlosen Plan
+  - Primarily English-language literature available
+  - Limited searches in the free plan
 websiteUrl: "https://consensus.app"
 featured: false
 trending: true
@@ -26,9 +26,9 @@ tags:
   - academic
   - evidence-based
 addedDate: 2026-05-28
-seoDescription: "Consensus durchsucht wissenschaftliche Studien mit KI und zeigt den Forschungskonsens. 20 Suchen täglich kostenlos, verlässliche Quellen."
+seoDescription: "Consensus searches scientific studies with AI and shows the research consensus. 20 searches daily free, reliable sources."
 ---
 
-Consensus löst ein fundamentales Problem bei KI-Suche: Statt plausibel klingende Antworten zu generieren, die möglicherweise falsch sind, basiert jede Antwort auf tatsächlich publizierten wissenschaftlichen Studien. Das macht das Tool besonders wertvoll für alle, die evidenzbasierte Informationen benötigen.
+Consensus solves a fundamental problem with AI search: instead of generating plausible-sounding answers that may be wrong, every answer is based on actually published scientific studies. This makes the tool particularly valuable for anyone who needs evidence-based information.
 
-Das Consensus-Meter ist das Alleinstellungsmerkmal: Es zeigt auf einen Blick, ob die Wissenschaft bei einer Frage mehrheitlich einer Meinung ist oder ob die Forschung gespalten ist. Das ist eine Dimension, die keine andere KI-Suchmaschine so transparent kommuniziert.
+The Consensus Meter is the unique selling point: it shows at a glance whether science is predominantly in agreement on a question or whether research is divided. This is a dimension that no other AI search engine communicates as transparently.

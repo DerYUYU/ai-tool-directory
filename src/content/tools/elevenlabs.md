@@ -1,23 +1,23 @@
 ---
 name: "ElevenLabs"
-tagline: "Die realistischste KI-Stimme der Welt"
-description: "ElevenLabs ist das führende KI-Text-to-Speech-Tool mit unübertroffener Realism. Es kann jede Stimme klonen, Audiobücher vertonen und mehrsprachige Voice-Overs in Broadcast-Qualität erstellen."
+tagline: "The most realistic AI voice in the world"
+description: "ElevenLabs is the leading AI text-to-speech tool with unmatched realism. It can clone any voice, narrate audiobooks, and create multilingual voice-overs in broadcast quality."
 category: "Audio"
 pricing:
   free: true
-  freeTier: "10.000 Zeichen/Monat kostenlos"
+  freeTier: "10,000 characters/month free"
   startingPrice: "$5"
 rating: 4.8
 pros:
-  - "Realistischste KI-Stimmen überhaupt"
-  - "Eigene Stimme in 1 Minute klonen"
-  - "29 Sprachen unterstützt"
-  - "API für Entwickler verfügbar"
-  - "Großzügiger kostenloser Tier"
+  - "Most realistic AI voices available"
+  - "Clone your own voice in 1 minute"
+  - "29 languages supported"
+  - "API available for developers"
+  - "Generous free tier"
 cons:
-  - "Stimm-Klonen ethisch problematisch"
-  - "Premium-Stimmen nur im Abo"
-  - "Hoher Datenschutz-Anspruch nötig"
+  - "Voice cloning is ethically problematic"
+  - "Premium voices only with subscription"
+  - "High data privacy requirements necessary"
 affiliateLink: "https://try.elevenlabs.io/muok7detr5hz"
 affiliateCommission: "22% recurring"
 websiteUrl: "https://elevenlabs.io"
@@ -26,19 +26,19 @@ tags: ["text-to-speech", "voice", "audio", "voice-clone", "podcast", "audiobook"
 addedDate: 2026-05-26
 ---
 
-## ElevenLabs im Detail
+## ElevenLabs in Detail
 
-ElevenLabs wurde 2022 von Piotr Dabkowski und Mati Staniszewski gegründet.
-In nur 2 Jahren wurde es zum Marktführer für KI-Sprachsynthese.
+ElevenLabs was founded in 2022 by Piotr Dabkowski and Mati Staniszewski.
+In just 2 years it became the market leader in AI speech synthesis.
 
-### Beste Anwendungsfälle
+### Best Use Cases
 
-- **Podcasts**: Automatische Vertonung von Transkripten
-- **YouTube Videos**: Voice-Overs ohne Mikrofon
-- **Hörbücher**: Ganze Bücher in Stunden vertonen
-- **Apps/Spiele**: Charakterstimmen dynamisch generieren
+- **Podcasts**: Automatic narration of transcripts
+- **YouTube Videos**: Voice-overs without a microphone
+- **Audiobooks**: Narrate entire books in hours
+- **Apps/Games**: Dynamically generate character voices
 
 ### Voice Cloning
 
-Mit dem Voice Cloning Feature kannst du deine eigene Stimme in wenigen Minuten klonen.
-Wichtig: Nur mit Erlaubnis der Person verwenden!
+With the Voice Cloning feature you can clone your own voice in a few minutes.
+Important: Only use with the person's permission!

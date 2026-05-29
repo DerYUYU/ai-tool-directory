@@ -1,22 +1,22 @@
 ---
 name: "Ideogram"
-tagline: "KI-Bildgenerator der als einziger Text zuverlässig in Bilder einbettet"
-description: "Ideogram ist ein KI-Bildgenerator, der sich durch seine einzigartige Fähigkeit auszeichnet, lesbaren und korrekt geschriebenen Text direkt in generierte Bilder einzubetten. Ideal für Thumbnails, Social-Media-Posts und Marketingmaterial."
+tagline: "AI image generator that reliably embeds text in images like no other"
+description: "Ideogram is an AI image generator distinguished by its unique ability to embed readable and correctly spelled text directly into generated images. Ideal for thumbnails, social media posts, and marketing materials."
 category: "Design"
 pricing:
   free: true
-  freeTier: "25 Bilder täglich kostenlos"
+  freeTier: "25 images daily free"
   startingPrice: "$8"
 rating: 4.6
 pros:
-  - "Bester KI-Bildgenerator für Text-in-Bild-Integration"
-  - "Realistischer und vielseitiger Bildstil"
-  - "Schnelle Generierungszeiten"
-  - "Günstige Einstiegspreise"
-  - "Magic-Prompt-Funktion verbessert Ergebnisse automatisch"
+  - "Best AI image generator for text-in-image integration"
+  - "Realistic and versatile image style"
+  - "Fast generation times"
+  - "Affordable entry prices"
+  - "Magic Prompt feature automatically improves results"
 cons:
-  - "Weniger künstlerisch und stilisiert als Midjourney"
-  - "Begrenzte kostenlose Credits täglich"
+  - "Less artistic and stylized than Midjourney"
+  - "Limited free credits daily"
 websiteUrl: "https://ideogram.ai"
 featured: false
 trending: true
@@ -26,9 +26,9 @@ tags:
   - social-media
   - marketing
 addedDate: 2026-05-28
-seoDescription: "Ideogram: KI-Bildgenerator für zuverlässige Text-in-Bild-Integration. 25 kostenlose Bilder täglich, ab $8/Monat."
+seoDescription: "Ideogram: AI image generator for reliable text-in-image integration. 25 free images daily, from $8/month."
 ---
 
-Ideogram hat sich als die go-to Lösung für alle etabliert, die Text zuverlässig in KI-generierte Bilder einbetten müssen. Während andere Generatoren bei Buchstaben und Wörtern regelmäßig scheitern, produziert Ideogram konsistent lesbare und korrekt geschriebene Textelemente — ein entscheidender Vorteil für YouTube-Thumbnails, Social-Media-Grafiken und Marketingmaterial.
+Ideogram has established itself as the go-to solution for anyone who needs to reliably embed text into AI-generated images. While other generators regularly fail with letters and words, Ideogram consistently produces readable and correctly spelled text elements — a decisive advantage for YouTube thumbnails, social media graphics, and marketing materials.
 
-Die Magic-Prompt-Funktion erweitert einfache Beschreibungen automatisch zu detaillierten Prompts und verbessert so die Bildqualität erheblich. Mit 25 kostenlosen Generierungen täglich und einem erschwinglichen Einstiegspreis von $8 pro Monat ist Ideogram besonders für Content-Creator und Marketer eine attraktive Alternative zu teureren Diensten.
+The Magic Prompt feature automatically expands simple descriptions into detailed prompts, significantly improving image quality. With 25 free generations daily and an affordable entry price of $8 per month, Ideogram is an especially attractive alternative to more expensive services for content creators and marketers.

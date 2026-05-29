@@ -1,21 +1,21 @@
 ---
 name: "Sourcegraph Cody"
-tagline: "KI-Code-Assistent der deine gesamte Codebase versteht"
-description: "Sourcegraph Cody ist ein KI-Code-Assistent, der auf Sourcegraphs leistungsstarker Code-Suchmaschine aufbaut und daher die gesamte Codebase versteht — nicht nur die aktuell geöffnete Datei. Ideal für große Projekte und Enterprise-Teams."
+tagline: "AI code assistant that understands your entire codebase"
+description: "Sourcegraph Cody is an AI code assistant built on Sourcegraph's powerful code search engine, giving it an understanding of the entire codebase — not just the currently open file. Ideal for large projects and enterprise teams."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Kostenlos für kleine Codebasen"
+  freeTier: "Free for small codebases"
   startingPrice: "$9"
 rating: 4.2
 pros:
-  - "Versteht die gesamte Codebase dank Sourcegraph-Integration"
-  - "Starke Code-Suche über alle Repositories hinweg"
-  - "Tiefe Git-Integration und Commit-Historie-Verständnis"
-  - "Enterprise-tauglich mit On-Premise-Option"
+  - "Understands the entire codebase thanks to Sourcegraph integration"
+  - "Powerful code search across all repositories"
+  - "Deep Git integration and commit history understanding"
+  - "Enterprise-ready with on-premise option"
 cons:
-  - "Komplexerer Setup im Vergleich zu einfacheren Tools"
-  - "Primär für große Teams und Enterprise-Umgebungen konzipiert"
+  - "More complex setup compared to simpler tools"
+  - "Primarily designed for large teams and enterprise environments"
 websiteUrl: "https://sourcegraph.com/cody"
 featured: false
 trending: false
@@ -25,9 +25,9 @@ tags:
   - large-projects
   - ai-coding
 addedDate: 2026-05-28
-seoDescription: "Sourcegraph Cody versteht deine gesamte Codebase — KI-Assistent mit starker Code-Suche und Enterprise-Git-Integration."
+seoDescription: "Sourcegraph Cody understands your entire codebase — AI assistant with powerful code search and enterprise Git integration."
 ---
 
-Was Sourcegraph Cody von anderen KI-Coding-Assistenten unterscheidet, ist sein einzigartiger Ansatz: Cody baut auf Sourcegraphs bewährter Code-Suchmaschine auf und hat dadurch Zugriff auf den vollständigen Kontext einer Codebase — über Dateien, Repositories und Commit-Historien hinweg. Bei Fragen zu Architekturentscheidungen oder codebase-weiten Patterns liefert Cody deutlich präzisere Antworten als tools mit reinem Datei-Kontext.
+What sets Sourcegraph Cody apart from other AI coding assistants is its unique approach: Cody is built on Sourcegraph's proven code search engine and therefore has access to the full context of a codebase — across files, repositories, and commit histories. For questions about architectural decisions or codebase-wide patterns, Cody delivers significantly more precise answers than tools with pure file context.
 
-Für Enterprise-Teams mit großen, verteilten Codebasen ist Cody besonders stark: Die Integration in bestehende Sourcegraph-Instanzen ermöglicht eine Analyse über alle internen Repositories hinweg, ohne Code an externe Server zu senden. Kleinere Teams und Einzelentwickler werden die höhere Komplexität beim Setup möglicherweise als Hürde empfinden, profitieren aber genauso von der überlegenen Kontexttiefe.
+For enterprise teams with large, distributed codebases, Cody is particularly strong: the integration into existing Sourcegraph instances enables analysis across all internal repositories without sending code to external servers. Smaller teams and individual developers may find the higher complexity during setup a barrier, but they benefit equally from the superior context depth.

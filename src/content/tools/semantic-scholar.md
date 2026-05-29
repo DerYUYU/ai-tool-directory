@@ -1,21 +1,21 @@
 ---
 name: "Semantic Scholar"
-tagline: "Kostenlose KI-Suche in 200 Millionen wissenschaftlichen Papers von Allen AI"
-description: "Semantic Scholar ist eine vollständig kostenlose KI-Suchmaschine für wissenschaftliche Literatur, entwickelt vom Allen Institute for AI. Mit semantischer Suche über 200 Millionen Papers, KI-generierten Zusammenfassungen und einer offenen API ist es die stärkste freie Forschungsplattform."
+tagline: "Free AI search across 200 million scientific papers by Allen AI"
+description: "Semantic Scholar is a completely free AI search engine for scientific literature, developed by the Allen Institute for AI. With semantic search across 200 million papers, AI-generated summaries and an open API, it is the most powerful free research platform."
 category: "Research"
 pricing:
   free: true
-  freeTier: "Vollständig kostenlos — kein Abo nötig"
+  freeTier: "Completely free — no subscription needed"
 rating: 4.6
 pros:
-  - Vollständig kostenlos ohne Einschränkungen
-  - Über 200 Millionen Papers in der Datenbank
-  - KI-generierte Zusammenfassungen direkt in den Suchergebnissen
-  - Offene API für eigene Anwendungen
-  - Echte semantische Suche statt nur Keyword-Matching
+  - Completely free without restrictions
+  - Over 200 million papers in the database
+  - AI-generated summaries directly in search results
+  - Open API for custom applications
+  - True semantic search instead of just keyword matching
 cons:
-  - Weniger interaktive Chat-Features als SciSpace
-  - Kein Upload und Analyse eigener PDF-Dokumente
+  - Fewer interactive chat features than SciSpace
+  - No upload and analysis of own PDF documents
 websiteUrl: "https://semanticscholar.org"
 featured: false
 trending: false
@@ -26,9 +26,9 @@ tags:
   - academic
   - ai-search
 addedDate: 2026-05-28
-seoDescription: "Semantic Scholar ist die kostenlose KI-Suche für 200 Mio. Papers vom Allen AI. Keine Anmeldung nötig, API verfügbar, semantische Suche."
+seoDescription: "Semantic Scholar is the free AI search for 200M papers by Allen AI. No sign-up required, API available, semantic search."
 ---
 
-Semantic Scholar ist das bemerkenswerteste Tool in dieser Kategorie – nicht wegen seiner Premium-Features, sondern wegen seiner Zugänglichkeit. Das Allen Institute for AI stellt eine Weltklasse-Forschungsplattform vollständig kostenlos zur Verfügung, ohne Werbung, ohne versteckte Kosten und ohne Nutzungslimits.
+Semantic Scholar is the most remarkable tool in this category — not because of its premium features, but because of its accessibility. The Allen Institute for AI provides a world-class research platform completely free of charge, without advertising, without hidden costs and without usage limits.
 
-Die semantische Suche versteht Bedeutung und Kontext statt nur nach exakten Schlüsselwörtern zu suchen. Das bedeutet, man findet relevante Papers auch dann, wenn man nicht die genaue Fachterminologie kennt. Die API macht Semantic Scholar auch für Entwickler attraktiv, die eigene Research-Tools bauen möchten. Für Nutzer, die interaktive Chat-Features oder PDF-Upload-Funktionen benötigen, empfiehlt sich die Kombination mit einem spezialisierten Tool wie Explainpaper.
+The semantic search understands meaning and context rather than just searching for exact keywords. This means you can find relevant papers even when you don't know the exact technical terminology. The API makes Semantic Scholar attractive for developers who want to build their own research tools. For users who need interactive chat features or PDF upload functionality, combining it with a specialized tool like Explainpaper is recommended.

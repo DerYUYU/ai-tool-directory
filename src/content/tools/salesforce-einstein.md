@@ -1,21 +1,21 @@
 ---
 name: "Salesforce Einstein"
-tagline: "KI-Assistent für das weltgrößte Enterprise-CRM-System"
-description: "Salesforce Einstein ist die KI-Schicht des weltgrößten Enterprise-CRM-Systems. Mit Einstein GPT, Sales-Prognosen, automatischen Lead-Scorings und KI-generierten E-Mails erweitert es Salesforce um intelligente Automatisierungen für Enterprise-Teams."
+tagline: "AI assistant for the world's largest enterprise CRM system"
+description: "Salesforce Einstein is the AI layer of the world's largest enterprise CRM system. With Einstein GPT, sales forecasts, automatic lead scoring and AI-generated emails, it extends Salesforce with intelligent automations for enterprise teams."
 category: "Business"
 pricing:
   free: false
   startingPrice: "$50"
 rating: 4.2
 pros:
-  - Beste Enterprise-CRM-KI auf dem Markt
-  - Tiefste Integration im Salesforce-Ökosystem
-  - Präzise Sales-Prognosen und Pipeline-Analyse
-  - Einstein GPT für automatische Texterstellung
+  - Best enterprise CRM AI on the market
+  - Deepest integration in the Salesforce ecosystem
+  - Precise sales forecasts and pipeline analysis
+  - Einstein GPT for automatic text generation
 cons:
-  - Ausschließlich für bestehende Salesforce-Nutzer sinnvoll
-  - Sehr hohe Kosten
-  - Komplexe Implementierung und Lernkurve
+  - Only useful for existing Salesforce users
+  - Very high costs
+  - Complex implementation and learning curve
 websiteUrl: "https://salesforce.com/ai"
 featured: false
 trending: false
@@ -26,9 +26,9 @@ tags:
   - automation
   - salesforce
 addedDate: 2026-05-28
-seoDescription: "Salesforce Einstein ist die KI für das weltgrößte Enterprise-CRM. Sales-Prognosen, Lead-Scoring und Einstein GPT für Salesforce-Nutzer."
+seoDescription: "Salesforce Einstein is the AI for the world's largest enterprise CRM. Sales forecasts, lead scoring and Einstein GPT for Salesforce users."
 ---
 
-Salesforce Einstein ist die konsequente KI-Erweiterung der Salesforce-Plattform. Für Unternehmen, die bereits stark in das Salesforce-Ökosystem investiert haben, ist Einstein die logische Ergänzung – die KI-Features sind tief integriert und liefern wertvolle Einblicke direkt im gewohnten CRM-Interface.
+Salesforce Einstein is the consistent AI extension of the Salesforce platform. For companies that have already invested heavily in the Salesforce ecosystem, Einstein is the logical addition — the AI features are deeply integrated and deliver valuable insights directly within the familiar CRM interface.
 
-Für alle anderen ist Einstein jedoch keine Option: Das Tool macht außerhalb von Salesforce keinen Sinn und ist zudem mit erheblichen Kosten verbunden. Kleine und mittlere Unternehmen werden selten das volle Potenzial ausschöpfen können. Einstein ist klar auf große Enterprise-Sales-Teams mit komplexen CRM-Anforderungen zugeschnitten.
+For everyone else, however, Einstein is not an option: The tool makes no sense outside of Salesforce and comes with considerable costs. Small and medium-sized businesses will rarely be able to leverage its full potential. Einstein is clearly tailored to large enterprise sales teams with complex CRM requirements.

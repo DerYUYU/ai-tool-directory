@@ -1,21 +1,21 @@
 ---
 name: "Pieces for Developers"
-tagline: "KI-Snippet-Manager mit lokalem Offline-KI-Modell"
-description: "Pieces for Developers ist ein intelligenter Code-Snippet-Manager mit einem lokalen KI-Modell, das vollständig offline läuft. Snippets werden automatisch kategorisiert, mit Kontext angereichert und sind über alle IDEs hinweg verfügbar."
+tagline: "AI snippet manager with local offline AI model"
+description: "Pieces for Developers is an intelligent code snippet manager with a local AI model that runs completely offline. Snippets are automatically categorized, enriched with context, and available across all IDEs."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Vollständig kostenlos mit lokalem KI-Modell"
+  freeTier: "Completely free with local AI model"
   startingPrice: "$10"
 rating: 4.2
 pros:
-  - "Lokales KI-Modell läuft vollständig offline — maximale Privatsphäre"
-  - "Intelligenter Snippet-Manager mit automatischer Kategorisierung"
-  - "IDE-Integration für VS Code, JetBrains und weitere"
-  - "Kein Code verlässt den eigenen Rechner"
+  - "Local AI model runs completely offline — maximum privacy"
+  - "Intelligent snippet manager with automatic categorization"
+  - "IDE integration for VS Code, JetBrains, and more"
+  - "No code leaves your own machine"
 cons:
-  - "Weniger bekannt als andere Tools, kleinere Community"
-  - "Begrenzte Community und weniger Drittanbieter-Integrationen"
+  - "Less well-known than other tools, smaller community"
+  - "Limited community and fewer third-party integrations"
 websiteUrl: "https://pieces.app"
 featured: false
 trending: false
@@ -25,9 +25,9 @@ tags:
   - privacy
   - code-management
 addedDate: 2026-05-28
-seoDescription: "Pieces for Developers — KI-Snippet-Manager mit lokalem Offline-KI-Modell für maximale Privatsphäre und intelligente Code-Verwaltung."
+seoDescription: "Pieces for Developers — AI snippet manager with local offline AI model for maximum privacy and intelligent code management."
 ---
 
-Pieces for Developers verfolgt einen einzigartigen Ansatz: Das KI-Modell läuft vollständig lokal auf dem eigenen Rechner, ohne Cloud-Verbindung. Damit ist Pieces die erste Wahl für Entwickler, die mit sensiblem Code arbeiten und sichergehen wollen, dass kein Snippet, kein Kontext und keine Anfrage einen eigenen Server verlässt. Das Tool funktioniert auch ohne Internetverbindung vollständig.
+Pieces for Developers takes a unique approach: the AI model runs completely locally on your own machine, without a cloud connection. This makes Pieces the first choice for developers working with sensitive code who want to ensure that no snippet, no context, and no request leaves their own server. The tool also works completely without an internet connection.
 
-Der eigentliche Kern ist ein intelligenter Snippet-Manager, der weit über einfaches Speichern hinausgeht: Pieces erkennt automatisch die Sprache, den Kontext und die Herkunft eines Snippets (z.B. aus einer bestimmten Datei oder einem GitHub-Repository) und macht alles über eine semantische Suche wiederauffindbar. Für Entwickler, die regelmäßig Code-Bausteine zwischen Projekten wiederverwenden, ist Pieces ein echter Produktivitätsgewinn.
+The actual core is an intelligent snippet manager that goes far beyond simple saving: Pieces automatically recognizes the language, context, and origin of a snippet (e.g., from a specific file or a GitHub repository) and makes everything findable through semantic search. For developers who regularly reuse code building blocks between projects, Pieces is a real productivity gain.

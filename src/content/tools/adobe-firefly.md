@@ -1,28 +1,28 @@
-﻿---
+---
 name: "Adobe Firefly"
-tagline: "KI-Design in Creative Cloud"
-description: "Adobes KI-Bildgenerator fuer commercial-safe Nutzung. Direkt in Photoshop und Illustrator integriert. Generative Fill revolutioniert die Bildbearbeitung."
+tagline: "AI design in Creative Cloud"
+description: "Adobe's AI image generator for commercial-safe use. Directly integrated into Photoshop and Illustrator. Generative Fill revolutionizes image editing."
 category: "Design"
 pricing:
   free: true
-  freeTier: "25 generative Credits/Monat kostenlos"
+  freeTier: "25 generative credits/month free"
   startingPrice: "$4.99"
 rating: 4.4
 pros:
-  - "Commercial safe fuer kommerzielle Nutzung"
-  - "Direkt in Photoshop/Illustrator integriert"
-  - "Generative Fill: revolutionaeres Inpainting"
+  - "Commercial safe for commercial use"
+  - "Directly integrated into Photoshop/Illustrator"
+  - "Generative Fill: revolutionary inpainting"
 cons:
-  - "Weniger kreativ als Midjourney"
-  - "Creative Cloud Abo fuer Integration"
+  - "Less creative than Midjourney"
+  - "Creative Cloud subscription required for integration"
 affiliateLink: "https://www.adobe.com?irgwc=1&mpid=YOUR_IMPACT_ID"
-affiliateCommission: "85% erstes Monat"
+affiliateCommission: "85% first month"
 websiteUrl: "https://firefly.adobe.com"
 featured: false
 tags: ["design", "photoshop", "commercial", "creative-cloud"]
 addedDate: 2026-05-26
 ---
 
-## Adobe Firefly fuer Profis
+## Adobe Firefly for Professionals
 
-Sichere Wahl fuer kommerzielle Projekte — keine rechtlichen Risiken.
+The safe choice for commercial projects — no legal risks.

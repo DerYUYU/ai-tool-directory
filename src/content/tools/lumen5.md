@@ -1,22 +1,22 @@
 ---
 name: "Lumen5"
-tagline: "Blog-Artikel automatisch in ansprechende Social Media Videos verwandeln"
-description: "Lumen5 ist eine KI-Plattform, die Blogartikel, Textinhalte oder URLs automatisch in ansprechende Social-Media-Videos umwandelt. Mit über 500 Millionen Stock-Assets und einer drag-and-drop Oberfläche ist es die erste Wahl für Content-Repurposing."
+tagline: "Automatically turn blog articles into engaging social media videos"
+description: "Lumen5 is an AI platform that automatically converts blog articles, text content, or URLs into engaging social media videos. With over 500 million stock assets and a drag-and-drop interface, it is the top choice for content repurposing."
 category: "Video"
 pricing:
   free: true
-  freeTier: "5 Videos/Monat kostenlos mit Wasserzeichen"
+  freeTier: "5 videos/month free with watermark"
   startingPrice: "$29"
 rating: 4.1
 pros:
-  - Perfekt für Content-Repurposing von Blog zu Video
-  - Sehr einfach zu bedienen — keine Editorkenntnisse nötig
-  - Über 500 Millionen lizenzfreie Stock-Assets inklusive
-  - Automatische Text-Extraktion aus URLs und Artikeln
-  - Viele Formatvorlagen für verschiedene Social-Plattformen
+  - Perfect for content repurposing from blog to video
+  - Very easy to use — no editing knowledge required
+  - Over 500 million royalty-free stock assets included
+  - Automatic text extraction from URLs and articles
+  - Many format templates for various social platforms
 cons:
-  - Begrenzte kreative Kontrolle über Layout und Timing
-  - Wasserzeichen auf allen Videos im kostenlosen Plan
+  - Limited creative control over layout and timing
+  - Watermark on all videos in the free plan
 affiliateLink: "https://lumen5.com?via=muok7detr5hz"
 affiliateCommission: "15% recurring"
 websiteUrl: "https://lumen5.com"
@@ -27,9 +27,9 @@ tags:
   - content-repurposing
   - social-media
 addedDate: 2026-05-28
-seoDescription: "Lumen5 wandelt Blogartikel automatisch in Social-Media-Videos um — mit 500M+ Stock-Assets und einfacher Drag-and-Drop Oberfläche."
+seoDescription: "Lumen5 automatically converts blog articles into social media videos — with 500M+ stock assets and an easy drag-and-drop interface."
 ---
 
-Lumen5 ist darauf spezialisiert, bestehende Textinhalte wie Blogartikel, Pressemitteilungen oder Newsletter in fertige Videos umzuwandeln. Die KI analysiert den Text, identifiziert Schlüsselsätze und kombiniert diese automatisch mit passenden Bildern und Clips aus der riesigen Stock-Bibliothek. Das Ergebnis sind Social-Media-taugliche Videos in verschiedenen Formaten.
+Lumen5 specializes in converting existing text content such as blog articles, press releases, or newsletters into finished videos. The AI analyzes the text, identifies key sentences, and automatically combines them with matching images and clips from the vast stock library. The result is social-media-ready videos in various formats.
 
-Das Tool richtet sich vor allem an Content-Marketer und Social-Media-Manager, die ihren vorhandenen Content auf einfache Weise als Video wiederverwerten möchten. Die Bedienung ist intuitiv, und die Lernkurve ist minimal. Wer mehr als 5 Videos pro Monat erstellen oder das Wasserzeichen entfernen möchte, benötigt einen der bezahlten Pläne ab 29 Dollar monatlich.
+The tool is aimed primarily at content marketers and social media managers who want to easily repurpose their existing content as video. The interface is intuitive and the learning curve is minimal. Anyone who wants to create more than 5 videos per month or remove the watermark will need one of the paid plans starting at $29 per month.

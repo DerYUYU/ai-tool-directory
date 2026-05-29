@@ -1,23 +1,23 @@
 ---
 name: "Synthesia"
-tagline: "KI-Videos mit realistischen Avataren"
-description: "Synthesia erstellt professionelle Videos mit KI-Avataren aus reinem Text. Unternehmen nutzen es für Trainingsvideos, Produktdemos und Erklärvideos — ohne Kamera, ohne Schauspieler."
+tagline: "AI videos with realistic avatars"
+description: "Synthesia creates professional videos with AI avatars from pure text. Companies use it for training videos, product demos and explainer videos — without a camera, without actors."
 category: "Video"
 pricing:
   free: true
-  freeTier: "3 kostenlose Minuten Video/Monat"
+  freeTier: "3 free minutes of video/month"
   startingPrice: "$29"
 rating: 4.4
 pros:
-  - "Keine Kamera oder Studio nötig"
-  - "160+ KI-Avatare zur Auswahl"
-  - "130+ Sprachen"
-  - "Professionelle Video-Qualität"
-  - "Eigenen Avatar erstellen"
+  - "No camera or studio needed"
+  - "160+ AI avatars to choose from"
+  - "130+ languages"
+  - "Professional video quality"
+  - "Create your own avatar"
 cons:
-  - "Videos wirken manchmal unnatürlich"
-  - "Teuer für häufige Nutzung"
-  - "Wenig kreative Kontrolle"
+  - "Videos sometimes look unnatural"
+  - "Expensive for frequent use"
+  - "Limited creative control"
 affiliateLink: "https://www.synthesia.io?via=YOUR_SYNTH_ID"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://synthesia.io"
@@ -26,14 +26,14 @@ tags: ["video", "avatar", "training", "corporate", "text-to-video"]
 addedDate: 2026-05-26
 ---
 
-## Synthesia im Detail
+## Synthesia in Detail
 
-Synthesia wurde 2017 in London gegründet und ist heute der Marktführer für KI-Avatar-Videos.
-Über 50.000 Unternehmen nutzen Synthesia für interne Schulungen und Marketing.
+Synthesia was founded in 2017 in London and is today the market leader for AI avatar videos.
+Over 50,000 companies use Synthesia for internal training and marketing.
 
-### Typische Anwendungsfälle
+### Typical use cases
 
-- **HR-Trainings**: Onboarding-Videos für neue Mitarbeiter
-- **Produktdemos**: Software-Tutorials ohne Screencasting
-- **Schulungen**: Compliance-Videos in verschiedenen Sprachen
-- **Marketing**: Personalisierte Verkaufsvideos
+- **HR training**: Onboarding videos for new employees
+- **Product demos**: Software tutorials without screencasting
+- **Training**: Compliance videos in different languages
+- **Marketing**: Personalized sales videos

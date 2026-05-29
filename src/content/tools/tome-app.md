@@ -1,22 +1,22 @@
 ---
 name: "Tome"
-tagline: "KI erstellt vollständige Präsentationen aus einem einzigen Satz"
-description: "Tome ist ein KI-gestütztes Präsentationstool, das aus einer kurzen Eingabe vollständige, visuell ansprechende Präsentationen generiert. Statt klassischer Folien nutzt Tome scrollbare Web-Seiten mit integrierten KI-Bildern und dynamischen Elementen."
+tagline: "AI creates complete presentations from a single sentence"
+description: "Tome is an AI-powered presentation tool that generates complete, visually appealing presentations from a short input. Instead of classic slides, Tome uses scrollable web pages with integrated AI images and dynamic elements."
 category: "Business"
 pricing:
   free: true
-  freeTier: "Unbegrenzte Seiten kostenlos mit Wasserzeichen"
+  freeTier: "Unlimited pages free with watermark"
   startingPrice: "$20"
 rating: 4.3
 pros:
-  - Modernster KI-Präsentations-Workflow
-  - Web-Seiten statt statischer Slides
-  - KI-Bilder direkt integriert
-  - Sehr einfache Bedienung
+  - Most modern AI presentation workflow
+  - Web pages instead of static slides
+  - AI images directly integrated
+  - Very easy to use
 cons:
-  - Weniger Features als PowerPoint oder Google Slides
-  - Wasserzeichen im kostenlosen Plan
-  - Begrenzte Export-Optionen
+  - Fewer features than PowerPoint or Google Slides
+  - Watermark in the free plan
+  - Limited export options
 affiliateLink: "https://tome.app?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://tome.app"
@@ -28,9 +28,9 @@ tags:
   - storytelling
   - business
 addedDate: 2026-05-28
-seoDescription: "Tome erstellt vollständige KI-Präsentationen aus einem Satz. Web-basierte Slides mit KI-Bildern – kostenlos mit Wasserzeichen."
+seoDescription: "Tome creates complete AI presentations from a single sentence. Web-based slides with AI images — free with watermark."
 ---
 
-Tome revolutioniert die Art, wie Präsentationen erstellt werden. Statt stundenlang Folien zu gestalten, gibt man einen einzigen Satz ein und Tome generiert automatisch eine vollständige, visuell ansprechende Präsentation – inklusive passender KI-Bilder, Texte und Layout.
+Tome revolutionizes the way presentations are created. Instead of spending hours designing slides, you enter a single sentence and Tome automatically generates a complete, visually appealing presentation — including matching AI images, text and layout.
 
-Anders als klassische Tools setzt Tome auf scrollbare Web-Seiten statt statische Slides. Das macht die Inhalte moderner und interaktiver, ist aber gleichzeitig ein Grund, warum das Tool nicht für jeden Anwendungsfall geeignet ist. Wer PowerPoint-Kompatibilität benötigt, wird enttäuscht sein.
+Unlike classic tools, Tome relies on scrollable web pages instead of static slides. This makes the content more modern and interactive, but is also a reason why the tool is not suitable for every use case. Those who need PowerPoint compatibility will be disappointed.

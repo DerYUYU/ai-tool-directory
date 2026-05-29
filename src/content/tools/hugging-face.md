@@ -1,28 +1,28 @@
-﻿---
+---
 name: "Hugging Face"
-tagline: "Die GitHub-Plattform fuer KI-Modelle"
-description: "Hugging Face ist die groesste Plattform fuer Open-Source KI-Modelle mit ueber 500.000 Modellen. Entwickler deployen, teilen und nutzen Modelle direkt - kostenlos und mit API-Zugang."
+tagline: "The GitHub platform for AI models"
+description: "Hugging Face is the largest platform for open-source AI models with over 500,000 models. Developers deploy, share, and use models directly — free and with API access."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Kostenloser Zugang zu Tausenden Modellen"
+  freeTier: "Free access to thousands of models"
   startingPrice: "$9"
 rating: 4.5
 pros:
-  - "Groesste KI-Modell-Bibliothek der Welt"
-  - "Meiste Modelle kostenlos nutzbar"
-  - "Spaces fuer Demo-Apps kostenlos"
-  - "Inference API verfuegbar"
+  - "Largest AI model library in the world"
+  - "Most models free to use"
+  - "Spaces for demo apps free"
+  - "Inference API available"
 cons:
-  - "GPU-Inference teuer"
-  - "Technisches Wissen noetig"
+  - "GPU inference expensive"
+  - "Technical knowledge required"
 websiteUrl: "https://huggingface.co"
 featured: false
 tags: ["models", "open-source", "developer", "ml", "datasets"]
 addedDate: 2026-05-26
 ---
 
-## Hugging Face - Das KI-Modell-Hub
+## Hugging Face - The AI Model Hub
 
-Der Ort wo alle KI-Forscher und Entwickler ihre Modelle teilen.
-500.000+ Modelle, Datasets und Demo-Apps.
+The place where all AI researchers and developers share their models.
+500,000+ models, datasets, and demo apps.

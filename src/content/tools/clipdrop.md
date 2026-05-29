@@ -1,21 +1,21 @@
 ---
 name: "Clipdrop"
-tagline: "Stability AI's Bildbearbeitungs-Suite — 10 KI-Tools in einer App"
-description: "Clipdrop von Stability AI bündelt über zehn KI-gestützte Bildbearbeitungstools in einer einzigen Plattform — von Hintergrundentfernung und Upscaling bis zum einzigartigen AI-Relight-Feature, das die Beleuchtung von Fotos im Nachhinein verändert."
+tagline: "Stability AI's image editing suite — 10 AI tools in one app"
+description: "Clipdrop by Stability AI bundles over ten AI-powered image editing tools in a single platform — from background removal and upscaling to the unique AI Relight feature that changes the lighting of photos after the fact."
 category: "Design"
 pricing:
   free: true
-  freeTier: "Basis-Features kostenlos"
+  freeTier: "Basic features free"
   startingPrice: "$13"
 rating: 4.3
 pros:
-  - "Viele spezialisierte Tools in einer einzigen App gebündelt"
-  - "Einzigartiges Relight-Feature für nachträgliche Beleuchtungsänderung"
-  - "Stable Diffusion XL für hochwertige Bildgenerierung"
-  - "API für Entwickler und externe Integrationen verfügbar"
+  - "Many specialized tools bundled into one single app"
+  - "Unique Relight feature for changing lighting after the fact"
+  - "Stable Diffusion XL for high-quality image generation"
+  - "API available for developers and external integrations"
 cons:
-  - "Pro-Abonnement nötig, um alle Features nutzen zu können"
-  - "Benutzeroberfläche wirkt durch die vielen Tools etwas unübersichtlich"
+  - "Pro subscription required to use all features"
+  - "User interface feels somewhat cluttered due to the many tools"
 affiliateLink: "https://clipdrop.co?via=YOUR_CD_ID"
 affiliateCommission: "15%/Sale"
 websiteUrl: "https://clipdrop.co"
@@ -27,9 +27,9 @@ tags:
   - background-removal
   - relight
 addedDate: 2026-05-28
-seoDescription: "Clipdrop von Stability AI: 10+ KI-Bildbearbeitungstools in einer App. Einzigartiges Relight-Feature, Stable Diffusion XL, API verfügbar."
+seoDescription: "Clipdrop by Stability AI: 10+ AI image editing tools in one app. Unique Relight feature, Stable Diffusion XL, API available."
 ---
 
-Clipdrop ist Stability AIs Antwort auf die Frage, was passiert, wenn man alle nützlichen KI-Bildbearbeitungstools unter einem Dach vereint. Neben Standard-Features wie Hintergrundentfernung und Upscaling sticht vor allem das Relight-Feature hervor, das die Beleuchtungsrichtung und -stimmung eines bereits aufgenommenen Fotos im Nachhinein verändert — ein Feature, das in dieser Form kein anderes Tool bietet.
+Clipdrop is Stability AI's answer to the question of what happens when you bring all useful AI image editing tools under one roof. Beyond standard features like background removal and upscaling, the Relight feature stands out in particular — it changes the lighting direction and mood of an already-taken photo after the fact, a feature no other tool offers in this form.
 
-Die Integration von Stable Diffusion XL als zugrunde liegendes Modell sichert hohe Bildqualität bei der Generierung, während die API Entwicklern ermöglicht, einzelne Clipdrop-Features in eigene Anwendungen einzubetten. Der monatliche Preis von $13 ist fair für den Funktionsumfang, aber wer nur ein oder zwei spezifische Features benötigt, findet spezialisierte Tools oft günstiger.
+The integration of Stable Diffusion XL as the underlying model ensures high image quality during generation, while the API allows developers to embed individual Clipdrop features into their own applications. The monthly price of $13 is fair for the range of features, but those who only need one or two specific features will often find specialized tools cheaper.

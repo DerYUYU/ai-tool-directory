@@ -1,41 +1,41 @@
 ---
 name: "Claude"
-tagline: "Anthropics sicherer und kreativer KI-Assistent"
-description: "Claude von Anthropic ist ein KI-Assistent der auf Sicherheit und Hilfsbereitschaft ausgelegt ist. Er glänzt bei langen Dokumenten, nuanciertem Schreiben und komplexen Analysen. Mit dem größten Kontextfenster unter den Top-Modellen ist Claude ideal für umfangreiche Aufgaben."
+tagline: "Anthropic's safe and creative AI assistant"
+description: "Claude by Anthropic is an AI assistant designed for safety and helpfulness. It excels at long documents, nuanced writing, and complex analyses. With the largest context window among top models, Claude is ideal for extensive tasks."
 category: "Writing"
 pricing:
   free: true
-  freeTier: "Claude 3.5 Haiku kostenlos"
+  freeTier: "Claude 3.5 Haiku free"
   startingPrice: "$20"
 rating: 4.7
 pros:
-  - "200k Token Kontextfenster (längste Dokumente)"
-  - "Besonders gut bei nuanciertem Schreiben"
-  - "Sehr ehrlich — sagt wenn es etwas nicht weiß"
-  - "Exzellent bei Code und Analyse"
-  - "API mit Claude Code integration"
+  - "200k token context window (longest documents)"
+  - "Particularly good at nuanced writing"
+  - "Very honest — says when it doesn't know something"
+  - "Excellent at code and analysis"
+  - "API with Claude Code integration"
 cons:
-  - "Kein Internetzugang in der Basisversion"
-  - "Weniger Plugins als ChatGPT"
-  - "Pro-Version für beste Modelle nötig"
+  - "No internet access in the base version"
+  - "Fewer plugins than ChatGPT"
+  - "Pro version required for the best models"
 websiteUrl: "https://claude.ai"
 featured: true
 tags: ["chatbot", "writing", "analysis", "code", "long-context", "anthropic"]
 addedDate: 2026-05-26
 ---
 
-## Claude im Detail
+## Claude in Detail
 
-Claude ist der KI-Assistent von Anthropic — dem KI-Sicherheits-Unternehmen gegründet
-von ehemaligen OpenAI-Mitarbeitern. Claudes Stärken liegen bei langen Texten und ehrlichen Antworten.
+Claude is the AI assistant from Anthropic — the AI safety company founded
+by former OpenAI employees. Claude's strengths lie in long texts and honest answers.
 
 ### Claude vs. ChatGPT
 
 | Feature | Claude | ChatGPT |
 |---------|--------|---------|
-| Kontext-Länge | 200k Token | 128k Token |
-| Schreibstil | Natürlicher | Direkter |
-| Ehrlichkeit | Sehr hoch | Hoch |
-| Plugins | Wenige | Viele |
+| Context Length | 200k tokens | 128k tokens |
+| Writing Style | More natural | More direct |
+| Honesty | Very high | High |
+| Plugins | Few | Many |
 
-Claude ist die bessere Wahl wenn du mit langen Dokumenten arbeitest oder präzises, natürliches Schreiben benötigst.
+Claude is the better choice when you work with long documents or need precise, natural writing.

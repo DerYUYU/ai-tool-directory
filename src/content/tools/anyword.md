@@ -1,21 +1,21 @@
 ---
 name: "Anyword"
-tagline: "KI-Texte mit vorhersagbarem Performance-Score"
-description: "Anyword ist ein datengetriebenes KI-Copywriting-Tool, das als einziges am Markt einen Performance-Score für jeden generierten Text vorhersagt. Damit können Marketer vor dem Veröffentlichen abschätzen, welcher Text besser konvertiert — ideal für bezahlte Werbung und Landing Pages."
+tagline: "AI copy with a predictable performance score"
+description: "Anyword is a data-driven AI copywriting tool that is uniquely able to predict a performance score for every generated text. This allows marketers to estimate which text converts better before publishing — ideal for paid advertising and landing pages."
 category: "Writing"
 pricing:
   free: false
   startingPrice: "$49"
 rating: 4.2
 pros:
-  - "Einzigartiger Performance-Score prognostiziert Conversion-Rate"
-  - "Speziell optimiert für bezahlte Werbung und Conversions"
-  - "Integrierte A/B-Test-Funktionalität"
-  - "Viele Templates für Ads, Emails und Landing Pages"
+  - "Unique performance score predicts conversion rate"
+  - "Specifically optimized for paid advertising and conversions"
+  - "Integrated A/B testing functionality"
+  - "Many templates for ads, emails, and landing pages"
 cons:
-  - "Teurer als die meisten Konkurrenten"
-  - "Kein kostenloser Einstiegsplan verfügbar"
-  - "Lernkurve beim Verstehen des Scoring-Systems"
+  - "More expensive than most competitors"
+  - "No free entry-level plan available"
+  - "Learning curve when understanding the scoring system"
 affiliateLink: "https://anyword.com?via=muok7detr5hz"
 websiteUrl: "https://anyword.com"
 affiliateCommission: "30% recurring"
@@ -23,11 +23,11 @@ featured: false
 trending: false
 tags: ["copywriting", "conversion", "performance", "ads"]
 addedDate: 2026-05-28
-seoDescription: "Anyword: KI-Copywriting mit einzigartigem Performance-Score für Conversions. Ab $49/Monat. ★4.2/5 Sterne — Jetzt testen."
+seoDescription: "Anyword: AI copywriting with a unique performance score for conversions. From $49/month. ★4.2/5 stars — Try it now."
 ---
 
-## Anyword im Detail
+## Anyword in Detail
 
-Anyword unterscheidet sich von anderen KI-Textwerkzeugen durch seinen datenbasierten Ansatz: Jeder generierte Text erhält einen Performance-Score, der auf Millionen von echten Werbekampagnen-Daten basiert. Marketer können so direkt im Editor vergleichen, welche Variante eines Headlines oder Call-to-Action statistisch besser abschneidet — ohne erst Live-Tests starten zu müssen.
+Anyword sets itself apart from other AI writing tools through its data-driven approach: every generated text receives a performance score based on millions of real advertising campaign data points. Marketers can compare directly in the editor which variant of a headline or call-to-action statistically performs better — without having to launch live tests first.
 
-Das Tool richtet sich primär an Performance-Marketer, die bezahlte Kanäle wie Google Ads, Facebook Ads oder E-Mail-Kampagnen betreiben. Für allgemeines Content-Marketing oder kreatives Schreiben ist Anyword weniger geeignet. Wer jedoch messbare Ergebnisse aus seinen Werbetexten herausholen möchte, bekommt hier ein einzigartiges Werkzeug, das kein anderer KI-Texter in dieser Form anbietet.
+The tool is primarily aimed at performance marketers running paid channels such as Google Ads, Facebook Ads, or email campaigns. For general content marketing or creative writing, Anyword is less suitable. However, anyone who wants to extract measurable results from their ad copy gets a unique tool here that no other AI copywriter offers in this form.

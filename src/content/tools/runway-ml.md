@@ -1,20 +1,20 @@
-﻿---
+---
 name: "RunwayML"
-tagline: "KI-Videobearbeitung der naechsten Generation"
-description: "RunwayML ist das fuehrende KI-Tool fuer Video-Generierung. Gen-2 erstellt Videos aus Text oder Bildern. Magic Tools wie Background Removal und Motion Tracking."
+tagline: "Next-generation AI video editing"
+description: "RunwayML is the leading AI tool for video generation. Gen-2 creates videos from text or images. Magic tools such as background removal and motion tracking."
 category: "Video"
 pricing:
   free: true
-  freeTier: "125 Credits kostenlos"
+  freeTier: "125 credits free"
   startingPrice: "$15"
 rating: 4.3
 pros:
-  - "Beste Text-to-Video Qualitaet"
-  - "Professionelle Editing-Features"
-  - "Aktive Weiterentwicklung"
+  - "Best text-to-video quality"
+  - "Professional editing features"
+  - "Active ongoing development"
 cons:
-  - "Credits schnell verbraucht"
-  - "Teuer fuer haeufige Nutzung"
+  - "Credits used up quickly"
+  - "Expensive for frequent use"
 websiteUrl: "https://runwayml.com"
 featured: false
 tags: ["video", "text-to-video", "gen-ai", "creative"]
@@ -23,4 +23,4 @@ addedDate: 2026-05-26
 
 ## RunwayML Gen-2
 
-Das Tool hinter vielen viralen KI-Videos. Gen-2 generiert realistische Videos aus Prompts.
+The tool behind many viral AI videos. Gen-2 generates realistic videos from prompts.

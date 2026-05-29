@@ -1,22 +1,22 @@
 ---
 name: "Murf AI"
-tagline: "120+ professionelle KI-Stimmen für Voiceovers in 20 Sprachen"
-description: "Murf AI ist ein professioneller KI-Voiceover-Generator mit über 120 natürlich klingenden Stimmen in 20 Sprachen. Ideal für E-Learning, Podcasts, YouTube-Videos und Unternehmenskommunikation — mit integrierter Hintergrundmusik und Pitch-Kontrolle."
+tagline: "120+ professional AI voices for voiceovers in 20 languages"
+description: "Murf AI is a professional AI voiceover generator with over 120 naturally sounding voices in 20 languages. Ideal for e-learning, podcasts, YouTube videos, and corporate communications — with integrated background music and pitch control."
 category: "Audio"
 pricing:
   free: true
-  freeTier: "10 Minuten Voiceover kostenlos (ohne Download)"
+  freeTier: "10 minutes voiceover free (no download)"
   startingPrice: "$19"
 rating: 4.5
 pros:
-  - Über 120 professionelle, natürlich klingende KI-Stimmen
-  - Unterstützung für 20 Sprachen mit regionalen Akzenten
-  - Präzise Kontrolle über Pitch, Geschwindigkeit und Betonung
-  - Integrierte Hintergrundmusik-Bibliothek
-  - Ideal für E-Learning, Podcasts und Unternehmensvideos
+  - Over 120 professional, naturally sounding AI voices
+  - Support for 20 languages with regional accents
+  - Precise control over pitch, speed, and emphasis
+  - Integrated background music library
+  - Ideal for e-learning, podcasts, and corporate videos
 cons:
-  - Free Tier nur zum Testen geeignet — kein Download möglich
-  - Für regelmäßige Nutzung ist ein Premium-Abo erforderlich
+  - Free tier suitable only for testing — no download possible
+  - A premium subscription is required for regular use
 affiliateLink: "https://murf.ai?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://murf.ai"
@@ -29,9 +29,9 @@ tags:
   - e-learning
   - youtube
 addedDate: 2026-05-28
-seoDescription: "Murf AI bietet 120+ KI-Stimmen für professionelle Voiceovers in 20 Sprachen — ideal für E-Learning, YouTube und Podcasts ab 19$/Monat."
+seoDescription: "Murf AI offers 120+ AI voices for professional voiceovers in 20 languages — ideal for e-learning, YouTube, and podcasts from $19/month."
 ---
 
-Murf AI gehört zu den führenden Plattformen für KI-generierte Voiceovers und überzeugt mit einer beeindruckenden Auswahl von über 120 Stimmen in 20 Sprachen. Die Stimmen klingen außergewöhnlich natürlich und lassen sich detailliert anpassen — von Sprechgeschwindigkeit und Tonhöhe bis hin zu Pausen und Betonungen einzelner Wörter. Die integrierte Hintergrundmusik-Bibliothek macht es einfach, vollständige Audioproduktionen zu erstellen.
+Murf AI is among the leading platforms for AI-generated voiceovers, impressing with an impressive selection of over 120 voices in 20 languages. The voices sound exceptionally natural and can be adjusted in detail — from speech speed and pitch to pauses and emphasis on individual words. The integrated background music library makes it easy to create complete audio productions.
 
-Die Plattform ist besonders bei E-Learning-Entwicklern, Podcast-Creatorn und YouTube-Kanälen beliebt, die regelmäßig hochwertige Voiceovers benötigen. Das kostenlose Kontingent von 10 Minuten eignet sich zum Testen und Ausprobieren, erlaubt aber keinen Download der Dateien. Für die produktive Nutzung empfiehlt sich der Basic-Plan ab 19 Dollar monatlich, der Downloads und ein deutlich höheres Nutzungslimit bietet.
+The platform is especially popular with e-learning developers, podcast creators, and YouTube channels that regularly need high-quality voiceovers. The free quota of 10 minutes is suitable for testing and trying out, but does not allow downloading files. For productive use, the Basic plan starting at $19 per month is recommended, which includes downloads and a significantly higher usage limit.

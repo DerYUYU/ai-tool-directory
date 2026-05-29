@@ -1,20 +1,20 @@
-﻿---
+---
 name: "Descript"
-tagline: "Video-Editing durch Text-Bearbeitung"
-description: "Descript revolutioniert Podcast- und Video-Editing: Bearbeite das Transkript wie ein Word-Dokument, das Video passt sich an. Entfernt Fullwoerter automatisch."
+tagline: "Video editing through text editing"
+description: "Descript revolutionizes podcast and video editing: edit the transcript like a Word document and the video adjusts automatically. Removes filler words automatically."
 category: "Video"
 pricing:
   free: true
-  freeTier: "1 Stunde Transkription kostenlos"
+  freeTier: "1 hour of transcription free"
   startingPrice: "$24"
 rating: 4.6
 pros:
-  - "Einzigartiger Text-basierter Video-Editor"
-  - "Entfernt aehm und aeh automatisch"
-  - "Ideal fuer Podcaster und YouTuber"
+  - "Unique text-based video editor"
+  - "Removes 'um' and 'uh' automatically"
+  - "Ideal for podcasters and YouTubers"
 cons:
-  - "Lernkurve fuer traditionelle Editoren"
-  - "Teuer fuer professionelle Nutzung"
+  - "Learning curve for traditional editors"
+  - "Expensive for professional use"
 affiliateLink: "https://www.descript.com?lmref=YOUR_DESC_ID"
 affiliateCommission: "15% recurring"
 websiteUrl: "https://descript.com"
@@ -23,6 +23,6 @@ tags: ["video", "podcast", "editing", "transcription"]
 addedDate: 2026-05-26
 ---
 
-## Descript - Text-basiertes Video-Editing
+## Descript - Text-based Video Editing
 
-Das revolutionaerste Konzept in Video-Editing: Bearbeite das Transkript, das Video folgt.
+The most revolutionary concept in video editing: edit the transcript and the video follows.

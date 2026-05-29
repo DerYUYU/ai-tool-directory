@@ -1,38 +1,38 @@
 ---
 name: "DeepSeek"
-tagline: "Das chinesische KI-Modell das die Welt schockierte"
-description: "DeepSeek R1 ist ein Open-Source KI-Modell aus China, das GPT-4 bei Coding und Mathematik übertrifft — zu einem Bruchteil der Trainingskosten. Mit 671 Milliarden Parametern und Mixture-of-Experts-Architektur ist es eines der effizientesten Modelle weltweit."
+tagline: "The Chinese AI model that shocked the world"
+description: "DeepSeek R1 is an open-source AI model from China that surpasses GPT-4 in coding and mathematics — at a fraction of the training cost. With 671 billion parameters and a Mixture-of-Experts architecture, it is one of the most efficient models in the world."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "DeepSeek Chat kostenlos"
-  startingPrice: "$0.14/1M Token"
+  freeTier: "DeepSeek Chat free"
+  startingPrice: "$0.14/1M tokens"
 rating: 4.6
 pros:
-  - "Übertrifft GPT-4 bei Coding-Benchmarks"
-  - "Open Source — selbst hostbar"
-  - "Extrem günstiger API-Preis ($0.14/1M Token)"
-  - "Starkes mathematisches Reasoning (R1)"
-  - "Kostenlose Chat-Oberfläche"
+  - "Surpasses GPT-4 on coding benchmarks"
+  - "Open source — self-hostable"
+  - "Extremely cheap API price ($0.14/1M tokens)"
+  - "Strong mathematical reasoning (R1)"
+  - "Free chat interface"
 cons:
-  - "Chinesisches Unternehmen — Datenschutz-Bedenken"
-  - "Zensiert China-kritische Inhalte"
-  - "Server oft überlastet"
-  - "Weniger Tooling/Plugins als OpenAI"
+  - "Chinese company — data privacy concerns"
+  - "Censors China-critical content"
+  - "Servers often overloaded"
+  - "Less tooling/plugins than OpenAI"
 websiteUrl: "https://chat.deepseek.com"
 featured: false
 trending: true
-tags: ["coding", "open-source", "günstig", "mathematik", "reasoning", "r1"]
+tags: ["coding", "open-source", "affordable", "math", "reasoning", "r1"]
 addedDate: 2026-05-27
 ---
 
-## DeepSeek im Detail
+## DeepSeek in Detail
 
-DeepSeek hat Anfang 2026 die KI-Welt erschüttert: Ein chinesisches Startup trainierte ein Modell auf Augenhöhe mit GPT-4 — für unter $6 Millionen. Zum Vergleich: OpenAI hat Hunderte Millionen Dollar investiert.
+DeepSeek shook the AI world at the start of 2026: a Chinese startup trained a model on par with GPT-4 — for under $6 million. For comparison: OpenAI has invested hundreds of millions of dollars.
 
-### Technische Innovation
+### Technical Innovation
 
-DeepSeek nutzt **Mixture of Experts (MoE)**: Statt alle 671 Milliarden Parameter für jeden Token zu aktivieren, werden nur ~37B aktive Parameter pro Token verwendet — das macht es extrem effizient.
+DeepSeek uses **Mixture of Experts (MoE)**: instead of activating all 671 billion parameters for every token, only ~37B active parameters per token are used — making it extremely efficient.
 
 ### DeepSeek R1 vs. GPT-4o
 
@@ -42,4 +42,4 @@ DeepSeek nutzt **Mixture of Experts (MoE)**: Statt alle 671 Milliarden Parameter
 | Coding    | **65.9%**   | 45.8%  |
 | Science   | **79.8%**   | 74.9%  |
 
-Besonders bei Mathematik und Coding schlägt R1 die Konkurrenz deutlich.
+Especially in mathematics and coding, R1 clearly beats the competition.

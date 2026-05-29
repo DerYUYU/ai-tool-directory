@@ -1,21 +1,21 @@
 ---
 name: "Tabnine"
-tagline: "KI-Code-Vervollständigung die deinen Coding-Stil lernt"
-description: "Tabnine ist ein KI-gestützter Code-Assistent, der sich an deinen persönlichen Coding-Stil anpasst und mit privaten Codebasen trainiert werden kann. Ideal für Teams und Enterprise-Umgebungen, die Datenschutz und Personalisierung priorisieren."
+tagline: "AI code completion that learns your coding style"
+description: "Tabnine is an AI-powered code assistant that adapts to your personal coding style and can be trained on private codebases. Ideal for teams and enterprise environments that prioritize privacy and personalization."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Basic Vervollständigung kostenlos"
+  freeTier: "Basic completion free"
   startingPrice: "$12"
 rating: 4.3
 pros:
-  - "Personalisiertes Modell das sich an deinen Coding-Stil anpasst"
-  - "Private Codebase-Training möglich"
-  - "Unterstützt 80+ Programmiersprachen"
-  - "Sicher und DSGVO-konform für Enterprise-Umgebungen"
+  - "Personalized model that adapts to your coding style"
+  - "Private codebase training possible"
+  - "Supports 80+ programming languages"
+  - "Secure and GDPR-compliant for enterprise environments"
 cons:
-  - "Weniger leistungsfähig als GitHub Copilot bei komplexen Aufgaben"
-  - "Personalisierung benötigt Zeit zum Einlernen"
+  - "Less powerful than GitHub Copilot for complex tasks"
+  - "Personalization needs time to learn"
 affiliateLink: "https://www.tabnine.com?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://tabnine.com"
@@ -27,9 +27,9 @@ tags:
   - personalization
   - enterprise
 addedDate: 2026-05-28
-seoDescription: "Tabnine KI-Code-Vervollständigung lernt deinen Coding-Stil und unterstützt 80+ Sprachen — ideal für Teams und Enterprise."
+seoDescription: "Tabnine AI code completion learns your coding style and supports 80+ languages — ideal for teams and enterprise."
 ---
 
-Tabnine unterscheidet sich von anderen KI-Coding-Tools durch seinen Fokus auf Personalisierung und Datenschutz. Das Modell lernt kontinuierlich aus deinem Code und passt sich deinem individuellen Stil an, sodass Vorschläge mit der Zeit immer relevanter werden. Besonders attraktiv ist die Möglichkeit, ein eigenes Modell auf einer privaten Codebase zu trainieren — ohne dass Code das Unternehmen verlässt.
+Tabnine differentiates itself from other AI coding tools through its focus on personalization and privacy. The model continuously learns from your code and adapts to your individual style, so suggestions become increasingly relevant over time. Particularly attractive is the ability to train a custom model on a private codebase — without code leaving the company.
 
-Für Teams und Enterprise-Kunden bietet Tabnine dedizierte Modelle, die vollständig on-premise oder in einer privaten Cloud betrieben werden können. Mit Unterstützung für über 80 Programmiersprachen und Integration in alle gängigen IDEs ist Tabnine eine solide Wahl für Entwickler, denen Datensicherheit und individuelle Anpassung wichtiger sind als maximale Modellleistung.
+For teams and enterprise customers, Tabnine offers dedicated models that can be operated entirely on-premise or in a private cloud. With support for over 80 programming languages and integration into all common IDEs, Tabnine is a solid choice for developers who value data security and individual customization over maximum model performance.

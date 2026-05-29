@@ -1,20 +1,20 @@
 ---
 name: "Loom"
-tagline: "Schnelle Video-Nachrichten statt langer Meetings — mit KI-Zusammenfassung"
-description: "Loom ermöglicht das schnelle Aufnehmen und Teilen von Video-Nachrichten mit Screen-Recording und Webcam. KI erstellt automatisch Zusammenfassungen und Kapitel, sodass Empfänger Videos effizient konsumieren können. Ideal für asynchrone Kommunikation in Remote-Teams."
+tagline: "Quick video messages instead of long meetings — with AI summary"
+description: "Loom enables the quick recording and sharing of video messages with screen recording and webcam. AI automatically creates summaries and chapters, so recipients can consume videos efficiently. Ideal for asynchronous communication in remote teams."
 category: "Productivity"
 pricing:
   free: true
-  freeTier: "25 Videos kostenlos (max 5 Minuten)"
+  freeTier: "25 videos free (max 5 minutes)"
   startingPrice: "$15"
 rating: 4.5
 pros:
-  - Schnellste Lösung für Video-Sharing mit einem Klick
-  - KI erstellt automatisch Zusammenfassungen und Kapitel
-  - Kombiniert Screen-Recording und Webcam gleichzeitig
-  - Weit verbreitet und von Empfängern ohne Account ansehbar
+  - Fastest solution for video sharing with one click
+  - AI automatically creates summaries and chapters
+  - Combines screen recording and webcam simultaneously
+  - Widely used and viewable by recipients without an account
 cons:
-  - Free Tier auf 25 Videos und maximal 5 Minuten pro Video begrenzt
+  - Free tier limited to 25 videos and a maximum of 5 minutes per video
 affiliateLink: "https://www.loom.com?irgwc=1&mpid=YOUR_IMPACT_ID"
 affiliateCommission: "15% recurring"
 websiteUrl: "https://loom.com"
@@ -27,9 +27,9 @@ tags:
   - screen-recording
   - team
 addedDate: 2026-05-28
-seoDescription: "Loom ersetzt Meetings durch schnelle Video-Nachrichten mit KI-Zusammenfassung und Screen-Recording. 25 Videos kostenlos."
+seoDescription: "Loom replaces meetings with quick video messages featuring AI summaries and screen recording. 25 videos free."
 ---
 
-Loom macht das Aufnehmen und Teilen von Erklärvideos so einfach wie das Schreiben einer E-Mail: Ein Klick startet die Aufnahme, ein weiterer Klick erzeugt einen teilbaren Link. Empfänger sehen das Video im Browser, ohne sich anmelden zu müssen — perfekt für die Kommunikation mit Externen.
+Loom makes recording and sharing explainer videos as simple as writing an email: one click starts the recording, another click generates a shareable link. Recipients watch the video in the browser without needing to sign in — perfect for communication with external parties.
 
-Die KI-Features sparen auf beiden Seiten Zeit: Für den Sender generiert Loom automatisch einen Titel und eine Zusammenfassung; für den Empfänger entstehen Kapitel, die direktes Springen zu relevanten Stellen ermöglichen. Damit wird asynchrone Video-Kommunikation genauso durchsuchbar und navigierbar wie Text.
+The AI features save time on both sides: for the sender, Loom automatically generates a title and summary; for the recipient, chapters are created that allow jumping directly to relevant sections. This makes asynchronous video communication just as searchable and navigable as text.

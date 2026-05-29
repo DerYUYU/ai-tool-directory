@@ -1,24 +1,24 @@
 ---
 name: "Sora"
-tagline: "OpenAI's Text-zu-Video KI — kinoreife Videos auf Abruf"
-description: "Sora von OpenAI generiert realistische und kreative Videos aus Text-Beschreibungen. Bis zu 1080p Auflösung, bis zu 20 Sekunden Länge — mit physikalisch korrekter Simulation von Objekten, Beleuchtung und Bewegung. Der neue Standard für KI-Videogenerierung."
+tagline: "OpenAI's text-to-video AI — cinematic videos on demand"
+description: "Sora by OpenAI generates realistic and creative videos from text descriptions. Up to 1080p resolution, up to 20 seconds in length — with physically accurate simulation of objects, lighting and motion. The new standard for AI video generation."
 category: "Video"
 pricing:
   free: false
-  freeTier: "Kein kostenloser Plan"
-  startingPrice: "$20/Monat (ChatGPT Plus)"
+  freeTier: "No free plan"
+  startingPrice: "$20/month (ChatGPT Plus)"
 rating: 4.5
 pros:
-  - "Beste Videoqualität aller KI-Tools"
-  - "Physikalisch korrekte Simulationen"
-  - "Bis zu 20 Sekunden und 1080p"
-  - "In ChatGPT Plus integriert"
-  - "Konsistente Charaktere in Szenen"
+  - "Best video quality of all AI tools"
+  - "Physically accurate simulations"
+  - "Up to 20 seconds and 1080p"
+  - "Integrated in ChatGPT Plus"
+  - "Consistent characters across scenes"
 cons:
-  - "ChatGPT Plus Abo erforderlich"
-  - "Begrenzte monatliche Generierungen"
-  - "Keine langen Videos (max ~20s)"
-  - "Wartezeiten bei Hochauslastung"
+  - "ChatGPT Plus subscription required"
+  - "Limited monthly generations"
+  - "No long videos (max ~20s)"
+  - "Wait times during high load"
 websiteUrl: "https://sora.com"
 featured: true
 trending: true
@@ -26,21 +26,21 @@ tags: ["video-generation", "text-to-video", "openai", "creative", "cinematik"]
 addedDate: 2026-05-27
 ---
 
-## Sora im Detail
+## Sora in Detail
 
-Sora wurde im Dezember 2024 offiziell veröffentlicht und hat die KI-Videowelt auf den Kopf gestellt. Während andere Tools pixelige, inkohärente Clips produzieren, generiert Sora kinoreife Szenen.
+Sora was officially released in December 2024 and turned the AI video world upside down. While other tools produce pixelated, incoherent clips, Sora generates cinematic scenes.
 
-### Was Sora einzigartig macht
+### What makes Sora unique
 
-- **Physik-Simulation**: Wasser, Feuer, Haare, Stoff — alles verhält sich physikalisch korrekt
-- **Konsistenz**: Charaktere behalten ihr Aussehen über die gesamte Szene
-- **Kameraführung**: Unterschiedliche Kamera-Perspektiven und Bewegungen möglich
+- **Physics simulation**: Water, fire, hair, fabric — everything behaves in a physically accurate way
+- **Consistency**: Characters retain their appearance throughout the entire scene
+- **Camera work**: Different camera perspectives and movements are possible
 
-### Vergleich zu Alternativen
+### Comparison to alternatives
 
 | | Sora | Runway ML | Pika |
 |--|------|-----------|------|
-| Qualität | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
-| Max Länge | 20s | 18s | 10s |
-| Preis | $20/Mo | $15/Mo | $8/Mo |
-| Einfachheit | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Quality | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Max length | 20s | 18s | 10s |
+| Price | $20/Mo | $15/Mo | $8/Mo |
+| Simplicity | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |

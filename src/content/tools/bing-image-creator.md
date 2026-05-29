@@ -1,21 +1,21 @@
 ---
 name: "Bing Image Creator"
-tagline: "Kostenloser DALL-E 3 Bildgenerator von Microsoft — kein Abo nötig"
-description: "Bing Image Creator von Microsoft bietet kostenlosen Zugang zu DALL-E 3, dem leistungsstärksten Bildgenerator von OpenAI. Ohne Abo, direkt im Browser nutzbar — der einfachste Einstieg in hochwertige KI-Bildgenerierung für jeden mit einem Microsoft-Account."
+tagline: "Free DALL-E 3 image generator from Microsoft — no subscription needed"
+description: "Bing Image Creator from Microsoft provides free access to DALL-E 3, OpenAI's most powerful image generator. No subscription, usable directly in the browser — the easiest entry point into high-quality AI image generation for anyone with a Microsoft account."
 category: "Design"
 pricing:
   free: true
-  freeTier: "15 schnelle Generierungen täglich komplett kostenlos"
+  freeTier: "15 fast generations daily completely free"
 rating: 4.3
 pros:
-  - "Vollständig kostenlos — kein Abo, keine Kreditkarte nötig"
-  - "DALL-E 3 Qualität (gleiches Modell wie ChatGPT Plus)"
-  - "Direkt im Browser nutzbar, kein Download"
-  - "Kein separater Account — Microsoft-Login reicht"
+  - "Completely free — no subscription, no credit card required"
+  - "DALL-E 3 quality (same model as ChatGPT Plus)"
+  - "Usable directly in the browser, no download"
+  - "No separate account — Microsoft login is enough"
 cons:
-  - "Keine kreative Kontrolle (keine Negative Prompts, kein Style-Training)"
-  - "15 schnelle Generierungen täglich, danach langsamere Ausgabe"
-  - "Erfordert Microsoft-Account"
+  - "No creative control (no negative prompts, no style training)"
+  - "15 fast generations daily, then slower output"
+  - "Requires a Microsoft account"
 websiteUrl: "https://www.bing.com/images/create"
 featured: false
 trending: false
@@ -25,9 +25,9 @@ tags:
   - microsoft
   - no-subscription
 addedDate: 2026-05-28
-seoDescription: "Bing Image Creator: Gratis DALL-E 3 Bildgenerator von Microsoft. 15 Bilder täglich kostenlos, kein Abo, direkt im Browser nutzbar."
+seoDescription: "Bing Image Creator: Free DALL-E 3 image generator from Microsoft. 15 images daily for free, no subscription, usable directly in the browser."
 ---
 
-Bing Image Creator ist das überzeugendste Gratisangebot im Bereich KI-Bildgenerierung: Microsoft stellt DALL-E 3 — das gleiche Modell, das OpenAI für $20/Monat verkauft — vollständig kostenlos und ohne Abonnement zur Verfügung. Wer einen Microsoft-Account hat, kann sofort hochwertige Bilder generieren, ohne Kreditkarte, ohne Registrierung für einen weiteren Dienst.
+Bing Image Creator is the most compelling free offering in the AI image generation space: Microsoft provides DALL-E 3 — the same model OpenAI sells for $20/month — completely free and without a subscription. Anyone with a Microsoft account can immediately generate high-quality images without a credit card or registration for yet another service.
 
-Die 15 täglichen "schnellen" Generierungen reichen für den gelegentlichen Bedarf problemlos aus, danach wird die Geschwindigkeit gedrosselt, nicht gesperrt. Der einzige echte Nachteil ist die fehlende kreative Kontrolle: Negative Prompts, Style-Einstellungen oder andere Feinabstimmungen sind nicht verfügbar. Für professionelle Nutzung greift man daher lieber zu spezialisierten Tools, aber als kostenloser Einstieg und für schnelle Ideen ist Bing Image Creator kaum zu schlagen.
+The 15 daily "fast" generations are more than enough for occasional needs; after that, speed is throttled, not blocked. The only real downside is the lack of creative control: negative prompts, style settings, or other fine-tuning are not available. For professional use, specialized tools are preferred, but as a free entry point and for quick ideas, Bing Image Creator is hard to beat.

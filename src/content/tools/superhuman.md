@@ -1,22 +1,22 @@
 ---
 name: "Superhuman"
-tagline: "Das schnellste E-Mail-Erlebnis der Welt — KI-getrieben"
-description: "Superhuman ist ein auf Geschwindigkeit optimierter E-Mail-Client mit KI-Funktionen, der Gmail und Outlook schneller und effizienter macht. Features wie AI Triage, Follow-up-Reminders, Split Inbox und konsequentes Keyboard-First-Design helfen dabei, Inbox Zero dauerhaft zu halten."
+tagline: "The world's fastest email experience — AI-powered"
+description: "Superhuman is a speed-optimized email client with AI features that makes Gmail and Outlook faster and more efficient. Features like AI Triage, follow-up reminders, split inbox and a consistent keyboard-first design help maintain inbox zero permanently."
 category: "Productivity"
 pricing:
   free: false
   startingPrice: "$30"
 rating: 4.4
 pros:
-  - Schnellste E-Mail-App am Markt durch konsequentes Performance-Design
-  - AI Triage priorisiert E-Mails automatisch nach Relevanz
-  - Follow-up-Reminder verhindert vergessene Antworten
-  - Split Inbox trennt wichtige von unwichtigen Mails klar
-  - Keyboard-First-Design für maximale Effizienz ohne Maus
+  - Fastest email app on the market through consistent performance design
+  - AI Triage automatically prioritizes emails by relevance
+  - Follow-up reminders prevent forgotten replies
+  - Split Inbox clearly separates important from unimportant emails
+  - Keyboard-first design for maximum efficiency without a mouse
 cons:
-  - Teuer mit $30 pro Monat ohne günstigere Einstiegsoption
-  - Nur Gmail und Outlook als Mail-Provider unterstützt
-  - Für gelegentliche E-Mail-Nutzer deutlich überdimensioniert
+  - Expensive at $30 per month without a cheaper entry option
+  - Only Gmail and Outlook supported as mail providers
+  - Clearly over-engineered for occasional email users
 affiliateLink: "https://superhuman.com?irgwc=1&mpid=YOUR_IMPACT_ID"
 affiliateCommission: "$30/Referral"
 websiteUrl: "https://superhuman.com"
@@ -29,9 +29,9 @@ tags:
   - gmail
   - inbox-zero
 addedDate: 2026-05-28
-seoDescription: "Superhuman ist der schnellste E-Mail-Client mit KI-Triage und Keyboard-First-Design. Ideal für Power-User, die Inbox Zero wollen."
+seoDescription: "Superhuman is the fastest email client with AI triage and keyboard-first design. Ideal for power users who want inbox zero."
 ---
 
-Superhuman wurde von Grund auf für Geschwindigkeit gebaut: Jede Aktion ist auf unter 100ms Ladezeit optimiert, das Interface reagiert instant und sämtliche Funktionen sind per Tastaturkürzel erreichbar. Wer täglich mit E-Mail arbeitet, merkt den Unterschied zu konventionellen Clients sofort.
+Superhuman was built from the ground up for speed: Every action is optimized for under 100ms load time, the interface responds instantly and all functions are accessible via keyboard shortcuts. Anyone who works with email daily immediately notices the difference from conventional clients.
 
-Die KI-Funktionen ergänzen das Geschwindigkeitsprinzip: AI Triage bewertet eingehende Mails und hebt die wichtigsten hervor, Follow-up-Reminders werden automatisch gesetzt, wenn eine Mail noch keine Antwort bekommen hat. Für People mit hohem E-Mail-Volumen rechnet sich der Preis schnell durch die eingesparte Zeit.
+The AI features complement the speed principle: AI Triage evaluates incoming emails and highlights the most important ones, follow-up reminders are automatically set when an email has not received a reply. For people with high email volume, the price pays for itself quickly through the time saved.

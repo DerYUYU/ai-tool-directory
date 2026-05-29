@@ -1,22 +1,22 @@
 ---
 name: "Mem AI"
-tagline: "KI-Notizen-App die sich selbst organisiert und Verbindungen findet"
-description: "Mem AI ist eine KI-gestützte Notizen-App, die Inhalte automatisch organisiert, Verbindungen zwischen Notizen erkennt und per KI-Suche über das gesamte persönliche Wissen zugänglich macht. Kein manuelles Sortieren in Ordner oder Tags mehr nötig."
+tagline: "AI notes app that organizes itself and finds connections"
+description: "Mem AI is an AI-powered notes app that automatically organizes content, recognizes connections between notes, and makes your entire personal knowledge accessible via AI search. No more manual sorting into folders or tags."
 category: "Productivity"
 pricing:
   free: true
-  freeTier: "Basis-Notizen kostenlos"
+  freeTier: "Basic notes free"
   startingPrice: "$14"
 rating: 4.1
 pros:
-  - Selbstorganisierende Notizen ohne manuelles Ablagesystem
-  - KI-Suche in allen eigenen Notizen und Dokumenten
-  - Bidirektionale Links zwischen verwandten Inhalten
-  - Schnelles Erfassen von Ideen ohne Kategorisierungs-Overhead
+  - Self-organizing notes without a manual filing system
+  - AI search across all your own notes and documents
+  - Bidirectional links between related content
+  - Fast capture of ideas without categorization overhead
 cons:
-  - Teurer als Notion oder Obsidian bei vergleichbarem Funktionsumfang
-  - Weniger strukturiert für komplexe Projektmanagement-Workflows
-  - Produkt noch aktiv in Entwicklung mit häufigen Änderungen
+  - More expensive than Notion or Obsidian for comparable feature sets
+  - Less structured for complex project management workflows
+  - Product still actively in development with frequent changes
 affiliateLink: "https://mem.ai?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://mem.ai"
@@ -28,9 +28,9 @@ tags:
   - knowledge-management
   - ai-search
 addedDate: 2026-05-28
-seoDescription: "Mem AI organisiert Notizen automatisch mit KI und findet Verbindungen zwischen Wissenseinheiten. Ideal für Personal Knowledge Management."
+seoDescription: "Mem AI automatically organizes notes with AI and finds connections between knowledge units. Ideal for Personal Knowledge Management."
 ---
 
-Mem AI verfolgt einen anderen Ansatz als klassische Notizen-Apps: Statt Ordner und Tags anzulegen, wirft man Gedanken einfach rein — die KI erkennt automatisch Zusammenhänge, erstellt Verbindungen und macht alles über natürliche Suchanfragen auffindbar. Das Ergebnis ist ein persönlicher Wissensgraph ohne Pflegeaufwand.
+Mem AI takes a different approach from classic notes apps: instead of creating folders and tags, you simply throw thoughts in — the AI automatically recognizes connections, creates links, and makes everything findable through natural search queries. The result is a personal knowledge graph without maintenance overhead.
 
-Die KI-Suche ist der eigentliche Kernvorteil: Sie durchsucht nicht nur Stichwörter, sondern versteht den Kontext und findet relevante Notizen auch dann, wenn man den genauen Wortlaut vergessen hat. Für Wissensarbeiter, die täglich viele Ideen und Informationen verarbeiten, ist das ein erheblicher Zeitgewinn.
+The AI search is the real core advantage: it not only searches keywords but understands context and finds relevant notes even when you've forgotten the exact wording. For knowledge workers who process many ideas and pieces of information daily, this is a significant time saver.

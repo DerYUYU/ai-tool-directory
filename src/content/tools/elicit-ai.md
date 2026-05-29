@@ -1,21 +1,21 @@
 ---
 name: "Elicit"
-tagline: "KI analysiert automatisch tausende Forschungsarbeiten für dich"
-description: "Elicit ist ein KI-Forschungsassistent, der auf systematische Literatur-Reviews spezialisiert ist. Das Tool kann tausende wissenschaftlicher Paper gleichzeitig analysieren, relevante Informationen extrahieren und in übersichtlichen Tabellen zusammenstellen."
+tagline: "AI automatically analyzes thousands of research papers for you"
+description: "Elicit is an AI research assistant specialized in systematic literature reviews. The tool can analyze thousands of scientific papers simultaneously, extract relevant information, and compile it into clear tables."
 category: "Research"
 pricing:
   free: true
-  freeTier: "5.000 Anfragen/Monat kostenlos"
+  freeTier: "5,000 requests/month free"
   startingPrice: "$10"
 rating: 4.4
 pros:
-  - Systematische Literatur-Reviews in kurzer Zeit
-  - Tausende Papers gleichzeitig analysierbar
-  - Automatische Daten- und Tabellen-Extraktion
-  - Großzügiges Free Tier mit 5.000 Anfragen
+  - Systematic literature reviews in a short time
+  - Thousands of papers analyzable simultaneously
+  - Automatic data and table extraction
+  - Generous free tier with 5,000 requests
 cons:
-  - Primär englischsprachige Papers abgedeckt
-  - Lernkurve für Nutzer ohne Forschungshintergrund
+  - Primarily covers English-language papers
+  - Learning curve for users without a research background
 websiteUrl: "https://elicit.com"
 featured: false
 trending: false
@@ -26,9 +26,9 @@ tags:
   - science
   - extraction
 addedDate: 2026-05-28
-seoDescription: "Elicit analysiert tausende Forschungsarbeiten automatisch. KI für systematische Literatur-Reviews mit Tabellen-Extraktion – kostenlos starten."
+seoDescription: "Elicit automatically analyzes thousands of research papers. AI for systematic literature reviews with table extraction — start for free."
 ---
 
-Elicit wurde speziell für den wissenschaftlichen Arbeitsprozess entwickelt. Was früher Wochen dauerte – tausende Papers durchzulesen und relevante Informationen zu extrahieren – kann Elicit in Minuten erledigen. Das macht das Tool besonders wertvoll für Doktoranden, Wissenschaftler und Research-Teams, die Literatur-Reviews durchführen.
+Elicit was developed specifically for the scientific workflow. What used to take weeks — reading thousands of papers and extracting relevant information — Elicit can accomplish in minutes. This makes the tool particularly valuable for doctoral students, scientists, and research teams conducting literature reviews.
 
-Die Tabellen-Extraktion ist ein besonderes Highlight: Elicit kann spezifische Datenpunkte aus Papers extrahieren und direkt vergleichbar in einer Tabelle darstellen. Für Menschen ohne Forschungshintergrund ist die Bedienoberfläche jedoch nicht sofort intuitiv – es braucht etwas Zeit, das volle Potenzial des Tools zu nutzen.
+The table extraction is a particular highlight: Elicit can extract specific data points from papers and present them directly in a comparable table. For people without a research background, however, the interface is not immediately intuitive — it takes some time to unlock the tool's full potential.

@@ -1,21 +1,21 @@
 ---
 name: "Taskade"
-tagline: "KI-Agenten, Aufgaben und Team-Workspace in einer App"
-description: "Taskade kombiniert Aufgabenverwaltung, Echtzeit-Kollaboration und KI-Agenten in einem einzigen Workspace. Teams können Projekte als Listen, Boards, Mind Maps oder Gantt-Charts verwalten, während KI-Agenten Recherchen, Zusammenfassungen und Automatisierungen direkt in Tasks ausführen."
+tagline: "AI agents, tasks and team workspace in one app"
+description: "Taskade combines task management, real-time collaboration and AI agents in a single workspace. Teams can manage projects as lists, boards, mind maps or Gantt charts, while AI agents execute research, summaries and automations directly in tasks."
 category: "Productivity"
 pricing:
   free: true
-  freeTier: "Unbegrenzte Projekte kostenlos mit begrenzter KI"
+  freeTier: "Unlimited projects free with limited AI"
   startingPrice: "$8"
 rating: 4.2
 pros:
-  - KI-Agenten direkt in Tasks und Projekten ausführbar
-  - Flexible Ansichten (Liste, Board, Mind Map, Gantt)
-  - Team-Kollaboration in Echtzeit
-  - Großzügiges Free Tier mit unbegrenzten Projekten
+  - AI agents executable directly in tasks and projects
+  - Flexible views (list, board, mind map, Gantt)
+  - Real-time team collaboration
+  - Generous free tier with unlimited projects
 cons:
-  - KI-Funktionen im Free Plan stark eingeschränkt
-  - Weniger bekannt als Notion, kleineres Ökosystem
+  - AI features heavily restricted in free plan
+  - Less well-known than Notion, smaller ecosystem
 affiliateLink: "https://www.taskade.com?via=muok7detr5hz"
 affiliateCommission: "30% recurring"
 websiteUrl: "https://taskade.com"
@@ -28,9 +28,9 @@ tags:
   - mind-maps
   - collaboration
 addedDate: 2026-05-28
-seoDescription: "Taskade vereint KI-Agenten, Aufgaben und Team-Kollaboration in einem Workspace. Flexibel, kostenlos startbar, mit KI-Automatisierung."
+seoDescription: "Taskade unites AI agents, tasks and team collaboration in one workspace. Flexible, free to start, with AI automation."
 ---
 
-Taskade hebt sich von klassischen Projektmanagement-Tools durch die Integration von KI-Agenten ab, die direkt in Projekten und Tasks aktiv werden können. Diese Agenten können Recherchen durchführen, Texte zusammenfassen, Inhalte generieren und Workflows automatisieren — alles ohne die App zu verlassen.
+Taskade sets itself apart from classic project management tools through the integration of AI agents that can become active directly in projects and tasks. These agents can conduct research, summarize texts, generate content and automate workflows — all without leaving the app.
 
-Die Flexibilität bei den Ansichten macht Taskade für unterschiedliche Arbeitsweisen geeignet: Wer strukturiert in Listen denkt, nutzt die List-View; kreative Teams greifen auf Mind Maps zurück; Projektleiter nutzen das Gantt-Chart für Timeline-Übersichten. Ein Workspace, der sich dem Team anpasst.
+The flexibility in views makes Taskade suitable for different working styles: Those who think in structured lists use the list view; creative teams use mind maps; project managers use the Gantt chart for timeline overviews. A workspace that adapts to the team.

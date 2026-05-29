@@ -1,22 +1,22 @@
 ---
 name: "Kapwing"
-tagline: "Online Video-Editor mit KI — direkt im Browser ohne Installation"
-description: "Kapwing ist ein vollständiger Online-Videoeditor mit KI-Funktionen wie automatischen Untertiteln, Hintergrundentfernung und Smart Cut. Er läuft komplett im Browser, unterstützt Team-Zusammenarbeit und ermöglicht den Export für alle Social-Media-Plattformen."
+tagline: "Online video editor with AI — directly in the browser with no installation"
+description: "Kapwing is a full-featured online video editor with AI capabilities such as automatic subtitles, background removal, and Smart Cut. It runs entirely in the browser, supports team collaboration, and enables export for all social media platforms."
 category: "Video"
 pricing:
   free: true
-  freeTier: "Unbegrenzte Exports bis 4 Min mit Wasserzeichen"
+  freeTier: "Unlimited exports up to 4 min with watermark"
   startingPrice: "$16"
 rating: 4.3
 pros:
-  - Kein Download nötig — läuft vollständig im Browser
-  - Großzügiges Free Tier mit unbegrenzten Exporten bis 4 Minuten
-  - Automatische Untertitel in hoher Qualität
-  - Echtzeit-Teamzusammenarbeit für mehrere Nutzer
-  - Export-Optimierung für alle Social-Media-Formate
+  - No download needed — runs entirely in the browser
+  - Generous free tier with unlimited exports up to 4 minutes
+  - High-quality automatic subtitles
+  - Real-time team collaboration for multiple users
+  - Export optimization for all social media formats
 cons:
-  - Wasserzeichen auf allen Exporten im kostenlosen Plan
-  - Langsamer als native Desktop-Anwendungen bei großen Projekten
+  - Watermark on all exports in the free plan
+  - Slower than native desktop applications for large projects
 affiliateLink: "https://www.kapwing.com?via=muok7detr5hz"
 affiliateCommission: "15% recurring"
 websiteUrl: "https://kapwing.com"
@@ -29,9 +29,9 @@ tags:
   - social-media
   - team
 addedDate: 2026-05-28
-seoDescription: "Kapwing ist ein KI-Videoeditor direkt im Browser — automatische Untertitel, Teamarbeit und Multi-Plattform-Export ab 16$/Monat."
+seoDescription: "Kapwing is an AI video editor directly in the browser — automatic subtitles, teamwork, and multi-platform export from $16/month."
 ---
 
-Kapwing bietet einen überraschend leistungsstarken Videoeditor, der komplett im Webbrowser läuft und keine Installation erfordert. Die KI-Funktionen umfassen automatische Untertitelgenerierung, intelligente Hintergrundentfernung und "Smart Cut", das Stille und Pausen automatisch herausschneidet. Besonders praktisch ist die Möglichkeit zur Echtzeit-Zusammenarbeit, die es Teams erlaubt, gemeinsam an Projekten zu arbeiten.
+Kapwing offers a surprisingly powerful video editor that runs entirely in the web browser and requires no installation. The AI features include automatic subtitle generation, intelligent background removal, and "Smart Cut" which automatically removes silences and pauses. Particularly practical is the ability to collaborate in real time, allowing teams to work together on projects.
 
-Das kostenlose Angebot ist vergleichsweise großzügig: Videos bis zu 4 Minuten Länge können unbegrenzt exportiert werden, allerdings mit Kapwing-Wasserzeichen. Für professionellen Einsatz ohne Wasserzeichen und mit Zugang zu allen Premium-Features ist das Pro-Abo ab 16 Dollar monatlich die richtige Wahl. Im Vergleich zu nativen Desktop-Apps kann Kapwing bei sehr langen oder aufwendigen Videos etwas langsamer arbeiten, für die meisten Social-Media-Projekte ist die Geschwindigkeit jedoch vollkommen ausreichend.
+The free offering is comparatively generous: videos up to 4 minutes in length can be exported unlimited, though with a Kapwing watermark. For professional use without a watermark and with access to all premium features, the Pro subscription from $16 per month is the right choice. Compared to native desktop apps, Kapwing can be somewhat slower with very long or complex videos, but for most social media projects the speed is perfectly adequate.

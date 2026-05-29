@@ -1,24 +1,24 @@
 ---
 name: "v0.dev"
-tagline: "UI-Komponenten auf Knopfdruck — von Vercel"
-description: "v0 von Vercel generiert React/Tailwind UI-Komponenten aus Text-Beschreibungen oder Screenshots. Produziert sofort einsatzbereiten Code mit shadcn/ui-Komponenten. Das bevorzugte Tool für Frontend-Entwickler die schnell schöne UIs brauchen."
+tagline: "UI components at the push of a button — by Vercel"
+description: "v0 by Vercel generates React/Tailwind UI components from text descriptions or screenshots. Produces immediately usable code with shadcn/ui components. The preferred tool for frontend developers who need beautiful UIs quickly."
 category: "Design"
 pricing:
   free: true
-  freeTier: "200 Credits/Monat kostenlos"
-  startingPrice: "$10/Monat"
+  freeTier: "200 credits/month free"
+  startingPrice: "$10/month"
 rating: 4.6
 pros:
-  - "Sofort kopierbarer React/Tailwind Code"
-  - "shadcn/ui Komponenten standardmäßig"
-  - "Screenshot → Code Funktion"
-  - "Von Vercel — nahtlose Integration"
-  - "Produziert sauberen, wartbaren Code"
+  - "Immediately copyable React/Tailwind code"
+  - "shadcn/ui components by default"
+  - "Screenshot → Code function"
+  - "By Vercel — seamless integration"
+  - "Produces clean, maintainable code"
 cons:
-  - "Primär auf React/Next.js fokussiert"
-  - "Credits schnell verbraucht bei kostenlosem Plan"
-  - "Komplexe Interaktionen brauchen Nacharbeitung"
-  - "Kein Backend-Code"
+  - "Primarily focused on React/Next.js"
+  - "Credits consumed quickly on free plan"
+  - "Complex interactions need post-processing"
+  - "No backend code"
 websiteUrl: "https://v0.dev"
 featured: false
 trending: true
@@ -26,22 +26,22 @@ tags: ["ui-generation", "react", "tailwind", "shadcn", "components", "frontend"]
 addedDate: 2026-05-27
 ---
 
-## v0.dev im Detail
+## v0.dev in Detail
 
-v0 ist das UI-Generierungstool von Vercel und hat die Frontend-Entwicklung revolutioniert. Du beschreibst eine UI-Komponente und bekommst sofort produktionsreifen React-Code zurück.
+v0 is Vercel's UI generation tool and has revolutionized frontend development. You describe a UI component and immediately get production-ready React code back.
 
-### Was v0 besonders macht
+### What makes v0 special
 
-- **shadcn/ui Integration**: Alle Komponenten folgen dem shadcn/ui Standard
-- **Screenshot-to-Code**: Bild hochladen → Code erhalten
-- **Iteratives Verfeinern**: "Mach den Button größer" → Code wird angepasst
-- **Direkt in Projekte einfügen**: Copy-Paste in jedes Next.js Projekt
+- **shadcn/ui Integration**: All components follow the shadcn/ui standard
+- **Screenshot-to-Code**: Upload an image → receive code
+- **Iterative refinement**: "Make the button bigger" → code is adjusted
+- **Insert directly into projects**: Copy-paste into any Next.js project
 
-### Typische Nutzung
+### Typical usage
 
 ```
-"Erstelle eine Pricing-Tabelle mit 3 Tiers, 
-monatlich/jährlich Toggle und einem Highlight-Tier"
+"Create a pricing table with 3 tiers, 
+monthly/yearly toggle and a highlighted tier"
 ```
 
-→ v0 generiert fertige React-Komponente mit Tailwind-Styling.
+→ v0 generates finished React component with Tailwind styling.

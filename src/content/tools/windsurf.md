@@ -1,24 +1,24 @@
 ---
 name: "Windsurf"
-tagline: "Die KI-IDE die wie ein Senior Developer denkt"
-description: "Windsurf von Codeium ist eine KI-first IDE mit dem revolutionären 'Cascade' Feature — einer KI die nicht nur Code schreibt, sondern das gesamte Projekt versteht, Dateien navigiert, Terminal-Befehle ausführt und mehrstufige Aufgaben autonom abarbeitet."
+tagline: "The AI IDE that thinks like a senior developer"
+description: "Windsurf by Codeium is an AI-first IDE with the revolutionary 'Cascade' feature — an AI that not only writes code, but understands the entire project, navigates files, executes terminal commands and autonomously handles multi-step tasks."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Kostenlos mit Basis-Features"
-  startingPrice: "$15/Monat"
+  freeTier: "Free with basic features"
+  startingPrice: "$15/month"
 rating: 4.5
 pros:
-  - "Cascade: Autonome Mehrstufenaufgaben"
-  - "Versteht das gesamte Codebase-Kontext"
-  - "Terminal-Ausführung direkt in der KI"
-  - "Kostenlose Basis-Version vorhanden"
-  - "Schneller als Cursor bei einfachen Tasks"
+  - "Cascade: Autonomous multi-step tasks"
+  - "Understands entire codebase context"
+  - "Terminal execution directly in the AI"
+  - "Free basic version available"
+  - "Faster than Cursor for simple tasks"
 cons:
-  - "Weniger ausgereift als Cursor"
-  - "Kleineres Plugin-Ökosystem"
-  - "Cascade kann manchmal zu aggressiv sein"
-  - "Weniger Community-Ressourcen"
+  - "Less mature than Cursor"
+  - "Smaller plugin ecosystem"
+  - "Cascade can sometimes be too aggressive"
+  - "Fewer community resources"
 websiteUrl: "https://windsurf.ai"
 featured: false
 trending: false
@@ -26,25 +26,25 @@ tags: ["ide", "coding", "codeium", "cascade", "ai-editor", "vs-code-alternative"
 addedDate: 2026-05-27
 ---
 
-## Windsurf im Detail
+## Windsurf in Detail
 
-Windsurf ist Codeiums Antwort auf GitHub Copilot und Cursor — mit einem einzigartigen Feature namens **Cascade**.
+Windsurf is Codeium's answer to GitHub Copilot and Cursor — with a unique feature called **Cascade**.
 
-### Was ist Cascade?
+### What is Cascade?
 
-Cascade ist ein "Agentic Coding Flow" — die KI kann:
-1. Mehrere Dateien gleichzeitig lesen und verstehen
-2. Terminal-Befehle ausführen (npm install, git commit, etc.)
-3. Bugs eigenständig finden und fixen
-4. Refactoring-Aufgaben autonom abarbeiten
+Cascade is an "Agentic Coding Flow" — the AI can:
+1. Read and understand multiple files simultaneously
+2. Execute terminal commands (npm install, git commit, etc.)
+3. Find and fix bugs independently
+4. Autonomously handle refactoring tasks
 
 ### Windsurf vs. Cursor
 
 | Feature | Windsurf | Cursor |
 |---------|----------|--------|
-| Autonomie | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| Preis | $15/Mo | $20/Mo |
-| Reife | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Autonomy | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Price | $15/Mo | $20/Mo |
+| Maturity | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | Ecosystem | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 
-Wer maximale Autonomie will: Windsurf. Wer ausgereiftes Tool-Ökosystem will: Cursor.
+Those who want maximum autonomy: Windsurf. Those who want a mature tool ecosystem: Cursor.

@@ -1,23 +1,23 @@
 ---
 name: "Notion AI"
-tagline: "KI direkt in deinem Notion-Workspace"
-description: "Notion AI ist der integrierte KI-Assistent in Notion. Er hilft beim Schreiben, Zusammenfassen, Übersetzen und Brainstormen — direkt in deinen Notizen und Projekten ohne zwischen Apps zu wechseln."
+tagline: "AI directly in your Notion workspace"
+description: "Notion AI is the integrated AI assistant in Notion. It helps with writing, summarizing, translating, and brainstorming — directly in your notes and projects without switching between apps."
 category: "Productivity"
 pricing:
   free: false
-  freeTier: "20 kostenlose AI-Antworten"
+  freeTier: "20 free AI responses"
   startingPrice: "$10"
 rating: 4.3
 pros:
-  - "Direkt in Notion integriert"
-  - "Greift auf bestehende Notizen zu"
-  - "Perfekt für Notion-User"
-  - "Keine Einarbeitungszeit"
-  - "Q&A über den gesamten Workspace"
+  - "Directly integrated into Notion"
+  - "Accesses existing notes"
+  - "Perfect for Notion users"
+  - "No learning curve"
+  - "Q&A across the entire workspace"
 cons:
-  - "Nur sinnvoll wenn du Notion nutzt"
-  - "Teurer Add-on zu Notion-Abo"
-  - "Weniger flexibel als eigenständige Tools"
+  - "Only useful if you use Notion"
+  - "Expensive add-on to Notion subscription"
+  - "Less flexible than standalone tools"
 affiliateLink: "https://www.notion.so?via=muok7detr5hz"
 affiliateCommission: "$10/Signup"
 websiteUrl: "https://notion.so/product/ai"
@@ -26,19 +26,19 @@ tags: ["productivity", "notes", "workspace", "notion", "writing"]
 addedDate: 2026-05-26
 ---
 
-## Notion AI im Detail
+## Notion AI in Detail
 
-Notion AI ist das KI-Add-on für Notion — dem beliebtesten All-in-One-Workspace.
-Es macht Notion zu einem echten KI-Powerhouse für Wissensmanagement.
+Notion AI is the AI add-on for Notion — the most popular all-in-one workspace.
+It turns Notion into a true AI powerhouse for knowledge management.
 
-### Was Notion AI kann
+### What Notion AI Can Do
 
-- **Texte verbessern**: Ton, Länge, Klarheit anpassen
-- **Zusammenfassen**: Lange Dokumente auf das Wesentliche reduzieren
-- **Action Items**: Meeting-Notizen automatisch in To-Dos umwandeln
-- **Q&A**: "Was haben wir letzte Woche besprochen?" — Notion antwortet
+- **Improve texts**: Adjust tone, length, and clarity
+- **Summarize**: Reduce long documents to the essentials
+- **Action Items**: Automatically convert meeting notes into to-dos
+- **Q&A**: "What did we discuss last week?" — Notion answers
 
-### Lohnt sich Notion AI?
+### Is Notion AI Worth It?
 
-Wenn du bereits Notion nutzt und regelmäßig Texte schreibst oder lange Dokumente hast,
-lohnt sich das Add-on. Ansonsten sind eigenständige Tools wie Claude flexibler.
+If you already use Notion and regularly write texts or have long documents,
+the add-on is worth it. Otherwise, standalone tools like Claude are more flexible.

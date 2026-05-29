@@ -1,24 +1,24 @@
 ---
 name: "Replit AI"
-tagline: "KI-Coding-Assistent im Browser — für alle Plattformen"
-description: "Replit ist eine browserbasierte IDE mit tiefintegrierter KI. Replit Agent kann vollständige Projekte von Grund auf erstellen, debuggen und deployen. Besonders stark für Python, Node.js und Webentwicklung — ohne lokales Setup."
+tagline: "AI coding assistant in the browser — for all platforms"
+description: "Replit is a browser-based IDE with deeply integrated AI. Replit Agent can create, debug, and deploy complete projects from scratch. Particularly strong for Python, Node.js, and web development — without local setup."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Basis-IDE kostenlos"
-  startingPrice: "$25/Monat (Replit Core)"
+  freeTier: "Basic IDE free"
+  startingPrice: "$25/month (Replit Core)"
 rating: 4.2
 pros:
-  - "Vollständig im Browser — kein Setup"
-  - "Replit Agent: Autonomes Code-Erstellen"
-  - "Instant Deploy mit eigener Domain"
-  - "Kostenlose Basis-Version"
-  - "Ideal für Einsteiger und Bildung"
+  - "Completely in the browser — no setup"
+  - "Replit Agent: Autonomous code creation"
+  - "Instant deploy with own domain"
+  - "Free basic version"
+  - "Ideal for beginners and education"
 cons:
-  - "Langsamer als lokale IDEs"
-  - "Agent braucht Core-Plan ($25/Mo)"
-  - "Begrenzte Ressourcen im Free-Plan"
-  - "Kein vollständiger Offline-Modus"
+  - "Slower than local IDEs"
+  - "Agent requires Core plan ($25/mo)"
+  - "Limited resources in free plan"
+  - "No full offline mode"
 websiteUrl: "https://replit.com"
 featured: false
 trending: false
@@ -26,21 +26,21 @@ tags: ["browser-ide", "coding", "python", "deploy", "education", "beginner"]
 addedDate: 2026-05-27
 ---
 
-## Replit AI im Detail
+## Replit AI in Detail
 
-Replit ist seit Jahren die beliebteste Browser-IDE — mit über 30 Millionen Entwicklern. Der neue **Replit Agent** hat das Tool in den KI-Zeitalter katapultiert.
+Replit has been the most popular browser IDE for years — with over 30 million developers. The new **Replit Agent** has catapulted the tool into the AI era.
 
 ### Replit Agent
 
-Der Agent kann:
-1. Komplette Apps aus einer Beschreibung bauen
-2. Bugs automatisch erkennen und fixen
-3. Mit einem Klick deployen (eigene replit.app Domain)
-4. Datenbanken und APIs integrieren
+The agent can:
+1. Build complete apps from a description
+2. Automatically detect and fix bugs
+3. Deploy with one click (own replit.app domain)
+4. Integrate databases and APIs
 
-### Für wen ist Replit ideal?
+### Who is Replit ideal for?
 
-- **Einsteiger**: Kein Terminal, kein Git-Setup, sofort loslegen
-- **Bildung**: Schüler und Studenten, die schnell experimentieren wollen
-- **Prototypen**: Schnell eine Idee testen ohne lokales Setup
-- **Freelancer**: Kunden direkt die URL zeigen
+- **Beginners**: No terminal, no Git setup, start right away
+- **Education**: Students who want to experiment quickly
+- **Prototypes**: Quickly test an idea without local setup
+- **Freelancers**: Show clients the URL directly

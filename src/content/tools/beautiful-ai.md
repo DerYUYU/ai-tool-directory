@@ -1,21 +1,21 @@
-﻿---
+---
 name: "Beautiful.ai"
-tagline: "KI-Praesentationen automatisch gestalten"
-description: "Beautiful.ai generiert professionelle Praesentation-Designs automatisch. Die KI passt Layouts, Farben und Anordnung an deinen Content an - ohne Design-Kenntnisse."
+tagline: "AI presentations designed automatically"
+description: "Beautiful.ai automatically generates professional presentation designs. The AI adapts layouts, colors, and arrangements to your content — no design skills required."
 category: "Design"
 pricing:
   free: true
-  freeTier: "3 Praesentationen kostenlos"
+  freeTier: "3 presentations free"
   startingPrice: "$12"
 rating: 4.2
 pros:
-  - "Automatisches Design-Layout"
-  - "Professionelle Templates"
-  - "Einfacher als PowerPoint"
-  - "Gute Zusammenarbeit-Features"
+  - "Automatic design layout"
+  - "Professional templates"
+  - "Easier than PowerPoint"
+  - "Good collaboration features"
 cons:
-  - "Weniger Kontrolle als Canva"
-  - "Bearbeitung manchmal frustrierend"
+  - "Less control than Canva"
+  - "Editing can be frustrating at times"
 affiliateLink: "https://www.beautiful.ai?via=muok7detr5hz"
 affiliateCommission: "25% recurring"
 websiteUrl: "https://beautiful.ai"
@@ -24,6 +24,6 @@ tags: ["presentations", "design", "slides", "productivity"]
 addedDate: 2026-05-26
 ---
 
-## Beautiful.ai - Smarte Praesentationen
+## Beautiful.ai - Smart Presentations
 
-Fuer alle die professionelle Praesentationen ohne Design-Aufwand brauchen.
+For everyone who needs professional presentations without the design effort.

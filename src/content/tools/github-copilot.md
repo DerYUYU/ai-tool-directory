@@ -1,43 +1,43 @@
 ---
 name: "GitHub Copilot"
-tagline: "KI-Code-Assistent direkt in deiner IDE"
-description: "GitHub Copilot ist der meistgenutzte KI-Coding-Assistent der Welt. Er funktioniert direkt in VS Code, JetBrains und anderen IDEs, schlägt ganzen Code vor, vervollständigt Funktionen und erklärt bestehenden Code."
+tagline: "AI code assistant directly in your IDE"
+description: "GitHub Copilot is the most widely used AI coding assistant in the world. It works directly in VS Code, JetBrains, and other IDEs, suggests entire code blocks, completes functions, and explains existing code."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "2.000 Code-Completions + 50 Chat-Nachrichten/Monat kostenlos"
+  freeTier: "2,000 code completions + 50 chat messages/month free"
   startingPrice: "$10"
 rating: 4.6
 pros:
-  - "Kostenloser Tier jetzt verfügbar"
-  - "Nahtlose IDE-Integration"
-  - "Versteht den gesamten Code-Kontext"
-  - "Copilot Chat für Code-Erklärungen"
-  - "Unterstützt alle Sprachen"
+  - "Free tier now available"
+  - "Seamless IDE integration"
+  - "Understands the entire code context"
+  - "Copilot Chat for code explanations"
+  - "Supports all languages"
 cons:
-  - "Schlägt manchmal unsicheren Code vor"
-  - "Für komplexe Architekturen noch begrenzt"
-  - "Datenschutzbedenken bei Unternehmens-Code"
+  - "Sometimes suggests insecure code"
+  - "Still limited for complex architectures"
+  - "Privacy concerns with enterprise code"
 websiteUrl: "https://github.com/features/copilot"
 featured: true
 tags: ["coding", "ide", "autocomplete", "vscode", "jetbrains", "github"]
 addedDate: 2026-05-26
 ---
 
-## GitHub Copilot im Detail
+## GitHub Copilot in Detail
 
-GitHub Copilot wurde 2021 von GitHub (Microsoft) in Zusammenarbeit mit OpenAI entwickelt.
-Es nutzt Codex-Modelle, die auf Milliarden von Code-Zeilen trainiert wurden.
+GitHub Copilot was developed in 2021 by GitHub (Microsoft) in collaboration with OpenAI.
+It uses Codex models trained on billions of lines of code.
 
 ### Setup in VS Code
 
-1. Extension "GitHub Copilot" installieren
-2. Mit GitHub-Account anmelden
-3. Kostenloser Tier aktivieren (2.000 Completions/Monat)
+1. Install the "GitHub Copilot" extension
+2. Sign in with your GitHub account
+3. Activate the free tier (2,000 completions/month)
 
-### Beste Features
+### Best Features
 
-- **Tab-Completion**: Schlägt ganze Funktionen vor
-- **Copilot Chat**: Stelle Fragen zu deinem Code
-- **Tests generieren**: Unit Tests auf Knopfdruck
-- **Dokumentation**: Docstrings automatisch generieren
+- **Tab Completion**: Suggests entire functions
+- **Copilot Chat**: Ask questions about your code
+- **Generate tests**: Unit tests at the push of a button
+- **Documentation**: Automatically generate docstrings

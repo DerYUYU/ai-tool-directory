@@ -1,45 +1,45 @@
 ---
 name: "Cursor"
-tagline: "Der KI-first Code-Editor"
-description: "Cursor ist ein VS Code Fork mit tief integrierter KI. Es versteht den gesamten Codebase, kann ganze Features auf Befehl implementieren und ist der bevorzugte Editor vieler KI-Enthusiasten und Vibe-Coder."
+tagline: "The AI-first code editor"
+description: "Cursor is a VS Code fork with deeply integrated AI. It understands the entire codebase, can implement entire features on command, and is the preferred editor of many AI enthusiasts and vibe coders."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "14-Tage Pro Trial, dann Hobby kostenlos"
+  freeTier: "14-day Pro trial, then Hobby free"
   startingPrice: "$20"
 rating: 4.7
 pros:
-  - "Versteht den gesamten Codebase"
-  - "Composer: ganze Features auf Befehl"
-  - "Basiert auf VS Code (vertraute Umgebung)"
-  - "Alle VS Code Extensions funktionieren"
-  - "Agent-Mode für autonomes Coding"
+  - "Understands the entire codebase"
+  - "Composer: entire features on command"
+  - "Based on VS Code (familiar environment)"
+  - "All VS Code extensions work"
+  - "Agent mode for autonomous coding"
 cons:
-  - "Teurer als Copilot"
-  - "Internet-Verbindung erforderlich"
-  - "Datenschutz bei sensiblem Code"
-  - "Kein offline Modus"
+  - "More expensive than Copilot"
+  - "Internet connection required"
+  - "Privacy concerns with sensitive code"
+  - "No offline mode"
 websiteUrl: "https://cursor.so"
 featured: true
 tags: ["coding", "ide", "editor", "vscode", "ai-coding", "vibe-coding"]
 addedDate: 2026-05-26
 ---
 
-## Cursor im Detail
+## Cursor in Detail
 
-Cursor wurde 2023 gegründet und ist zum bevorzugten Editor der KI-Coding-Community geworden.
-Es ist bekannt als das Tool hinter dem "Vibe Coding" Trend.
+Cursor was founded in 2023 and has become the preferred editor of the AI coding community.
+It is known as the tool behind the "Vibe Coding" trend.
 
 ### Cursor vs. GitHub Copilot
 
 | Feature | Cursor | Copilot |
 |---------|--------|---------|
-| Codebase-Verständnis | ✅ Voll | Teilweise |
-| Composer (ganze Features) | ✅ Ja | ❌ Nein |
-| Preis | $20/Monat | $10/Monat |
-| Editor | Eigener | Plugin |
+| Codebase understanding | Full | Partial |
+| Composer (entire features) | Yes | No |
+| Price | $20/month | $10/month |
+| Editor | Own | Plugin |
 
 ### Cursor Composer
 
-Der Killer-Feature: Öffne Composer (Cmd+I), beschreibe was du bauen willst,
-und Cursor implementiert es über mehrere Dateien hinweg.
+The killer feature: open Composer (Cmd+I), describe what you want to build,
+and Cursor implements it across multiple files.

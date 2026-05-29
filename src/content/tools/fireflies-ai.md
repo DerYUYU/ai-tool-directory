@@ -1,22 +1,22 @@
 ---
 name: "Fireflies.ai"
-tagline: "KI-Meeting-Assistent der mitschreibt, zusammenfasst und Action Items erkennt"
-description: "Fireflies.ai ist ein KI-gestützter Meeting-Assistent, der automatisch an Videoanrufen teilnimmt, Gespräche transkribiert, Zusammenfassungen erstellt und Action Items erkennt. Er lässt sich nahtlos in Zoom, Google Meet, Teams und viele CRM-Systeme integrieren."
+tagline: "AI meeting assistant that takes notes, summarizes, and detects action items"
+description: "Fireflies.ai is an AI-powered meeting assistant that automatically joins video calls, transcribes conversations, creates summaries, and detects action items. It integrates seamlessly with Zoom, Google Meet, Teams, and many CRM systems."
 category: "Productivity"
 pricing:
   free: true
-  freeTier: "800 Minuten Transkription kostenlos"
+  freeTier: "800 minutes of transcription free"
   startingPrice: "$10"
 rating: 4.5
 pros:
-  - Automatische Meeting-Teilnahme ohne manuelles Starten
-  - Action-Items-Erkennung direkt aus dem Gespräch
-  - CRM-Integration (Salesforce, HubSpot u.a.)
-  - Volltext-Suche über alle gespeicherten Meetings
-  - Team-Features für gemeinsamen Zugriff auf Transkripte
+  - Automatic meeting attendance without manual start
+  - Action item detection directly from the conversation
+  - CRM integration (Salesforce, HubSpot, and others)
+  - Full-text search across all saved meetings
+  - Team features for shared access to transcripts
 cons:
-  - Datenschutz-Bedenken bei vertraulichen oder sensiblen Meetings
-  - Gelegentliche Transkriptionsfehler bei starken Akzenten
+  - Privacy concerns with confidential or sensitive meetings
+  - Occasional transcription errors with strong accents
 affiliateLink: "https://fireflies.ai?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://fireflies.ai"
@@ -29,9 +29,9 @@ tags:
   - zoom
   - productivity
 addedDate: 2026-05-28
-seoDescription: "Fireflies.ai transkribiert Meetings automatisch, erkennt Action Items und integriert sich in CRM-Systeme. 800 Minuten kostenlos."
+seoDescription: "Fireflies.ai automatically transcribes meetings, detects action items, and integrates with CRM systems. 800 minutes free."
 ---
 
-Fireflies.ai nimmt automatisch an Videomeetings teil und erstellt vollständige Transkripte sowie prägnante Zusammenfassungen. Die KI erkennt dabei Action Items, Fragen und wichtige Entscheidungen direkt im Gesprächsverlauf — ohne dass jemand manuell mitschreiben muss.
+Fireflies.ai automatically joins video meetings and creates complete transcripts as well as concise summaries. The AI detects action items, questions, and key decisions directly within the conversation flow — without anyone having to take notes manually.
 
-Besonders für Vertriebsteams und Remote-Teams ist der CRM-Anschluss wertvoll: Gesprächsnotizen landen automatisch in Salesforce oder HubSpot. Die Suchfunktion über alle archivierten Meetings macht Fireflies.ai zu einem durchsuchbaren Gedächtnis für das gesamte Team.
+The CRM connection is especially valuable for sales teams and remote teams: meeting notes automatically land in Salesforce or HubSpot. The search function across all archived meetings makes Fireflies.ai a searchable memory for the entire team.

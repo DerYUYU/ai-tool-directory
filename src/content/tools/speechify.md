@@ -1,22 +1,22 @@
 ---
 name: "Speechify"
-tagline: "Höre jedes Dokument, PDF oder Webseite als Hörbuch — 30M+ Nutzer"
-description: "Speechify wandelt jedes Dokument, PDF, E-Mail oder Webseite in natürlich klingende Audiosprache um. Mit über 30 Millionen Nutzern ist es die beliebteste Text-zu-Sprache-App für Studenten, Berufstätige und Menschen mit Leseschwierigkeiten."
+tagline: "Listen to any document, PDF or website as an audiobook — 30M+ users"
+description: "Speechify converts any document, PDF, email or website into naturally sounding audio speech. With over 30 million users, it is the most popular text-to-speech app for students, professionals and people with reading difficulties."
 category: "Audio"
 pricing:
   free: true
-  freeTier: "Basisfunktionen kostenlos"
+  freeTier: "Basic features free"
   startingPrice: "$139"
 rating: 4.3
 pros:
-  - Natürlichste Text-zu-Sprache-Technologie auf dem Markt
-  - Über 30 Millionen Nutzer weltweit — bewährteste Lösung
-  - Verfügbar auf allen Geräten (iOS, Android, Desktop, Browser)
-  - Chrome Extension für direktes Vorlesen von Webseiten
-  - Unterstützt PDFs, Dokumente, E-Books und Webinhalte
+  - Most natural text-to-speech technology on the market
+  - Over 30 million users worldwide — most proven solution
+  - Available on all devices (iOS, Android, Desktop, Browser)
+  - Chrome Extension for direct reading of websites
+  - Supports PDFs, documents, e-books and web content
 cons:
-  - Jährliches Premium-Abo mit 139 Dollar sehr teuer
-  - Kostenlose Version hat sehr eingeschränkten Funktionsumfang
+  - Annual premium subscription at $139 very expensive
+  - Free version has very limited feature set
 affiliateLink: "https://speechify.com?irgwc=1&mpid=YOUR_IMPACT_ID"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://speechify.com"
@@ -29,9 +29,9 @@ tags:
   - productivity
   - students
 addedDate: 2026-05-28
-seoDescription: "Speechify liest jedes Dokument, PDF und Webseite vor — 30M+ Nutzer, natürlichste KI-Stimmen, Chrome Extension und alle Geräte."
+seoDescription: "Speechify reads any document, PDF and website aloud — 30M+ users, most natural AI voices, Chrome Extension and all devices."
 ---
 
-Speechify ist mit über 30 Millionen Nutzern die meistgenutzte Text-zu-Sprache-App weltweit und bietet die bisher natürlichsten KI-Stimmen für das Vorlesen von Texten. Die App kann nahezu jede Textquelle verarbeiten — PDFs, Word-Dokumente, E-Mails, Webseiten und sogar gescannte Bilder. Für Studenten, Pendler und Menschen mit Legasthenie oder Seheinschränkungen ist Speechify ein echter Produktivitätsgewinn.
+Speechify is the most widely used text-to-speech app worldwide with over 30 million users and offers the most natural AI voices for reading texts. The app can process virtually any text source — PDFs, Word documents, emails, websites and even scanned images. For students, commuters and people with dyslexia or visual impairments, Speechify is a genuine productivity gain.
 
-Die nahtlose Verfügbarkeit auf iOS, Android, dem Desktop und als Chrome-Extension macht Speechify besonders flexibel einsetzbar. Der kostenlose Plan bietet Basisfunktionen zum Kennenlernen, ist für den produktiven Alltag jedoch zu eingeschränkt. Das Premium-Jahresabo kostet 139 Dollar, was im Vergleich zu ähnlichen Tools teuer ist, aber durch die Qualität und den Funktionsumfang gerechtfertigt werden kann.
+The seamless availability on iOS, Android, desktop and as a Chrome Extension makes Speechify particularly flexible to use. The free plan offers basic features for getting started, but is too limited for productive everyday use. The annual premium subscription costs $139, which is expensive compared to similar tools, but can be justified by the quality and feature set.

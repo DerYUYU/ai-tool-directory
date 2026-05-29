@@ -1,42 +1,42 @@
 ---
 name: "Perplexity AI"
-tagline: "Die KI-Suchmaschine mit Quellenangaben"
-description: "Perplexity AI ist eine KI-betriebene Suchmaschine die aktuelle Web-Informationen mit KI-Antworten kombiniert. Anders als ChatGPT hat es immer Zugang zum Internet und zitiert alle Quellen direkt."
+tagline: "The AI search engine with source citations"
+description: "Perplexity AI is an AI-powered search engine that combines current web information with AI answers. Unlike ChatGPT, it always has access to the internet and cites all sources directly."
 category: "Research"
 pricing:
   free: true
-  freeTier: "Unbegrenzte kostenlose Suchen"
+  freeTier: "Unlimited free searches"
   startingPrice: "$20"
 rating: 4.6
 pros:
-  - "Immer aktuell (Echtzeit-Internet)"
-  - "Quellen werden immer zitiert"
-  - "Kostenlos unbegrenzt nutzbar"
-  - "Ideal für Recherche und Fakten"
-  - "Copilot-Modus für tiefere Recherche"
+  - "Always up to date (real-time internet)"
+  - "Sources are always cited"
+  - "Free unlimited use"
+  - "Ideal for research and facts"
+  - "Copilot mode for deeper research"
 cons:
-  - "Weniger kreativ als ChatGPT"
-  - "Pro nötig für GPT-4/Claude-Modelle"
-  - "Manchmal zu oberflächlich bei komplexen Themen"
+  - "Less creative than ChatGPT"
+  - "Pro needed for GPT-4/Claude models"
+  - "Sometimes too superficial for complex topics"
 websiteUrl: "https://perplexity.ai"
 featured: false
 tags: ["search", "research", "web-search", "facts", "citations"]
 addedDate: 2026-05-26
 ---
 
-## Perplexity AI im Detail
+## Perplexity AI in Detail
 
-Perplexity wurde 2022 gegründet und hat das Konzept der KI-Suche neu definiert.
-Es kombiniert das Beste aus Suchmaschinen und KI-Assistenten.
+Perplexity was founded in 2022 and has redefined the concept of AI search.
+It combines the best of search engines and AI assistants.
 
-### Wann Perplexity vs. ChatGPT?
+### When Perplexity vs. ChatGPT?
 
-**Perplexity** wenn:
-- Aktuelle Informationen (News, Preise, Veranstaltungen)
-- Fakten mit Quellenangaben
-- Schnelle Recherche
+**Perplexity** when:
+- Current information (news, prices, events)
+- Facts with source citations
+- Quick research
 
-**ChatGPT** wenn:
-- Kreatives Schreiben
-- Code-Hilfe
-- Lange Analysen aus vorhandenem Wissen
+**ChatGPT** when:
+- Creative writing
+- Code help
+- Long analyses from existing knowledge

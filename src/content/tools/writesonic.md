@@ -1,19 +1,19 @@
 ---
 name: "Writesonic"
-tagline: "KI-Content-Plattform für Teams"
-description: "Writesonic ist eine umfassende KI-Schreibplattform mit über 100 Templates. Chatsonic kombiniert ChatGPT mit Internetzugang für aktuelle Antworten."
+tagline: "AI content platform for teams"
+description: "Writesonic is a comprehensive AI writing platform with over 100 templates. Chatsonic combines ChatGPT with internet access for up-to-date answers."
 category: "Writing"
 pricing:
   free: true
-  freeTier: "10.000 Wörter/Monat kostenlos"
+  freeTier: "10,000 words/month free"
   startingPrice: "$19"
 rating: 4.2
 pros:
-  - "Über 100 Content-Templates"
-  - "Chatsonic mit Internetzugang"
-  - "Günstigste Preise im Segment"
+  - "Over 100 content templates"
+  - "Chatsonic with internet access"
+  - "Lowest prices in the segment"
 cons:
-  - "Qualität bei langen Texten schwankt"
+  - "Quality varies for long texts"
 affiliateLink: "https://writesonic.com?via=muok7detr5hz"
 affiliateCommission: "30% recurring"
 websiteUrl: "https://writesonic.com"
@@ -22,6 +22,6 @@ tags: ["writing", "copywriting", "seo", "templates"]
 addedDate: 2026-05-26
 ---
 
-## Writesonic als Jasper-Alternative
+## Writesonic as a Jasper Alternative
 
-Günstigere Alternative zu Jasper mit ähnlichem Funktionsumfang.
+More affordable alternative to Jasper with a similar feature set.

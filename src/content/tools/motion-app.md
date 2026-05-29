@@ -1,21 +1,21 @@
 ---
 name: "Motion"
-tagline: "KI plant deinen Tag und schedulet Aufgaben vollautomatisch"
-description: "Motion ist eine KI-gestützte Kalender- und Aufgaben-App, die deinen gesamten Tagesablauf automatisch plant. Die KI berücksichtigt Deadlines, Prioritäten und verfügbare Zeitfenster und erstellt daraus einen optimierten Tagesplan — vollautomatisch und in Echtzeit angepasst."
+tagline: "AI plans your day and schedules tasks fully automatically"
+description: "Motion is an AI-powered calendar and task app that automatically plans your entire workday. The AI considers deadlines, priorities, and available time slots to create an optimized daily schedule — fully automatic and adjusted in real time."
 category: "Productivity"
 pricing:
   free: false
   startingPrice: "$19"
 rating: 4.3
 pros:
-  - Vollautomatisches Scheduling ohne manuelles Einplanen
-  - KI priorisiert Tasks nach Deadline und Wichtigkeit
-  - Schützt Zeitblöcke für Deep Work automatisch
-  - Integriert Kalendertermine und Aufgabenliste in einer Ansicht
+  - Fully automatic scheduling without manual planning
+  - AI prioritizes tasks by deadline and importance
+  - Automatically protects time blocks for deep work
+  - Integrates calendar events and task list in one view
 cons:
-  - Kein Free Tier verfügbar
-  - Teurer als klassische Kalender-Apps
-  - Lernkurve beim Einrichten der eigenen Präferenzen
+  - No free tier available
+  - More expensive than classic calendar apps
+  - Learning curve when setting up your own preferences
 affiliateLink: "https://www.usemotion.com?via=muok7detr5hz"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://usemotion.com"
@@ -28,9 +28,9 @@ tags:
   - tasks
   - automation
 addedDate: 2026-05-28
-seoDescription: "Motion plant deinen Tag vollautomatisch mit KI. Aufgaben, Deadlines und Kalender in einem System — ab $19 pro Monat."
+seoDescription: "Motion plans your day fully automatically with AI. Tasks, deadlines, and calendar in one system — from $19 per month."
 ---
 
-Motion übernimmt die Planung des Arbeitstages komplett: Neue Aufgaben werden automatisch in freie Zeitfenster eingeplant, Deadlines berücksichtigt und bei Terminverschiebungen sofort neu priorisiert. Wer täglich viele Tasks jongliert, spart erheblich Zeit gegenüber manuellem Planen.
+Motion takes over the entire planning of the workday: new tasks are automatically scheduled into free time slots, deadlines are considered, and tasks are immediately re-prioritized when appointments shift. Those who juggle many tasks daily save significant time compared to manual planning.
 
-Die enge Verbindung von Kalender und Aufgabensystem ist das Kernprinzip: Motion sieht, wann Meetings stattfinden, und plant Arbeitsblöcke passend drum herum. Deep-Work-Phasen werden als feste Blöcke geschützt, sodass Kollegen keine spontanen Meetings in diese Zeit buchen können.
+The tight connection between calendar and task system is the core principle: Motion sees when meetings are happening and plans work blocks appropriately around them. Deep-work phases are protected as fixed blocks so colleagues cannot book spontaneous meetings during that time.

@@ -1,21 +1,21 @@
 ---
 name: "Typeface"
-tagline: "Enterprise KI-Marketing-Inhalte im konsistenten Brand Voice"
-description: "Typeface ist eine Enterprise-KI-Plattform für die Erstellung von Marketing-Inhalten, die automatisch den Brand Voice eines Unternehmens einhält. Mit tiefer Integration in Adobe und Figma sowie Enterprise-Sicherheitsstandards richtet sich das Tool an große Marken."
+tagline: "Enterprise AI marketing content with consistent brand voice"
+description: "Typeface is an enterprise AI platform for creating marketing content that automatically adheres to a company's brand voice. With deep integration into Adobe and Figma and enterprise security standards, the tool targets large brands."
 category: "Business"
 pricing:
   free: false
   startingPrice: "$95"
 rating: 4.2
 pros:
-  - Konsistenter Brand Voice über alle Inhalte hinweg
-  - Erfüllt Enterprise-Sicherheitsstandards
-  - Native Integration in Adobe und Figma
-  - Skalierbare Content-Produktion für große Teams
+  - Consistent brand voice across all content
+  - Meets enterprise security standards
+  - Native integration into Adobe and Figma
+  - Scalable content production for large teams
 cons:
-  - Sehr hoher Einstiegspreis
-  - Ausschließlich für Enterprise-Kunden konzipiert
-  - Kleine und mittlere Unternehmen profitieren kaum
+  - Very high entry price
+  - Exclusively designed for enterprise customers
+  - Small and medium businesses benefit little
 websiteUrl: "https://typeface.ai"
 featured: false
 trending: false
@@ -25,9 +25,9 @@ tags:
   - marketing
   - brand-voice
 addedDate: 2026-05-28
-seoDescription: "Typeface erstellt Enterprise-Marketing-Inhalte mit konsistentem Brand Voice. KI mit Adobe- und Figma-Integration für große Marken."
+seoDescription: "Typeface creates enterprise marketing content with consistent brand voice. AI with Adobe and Figma integration for large brands."
 ---
 
-Typeface adressiert ein spezifisches Enterprise-Problem: Große Marken beschäftigen viele Content-Ersteller, und die Konsistenz des Brand Voice leidet. Typeface trainiert auf den eigenen Markeninhalten und stellt sicher, dass jeder generierte Text klingt, als käme er von derselben Quelle.
+Typeface addresses a specific enterprise problem: Large brands employ many content creators, and the consistency of brand voice suffers. Typeface trains on your own brand content and ensures that every generated text sounds as if it came from the same source.
 
-Die Integrations in Adobe Creative Cloud und Figma macht Typeface besonders attraktiv für Marketing- und Designteams, die bereits in diesen Ökosystemen arbeiten. Allerdings ist der Preis ein klares Signal: Typeface richtet sich an große Unternehmen mit entsprechendem Content-Marketing-Budget. Für kleinere Teams gibt es günstigere Alternativen, die ähnliche Grundfunktionen bieten.
+The integration into Adobe Creative Cloud and Figma makes Typeface particularly attractive for marketing and design teams already working within these ecosystems. However, the price is a clear signal: Typeface is aimed at large companies with a corresponding content marketing budget. For smaller teams there are cheaper alternatives that offer similar basic features.

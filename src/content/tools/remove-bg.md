@@ -1,22 +1,22 @@
 ---
 name: "Remove.bg"
-tagline: "Hintergrund von Fotos entfernen in einer Sekunde mit KI"
-description: "Remove.bg ist der Marktführer für automatische Hintergrundentfernung per KI. Ein Klick genügt, um selbst komplexe Freisteller mit Haaren und feinen Details in Sekunden zu erstellen. Mit API-Zugang und Bulk-Verarbeitung für professionelle Anwendungsfälle."
+tagline: "Remove photo backgrounds in one second with AI"
+description: "Remove.bg is the market leader for automatic background removal using AI. One click is enough to create even complex cutouts with hair and fine details in seconds. With API access and bulk processing for professional use cases."
 category: "Design"
 pricing:
   free: true
-  freeTier: "5 Bilder kostenlos in kleiner Auflösung"
+  freeTier: "5 images free in small resolution"
   startingPrice: "$9"
 rating: 4.5
 pros:
-  - "Extrem einfache Bedienung — ein Klick reicht"
-  - "Schnelle Verarbeitung in Sekunden"
-  - "Sehr gute Ergebnisse auch bei Haaren und feinen Details"
-  - "API für Entwickler und Automatisierungen verfügbar"
-  - "Bulk-Verarbeitung für große Bildmengen"
+  - "Extremely easy to use — one click is enough"
+  - "Fast processing in seconds"
+  - "Very good results even with hair and fine details"
+  - "API available for developers and automations"
+  - "Bulk processing for large image volumes"
 cons:
-  - "Kostenlose Version liefert nur kleine Auflösung"
-  - "Bei vielen Bildern werden die Kosten schnell hoch"
+  - "Free version delivers only small resolution"
+  - "Costs add up quickly with many images"
 affiliateLink: "https://www.remove.bg?via=YOUR_RBG_ID"
 affiliateCommission: "10%/Sale"
 websiteUrl: "https://remove.bg"
@@ -28,9 +28,9 @@ tags:
   - api
   - e-commerce
 addedDate: 2026-05-28
-seoDescription: "Remove.bg: KI entfernt Bildhintergrund in einer Sekunde. Auch bei Haaren. API und Bulk-Verarbeitung verfügbar. 5 Bilder kostenlos."
+seoDescription: "Remove.bg: AI removes image backgrounds in one second. Even with hair. API and bulk processing available. 5 images free."
 ---
 
-Remove.bg hat die automatische Hintergrundentfernung demokratisiert und auf ein Komplexitätsniveau reduziert, das buchstäblich keiner Erklärung bedarf. Ein Bild hochladen, eine Sekunde warten, fertiger Freisteller herunterladen — selbst bei komplizierten Motiven wie lockigen Haaren oder transparenten Objekten liefert der KI-Algorithmus beeindruckend saubere Ergebnisse.
+Remove.bg has democratized automatic background removal and reduced it to a level of complexity that literally requires no explanation. Upload an image, wait one second, download the finished cutout — even with complicated subjects like curly hair or transparent objects, the AI algorithm delivers impressively clean results.
 
-Für E-Commerce-Anbieter und Fotografen mit hohem Bildvolumen macht die REST-API Remove.bg zu einem wichtigen Baustein in automatisierten Workflows. Der Preis pro Bild sinkt bei höheren Volumen, bleibt aber für sehr hohe Stückzahlen eine spürbare Kostenposition — wer täglich hunderte Bilder freistellen muss, sollte die API-Preise genau kalkulieren.
+For e-commerce providers and photographers with high image volumes, the REST API makes Remove.bg an important component in automated workflows. The price per image decreases with higher volumes but remains a noticeable cost item for very high quantities — anyone who needs to cut out hundreds of images daily should carefully calculate the API pricing.

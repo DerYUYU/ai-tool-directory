@@ -1,42 +1,41 @@
 ---
 name: "Midjourney"
-tagline: "Die kreativste KI-Bildgenerierung"
-description: "Midjourney ist das führende KI-Tool für kreative Bildgenerierung. Mit unübertroffener künstlerischer Qualität erstellt es atemberaubende Bilder aus Textbeschreibungen. Besonders stark bei fotorealistischen und künstlerischen Bildern."
+tagline: "The most creative AI image generation"
+description: "Midjourney is the leading AI tool for creative image generation. With unmatched artistic quality, it creates stunning images from text descriptions. Particularly strong for photorealistic and artistic images."
 category: "Design"
 pricing:
   free: false
-  freeTier: "Keine kostenlose Version mehr"
+  freeTier: "No free version anymore"
   startingPrice: "$10"
 rating: 4.8
 pros:
-  - "Beste Bildqualität unter allen KI-Bildtools"
-  - "Unübertroffener künstlerischer Stil"
-  - "Einfache Discord-Integration"
-  - "V6 Modell für hyperrealistische Bilder"
-  - "Aktive Community mit Inspirationen"
+  - "Best image quality among all AI image tools"
+  - "Unmatched artistic style"
+  - "Simple Discord integration"
+  - "V6 model for hyperrealistic images"
+  - "Active community with inspiration"
 cons:
-  - "Keine kostenlose Testversion mehr"
-  - "Nur via Discord nutzbar (kein Web-UI)"
-  - "Keine kommerzielle Kontrolle über Ergebnisse auf Basic"
-  - "Lernkurve bei Prompts"
+  - "No free trial version anymore"
+  - "Only usable via Discord (no web UI)"
+  - "No commercial control over results on Basic"
+  - "Learning curve for prompts"
 websiteUrl: "https://midjourney.com"
 featured: true
 tags: ["image-generation", "art", "design", "creative", "discord"]
 addedDate: 2026-05-26
 ---
 
-## Midjourney im Detail
+## Midjourney in Detail
 
-Midjourney ist das kreativste KI-Bildtool auf dem Markt. Es wurde 2022 gegründet
-und hat mit seinen cineastischen, künstlerischen Outputs die Design-Welt revolutioniert.
+Midjourney is the most creative AI image tool on the market. Founded in 2022, it has revolutionized the design world with its cinematic, artistic outputs.
 
 ### Midjourney Prompting
 
-Der Schlüssel zu guten Midjourney-Bildern liegt im Prompting:
-- Beschreibe Stil, Beleuchtung und Stimmung
-- Füge Kunstrichtungen hinzu: "in the style of", "cinematic", "photorealistic"
-- Nutze Parameter: `--ar 16:9` für Querformat, `--style raw` für weniger Stilisierung
+The key to good Midjourney images lies in prompting:
+- Describe style, lighting, and mood
+- Add art directions: "in the style of", "cinematic", "photorealistic"
+- Use parameters: `--ar 16:9` for landscape, `--style raw` for less stylization
 
-### Alternativen
+### Alternatives
 
-Falls Midjourney zu teuer ist: DALL-E 3 (in ChatGPT kostenlos), Adobe Firefly (kreative Kontrolle), Stable Diffusion (kostenlos, lokal).
+If Midjourney is too expensive: DALL-E 3 (free in ChatGPT), Adobe Firefly (creative control), Stable Diffusion (free, local).

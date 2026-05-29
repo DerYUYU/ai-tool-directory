@@ -1,21 +1,21 @@
 ---
 name: "Qodo"
-tagline: "KI generiert automatisch Tests für deinen Code"
-description: "Qodo (ehemals CodiumAI) ist ein KI-Tool, das sich auf automatische Test-Generierung und Code-Reviews spezialisiert hat. Es analysiert deinen Code und erstellt Unit Tests, erklärt komplexe Logik und unterstützt Pull-Request-Reviews."
+tagline: "AI automatically generates tests for your code"
+description: "Qodo (formerly CodiumAI) is an AI tool that specializes in automatic test generation and code reviews. It analyzes your code and creates unit tests, explains complex logic, and supports pull request reviews."
 category: "Coding"
 pricing:
   free: true
-  freeTier: "Kostenlos für Einzelentwickler"
+  freeTier: "Free for individual developers"
   startingPrice: "$19"
 rating: 4.3
 pros:
-  - "Automatische Generierung von Unit Tests spart viel Entwicklungszeit"
-  - "Erklärt komplexen Code verständlich"
-  - "PR-Review-Features direkt im Workflow"
-  - "Erkennt Edge Cases und Fehlerszenarien"
+  - "Automatic generation of unit tests saves a lot of development time"
+  - "Explains complex code in an understandable way"
+  - "PR review features directly in the workflow"
+  - "Detects edge cases and error scenarios"
 cons:
-  - "Generierte Tests brauchen oft manuelle Anpassung"
-  - "Testqualität bei komplexer Business-Logik manchmal oberflächlich"
+  - "Generated tests often require manual adjustments"
+  - "Test quality for complex business logic sometimes superficial"
 websiteUrl: "https://qodo.ai"
 featured: false
 trending: false
@@ -25,9 +25,9 @@ tags:
   - code-review
   - automation
 addedDate: 2026-05-28
-seoDescription: "Qodo generiert automatisch Unit Tests für deinen Code, erklärt Logik und unterstützt PR-Reviews — kostenlos für Entwickler."
+seoDescription: "Qodo automatically generates unit tests for your code, explains logic, and supports PR reviews — free for developers."
 ---
 
-Qodo löst eines der lästigsten Probleme im Entwickleralltag: das Schreiben von Tests. Statt manuell Testfälle zu überlegen, analysiert Qodo den vorhandenen Code, identifiziert relevante Szenarien — inklusive Edge Cases und Fehlerpfade — und generiert daraus direkt ausführbare Unit Tests. Das spart nicht nur Zeit, sondern erhöht auch die Testabdeckung in Projekten, wo Tests sonst vernachlässigt werden.
+Qodo solves one of the most tedious problems in everyday development: writing tests. Instead of manually thinking up test cases, Qodo analyzes the existing code, identifies relevant scenarios — including edge cases and error paths — and directly generates executable unit tests from them. This not only saves time but also increases test coverage in projects where tests are otherwise neglected.
 
-Neben der Test-Generierung bietet Qodo ein Code-Erklärungsfeature, das besonders beim Onboarding in fremde Codebases hilft, sowie Pull-Request-Reviews mit automatischem Feedback zu Codequalität und potenziellen Bugs. Die generierten Tests sind ein guter Startpunkt, ersetzen aber kein tiefes Durchdenken der Testlogik — komplexe Business-Regeln sollte man immer noch manuell absichern.
+In addition to test generation, Qodo offers a code explanation feature that is particularly helpful when onboarding into unfamiliar codebases, as well as pull request reviews with automatic feedback on code quality and potential bugs. The generated tests are a good starting point but do not replace deep thinking about test logic — complex business rules should always be verified manually.

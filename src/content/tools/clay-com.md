@@ -1,22 +1,22 @@
 ---
 name: "Clay"
-tagline: "KI-gestütztes B2B-Prospecting mit 50+ Datenquellen in einem Tool"
-description: "Clay ist das mächtigste B2B-Prospecting-Tool auf dem Markt. Es kombiniert über 50 Datenquellen mit KI-Personalisierung und Waterfall-Enrichment, um hochpräzise Leads zu finden und automatisch personalisierte Outreach-Nachrichten zu erstellen."
+tagline: "AI-powered B2B prospecting with 50+ data sources in one tool"
+description: "Clay is the most powerful B2B prospecting tool on the market. It combines over 50 data sources with AI personalization and waterfall enrichment to find highly precise leads and automatically create personalized outreach messages."
 category: "Business"
 pricing:
   free: true
-  freeTier: "100 Credits/Monat kostenlos"
+  freeTier: "100 credits/month free"
   startingPrice: "$149"
 rating: 4.5
 pros:
-  - Mächtigstes Prospecting-Tool auf dem Markt
-  - Über 50 Datenquellen in einem einzigen Workflow
-  - KI-Personalisierung für jeden Lead individuell
-  - Waterfall-Enrichment maximiert Trefferquote
+  - Most powerful prospecting tool on the market
+  - Over 50 data sources in a single workflow
+  - AI personalization for every lead individually
+  - Waterfall enrichment maximizes hit rate
 cons:
-  - Teuer ab dem Einstiegsplan
-  - Steile Lernkurve für neue Nutzer
-  - Primär für Sales-Teams mit ausreichendem Budget geeignet
+  - Expensive from the entry-level plan
+  - Steep learning curve for new users
+  - Primarily suited for sales teams with sufficient budget
 affiliateLink: "https://clay.com?via=YOUR_CLAY_ID"
 affiliateCommission: "20% recurring"
 websiteUrl: "https://clay.com"
@@ -29,9 +29,9 @@ tags:
   - b2b
   - outreach
 addedDate: 2026-05-28
-seoDescription: "Clay kombiniert 50+ Datenquellen mit KI für B2B-Prospecting. Waterfall-Enrichment und personalisiertes Outreach für Sales-Teams."
+seoDescription: "Clay combines 50+ data sources with AI for B2B prospecting. Waterfall enrichment and personalized outreach for sales teams."
 ---
 
-Clay hat die B2B-Sales-Welt in den letzten Jahren grundlegend verändert. Statt mehrere Tools für Datenanreicherung, Lead-Recherche und Personalisierung zu kombinieren, bündelt Clay alles in einem flexiblen Workflow-Tool. Das Waterfall-Enrichment-System fragt automatisch mehrere Datenquellen nacheinander ab, bis ein Datenpunkt gefunden wird.
+Clay has fundamentally changed the B2B sales world in recent years. Instead of combining multiple tools for data enrichment, lead research, and personalization, Clay bundles everything into one flexible workflow tool. The waterfall enrichment system automatically queries multiple data sources in sequence until a data point is found.
 
-Das Ergebnis sind hochgradig personalisierte Outreach-Kampagnen, die auf echten Datenpunkten basieren – kein generisches "Ich habe Ihr Profil gesehen"-Messaging mehr. Die Lernkurve ist real, aber für Sales-Teams, die regelmäßig viele Leads bearbeiten, amortisiert sich das Investment schnell.
+The result is highly personalized outreach campaigns based on real data points — no more generic "I saw your profile" messaging. The learning curve is real, but for sales teams that regularly process many leads, the investment pays off quickly.

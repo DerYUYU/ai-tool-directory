@@ -1,20 +1,20 @@
 ---
 name: "Scalenut"
-tagline: "KI-gestütztes SEO Content Planning von Recherche bis Artikel"
-description: "Scalenut ist eine All-in-One-SEO-Content-Plattform, die den gesamten Workflow von der Keyword-Recherche über das Content-Cluster-Planning bis zur KI-gestützten Artikelerstellung abdeckt. Der Cruise Mode erstellt vollständige SEO-Artikel in Minuten."
+tagline: "AI-powered SEO content planning from research to article"
+description: "Scalenut is an all-in-one SEO content platform that covers the entire workflow from keyword research through content cluster planning to AI-powered article creation. Cruise Mode creates complete SEO articles in minutes."
 category: "Writing"
 pricing:
   free: false
   startingPrice: "$39"
 rating: 4.2
 pros:
-  - "Vollständiger SEO-Content-Workflow in einem Tool"
-  - "Cruise Mode für schnelle automatisierte Artikelerstellung"
-  - "Keyword-Cluster-Planung für Content-Strategien"
-  - "Integrierte NLP-Analyse für Content-Optimierung"
+  - "Complete SEO content workflow in one tool"
+  - "Cruise Mode for fast automated article creation"
+  - "Keyword cluster planning for content strategies"
+  - "Integrated NLP analysis for content optimization"
 cons:
-  - "Kein kostenloser Plan verfügbar"
-  - "Interface manchmal buggy und langsam"
+  - "No free plan available"
+  - "Interface sometimes buggy and slow"
 affiliateLink: "https://scalenut.com?via=muok7detr5hz"
 affiliateCommission: "30% recurring"
 websiteUrl: "https://scalenut.com"
@@ -22,11 +22,11 @@ featured: false
 trending: false
 tags: ["seo", "content-planning", "keyword-research", "blog", "long-form"]
 addedDate: 2026-05-28
-seoDescription: "Scalenut: KI-SEO-Plattform von Keyword-Recherche bis Artikel. Ab $39/Monat. ★4.2/5 Sterne — Jetzt testen."
+seoDescription: "Scalenut: AI SEO platform from keyword research to article. From $39/month. ★4.2/5 stars — Try it now."
 ---
 
-## Scalenut im Detail
+## Scalenut in Detail
 
-Scalenut positioniert sich als vollständige SEO-Content-Plattform für Content-Teams und SEO-Agenturen. Das Tool beginnt bei der strategischen Planung: Mit dem Keyword-Planner lassen sich Themen-Cluster identifizieren, die mehrere verwandte Keywords mit einem organisierten Netzwerk von Artikeln abdecken. Diese datengetriebene Content-Strategie ist besonders wertvoll für Websites, die topische Autorität in einer Nische aufbauen wollen.
+Scalenut positions itself as a complete SEO content platform for content teams and SEO agencies. The tool starts with strategic planning: The keyword planner allows identifying topic clusters that cover multiple related keywords with an organized network of articles. This data-driven content strategy is particularly valuable for websites that want to build topical authority in a niche.
 
-Der Kern des Tools ist der Cruise Mode, der aus einem Keyword automatisch eine strukturierte Gliederung, Content-Brief und fertigen Artikel in einem Durchlauf generiert. Während die Ergebnisse nicht immer veröffentlichungsreif sind, bilden sie eine starke Grundlage für die menschliche Nachbearbeitung. Verglichen mit dem separaten Einsatz von Keyword-Tool, Content-Brief-Tool und KI-Texter spart Scalenut erheblich Zeit und Geld.
+The core of the tool is Cruise Mode, which automatically generates a structured outline, content brief and finished article from a keyword in one pass. While the results are not always publication-ready, they form a strong foundation for human post-editing. Compared to using separate keyword tools, content brief tools and AI copywriters, Scalenut saves significant time and money.
