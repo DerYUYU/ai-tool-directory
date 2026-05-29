@@ -19,9 +19,9 @@ function renderStars(rating: number) {
 // SEO meta description — custom override or auto-generated (max 160 chars)
 const metaDescription = tool.data.seoDescription ?? (() => {
   const price = tool.data.pricing.free
-    ? 'Freee Version verfügbar'
-    : `Ab ${tool.data.pricing.startingPrice}/Monat`;
-  const raw = `${tool.data.name}: ${tool.data.tagline}. ${price}. ★${tool.data.rating}/5 Sterne — Alle Infos & Erfahrungen 2026.`;
+    ? 'Free version available'
+    : `From ${tool.data.pricing.startingPrice}/month`;
+  const raw = `${tool.data.name}: ${tool.data.tagline}. ${price}. ★${tool.data.rating}/5 stars — Reviews & info 2026.`;
   return raw.length > 160 ? raw.slice(0, 157) + '...' : raw;
 })();
 
@@ -153,7 +153,7 @@ const breadcrumbs = {
     <!-- Affiliate Disclosure -->
     {tool.data.affiliateLink && (
       <div class="affiliate-banner">
-        ℹ️ <strong>Hinweis:</strong> Diese Seite enthält Affiliate-Links. Wenn du über unsere Links kaufst, erhalten wir eine kleine Provision — ohne Mehrkosten für dich.
+        ℹ️ <strong>Note:</strong> This page contains affiliate links. If you purchase through our links, we earn a small commission — at no extra cost to you.
       </div>
     )}
 
@@ -163,8 +163,8 @@ const breadcrumbs = {
         <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem">
           <span class="badge badge-category">{tool.data.category}</span>
           {tool.data.pricing.free
-            ? <span class="badge badge-free">Free verfügbar</span>
-            : <span class="badge badge-paid">Ab {tool.data.pricing.startingPrice}/Monat</span>
+            ? <span class="badge badge-free">Free available</span>
+            : <span class="badge badge-paid">From {tool.data.pricing.startingPrice}/month</span>
           }
           {tool.data.featured && <span class="badge" style="background:rgba(251,191,36,0.15);color:#fbbf24">⭐ Featured</span>}
         </div>
@@ -179,11 +179,11 @@ const breadcrumbs = {
         </div>
 
         <!-- Description -->
-        <h2 style="margin-bottom:1rem">Was ist {tool.data.name}?</h2>
+        <h2 style="margin-bottom:1rem">What is {tool.data.name}?</h2>
         <p style="color:var(--text-muted);margin-bottom:2rem;font-size:1.05rem">{tool.data.description}</p>
 
         <!-- Pros & Cons -->
-        <h2 style="margin-bottom:1rem">Vor- und Cons</h2>
+        <h2 style="margin-bottom:1rem">Pros & Cons</h2>
         <div class="pros-cons" style="margin-bottom:2rem">
           <div class="card">
             <h3 style="color:var(--green);margin-bottom:1rem">✅ Pros</h3>
@@ -211,7 +211,7 @@ const breadcrumbs = {
           {tool.data.pricing.startingPrice && (
             <div>
               <span class="badge badge-paid" style="margin-right:0.5rem">PAID</span>
-              Ab {tool.data.pricing.startingPrice}/Monat für Pro-Features
+              From {tool.data.pricing.startingPrice}/month for Pro features
             </div>
           )}
         </div>
@@ -231,14 +231,14 @@ const breadcrumbs = {
         <!-- Related Comparisons -->
         {['chatgpt-vs-claude','cursor-vs-github-copilot','midjourney-vs-dall-e-3','cursor-vs-windsurf','chatgpt-vs-gemini','midjourney-vs-stable-diffusion','notion-ai-vs-mem-ai','zapier-vs-make-com','elevenlabs-vs-murf-ai','suno-ai-vs-udio','perplexity-vs-notebooklm','github-copilot-vs-codeium','heygen-vs-synthesia','jasper-ai-vs-writesonic','runway-ml-vs-pika'].filter(c => c.includes(tool.id)).length > 0 && (
           <div style="margin-bottom:2rem">
-            <h3 style="margin-bottom:0.8rem">Tool-Vergleiche</h3>
+            <h3 style="margin-bottom:0.8rem">Tool Comparisons</h3>
             <div class="pills">
               {['chatgpt-vs-claude','cursor-vs-github-copilot','midjourney-vs-dall-e-3','cursor-vs-windsurf','chatgpt-vs-gemini','midjourney-vs-stable-diffusion','notion-ai-vs-mem-ai','zapier-vs-make-com','elevenlabs-vs-murf-ai','suno-ai-vs-udio','perplexity-vs-notebooklm','github-copilot-vs-codeium','heygen-vs-synthesia','jasper-ai-vs-writesonic','runway-ml-vs-pika']
                 .filter(c => c.includes(tool.id))
                 .map(c => {
                   const parts = c.split('-vs-');
                   const other = parts[0] === tool.id ? parts[1] : parts[0];
-                  return <a href={`/compare/${c}`} class="pill" style="text-decoration:none">{other.replace(/-/g,' ')} vergleichen →</a>;
+                  return <a href={`/compare/${c}`} class="pill" style="text-decoration:none">Compare with {other.replace(/-/g,' ')} →</a>;
                 })
               }
             </div>
@@ -282,21 +282,21 @@ const breadcrumbs = {
       <div style="position:sticky;top:80px;display:flex;flex-direction:column;gap:1.5rem">
         <!-- CTA Card -->
         <div class="card" style="text-align:center;padding:2rem">
-          <h3 style="margin-bottom:0.5rem">{tool.data.name} testen</h3>
+          <h3 style="margin-bottom:0.5rem">Try {tool.data.name}</h3>
           <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem">
-            {tool.data.pricing.free ? 'Free loslegen — kein Kreditkarte nötig' : `Ab ${tool.data.pricing.startingPrice}/Monat`}
+            {tool.data.pricing.free ? 'Start for free — no credit card required' : `From ${tool.data.pricing.startingPrice}/month`}
           </p>
           {tool.data.affiliateLink ? (
             <a href={tool.data.affiliateLink} target="_blank" rel="noopener sponsored" class="btn btn-primary" style="width:100%;justify-content:center">
-              Jetzt kostenlos starten →
+              Get started for free →
             </a>
           ) : (
             <a href={tool.data.websiteUrl} target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;justify-content:center">
-              Website besuchen →
+              Visit website →
             </a>
           )}
           {tool.data.affiliateLink && (
-            <p style="font-size:0.7rem;color:var(--text-muted);margin-top:0.8rem">* Affiliate-Link</p>
+            <p style="font-size:0.7rem;color:var(--text-muted);margin-top:0.8rem">* Affiliate link</p>
           )}
         </div>
 
@@ -305,12 +305,12 @@ const breadcrumbs = {
           <h3 style="margin-bottom:1rem">Quick Facts</h3>
           <div style="display:flex;flex-direction:column;gap:0.8rem;font-size:0.9rem">
             <div style="display:flex;justify-content:space-between">
-              <span style="color:var(--text-muted)">Kategorie</span>
+              <span style="color:var(--text-muted)">Category</span>
               <a href={`/categories/${tool.data.category}`}>{tool.data.category}</a>
             </div>
             <div style="display:flex;justify-content:space-between">
-              <span style="color:var(--text-muted)">Freee Version</span>
-              <span>{tool.data.pricing.free ? '✅ Ja' : '❌ Nein'}</span>
+              <span style="color:var(--text-muted)">Free Version</span>
+              <span>{tool.data.pricing.free ? '✅ Yes' : '❌ No'}</span>
             </div>
             <div style="display:flex;justify-content:space-between">
               <span style="color:var(--text-muted)">Rating</span>
@@ -328,7 +328,7 @@ const breadcrumbs = {
         <!-- Newsletter -->
         <div class="card" style="background:var(--accent-dim);border-color:var(--accent)">
           <h3 style="margin-bottom:0.5rem">📬 Newsletter</h3>
-          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem">Neue Tools jede Woche</p>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem">New tools every week</p>
           <a href="/newsletter" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.85rem">
             Subscribe
           </a>
